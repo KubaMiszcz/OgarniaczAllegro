@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OgarniaczAllegro.DAL\OgarniaczAllegro.DAL.csproj" />
+    <ProjectReference Include="..\..\..\..\..\zzzSymlinkiDoVisualStudio\OgarniaczAllegro.DAL\OgarniaczAllegro.DAL.csproj" />
   </ItemGroup>
 
 
