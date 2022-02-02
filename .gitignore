@@ -49,6 +49,30 @@ Generated\ Files/
 TestResult.xml
 nunit-*.xml
 
+# VS2022
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# VS2022
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+
+
+
+
+
+
+
+
+
+
+
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
@@ -397,6 +421,15 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-*/obj/*
-*/bin/*
-.vs/*
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/OgarniaczAllegro.DAL.csproj.nuget.dgspec.json
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/project.assets.json
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/project.nuget.cache
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/Debug/netcoreapp3.1/OgarniaczAllegro.DAL.assets.cache
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/Debug/netcoreapp3.1/OgarniaczAllegro.DAL.GeneratedMSBuildEditorConfig.editorconfig
+
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/**
+OgarniaczAllegro-Backend/OgarniaczAllegro.WebAPI/obj/**
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/obj/*
+OgarniaczAllegro-Backend/OgarniaczAllegro.WebAPI/obj/*
+OgarniaczAllegro-Backend/OgarniaczAllegro.DAL/.vs/*
+OgarniaczAllegro-Backend/OgarniaczAllegro.WebAPI/.vs/*
