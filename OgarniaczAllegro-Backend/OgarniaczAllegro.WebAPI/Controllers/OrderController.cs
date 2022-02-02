@@ -20,10 +20,11 @@ namespace OgarniaczAllegro.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<IOrderDTO> Get()
+        //public IEnumerable<IOrderDTO> Get()
+        public IEnumerable<string> Get()
         {
             var rng = new Random();
-            return null; // Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return new List<string> { "orderwordks", "ssss" }; // Enumerable.Range(1, 5).Select(index => new WeatherForecast
             //{
             //    Date = DateTime.Now.AddDays(index),
             //    TemperatureC = rng.Next(-20, 55),
