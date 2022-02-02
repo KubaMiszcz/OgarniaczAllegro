@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MegaSync-Kuba\\=SoftwareKubyMiszcza\\OgarniaczAllegro\\OgarniaczAllegro-Backend\\OgarniaczAllegro.DAL\\OgarniaczAllegro.DAL.csproj",
+      "projectUniqueName": "D:\\zzzSymlinkiDoVisualStudio\\OgarniaczAllegro.DAL\\OgarniaczAllegro.DAL.csproj",
       "projectName": "OgarniaczAllegro.DAL",
-      "projectPath": "D:\\MegaSync-Kuba\\=SoftwareKubyMiszcza\\OgarniaczAllegro\\OgarniaczAllegro-Backend\\OgarniaczAllegro.DAL\\OgarniaczAllegro.DAL.csproj",
+      "projectPath": "D:\\zzzSymlinkiDoVisualStudio\\OgarniaczAllegro.DAL\\OgarniaczAllegro.DAL.csproj",
       "packagesPath": "C:\\Users\\KubaMiszcz\\.nuget\\packages\\",
-      "outputPath": "D:\\MegaSync-Kuba\\=SoftwareKubyMiszcza\\OgarniaczAllegro\\OgarniaczAllegro-Backend\\OgarniaczAllegro.DAL\\obj\\",
+      "outputPath": "D:\\zzzSymlinkiDoVisualStudio\\OgarniaczAllegro.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
