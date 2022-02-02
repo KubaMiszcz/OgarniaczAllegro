@@ -12,18 +12,7 @@ data archiwizjacji
 szukajka po wszystkich polach
 sortowanie
 
-
-
-
-
-
-
-
-
-
-
-
-
+notatka do zamowienia
 
 
 
