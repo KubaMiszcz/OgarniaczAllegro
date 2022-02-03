@@ -1,1 +1,54 @@
-<p>orders-table works!</p>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col" class="col">Name</th>
+      <th scope="col" class="col">Allegro Pay</th>
+      <th scope="col" class="col">Business / Private</th>
+      <th scope="col" class="col">Total</th>
+
+      <th scope="col" class="col">Invoice Received</th>
+      <th scope="col" class="col">Package Received</th>
+      <th scope="col" class="col">Received Date</th>
+
+      <th scope="col" class="col">Return Issued</th>
+
+      <th scope="col" class="col">Return To Date</th>
+      <th scope="col" class="col">Return Code</th>
+      <th scope="col" class="col">Return Total</th>
+
+      <th scope="col" class="col">Return Sended</th>
+      <th scope="col" class="col">Return Delivered</th>
+      <th scope="col" class="col">Cash Returned</th>
+      <th scope="col" class="col">Invoice Correction Received</th>
+
+      <th scope="col" class="col">Finished</th>
+      <th scope="col" class="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of ordersList">
+      <td>{{order.name}}</td>
+      <td>{{order.isAllegroPay}}</td>
+      <td>{{order.isBusinessOrder}}</td>
+      <td>{{order.orderValue}}</td>
+
+      <td>{{order.isInvoiceReceived}}</td>
+      <td>{{order.isPackageReceived}}</td>
+      <td>{{order.receivedDate}}</td>
+      <td>{{order.isReturnIssued}}</td>
+
+      <td>{{order.returnToDate}}</td>
+      <td>{{order.returnCode}}</td>
+      <td>{{order.returnValue}}</td>
+
+      <td>{{order.isReturnSended}}</td>
+      <td>{{order.isReturnDelivered}}</td>
+      <td>{{order.isCashReturned}}</td>
+      <td>{{order.isInvoiceCorrectionReceived}}</td>
+
+      <td>{{order.isFinished}}</td>
+      <td>{{order.comment}}</td>
+    </tr>
+
+  </tbody>
+</table>

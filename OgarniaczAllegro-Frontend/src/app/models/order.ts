@@ -1,28 +1,73 @@
-import { IPurchase } from "./purchase";
 
-export interface IOrder {
+export interface IOrderRow {
   // seller:string;  // sprzedajacy
-  order: string; //zamowienie
-  isAllegroPay: string;// allegro Pay	
-  isBusinessOrder: string; //na firme?
-  orderTotalAmount: string;// suma kupionych
+  name: string; //zamowienie
+  isAllegroPay?: boolean;// allegro Pay	
+  isBusinessOrder?: boolean; //na firme?
+  orderValue?: number;// suma kupionych
 
-  isInvoiceReceived: string;// faktura OK ?
-  isPackageReceived: string; // Przesyłka odebrana
+  isInvoiceReceived?: boolean;// faktura OK ?
+  isPackageReceived?: boolean; // Przesyłka odebrana
   receivedDate?: string;// Data odebrania -> 
 
-  isReturnIssued: string; //Zwrot zgłoszony
+  isReturnIssued?: boolean; //Zwrot zgłoszony
 
-  returnToDate: string;// odeslij do
-  returnCode: string;// kod zwrotu
-  returnTotalAmount: string; // kwota do zwrotu
+  returnToDate?: string;// odeslij do
+  returnCode?: string;// kod zwrotu
+  returnValue?: number; // kwota do zwrotu
 
-  isReturnSended: string;// Zwrot wysłany
-  isReturnDelivered: string;// Zwrot u sprzedającego
-  isCashReturned: string;// zwrot na koncie
-  isInvoiceCorrectionReceived: string;// korekta OK ?
+  isReturnSended?: boolean;// Zwrot wysłany
+  isReturnDelivered?: boolean;// Zwrot u sprzedającego
+  isCashReturned?: boolean;// zwrot na koncie
+  isInvoiceCorrectionReceived?: boolean;// korekta OK ?
 
-  isFinished: string; // ALL OK
-  note: string; // notatka
+  isFinished?: boolean; // ALL OK
+  comment?: string; // notatka
 }
+
+
+export const EXAMPLE_ROWS: IOrderRow[] = [
+  {
+    name: 'spieniacz do mleka ten drugi zwracany',
+    isAllegroPay: true,
+    isBusinessOrder: true,
+    orderValue: 188,
+    isPackageReceived: true,
+    returnCode: '889 465 645 2',
+    returnValue: 188,
+    isReturnSended: true,
+    isReturnDelivered: true,
+    isCashReturned: false,
+    isFinished: false,
+    comment: 'anycomm'
+  },
+  {
+    name: 'sonoff zwracany bo pomylka  ',
+    isAllegroPay: true,
+    isBusinessOrder: true,
+    orderValue: 56.12,
+    isPackageReceived: true,
+    returnCode: '889 444 555 2',
+    returnValue: 56.12,
+    isReturnSended: true,
+    isReturnDelivered: false,
+    isCashReturned: false,
+    isFinished: false,
+    comment: 'soncom'
+  },
+  {
+    name: 'ubranka z atomizerem  ',
+    isAllegroPay: true,
+    isBusinessOrder: false,
+    orderValue: 41.97,
+    isPackageReceived: true,
+    returnCode: '889 444 555 2',
+    returnValue: 24.68,
+    isReturnSended: true,
+    isReturnDelivered: false,
+    isCashReturned: false,
+    isFinished: false,
+
+  },
+]
 

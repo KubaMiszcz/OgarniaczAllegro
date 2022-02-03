@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Jak Życ</a>
+      <a class="navbar-brand" href="#">Ogarniacz Allegro</a>
   
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,8 +8,15 @@
       </button>
   
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="col navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="rosw navbar-nav meaas-auto maasb-2 msb-lg-0">
   
+            <div class="nav-item col-4 p-1 center ">
+              <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/orders-list']"><span class="navbar-item">Pending</span></a>
+            </div>
+
+            <div class="nav-item col-4 p-1 center ">
+              <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/archived-orders']"><span class="navbar-item">Archived</span></a>
+            </div>
           <!-- <div class="col-3">
             <div class="row nav-items d-flex justify-content-start">
   

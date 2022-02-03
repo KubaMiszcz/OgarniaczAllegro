@@ -1,3 +1,5 @@
+import { OrderServiceService } from './../services/order-service.service';
+import { IOrderRow, EXAMPLE_ROWS } from './../models/order';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders-table.component.scss']
 })
 export class OrdersTableComponent implements OnInit {
+  ordersList: IOrderRow[] = [];
 
-  constructor() { }
+  constructor(
+    private orderServiceService: OrderServiceService,
+  ) {
+  }
 
   ngOnInit(): void {
+    this.orderServiceService.ordersList$.subscribe(ol => this.ordersList = ol);
   }
 
 }
