@@ -42,7 +42,10 @@
       <td>{{order.returnValue}}</td>
 
       <td>{{order.isReturnSended}}</td>
-      <td>{{order.isReturnDelivered}}</td>
+      <td>
+        <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle" aria-hidden="true"></i>
+        <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
+      </td>
       <td>{{order.isCashReturned}}</td>
       <td>{{order.isInvoiceCorrectionReceived}}</td>
 
