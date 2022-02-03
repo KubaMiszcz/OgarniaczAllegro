@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+  height: 100%;
+}
+
+.modal-dialog {
+  border: 2px solid #007bfb;
+  border-radius: 10px;
+  filter: drop-shadow(2px 4px 6px black);
+
+  .modal-content {
+    border-radius: 8px;
+
+    .modal-header {
+      background-color: #bedeff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 2em;
+      padding: 0.5em;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px solid #007bfb;
+    }
+
+    .modal-footer {
+      padding: 0em;
+      border-radius: 0 0 8px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+
+.card {
+  border: 2px solid #007bfb;
+  border-radius: 10px;
+  filter: drop-shadow(2px 4px 6px black);
+
+  .card-header {
+    background-color: #bedeff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2em;
+    padding: 0.5em;
+    border-bottom: 1px solid #007bfb;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card-footer {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.background-red {
+  background-color: #ffb8b8;
+}
+
+.background-green {
+  background-color: #b8ffb8;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-text-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.align-items-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.align-items-right {
+  display: flex;
+  justify-content: flex-end;
+}
