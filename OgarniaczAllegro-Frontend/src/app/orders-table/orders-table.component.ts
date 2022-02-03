@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersTableComponent implements OnInit {
   ordersList: IOrderRow[] = [];
+  isEdited: IOrderRow = this.ordersList[0];
 
   constructor(
     private orderServiceService: OrderServiceService,
@@ -19,4 +20,8 @@ export class OrdersTableComponent implements OnInit {
     this.orderServiceService.ordersList$.subscribe(ol => this.ordersList = ol);
   }
 
+  onEdit(value: any) {
+    this.isEdited = value;
+    console.log(value);
+  }
 }

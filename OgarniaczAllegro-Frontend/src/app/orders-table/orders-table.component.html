@@ -1,57 +1,92 @@
-<table class="table table-hover table-striped">
+<table class="table table-sm table-hover table-striped">
   <thead>
     <tr>
-      <th scope="col" class="col">Name</th>
-      <th scope="col" class="col">Allegro Pay</th>
-      <th scope="col" class="col">Business / Private</th>
-      <th scope="col" class="col">Total</th>
+      <th scope="col" class="col text-center">Name</th>
+      <th scope="col" class="col text-center">Allegro Pay</th>
+      <th scope="col" class="col text-center">Business Private</th>
+      <th scope="col" class="col text-center">Total</th>
 
-      <th scope="col" class="col">Invoice Received</th>
-      <th scope="col" class="col">Package Received</th>
-      <th scope="col" class="col">Received Date</th>
+      <th scope="col" class="col text-center">Invoice Received</th>
+      <th scope="col" class="col text-center">Package Received</th>
+      <th scope="col" class="col text-center">Received Date</th>
 
-      <th scope="col" class="col">Return Issued</th>
+      <th scope="col" class="col text-center">Return Issued</th>
 
-      <th scope="col" class="col">Return To Date</th>
-      <th scope="col" class="col">Return Code</th>
-      <th scope="col" class="col">Return Total</th>
+      <th scope="col" class="col text-center">Return To&nbsp;Date</th>
+      <th scope="col" class="col text-center">Return Code</th>
+      <th scope="col" class="col text-center">Return Total</th>
 
-      <th scope="col" class="col">Return Sended</th>
-      <th scope="col" class="col">Return Delivered</th>
-      <th scope="col" class="col">Cash Returned</th>
-      <th scope="col" class="col">Invoice Correction Received</th>
+      <th scope="col" class="col text-center">Return Sended</th>
+      <th scope="col" class="col text-center">Return Delivered</th>
+      <th scope="col" class="col text-center">Cash Returned</th>
+      <th scope="col" class="col text-center">Invoice Corr&nbsp;Rcvd</th>
 
-      <th scope="col" class="col">Finished</th>
-      <th scope="col" class="col">Comment</th>
+      <th scope="col" class="col text-center">Finished</th>
+      <th scope="col" class="col text-center">Comment</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let order of ordersList">
-      <td>{{order.name}}</td>
-      <td>{{order.isAllegroPay}}</td>
-      <td>{{order.isBusinessOrder}}</td>
-      <td>{{order.orderValue | plnPipe}}</td>
-
-      <td>{{order.isInvoiceReceived}}</td>
-      <td>{{order.isPackageReceived}}</td>
-      <td>{{order.receivedDate}}</td>
-      <td>{{order.isReturnIssued}}</td>
-
-      <td>{{order.returnToDate}}</td>
-      <td>{{order.returnCode}}</td>
-      <td>{{order.returnValue}}</td>
-
-      <td>{{order.isReturnSended}}</td>
-      <td>
-        <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle" aria-hidden="true"></i>
-        <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
+    <tr *ngFor="let order of ordersList" (click)="onEdit(order)">
+      <td  class="col-6">
+        <span *ngIf="!(order?.name === isEdited?.name)">{{order.name}}</span><br>
+      
+          <div *ngIf="order?.name === isEdited?.name" class="col">
+            <input [(ngModel)]="order.name" type="text" class="form-control form-control-sm" id="colFormLabelSm" 
+            placeholder="col-form-label-sm">
+          </div>
       </td>
-      <td>{{order.isCashReturned}}</td>
+
+
+
+
+
+
+
+
+      <td class="text-center">
+        <div>
+          <input [(ngModel)]="order.isAllegroPay" class="form-check-input checkbox " type="checkbox" id="checkboxNoLabel" [value]="order.isAllegroPay" aria-label="...">
+        </div>
+      </td>
+
+      <td class="text-center ">
+        <div>
+          <input [(ngModel)]="order.isBusinessOrder" class="form-check-input checkbox " type="checkbox" id="checkboxNoLabel" [value]="order.isBusinessOrder" aria-label="..." >
+        </div>
+      </td>
+
+      <td class="text-center text-nowrap"> {{order.orderValue | plnPipe}}</td>
+
+      <!-- ============ -->
+      
+      <td class="text-center">{{order.isInvoiceReceived}}</td>
+      <td class="text-center">{{order.isPackageReceived}}</td>
+      <td class="text-center">{{order.receivedDate}}</td>
+      <td class="text-center">{{order.isReturnIssued}}</td>
+
+      <td class="text-center">{{order.returnToDate}}</td>
+      <td class="text-center">{{order.returnCode}}</td>
+      <td class="text-center text-nowrap">{{order.returnValue | plnPipe}}</td>
+
+      <td class="text-center">{{order.isReturnSended}}</td>
+      <td class="text-center">
+        <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle " aria-hidden="true"></i>
+        <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+      </td>
+      <td class="text-center">{{order.isCashReturned}}</td>
       <td>{{order.isInvoiceCorrectionReceived}}</td>
 
-      <td>{{order.isFinished}}</td>
+      <td class="text-center">{{order.isFinished}}</td>
       <td>{{order.comment}}</td>
     </tr>
+
+
+
+
+
+
+
 
   </tbody>
 </table>

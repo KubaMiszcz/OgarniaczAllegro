@@ -79,24 +79,7 @@ body {
   background-color: #b8ffb8;
 }
 
-.text-align-left {
-  text-align: left;
-}
-
-.text-text-center {
-  text-align: center;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
-.align-items-left {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.align-items-right {
-  display: flex;
-  justify-content: flex-end;
+.checkbox {
+  min-height: 2em;
+  min-width: 2em;
 }
