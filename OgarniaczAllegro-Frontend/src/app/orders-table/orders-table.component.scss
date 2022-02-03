@@ -1,1 +1,21 @@
+.name {
+  border-radius: 10px;
+}
 
+th,
+td {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-collapse: collapse;
+}
+
+.return-code {
+  font-size: 0.7rem;
+  overflow-y: hidden;
+  min-width: 3rem;
+}
+
+.return-to-date {
+  font-size: 0.7rem;
+  min-width: 6rem;
+}

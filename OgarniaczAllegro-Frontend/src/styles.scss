@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
 html,
@@ -6,57 +7,57 @@ body {
   height: 100%;
 }
 
-.modal-dialog {
-  border: 2px solid #007bfb;
-  border-radius: 10px;
-  filter: drop-shadow(2px 4px 6px black);
+// .modal-dialog {
+//   border: 2px solid #007bfb;
+//   border-radius: 10px;
+//   filter: drop-shadow(2px 4px 6px black);
 
-  .modal-content {
-    border-radius: 8px;
+//   .modal-content {
+//     border-radius: 8px;
 
-    .modal-header {
-      background-color: #bedeff;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 2em;
-      padding: 0.5em;
-      border-radius: 8px 8px 0 0;
-      border-bottom: 1px solid #007bfb;
-    }
+//     .modal-header {
+//       background-color: #bedeff;
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-start;
+//       height: 2em;
+//       padding: 0.5em;
+//       border-radius: 8px 8px 0 0;
+//       border-bottom: 1px solid #007bfb;
+//     }
 
-    .modal-footer {
-      padding: 0em;
-      border-radius: 0 0 8px 8px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-  }
-}
+//     .modal-footer {
+//       padding: 0em;
+//       border-radius: 0 0 8px 8px;
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-end;
+//     }
+//   }
+// }
 
 
 
-.card {
-  border: 2px solid #007bfb;
-  border-radius: 10px;
-  filter: drop-shadow(2px 4px 6px black);
+// .card {
+//   border: 2px solid #007bfb;
+//   border-radius: 10px;
+//   filter: drop-shadow(2px 4px 6px black);
 
-  .card-header {
-    background-color: #bedeff;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 2em;
-    padding: 0.5em;
-    border-bottom: 1px solid #007bfb;
-    border-radius: 8px 8px 0 0;
-  }
+//   .card-header {
+//     background-color: #bedeff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     height: 2em;
+//     padding: 0.5em;
+//     border-bottom: 1px solid #007bfb;
+//     border-radius: 8px 8px 0 0;
+//   }
 
-  .card-footer {
-    border-radius: 0 0 8px 8px;
-  }
-}
+//   .card-footer {
+//     border-radius: 0 0 8px 8px;
+//   }
+// }
 
 
 .text-bold {
@@ -80,6 +81,6 @@ body {
 }
 
 .checkbox {
-  min-height: 2em;
-  min-width: 2em;
+  min-height: 2rem;
+  min-width: 2rem;
 }

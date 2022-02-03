@@ -1,3 +1,4 @@
+import { IMyDate } from "./my-date";
 
 export interface IOrderRow {
   // seller:string;  // sprzedajacy
@@ -12,7 +13,7 @@ export interface IOrderRow {
 
   isReturnIssued?: boolean; //Zwrot zgłoszony
 
-  returnToDate?: string;// odeslij do
+  returnToDate?: IMyDate;// odeslij do
   returnCode?: string;// kod zwrotu
   returnValue?: number; // kwota do zwrotu
 
@@ -33,6 +34,7 @@ export const EXAMPLE_ROWS: IOrderRow[] = [
     isBusinessOrder: true,
     orderValue: 188,
     isPackageReceived: true,
+    returnToDate: { year: 2022, month: 1, day: 1 },
     returnCode: '889 465 645 2',
     returnValue: 188,
     isReturnSended: true,
