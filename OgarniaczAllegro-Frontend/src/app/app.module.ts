@@ -1,3 +1,4 @@
+import { PlnPipe } from './pipes/pln.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,6 +8,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { OrderRowComponent } from './order-row/order-row.component';
 import { OrdersTableComponent } from './orders-table/orders-table.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     OrderRowComponent,
     OrdersTableComponent,
-    FooterComponent
+    FooterComponent,
+    PlnPipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

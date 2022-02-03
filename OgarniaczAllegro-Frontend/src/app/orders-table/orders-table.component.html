@@ -30,7 +30,7 @@
       <td>{{order.name}}</td>
       <td>{{order.isAllegroPay}}</td>
       <td>{{order.isBusinessOrder}}</td>
-      <td>{{order.orderValue}}</td>
+      <td>{{order.orderValue | plnPipe}}</td>
 
       <td>{{order.isInvoiceReceived}}</td>
       <td>{{order.isPackageReceived}}</td>
