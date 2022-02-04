@@ -6,52 +6,33 @@ export interface IOrder {
   // seller:string;  // sprzedajacy
   name: string; //zamowienie
   isAllegroPay?: StatusEnum;// allegro Pay	
-  isBusinessOrder?: boolean; //na firme?
+  isBusinessOrder?: StatusEnum; //na firme?
   orderValue?: number;// suma kupionych
 
-  isInvoiceReceived?: boolean;// faktura OK ?
-  isPackageReceived?: boolean; // Przesyłka odebrana
+  isInvoiceReceived?: StatusEnum;// faktura OK ?
+  isPackageReceived?: StatusEnum; // Przesyłka odebrana
   receivedDate?: string;// Data odebrania -> 
 
-  isReturnIssued?: boolean; //Zwrot zgłoszony
+  isReturnIssued?: StatusEnum; //Zwrot zgłoszony
 
   returnToDate?: IMyDate;// odeslij do
   returnCode?: string;// kod zwrotu
   returnValue?: number; // kwota do zwrotu
 
-  isReturnSended?: boolean;// Zwrot wysłany
-  isReturnDelivered?: boolean;// Zwrot u sprzedającego
-  isCashReturned?: boolean;// zwrot na koncie
-  isInvoiceCorrectionReceived?: boolean;// korekta OK ?
+  isReturnSended?: StatusEnum;// Zwrot wysłany
+  isReturnDelivered?: StatusEnum;// Zwrot u sprzedającego
+  isCashReturned?: StatusEnum;// zwrot na koncie
+  isInvoiceCorrectionReceived?: StatusEnum;// korekta OK ?
 
-  isFinished: boolean; // ALL OK
+  isFinished: StatusEnum; // ALL OK
   comment?: string; // notatka
 }
 
-export class Order {
+export class Order implements IOrder {
   id = 0;
-  // seller:string;  // sprzedajacy
+  // seller:string;  // sprzedajacy 
   name = ''; //zamowienie
-  // isAllegroPay = StatusEnum.Unknown;// allegro Pay	
-  isBusinessOrder?: boolean; //na firme?
-  orderValue?: number;// suma kupionych
-
-  isInvoiceReceived?: boolean;// faktura OK ?
-  isPackageReceived?: boolean; // Przesyłka odebrana
-  receivedDate?: string;// Data odebrania -> 
-
-  isReturnIssued?: boolean; //Zwrot zgłoszony
-
-  returnToDate?: IMyDate;// odeslij do
-  returnCode?: string;// kod zwrotu
-  returnValue?: number; // kwota do zwrotu
-
-  isReturnSended?: boolean;// Zwrot wysłany
-  isReturnDelivered?: boolean;// Zwrot u sprzedającego
-  isCashReturned?: boolean;// zwrot na koncie
-  isInvoiceCorrectionReceived?: boolean;// korekta OK ?
-
-  isFinished = false; // ALL OK
+  isFinished = StatusEnum.No; // ALL OK
   comment?: string; // notatka
 }
 
@@ -65,48 +46,47 @@ export const EXAMPLE_ROWS: IOrder[] = [
   {
     id: 1,
     name: 'spieniacz do mleka ten drugi zwracany',
-    // isAllegroPay: StatusEnum.Yes,
-    isBusinessOrder: true,
+    isAllegroPay: StatusEnum.Yes,
+    isBusinessOrder: StatusEnum.Yes,
     orderValue: 188,
-    isPackageReceived: true,
+    isPackageReceived: StatusEnum.Yes,
     returnToDate: { year: 2022, month: 1, day: 1 },
     returnCode: '889 465 645 2',
     returnValue: 188,
-    isReturnSended: true,
-    isReturnDelivered: true,
-    isCashReturned: false,
-    isFinished: false,
+    isReturnSended: StatusEnum.Yes,
+    isReturnDelivered: StatusEnum.Yes,
+    isCashReturned: StatusEnum.No,
+    isFinished: StatusEnum.No,
     comment: 'anycomm'
   },
   {
     id: 2,
     name: 'sonoff zwracany bo pomylka  ',
     isAllegroPay: StatusEnum.No,
-    isBusinessOrder: true,
+    isBusinessOrder: StatusEnum.Yes,
     orderValue: 56.12,
-    isPackageReceived: true,
+    isPackageReceived: StatusEnum.Yes,
     returnCode: '889 444 555 2',
     returnValue: 56.12,
-    isReturnSended: true,
-    isReturnDelivered: false,
-    isCashReturned: false,
-    isFinished: false,
+    isReturnSended: StatusEnum.Yes,
+    isReturnDelivered: StatusEnum.No,
+    isCashReturned: StatusEnum.No,
+    isFinished: StatusEnum.No,
     comment: 'soncom'
   },
   {
     id: 3,
     name: 'ubranka z atomizerem  ',
     isAllegroPay: StatusEnum.Unknown,
-    isBusinessOrder: false,
+    isBusinessOrder: StatusEnum.No,
     orderValue: 41.97,
-    isPackageReceived: true,
+    isPackageReceived: StatusEnum.Yes,
     returnCode: '889 444 555 2',
     returnValue: 24.68,
-    isReturnSended: true,
-    isReturnDelivered: false,
-    isCashReturned: false,
-    isFinished: false,
-
+    isReturnSended: StatusEnum.Yes,
+    isReturnDelivered: StatusEnum.No,
+    isCashReturned: StatusEnum.No,
+    isFinished: StatusEnum.No,
   },
 ]
 
