@@ -1,14 +1,16 @@
 
-  <td class="col-6">
-      <button *ngIf="order.id===0" type="button" class="btn btn-primary add-button">
-        <div class="add-icon"><i class="fa fa-plus-square " aria-hidden="true"></i></div>
-      </button>
+  <td class="col-12">
+      <div class="d-flex align-items-center">
+        <button *ngIf="order.id===0" type="button" class="btn btn-primary add-button" (click)="addNew()">
+          <div class="add-icon"><i class="fa fa-plus-square " aria-hidden="true"></i></div>
+        </button>
 
-      <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
-      <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
-                class="form-control name" rows="3" id="exampleFormControlTextarea1" 
-                aria-label="With textarea">
-          </textarea>
+        <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
+        <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
+                  class="form-control name" rows="3" id="exampleFormControlTextarea1" 
+                  aria-label="With textarea">
+            </textarea>
+          </div>
   </td>
 
 

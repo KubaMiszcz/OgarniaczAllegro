@@ -27,7 +27,7 @@
   </thead>
   <tbody>
 
-    <tr app-order-row (click)="selectRow(null)">
+    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true" (click)="selectRow(null)" (editComplete)="onAddNew($event)">
     </tr>
 
     <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)" (click)="selectRow(order)">

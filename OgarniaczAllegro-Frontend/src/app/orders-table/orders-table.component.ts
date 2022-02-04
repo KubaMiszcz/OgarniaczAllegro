@@ -11,21 +11,28 @@ import { Component, OnInit } from '@angular/core';
 export class OrdersTableComponent implements OnInit {
   ordersList: IOrder[] = [];
   editedOrder = new Order();
+  showAddNewRow = false;
 
   constructor(
     private orderServiceService: OrderServiceService,
   ) {
+    this.orderServiceService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
+
     this.orderServiceService.ordersList$.subscribe(ol => this.ordersList = ol);
-    this.orderServiceService.editedOrder$.subscribe(o => this.editedOrder = o);
+    this.orderServiceService.selectedOrder$.subscribe(o => this.editedOrder = o);
   }
 
   ngOnInit(): void { }
 
   selectRow(order: IOrder | null) {
-    this.orderServiceService.editedOrder$.next(order ?? new Order());
+    this.orderServiceService.selectedOrder$.next(order ?? new Order());
   }
 
   isInEdit(order: IOrder) {
     return order.id === this.editedOrder.id;
+  }
+
+  onAddNew(value: IOrder) {
+    this.orderServiceService.addNewOrder(value);
   }
 }

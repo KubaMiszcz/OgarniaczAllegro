@@ -1,21 +1,25 @@
-.name {
-  border-radius: 10px;
-}
+.table {
+  border: 1px solid grey;
 
-th,
-td {
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  border-collapse: collapse;
-}
+  .name {
+    border-radius: 10px;
+  }
 
-.return-code {
-  font-size: 0.7rem;
-  overflow-y: hidden;
-  min-width: 3rem;
-}
+  th,
+  td {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-collapse: collapse;
+  }
 
-.return-to-date {
-  font-size: 0.7rem;
-  min-width: 6rem;
+  .return-code {
+    font-size: 0.7rem;
+    overflow-y: hidden;
+    min-width: 3rem;
+  }
+
+  .return-to-date {
+    font-size: 0.7rem;
+    min-width: 6rem;
+  }
 }
