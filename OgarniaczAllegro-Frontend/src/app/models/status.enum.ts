@@ -1,6 +1,6 @@
 export enum StatusEnum {
-  Yes = 'Yes',
   No = 'No',
+  Yes = 'Yes',
   NA = 'NA',
   Unknown = 'Unknown',
 }

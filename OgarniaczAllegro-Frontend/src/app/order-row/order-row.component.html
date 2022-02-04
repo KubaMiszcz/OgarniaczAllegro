@@ -1,12 +1,14 @@
 <td class="col-12">
   <div class="d-flex align-items-center">
+
     <button *ngIf="order.id===0" type="button" class="btn btn-primary add-button" (click)="addNew()">
-      <div class="add-icon"><i class="fa fa-plus-square " aria-hidden="true"></i></div>
+      <div class="add-icon"><i class="fa fa-plus " aria-hidden="true"></i></div>
     </button>
 
     <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
-              class="form-control name" rows="3" id="exampleFormControlTextarea1"
+              class="form-control name" id="exampleFormControlTextarea1"
+              [rows]="order.id===0 ? 1 : 3" 
               aria-label="With textarea">
             </textarea>
   </div>
@@ -19,7 +21,7 @@
 
 
 <td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.isBusinessOrder"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.hasInvoice" (click)="triStateClicked('hasInvoice')"></app-tri-state-check-box>
 </td>
 
 
@@ -34,41 +36,56 @@
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isInvoiceReceived" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="..."
-         [disabled]="order.isBusinessOrder ?? false">
+  <app-tri-state-check-box [(value)]="order.isInvoiceReceived"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isPackageReceived" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isPackageReceived"></app-tri-state-check-box>
 </td>
 
 
-<td class="text-center">
-  <input [(ngModel)]="order.receivedDate" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
-</td>
-
-
-<td class="text-center">
-  <input [(ngModel)]="order.isReturnIssued" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
-</td>
-
-
-<!-- <td class="text-center">{{order.returnToDate}}</td> -->
 <td class="text-center ">
-  <form class="form-inline">
-    <div class="form-group">
-      <div class="input-group">
+  <!-- <form class="form-inline"> -->
+    <!-- <div class="form-group"> -->
+      <!-- <div class="input-group"> -->
+      <div class="d-flex">
+        <span *ngIf="!isInEdit"
+              class="return-to-date"
+              (click)="d.toggle()">{{order?.receivedDate | myDate}}
+        </span>
+
+        <input [hidden]="!isInEdit"
+               [(ngModel)]="order.receivedDate"
+               class="form-control return-to-date"
+               name="dp"
+               (click)="d.toggle()"
+               ngbDatepicker #d="ngbDatepicker"
+               [placement]="'bottom'">
+        <!-- (closed)="onDateSelected(order)" -->
+        <!-- [positionTarget]="buttonEl" -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </form> -->
+      </div>
+</td>
+
+
+<td class="text-center">
+  <app-tri-state-check-box [(value)]="order.isReturnIssued"></app-tri-state-check-box>
+</td>
+
+
+<td class="text-center ">
+  <!-- <form class="form-inline"> -->
+    <!-- <div class="form-group"> -->
+      <!-- <div class="input-group"> -->
+      <div class="d-flex">
         <span *ngIf="!isInEdit"
               class="return-to-date"
               (click)="d.toggle()">{{order?.returnToDate | myDate}}
         </span>
 
-        <!-- [(ngModel)]="order.returnToDate"  -->
         <input [hidden]="!isInEdit"
                [(ngModel)]="order.returnToDate"
                class="form-control return-to-date"
@@ -77,25 +94,23 @@
                ngbDatepicker #d="ngbDatepicker"
                [placement]="'bottom'">
         <!-- (closed)="onDateSelected(order)" -->
-        <!-- placeholder="{{order.returnToDate | myDate}}" -->
         <!-- [positionTarget]="buttonEl" -->
-
-
-        <!-- <div class="input-group-append">
-              <button #buttonEl class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
-            </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </form> -->
       </div>
-    </div>
-  </form>
 </td>
 
 
 <td class="text-center">
-  <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
-  <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
-            id="exampleFormControlTextarea1" class="form-control name return-code" rows="4"
-            aria-label="With textarea">
-       </textarea>
+  <div class="d-flex">
+    <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
+    <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
+              id="exampleFormControlTextarea1" class="form-control name return-code" 
+              [rows]="order.id===0 ? 1 : 4" 
+              aria-label="With textarea">
+            </textarea>
+  </div>
 </td>
 
 
@@ -107,14 +122,12 @@
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isReturnSended" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isReturnSended"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isReturnDelivered" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isReturnDelivered"></app-tri-state-check-box>
 </td>
 
 
@@ -126,27 +139,27 @@
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isCashReturned" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isCashReturned"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isInvoiceCorrectionReceived" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isInvoiceCorrectionReceived"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <input [(ngModel)]="order.isFinished" class="form-check-input checkbox "
-         type="checkbox" id="checkboxNoLabel" aria-label="...">
+  <app-tri-state-check-box [(value)]="order.isFinished"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <span *ngIf="!isInEdit" class="">{{order.comment}}</span>
-  <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
-            id="exampleFormControlTextarea1" class="form-control name" rows="3"
-            aria-label="With textarea">
-     </textarea>
+  <div class="d-flex">
+    <span *ngIf="!isInEdit" class="">{{order.comment}}</span>
+    <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
+    id="exampleFormControlTextarea1" class="form-control name" 
+    [rows]="order.id===0 ? 1 : 3" 
+    aria-label="With textarea">
+  </textarea>
+</div>
 </td>

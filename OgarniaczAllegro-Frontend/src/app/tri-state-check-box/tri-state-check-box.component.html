@@ -7,7 +7,9 @@
             'btn-na' : value === statuses.NA,
             'btn-unknown' : !value || value === statuses.Unknown
      } "
-        (click)="toggleState()">
+        (click)="toggleState()"
+        [disabled]="disabled"
+        [hidden]="hidden">
   <span *ngIf="value === statuses.Yes"><i class="fa fa-check" aria-hidden="true"></i></span>
   <span *ngIf="value === statuses.No"><i class="fa fa-times" aria-hidden="true"></i></span>
   <span *ngIf="value === statuses.NA"><i class="fa fa-minus" aria-hidden="true"></i></span>

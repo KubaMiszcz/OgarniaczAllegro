@@ -15,6 +15,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class TriStateCheckBoxComponent implements OnInit {
   @Input() value?: StatusEnum = StatusEnum.Unknown;
   @Output() valueChange = new EventEmitter<StatusEnum>();
+  @Input() disabled = false;
+  @Input() hidden = false;
 
   statuses = StatusEnum;
 

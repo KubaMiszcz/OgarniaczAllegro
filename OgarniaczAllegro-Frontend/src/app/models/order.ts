@@ -5,13 +5,13 @@ export interface IOrder {
   id: number;
   // seller:string;  // sprzedajacy
   name: string; //zamowienie
-  isAllegroPay?: StatusEnum;// allegro Pay	
-  isBusinessOrder?: StatusEnum; //na firme?
+  isAllegroPay?: StatusEnum;// allegro Pay
+  hasInvoice?: StatusEnum; //na firme?
   orderValue?: number;// suma kupionych
 
   isInvoiceReceived?: StatusEnum;// faktura OK ?
   isPackageReceived?: StatusEnum; // Przesyłka odebrana
-  receivedDate?: string;// Data odebrania -> 
+  receivedDate?: IMyDate;// Data odebrania -> 
 
   isReturnIssued?: StatusEnum; //Zwrot zgłoszony
 
@@ -32,8 +32,22 @@ export class Order implements IOrder {
   id = 0;
   // seller:string;  // sprzedajacy 
   name = ''; //zamowienie
-  isFinished = StatusEnum.No; // ALL OK
-  comment?: string; // notatka
+  isAllegroPay?: StatusEnum = StatusEnum.Unknown;
+  hasInvoice?: StatusEnum = StatusEnum.Unknown;
+  // hasInvoice = StatusEnum.Unknown; //na firme?
+  // orderValue?: number;// suma kupionych
+  isInvoiceReceived?: StatusEnum = StatusEnum.No;// faktura OK ?
+  isPackageReceived?: StatusEnum = StatusEnum.No; // Przesyłka odebrana
+  // receivedDate?: IMyDate;// Data odebrania -> 
+  isReturnIssued?: StatusEnum = StatusEnum.No; //Zwrot zgłoszony
+  returnToDate?: IMyDate;// odeslij do
+  // returnCode?: string;// kod zwrotu
+  // returnValue?: number; // kwota do zwrotu
+  isReturnSended?: StatusEnum = StatusEnum.No;// Zwrot wysłany
+  isReturnDelivered?: StatusEnum = StatusEnum.No;// Zwrot u sprzedającego
+  isCashReturned?: StatusEnum = StatusEnum.No;// zwrot na koncie
+  isInvoiceCorrectionReceived?: StatusEnum = StatusEnum.No;// korekta OK ?
+  isFinished = StatusEnum.No;// ALL OK
 }
 
 
@@ -47,7 +61,8 @@ export const EXAMPLE_ROWS: IOrder[] = [
     id: 1,
     name: 'spieniacz do mleka ten drugi zwracany',
     isAllegroPay: StatusEnum.Yes,
-    isBusinessOrder: StatusEnum.Yes,
+    hasInvoice: StatusEnum.Yes,
+    isInvoiceReceived: StatusEnum.Yes,
     orderValue: 188,
     isPackageReceived: StatusEnum.Yes,
     returnToDate: { year: 2022, month: 1, day: 1 },
@@ -63,7 +78,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
     id: 2,
     name: 'sonoff zwracany bo pomylka  ',
     isAllegroPay: StatusEnum.No,
-    isBusinessOrder: StatusEnum.Yes,
+    hasInvoice: StatusEnum.Yes,
     orderValue: 56.12,
     isPackageReceived: StatusEnum.Yes,
     returnCode: '889 444 555 2',
@@ -78,7 +93,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
     id: 3,
     name: 'ubranka z atomizerem  ',
     isAllegroPay: StatusEnum.Unknown,
-    isBusinessOrder: StatusEnum.No,
+    hasInvoice: StatusEnum.No,
     orderValue: 41.97,
     isPackageReceived: StatusEnum.Yes,
     returnCode: '889 444 555 2',

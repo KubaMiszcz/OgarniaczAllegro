@@ -12,7 +12,7 @@ td {
 .return-code {
   font-size: 0.7rem;
   overflow-y: hidden;
-  min-width: 3rem;
+  // height: calc(0.9*6rem);
 }
 
 .return-to-date {
@@ -21,12 +21,22 @@ td {
 }
 
 .checkbox {
-  min-height: 2rem;
+  // min-height: 2rem;
   min-width: 2rem;
 }
 
-.add-button {}
+.add-button {
+  // min-width: 2.5;
+  // min-height: 2.5rem;
+  // padding: 0;
+  // max-width: 2.5rem;
+  // max-height: 2.5rem;
+  // width: 2.5rem;
+  // height: 2.5rem;
+  margin-right: 0.25rem;
+}
 
 .add-icon {
-  font-size: 1rem;
+  // font-size: 2rem;
+  // margin-top: -17px;
 }
