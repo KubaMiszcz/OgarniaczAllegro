@@ -1,10 +1,11 @@
+import { StatusEnum } from './../models/status.enum';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-const STATES: (boolean | undefined)[] = [
-  true,
-  false,
-  undefined,
-]
+// const STATES: (boolean | undefined)[] = [
+//   true,
+//   false,
+//   undefined,
+// ]
 
 @Component({
   selector: 'app-tri-state-check-box',
@@ -12,25 +13,21 @@ const STATES: (boolean | undefined)[] = [
   styleUrls: ['./tri-state-check-box.component.scss']
 })
 export class TriStateCheckBoxComponent implements OnInit {
-  @Input() value?: boolean | undefined = undefined;
-  @Output() valueChange = new EventEmitter<boolean | undefined>();
+  @Input() value?: StatusEnum = StatusEnum.Unknown;
+  @Output() valueChange = new EventEmitter<StatusEnum>();
 
-  states = STATES;
+  statuses = StatusEnum;
 
-
-  // @Input() inputModel: string;
-  // @Output() inputModelChange = new EventEmitter<string>();
-
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   toggleState() {
-    let nextStateIdx = this.states.findIndex(s => this.value === s) + 1;
-    nextStateIdx = nextStateIdx >= this.states.length ? 0 : nextStateIdx;
-    this.value = this.states[nextStateIdx];
+    let statuses = Object.values(StatusEnum);
+    let nextStatusIdx = statuses.findIndex(s => this.value === s) + 1;
+    nextStatusIdx = nextStatusIdx >= statuses.length ? 0 : nextStatusIdx;
+    this.value = statuses[nextStatusIdx];
     this.valueChange.emit(this.value);
   }
 }

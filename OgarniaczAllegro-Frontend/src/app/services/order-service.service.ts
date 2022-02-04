@@ -1,3 +1,4 @@
+import { StatusEnum } from './../models/status.enum';
 import { EXAMPLE_ROWS, IOrder, Order } from './../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
@@ -13,6 +14,17 @@ export class OrderServiceService {
   showAddNewOrderRow$ = new BehaviorSubject<boolean>(true);
 
   constructor() {
+    let order = new Order();
+    order.name = 'testtt';
+    this.ordersList$.value.push(order);
+    this.ordersList$.next(EXAMPLE_ROWS);
+    let order2 = new Order();
+    order2.name = 'testtt22';
+    this.ordersList$.value.push(order2);
+    this.ordersList$.next(EXAMPLE_ROWS);
+
+
+
     this.ordersList$.next(EXAMPLE_ROWS);
   }
 

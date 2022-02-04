@@ -1,5 +1,5 @@
 import { OrderServiceService } from './../services/order-service.service';
-import { IOrder, EXAMPLE_ROWS, Order } from './../models/order';
+import { IOrder, Order } from './../models/order';
 import { Component, OnInit } from '@angular/core';
 
 

@@ -1,10 +1,11 @@
+import { StatusEnum } from './status.enum';
 import { IMyDate } from "./my-date";
 
 export interface IOrder {
   id: number;
   // seller:string;  // sprzedajacy
   name: string; //zamowienie
-  isAllegroPay?: boolean;// allegro Pay	
+  isAllegroPay?: StatusEnum;// allegro Pay	
   isBusinessOrder?: boolean; //na firme?
   orderValue?: number;// suma kupionych
 
@@ -31,7 +32,7 @@ export class Order {
   id = 0;
   // seller:string;  // sprzedajacy
   name = ''; //zamowienie
-  isAllegroPay?: boolean;// allegro Pay	
+  // isAllegroPay = StatusEnum.Unknown;// allegro Pay	
   isBusinessOrder?: boolean; //na firme?
   orderValue?: number;// suma kupionych
 
@@ -64,7 +65,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
   {
     id: 1,
     name: 'spieniacz do mleka ten drugi zwracany',
-    isAllegroPay: true,
+    // isAllegroPay: StatusEnum.Yes,
     isBusinessOrder: true,
     orderValue: 188,
     isPackageReceived: true,
@@ -80,7 +81,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
   {
     id: 2,
     name: 'sonoff zwracany bo pomylka  ',
-    isAllegroPay: true,
+    isAllegroPay: StatusEnum.No,
     isBusinessOrder: true,
     orderValue: 56.12,
     isPackageReceived: true,
@@ -95,7 +96,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
   {
     id: 3,
     name: 'ubranka z atomizerem  ',
-    isAllegroPay: true,
+    isAllegroPay: StatusEnum.Unknown,
     isBusinessOrder: false,
     orderValue: 41.97,
     isPackageReceived: true,
