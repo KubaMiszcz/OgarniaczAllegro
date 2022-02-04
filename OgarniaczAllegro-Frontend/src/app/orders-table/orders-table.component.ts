@@ -35,4 +35,10 @@ export class OrdersTableComponent implements OnInit {
   onAddNew(value: IOrder) {
     this.orderServiceService.addNewOrder(value);
   }
+
+
+  aa(event: any) {
+    console.log(event);
+
+  }
 }

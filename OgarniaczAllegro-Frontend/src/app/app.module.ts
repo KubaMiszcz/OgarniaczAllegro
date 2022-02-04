@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DatePipe } from '@angular/common';
+import { TriStateCheckBoxComponent } from './tri-state-check-box/tri-state-check-box.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { DatePipe } from '@angular/common';
     FooterComponent,
     PlnPipe,
     MyDatePipe,
+    TriStateCheckBoxComponent,
   ],
   imports: [
     FormsModule,

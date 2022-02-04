@@ -11,6 +11,7 @@ export class OrderRowComponent implements OnInit {
   @Input() order: IOrder = new Order();
   @Input() isInEdit = false;
 
+
   @Output() editComplete = new EventEmitter<IOrder>();
   // editedField = '';
 

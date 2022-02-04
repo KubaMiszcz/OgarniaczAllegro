@@ -15,8 +15,10 @@
 
 
   <td class="text-center">
-    <input [(ngModel)]="order.isAllegroPay" class="form-check-input checkbox "
-           type="checkbox" id="checkboxNoLabel" aria-label="...">
+    <!-- <input [(ngModel)]="order.isAllegroPay" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="..."> -->
+
+           <app-tri-state-check-box [(value)]="order.isAllegroPay"></app-tri-state-check-box>
   </td>
 
 
@@ -38,7 +40,8 @@
 
   <td class="text-center">
     <input [(ngModel)]="order.isInvoiceReceived" class="form-check-input checkbox "
-           type="checkbox" id="checkboxNoLabel" aria-label="...">
+           type="checkbox" id="checkboxNoLabel" aria-label="..."
+           [disabled]="order.isBusinessOrder ?? false">
   </td>
 
 
