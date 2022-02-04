@@ -1,24 +1,153 @@
-<div class="row">
-  <div class="col">Name</div>
-  <div class="col">Allegro Pay</div>
-  <div class="col">Business/Private</div>
-  <div class="col">Total</div>
 
-  <div class="col">Invoice Received</div>
-  <div class="col">Package Received</div>
-  <div class="col">Received Date</div>
+  <td class="col-6">
+      <button *ngIf="order.id===0" type="button" class="btn btn-primary add-button">
+        <div class="add-icon"><i class="fa fa-plus-square " aria-hidden="true"></i></div>
+      </button>
 
-  <div class="col">Return Issued</div>
+      <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
+      <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
+                class="form-control name" rows="3" id="exampleFormControlTextarea1" 
+                aria-label="With textarea">
+          </textarea>
+  </td>
 
-  <div class="col">Return To Date</div>
-  <div class="col">Return Code</div>
-  <div class="col">Return Total</div>
 
-  <div class="col">Return Sended</div>
-  <div class="col">Return Delivered</div>
-  <div class="col">Cash Returned</div>
-  <div class="col">Invoice Correction Received</div>
+  <td class="text-center">
+    <input [(ngModel)]="order.isAllegroPay" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
 
-  <div class="col">Finished</div>
-  <div class="col">Comment</div>
-</div>
+
+  <td class="text-center ">
+    <input [(ngModel)]="order.isBusinessOrder" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center text-nowrap">
+    <span *ngIf="!isInEdit" class="">{{order.orderValue | plnPipe}}</span>
+    <input *ngIf="isInEdit" [(ngModel)]="order.orderValue"
+           class="form-control" type="numeric">
+  </td>
+
+
+  <!-- ============ -->
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isInvoiceReceived" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isPackageReceived" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.receivedDate" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isReturnIssued" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <!-- <td class="text-center">{{order.returnToDate}}</td> -->
+  <td class="text-center ">
+    <form class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <span *ngIf="!isInEdit"
+                class="return-to-date"
+                (click)="d.toggle()">{{order?.returnToDate | myDate}}
+          </span>
+
+          <!-- [(ngModel)]="order.returnToDate"  -->
+          <input [hidden]="!isInEdit"
+                 [(ngModel)]="order.returnToDate"
+                 class="form-control return-to-date"
+                 name="dp"
+                 (click)="d.toggle()"
+                 ngbDatepicker #d="ngbDatepicker"
+                 [placement]="'bottom'">
+          <!-- (closed)="onDateSelected(order)" -->
+          <!-- placeholder="{{order.returnToDate | myDate}}" -->
+          <!-- [positionTarget]="buttonEl" -->
+
+
+          <!-- <div class="input-group-append">
+              <button #buttonEl class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div> -->
+        </div>
+      </div>
+    </form>
+  </td>
+
+
+  <td class="text-center">
+    <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
+    <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
+              id="exampleFormControlTextarea1" class="form-control name return-code" rows="4"
+              aria-label="With textarea">
+       </textarea>
+  </td>
+
+
+  <td class="text-center text-nowrap">
+    <span *ngIf="!isInEdit" class="">{{order.returnValue | plnPipe}}</span>
+    <input *ngIf="isInEdit" [(ngModel)]="order.returnValue"
+           class="form-control" type="text">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isReturnSended" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isReturnDelivered" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <!-- <td class="text-center">
+      <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle " aria-hidden="true"></i>
+      <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
+      <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </td> -->
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isCashReturned" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isInvoiceCorrectionReceived" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center">
+    <input [(ngModel)]="order.isFinished" class="form-check-input checkbox "
+           type="checkbox" id="checkboxNoLabel" aria-label="...">
+  </td>
+
+
+  <td class="text-center" >
+    <span *ngIf="!isInEdit" class="">{{order.comment}}</span>
+    <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
+              id="exampleFormControlTextarea1" class="form-control name" rows="3"
+              aria-label="With textarea">
+     </textarea>
+  </td>
+

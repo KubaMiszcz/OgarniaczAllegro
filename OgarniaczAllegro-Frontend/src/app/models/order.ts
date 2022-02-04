@@ -1,6 +1,7 @@
 import { IMyDate } from "./my-date";
 
-export interface IOrderRow {
+export interface IOrder {
+  id: number;
   // seller:string;  // sprzedajacy
   name: string; //zamowienie
   isAllegroPay?: boolean;// allegro Pay	
@@ -22,13 +23,46 @@ export interface IOrderRow {
   isCashReturned?: boolean;// zwrot na koncie
   isInvoiceCorrectionReceived?: boolean;// korekta OK ?
 
-  isFinished?: boolean; // ALL OK
+  isFinished: boolean; // ALL OK
+  comment?: string; // notatka
+}
+
+export class Order {
+  id = 0;
+  // seller:string;  // sprzedajacy
+  name = ''; //zamowienie
+  isAllegroPay?: boolean;// allegro Pay	
+  isBusinessOrder?: boolean; //na firme?
+  orderValue?: number;// suma kupionych
+
+  isInvoiceReceived?: boolean;// faktura OK ?
+  isPackageReceived?: boolean; // Przesyłka odebrana
+  receivedDate?: string;// Data odebrania -> 
+
+  isReturnIssued?: boolean; //Zwrot zgłoszony
+
+  returnToDate?: IMyDate;// odeslij do
+  returnCode?: string;// kod zwrotu
+  returnValue?: number; // kwota do zwrotu
+
+  isReturnSended?: boolean;// Zwrot wysłany
+  isReturnDelivered?: boolean;// Zwrot u sprzedającego
+  isCashReturned?: boolean;// zwrot na koncie
+  isInvoiceCorrectionReceived?: boolean;// korekta OK ?
+
+  isFinished = false; // ALL OK
   comment?: string; // notatka
 }
 
 
-export const EXAMPLE_ROWS: IOrderRow[] = [
+
+
+
+
+
+export const EXAMPLE_ROWS: IOrder[] = [
   {
+    id: 1,
     name: 'spieniacz do mleka ten drugi zwracany',
     isAllegroPay: true,
     isBusinessOrder: true,
@@ -44,6 +78,7 @@ export const EXAMPLE_ROWS: IOrderRow[] = [
     comment: 'anycomm'
   },
   {
+    id: 2,
     name: 'sonoff zwracany bo pomylka  ',
     isAllegroPay: true,
     isBusinessOrder: true,
@@ -58,6 +93,7 @@ export const EXAMPLE_ROWS: IOrderRow[] = [
     comment: 'soncom'
   },
   {
+    id: 3,
     name: 'ubranka z atomizerem  ',
     isAllegroPay: true,
     isBusinessOrder: false,

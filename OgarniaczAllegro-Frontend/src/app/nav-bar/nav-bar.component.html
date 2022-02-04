@@ -1,23 +1,52 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ogarniacz Allegro</a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="rosw navbar-nav meaas-auto maasb-2 msb-lg-0">
-  
-            <div class="nav-item col-4 p-1 center ">
-              <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/orders-list']"><span class="navbar-item">Pending</span></a>
-            </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Ogarniacz Allegro</a>
 
-            <div class="nav-item col-4 p-1 center ">
-              <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/archived-orders']"><span class="navbar-item">Archived</span></a>
-            </div>
-          <!-- <div class="col-3">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="rosw navbar-nav">
+
+        <div class="nav-item col p-1 center ">
+          <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/orders-list']"><span class="navbar-item">Pending</span></a>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/archived-orders']"><span
+                  class="navbar-item">Archived</span></a>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="addNewOrder()">
+            Add New
+          </button>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="saveNewOrder()">
+            {{saveButtonLabel}}
+          </button>
+        </div>
+
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="save()">
+            SaveALL
+          </button>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="load()">
+            LoadALL
+          </button>
+        </div>
+
+
+
+        <!-- <div class="col-3">
             <div class="row nav-items d-flex justify-content-start">
   
               <div class="nav-item col-4 p-1 center ">
@@ -36,8 +65,8 @@
               </div>
             </div>
           </div> -->
-  
-          <!-- <div class="col-6 my-auto">
+
+        <!-- <div class="col-6 my-auto">
             <div class="nav-item">
               <button type="button" name="" id=""
                       class="btn btn-light btn-outline-dark btn-mdd btn-block msb-4 next-turn-btn"
@@ -46,8 +75,8 @@
             </div>
   
           </div> -->
-  
-          <!-- <div class="col-3">
+
+        <!-- <div class="col-3">
             <div class="row nav-items d-flex justify-content-end">
   
               <div class="nav-item col-4 p-1 center ">
@@ -64,14 +93,10 @@
   
             </div>
           </div> -->
-  
-  
-  
-        </div>
+
+
+
       </div>
     </div>
-  </nav>
-  
-  
-  
-  
+  </div>
+</nav>

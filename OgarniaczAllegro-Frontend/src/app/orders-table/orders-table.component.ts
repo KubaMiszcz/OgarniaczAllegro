@@ -1,7 +1,6 @@
 import { OrderServiceService } from './../services/order-service.service';
-import { IOrderRow, EXAMPLE_ROWS } from './../models/order';
+import { IOrder, EXAMPLE_ROWS, Order } from './../models/order';
 import { Component, OnInit } from '@angular/core';
-import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -10,53 +9,23 @@ import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./orders-table.component.scss']
 })
 export class OrdersTableComponent implements OnInit {
-  ordersList: IOrderRow[] = [];
-
-  editedRow: IOrderRow = this.ordersList[0];
-  NGBselectedDate: NgbDateStruct = { year: 0, month: 0, day: 0 };
-
-
-  // date: { year: number, month: number };
-
-
+  ordersList: IOrder[] = [];
+  editedOrder = new Order();
 
   constructor(
     private orderServiceService: OrderServiceService,
-    private ngbCalendar: NgbCalendar,
   ) {
     this.orderServiceService.ordersList$.subscribe(ol => this.ordersList = ol);
-
+    this.orderServiceService.editedOrder$.subscribe(o => this.editedOrder = o);
   }
 
   ngOnInit(): void { }
 
-  onEdit(value: any, colName: string | null) {
-    this.editedRow = this.editedRow?.name === value?.name ? null : value;
-    console.log(value);
+  selectRow(order: IOrder | null) {
+    this.orderServiceService.editedOrder$.next(order ?? new Order());
   }
 
-  // getNGBreturnToDate(value: Date | undefined) {
-  // return `${value?.getFullYear}-${value?.getMonth}-${value?.getDay}`
-  // let res: NgbDateStruct = {
-  //   "year": 2022,
-  //   "month": 2,
-  //   "day": 3
-  // }
-  // return res
-  // }
-
-  onDateSelected(value: IOrderRow) {
-    // console.log(value);
-    // let order = this.ordersList.find(o => o.name === value.name);
-    // order!.returnToDate = new Date(this.orderReturnToDate());
-    // console.log(order?.returnToDate);
-
-    // // returnToDate.setFullYear =
-
+  isInEdit(order: IOrder) {
+    return order.id === this.editedOrder.id;
   }
-
-  orderReturnToDate() {
-    // return `${this.NGBselectedDate.year}-${this.NGBselectedDate?.month}-${this.NGBselectedDate?.day}`;
-  }
-
 }
