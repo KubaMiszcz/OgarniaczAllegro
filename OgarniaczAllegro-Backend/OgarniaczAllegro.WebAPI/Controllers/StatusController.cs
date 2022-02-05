@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OgarniaczAllegro.DAL;
+using OgarniaczAllegro.DAL.Models;
 using OgarniaczAllegro.WebAPI.DTO;
 using OgarniaczAllegro.WebAPI.Repositories;
 using System;
@@ -11,24 +14,33 @@ namespace OgarniaczAllegro.WebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class OrderController : ControllerBase
+    public class StatusController : ControllerBase
     {
-        private readonly IOrderRepository _orderRepository;
+        private readonly IStatusRepository _statusService;
         private readonly ILogger<OrderController> _logger;
 
-        public OrderController(
-            IOrderRepository orderRepository,
+        public StatusController(
+            IStatusRepository statusService,
             ILogger<OrderController> logger)
         {
-            _orderRepository = orderRepository;
+            _statusService = statusService;
             _logger = logger;
         }
 
         [HttpGet]
-        //public IEnumerable<IOrderDTO> Get()
         public IActionResult Get()
+        //public ActionResult<List<StatusDTO>> Get()
         {
-            return Ok();
+            //try
+            //{
+                var res = _statusService.GetStatuses();
+                return Ok(res);
+            //}
+            //catch (Exception e)
+            //{
+            //    _logger.LogError(e.Message, e);
+            //    return StatusCode(StatusCodes.Status500InternalServerError);
+            //}
         }
 
         // GET api/<ValuesController>/5
