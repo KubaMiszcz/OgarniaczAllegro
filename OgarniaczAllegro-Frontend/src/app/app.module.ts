@@ -1,5 +1,5 @@
-import { MyDatePipe } from './pipes/my-date.pipe';
-import { PlnPipe } from './pipes/pln.pipe';
+import { MyDatePipe } from './shared/pipes/my-date.pipe';
+import { PlnPipe } from './shared/pipes/pln.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DatePipe } from '@angular/common';
-import { TriStateCheckBoxComponent } from './tri-state-check-box/tri-state-check-box.component';
+import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-state-check-box.component';
 
 
 @NgModule({

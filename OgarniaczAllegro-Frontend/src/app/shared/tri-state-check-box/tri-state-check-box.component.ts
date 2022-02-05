@@ -1,4 +1,4 @@
-import { StatusEnum } from '../models/status.enum';
+import { StatusEnum } from '../../models/status.enum';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
