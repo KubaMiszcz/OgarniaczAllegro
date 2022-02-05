@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OgarniaczAllegro.WebAPI.Interfaces;
+using OgarniaczAllegro.WebAPI.DTO;
+using OgarniaczAllegro.WebAPI.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,25 +13,22 @@ namespace OgarniaczAllegro.WebAPI.Controllers
     [Route("[controller]")]
     public class OrderController : ControllerBase
     {
+        private readonly IOrderRepository _orderRepository;
         private readonly ILogger<OrderController> _logger;
 
-        public OrderController(ILogger<OrderController> logger)
+        public OrderController(
+            IOrderRepository orderRepository,
+            ILogger<OrderController> logger)
         {
+            _orderRepository = orderRepository;
             _logger = logger;
         }
 
         [HttpGet]
         //public IEnumerable<IOrderDTO> Get()
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            var rng = new Random();
-            return new List<string> { "orderwordks", "ssss" }; // Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            //{
-            //    Date = DateTime.Now.AddDays(index),
-            //    TemperatureC = rng.Next(-20, 55),
-            //    Summary = Summaries[rng.Next(Summaries.Length)]
-            //})
-            //.ToArray();
+            return Ok();
         }
 
         // GET api/<ValuesController>/5

@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Ogarniacz Allegro</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="rosw navbar-nav">
+
+        <div class="nav-item col p-1 center ">
+          <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/orders-list']"><span class="navbar-item">Pending</span></a>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/archived-orders']"><span
+                  class="navbar-item">Archived</span></a>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="toggleAddNewRow()">
+            {{(showAddNewRow$ | async) ? 'Hide ':'Add '}} new
+            <!-- {{showAddNewRow ? 'Hide ':'Add '}} new -->
+          </button>
+        </div>
+
+        <!-- <div *ngIf="saveButtonLabel!==''" class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="saveOrder()">
+            {{saveButtonLabel}}
+          </button>
+        </div> -->
+
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="save()">
+            SaveALL
+          </button>
+        </div>
+
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="load()">
+            LoadALL
+          </button>
+        </div>
+
+
+
+        <!-- <div class="col-3">
+            <div class="row nav-items d-flex justify-content-start">
+  
+              <div class="nav-item col-4 p-1 center ">
+                <a class="nav-link d-flex active center" aria-current="page" [routerLink]="['/game']"><span class="navbar-item">Gra</span></a>
+              </div>
+  
+              <div class="nav-item col-4 p-1 center">
+                <a class="nav-link d-flex center" aria-current="page" [routerLink]="['/player-info']">
+                  <span class="navbar-item">Dane Gracza</span>
+                </a>
+              </div>
+  
+              <div class="nav-item col-4 p-1 center  ">
+                <span class="navbar-item">Date: </span>
+                <span class="navbar-item">DAAAA</span>
+              </div>
+            </div>
+          </div> -->
+
+        <!-- <div class="col-6 my-auto">
+            <div class="nav-item">
+              <button type="button" name="" id=""
+                      class="btn btn-light btn-outline-dark btn-mdd btn-block msb-4 next-turn-btn"
+                      ><span style="font-size: 2em;">Nastepny tydzien</span>
+              </button>
+            </div>
+  
+          </div> -->
+
+        <!-- <div class="col-3">
+            <div class="row nav-items d-flex justify-content-end">
+  
+              <div class="nav-item col-4 p-1 center ">
+                <a class="nav-link d-flex center" [routerLink]="['/top-100']" aria-current="page">
+                  <span class="navbar-item">Top 100</span>
+                </a>
+              </div>
+  
+              <div class="nav-item col-4 p-1 center ">
+                <a class="nav-link d-flex center" [routerLink]="['/help']" aria-current="page">
+                  <span class="navbar-item">Pomoc</span>
+                </a>
+              </div>
+  
+            </div>
+          </div> -->
+
+
+
+      </div>
+    </div>
+  </div>
+</nav>

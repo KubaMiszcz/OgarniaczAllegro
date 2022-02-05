@@ -1,0 +1,38 @@
+<table class="table table-sm table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col" class="col text-center">Name</th>
+      <th scope="col" class="col text-center">Allegro Pay</th>
+      <th scope="col" class="col text-center">Has Invoice</th>
+      <th scope="col" class="col text-center">Total Value</th>
+
+      <th scope="col" class="col text-center">Invoice Received</th>
+      <th scope="col" class="col text-center">Package Received</th>
+      <th scope="col" class="col text-center">Received Date</th>
+
+      <th scope="col" class="col text-center">Return Issued</th>
+
+      <th scope="col" class="col text-center">Return To&nbsp;Date</th>
+      <th scope="col" class="col text-center">Return Code</th>
+      <th scope="col" class="col text-center">Return Total</th>
+
+      <th scope="col" class="col text-center">Return Sended</th>
+      <th scope="col" class="col text-center">Return Delivered</th>
+      <th scope="col" class="col text-center">Cash Returned</th>
+      <th scope="col" class="col text-center">Invoice Corr&nbsp;Rcvd</th>
+
+      <th scope="col" class="col text-center">Finished</th>
+      <th scope="col" class="col text-center">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true" (click)="selectRow(null)" (editComplete)="onAddNew($event)">
+    </tr>
+
+    <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)" (click)="selectRow(order)">
+    </tr>
+
+
+  </tbody>
+</table>

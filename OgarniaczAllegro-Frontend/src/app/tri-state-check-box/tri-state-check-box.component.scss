@@ -1,0 +1,28 @@
+.checkbox {
+  // max-height: 1rem;
+  // max-width: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.btn-yes {
+  background-color: green;
+}
+
+.btn-no {
+  background-color: red;
+}
+
+.btn-na {
+  background-color: orange;
+  color: darkblue;
+}
+
+.btn-unknown {
+  background-color: lightgray;
+  color: darkgray;
+}
