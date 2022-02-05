@@ -1,5 +1,4 @@
-import { StatusEnum } from './../models/status.enum';
-import { EXAMPLE_ROWS, IOrder, Order } from './../models/order';
+import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 

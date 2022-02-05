@@ -1,19 +1,22 @@
 <button
-        type="button" name="" id="id" name="name"
-        class="btn btn-primary btn-sm m-1 checkbox"
-        [ngClass]="{
+  type="button" id="id" name="name"
+  class="btn btn-primary btn-sm m-1 checkbox"
+  [ngClass]="{
             'btn-yes' : value === statuses.Yes,
             'btn-no' : value === statuses.No,
             'btn-na' : value === statuses.NA,
             'btn-unknown' : !value || value === statuses.Unknown
      } "
-        (click)="toggleState()"
-        [disabled]="disabled"
-        [hidden]="hidden">
+  (click)="toggleState()"
+  [disabled]="disabled"
+  [hidden]="hidden"
+  >
+
   <span *ngIf="value === statuses.Yes"><i class="fa fa-check" aria-hidden="true"></i></span>
   <span *ngIf="value === statuses.No"><i class="fa fa-times" aria-hidden="true"></i></span>
   <span *ngIf="value === statuses.NA"><i class="fa fa-minus" aria-hidden="true"></i></span>
   <span *ngIf="value === statuses.Unknown"><i class="fa fa-question" aria-hidden="true"></i></span>
   <span *ngIf="!value"><i class="fa fa-question" aria-hidden="true"></i></span>
-  <input [hidden]="true" type="text" [(ngModel)]="value" (ngModelChange)="toggleState()" />
+  
+  <input [hidden]="true" type="text" [(ngModel)]="value" (ngModelChange)="toggleState()"/>
 </button>

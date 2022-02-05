@@ -1,6 +1,7 @@
 import { Order } from './../models/order';
 import { OrderServiceService } from './../services/order-service.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  showAddNewRow = true;
+  // showAddNewRow = true;
+  showAddNewRow$ = new Observable<boolean>();
   // saveButtonLabel = '';
   // selectedOrder = new Order();
 
@@ -25,8 +27,10 @@ export class NavBarComponent implements OnInit {
   }
 
   toggleAddNewRow() {
-    this.showAddNewRow = !this.showAddNewRow;
-    this.orderServiceService.showAddNewOrderRow$.next(this.showAddNewRow);
+    this.showAddNewRow$ = this.orderServiceService.showAddNewOrderRow$;
+
+    // this.showAddNewRow = !this.showAddNewRow;
+    // this.orderServiceService.showAddNewOrderRow$.next(this.showAddNewRow);
   }
 
   // saveOrder() {

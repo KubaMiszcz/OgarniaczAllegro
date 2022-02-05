@@ -1,11 +1,5 @@
-import { StatusEnum } from './../models/status.enum';
+import { StatusEnum } from '../models/status.enum';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-
-// const STATES: (boolean | undefined)[] = [
-//   true,
-//   false,
-//   undefined,
-// ]
 
 @Component({
   selector: 'app-tri-state-check-box',
@@ -20,7 +14,8 @@ export class TriStateCheckBoxComponent implements OnInit {
 
   statuses = StatusEnum;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
