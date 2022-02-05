@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgarniaczAllegro.DAL.Models
 {
-    [Table("OgarniaczAllegro.Status")]
+    [Table("OgarniaczAllegro_Status")]
     public class Status
     {
         [Key]

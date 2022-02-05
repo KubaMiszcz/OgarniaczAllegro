@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OgarniaczAllegro.DAL.Models
 {
-    [Table("OgarniaczAllegro.Order")]
+    [Table("OgarniaczAllegro_Order")]
     public class Order
     {
         [Key]
