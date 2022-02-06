@@ -1,7 +1,8 @@
 import { Order } from './../models/order';
-import { OrderService } from './../services/order-service.service';
+import { OrderService } from '../services/order.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { StatusService } from '../services/status.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,40 +10,30 @@ import { Observable } from 'rxjs';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  // showAddNewRow = true;
-  showAddNewRow$ = new Observable<boolean>();
-  // saveButtonLabel = '';
-  // selectedOrder = new Order();
+  showAddNewRow = true;
 
   constructor(
-    private orderServiceService: OrderService,
+    private orderService: OrderService,
+    private statusService: StatusService,
   ) { }
 
-  ngOnInit(): void {
-    // this.orderServiceService.selectedOrder$.subscribe(o => {
-    // this.selectedOrder = o;
-    // this.saveButtonLabel = o.id === 0 ? 'Save New order' : '';
-    // });
+  ngOnInit(): void { }
 
+  testDEV() {
+    console.log(this.statusService.statuses)
   }
 
   toggleAddNewRow() {
-    this.showAddNewRow$ = this.orderServiceService.showAddNewOrderRow$;
-
-    // this.showAddNewRow = !this.showAddNewRow;
-    // this.orderServiceService.showAddNewOrderRow$.next(this.showAddNewRow);
+    this.showAddNewRow = !this.showAddNewRow;
+    this.orderService.showAddNewOrderRow$.next(this.showAddNewRow);
   }
 
-  // saveOrder() {
-  //   this.orderServiceService.saveNewOrder(this.selectedOrder);
-  // }
-
   save() {
-    localStorage.setItem('orders', JSON.stringify(this.orderServiceService.ordersList$.value));
+    localStorage.setItem('orders', JSON.stringify(this.orderService.ordersList$.value));
   }
 
   load() {
-    this.orderServiceService.ordersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
-    console.log(this.orderServiceService.ordersList$.value);
+    this.orderService.ordersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
+    console.log(this.orderService.ordersList$.value);
   }
 }

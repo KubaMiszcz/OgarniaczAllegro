@@ -4,7 +4,7 @@ export interface IUser {
   fullName?: string;
 }
 
-export const USER: IUser = {
+export const CURRENT_USER: IUser = {
   id: 1,
   username: 'test',
   fullName: 'test',

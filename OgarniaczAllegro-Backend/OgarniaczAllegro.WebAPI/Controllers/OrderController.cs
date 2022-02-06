@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OgarniaczAllegro.WebAPI.DTO;
 using OgarniaczAllegro.WebAPI.Repositories;
@@ -40,8 +41,23 @@ namespace OgarniaczAllegro.WebAPI.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        //public IActionResult Post([FromBody] OrderDTO value)
+        public IActionResult Post([FromBody] OrderDTO order)
         {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return LogAndReturn500(e);
+            }
+        }
+
+        private StatusCodeResult LogAndReturn500(Exception e)
+        {
+            _logger.LogError(e.Message, e);
+            return StatusCode(StatusCodes.Status500InternalServerError);
         }
 
         // PUT api/<ValuesController>/5

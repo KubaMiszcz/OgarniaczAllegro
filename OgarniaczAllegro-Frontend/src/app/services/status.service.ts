@@ -1,5 +1,5 @@
-import { IStatus } from './../models/status.model';
-import { USER as CURRENT_USER } from '../models/user.model';
+import { IStatus } from '../models/status.model';
+import { CURRENT_USER as CURRENT_USER } from '../models/user.model';
 import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
@@ -12,22 +12,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class StatusService {
-  private apiPath = environment.apiPath;
+  private apiPath = `${environment.apiPath}/status`;
 
   statuses: IStatus[] = [];
 
   constructor(
     private http: HttpClient,
   ) {
-    // this.currentUser$.next(CURRENT_USER);
+    this.fetchStatuses();
   }
 
-  getStatuses() {
-    this.http.get<IStatus[]>(`${this.apiPath}/status`).subscribe(s => {
+  fetchStatuses() {
+    this.http.get<IStatus[]>(`${this.apiPath}`).subscribe(s => {
       this.statuses = s;
-      console.log(s);
-    }
-    );
-
+    });
   }
+
 }

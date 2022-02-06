@@ -1,28 +1,31 @@
-﻿namespace OgarniaczAllegro.WebAPI.DTO
+﻿using System;
+
+namespace OgarniaczAllegro.WebAPI.DTO
 {
     public class OrderDTO
     {
-        string Order { get; set; } //zamowienie
-        string IsAllegroPay { get; set; } // allegro Pay	
-        string HasInvoice { get; set; } //na firme?
-        string OrderTotalAmount { get; set; } // suma kupionych
+        public int Id { get; set; }
+        public string Name { get; set; } //zamowienie
+        public string IsAllegroPay { get; set; } // allegro Pay	
+        public string HasInvoice { get; set; } //na firme?
+        public decimal? OrderValue { get; set; } // suma kupionych
 
-        string IsInvoiceReceived { get; set; } // faktura OK ?
-        string IsPackageReceived { get; set; } // Przesyłka odebrana
-        string ReceivedDate { get; set; } // Data odebrania -> 
+        public string IsInvoiceReceived { get; set; } // faktura OK ?
+        public string IsPackageReceived { get; set; } // Przesyłka odebrana
+        public MyDateDTO ReceivedDate { get; set; } // Data odebrania -> 
 
-        string IsReturnIssued { get; set; } //Zwrot zgłoszony
+        public string IsReturnIssued { get; set; } //Zwrot zgłoszony
 
-        string ReturnToDate { get; set; } // odeslij do
-        string ReturnCode { get; set; } // kod zwrotu
-        string ReturnTotalAmount { get; set; } // kwota do zwrotu
+        public MyDateDTO ReturnToDate { get; set; } // odeslij do
+        public string ReturnCode { get; set; } // kod zwrotu
+        public decimal? ReturnValue { get; set; } // kwota do zwrotu
 
-        string IsReturnSended { get; set; } // Zwrot wysłany
-        string IsReturnDelivered { get; set; } // Zwrot u sprzedającego
-        string IsCashReturned { get; set; } // zwrot na koncie
-        string IsInvoiceCorrectionReceived { get; set; } // korekta OK ?
+        public string IsReturnSended { get; set; } // Zwrot wysłany
+        public string IsReturnDelivered { get; set; } // Zwrot u sprzedającego
+        public string IsCashReturned { get; set; } // zwrot na koncie
+        public string IsInvoiceCorrectionReceived { get; set; } // korekta OK ?
 
-        string IsFinished { get; set; } // ALL OK
-        string Note { get; set; } // notatka
+        public string IsFinished { get; set; } // ALL OK
+        public string Note { get; set; } // notatka
     }
 }

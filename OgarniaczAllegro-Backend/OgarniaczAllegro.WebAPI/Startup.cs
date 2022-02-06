@@ -48,7 +48,11 @@ namespace OgarniaczAllegro.WebAPI
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
-                { builder.WithOrigins(CorsAllowedHost); });
+                {
+                    builder.WithOrigins(CorsAllowedHost)
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+                });
             });
 
 
