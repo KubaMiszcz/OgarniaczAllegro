@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DatePipe } from '@angular/common';
 import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-state-check-box.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-stat
   imports: [
     FormsModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
   ],

@@ -1,4 +1,4 @@
-import { OrderServiceService } from './../services/order-service.service';
+import { OrderService } from './../services/order-service.service';
 import { IOrder, Order } from './../models/order';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +14,7 @@ export class OrdersTableComponent implements OnInit {
   showAddNewRow = false;
 
   constructor(
-    private orderServiceService: OrderServiceService,
+    private orderServiceService: OrderService,
   ) {
     this.orderServiceService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
 

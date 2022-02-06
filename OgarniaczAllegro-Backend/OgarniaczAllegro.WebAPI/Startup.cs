@@ -40,8 +40,23 @@ namespace OgarniaczAllegro.WebAPI
 
             //services.AddDatabaseDeveloperPageExceptionFilter();
 
+
+            //var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+            var CorsAllowedHost = Configuration.GetValue<string>("AllowedHosts");
+
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                { builder.WithOrigins(CorsAllowedHost); });
+            });
+
+
+
             services.AddControllers();
 
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IStatusRepository, StatusRepository>();
         }
 
@@ -57,9 +72,13 @@ namespace OgarniaczAllegro.WebAPI
                 app.UseExceptionHandler("/Error");
             }
 
+            //app.UseCors(MyAllowSpecificOrigins);
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
             //app.UseMvcWithDefaultRoute();

@@ -1,5 +1,5 @@
 import { Order } from './../models/order';
-import { OrderServiceService } from './../services/order-service.service';
+import { OrderService } from './../services/order-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -15,7 +15,7 @@ export class NavBarComponent implements OnInit {
   // selectedOrder = new Order();
 
   constructor(
-    private orderServiceService: OrderServiceService,
+    private orderServiceService: OrderService,
   ) { }
 
   ngOnInit(): void {
