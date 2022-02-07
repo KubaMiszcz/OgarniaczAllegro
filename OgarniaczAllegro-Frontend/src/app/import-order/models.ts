@@ -1,5 +1,3 @@
-// declare module namespace {
-
 export interface Address {
   firstName: string;
   lastName: string;
@@ -401,6 +399,3 @@ export interface MyorderGroup {
 export interface RootObject {
   myorderGroup: MyorderGroup;
 }
-
-// }
-
