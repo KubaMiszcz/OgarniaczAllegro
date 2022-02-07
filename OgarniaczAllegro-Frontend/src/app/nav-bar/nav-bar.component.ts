@@ -36,4 +36,6 @@ export class NavBarComponent implements OnInit {
     this.orderService.ordersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
     console.log(this.orderService.ordersList$.value);
   }
+
+
 }

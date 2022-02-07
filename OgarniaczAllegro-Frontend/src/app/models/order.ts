@@ -1,3 +1,4 @@
+import { IUser } from './user.model';
 import { StatusEnum } from './status.enum';
 import { IMyDate } from "./my-date";
 
@@ -26,6 +27,19 @@ export interface IOrder {
 
   isFinished: StatusEnum; // ALL OK
   comment?: string; // notatka
+
+
+
+  // owner?:IUser; //remove nullable
+  // finishingDare?: IMyDate;
+  // putchase as object
+  // return as object
+  // data odebrania paczki
+  // czas na zwrot +14dni albo custom
+  // Zwrot zgłoszony +data
+  // Zwrot w drodze  +data
+  // Zwrot u sprzedającego +data
+  // Zwrot zakończony +data
 }
 
 export class Order implements IOrder {

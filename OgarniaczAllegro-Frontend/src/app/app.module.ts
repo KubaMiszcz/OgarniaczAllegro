@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DatePipe } from '@angular/common';
 import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-state-check-box.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ImportOrderComponent } from './import-order/import-order.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     PlnPipe,
     MyDatePipe,
     TriStateCheckBoxComponent,
+    ImportOrderComponent,
   ],
   imports: [
     FormsModule,
