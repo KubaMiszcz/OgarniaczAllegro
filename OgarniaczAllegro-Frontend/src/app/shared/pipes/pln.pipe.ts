@@ -9,6 +9,6 @@ export class PlnPipe implements PipeTransform {
       return 'n/a';
     }
 
-    return (Math.round(value * 10) / 10).toFixed(2) + ' zł';
+    return (Math.round(value * 100) / 100).toFixed(2) + ' zł';
   }
 }

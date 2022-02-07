@@ -1,3 +1,4 @@
+import { HelperService } from './../services/helper.service';
 import { StatusEnum } from './../models/status.enum';
 import { IOrder, Order } from './../models/order';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
@@ -15,7 +16,9 @@ export class OrderRowComponent implements OnInit {
   @Output() editComplete = new EventEmitter<IOrder>();
   // editedField = '';
 
-  constructor() { }
+  constructor(
+    private helperService: HelperService
+  ) { }
 
   ngOnInit(): void { }
 
@@ -25,7 +28,7 @@ export class OrderRowComponent implements OnInit {
 
   triStateClicked(colName: string) {
     switch (colName) {
-      case nameof<Order>('hasInvoice'):
+      case this.helperService.nameof<Order>('hasInvoice'):
 
         // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.Yes ? StatusEnum.NA : StatusEnum.Unknown;
         // console.log(colName, this.order[colName], this.order.isInvoiceCorrectionReceived)
@@ -38,6 +41,10 @@ export class OrderRowComponent implements OnInit {
     }
   }
 
+
+  onLostFocus(event: any) {
+
+    this.editComplete.emit(this.order);
+  }
 }
 
-const nameof = <T>(name: keyof T) => name;

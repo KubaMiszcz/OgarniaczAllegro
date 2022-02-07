@@ -1,4 +1,4 @@
-import { OrderServiceService } from './../services/order-service.service';
+import { OrderService } from '../services/order.service';
 import { IOrder, Order } from './../models/order';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,31 +14,30 @@ export class OrdersTableComponent implements OnInit {
   showAddNewRow = false;
 
   constructor(
-    private orderServiceService: OrderServiceService,
+    private orderService: OrderService,
   ) {
-    this.orderServiceService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
+    this.orderService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
 
-    this.orderServiceService.ordersList$.subscribe(ol => this.ordersList = ol);
-    this.orderServiceService.selectedOrder$.subscribe(o => this.editedOrder = o);
+    this.orderService.ordersList$.subscribe(ol => this.ordersList = ol);
+    this.orderService.selectedOrder$.subscribe(o => this.editedOrder = o);
   }
 
   ngOnInit(): void { }
 
   selectRow(order: IOrder | null) {
-    this.orderServiceService.selectedOrder$.next(order ?? new Order());
+    this.orderService.selectOrder(order);
   }
 
   isInEdit(order: IOrder) {
     return order.id === this.editedOrder.id;
   }
 
-  onAddNew(value: IOrder) {
-    this.orderServiceService.addNewOrder(value);
+  addNewOrder(order: IOrder) {
+    this.orderService.addNewOrder(order);
   }
 
-
-  aa(event: any) {
-    console.log(event);
-
+  updateOrder(order: IOrder) {
+    this.orderService.updateOrder(order);
   }
+
 }

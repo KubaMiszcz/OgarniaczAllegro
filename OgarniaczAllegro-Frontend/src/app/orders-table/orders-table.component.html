@@ -27,10 +27,14 @@
   </thead>
   <tbody>
 
-    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true" (click)="selectRow(null)" (editComplete)="onAddNew($event)">
+    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true"
+        (click)="selectRow(null)"
+        (editComplete)="addNewOrder($event)">
     </tr>
 
-    <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)" (click)="selectRow(order)">
+    <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)"
+        (click)="selectRow(order)"
+        (editComplete)="updateOrder($event)">
     </tr>
 
 

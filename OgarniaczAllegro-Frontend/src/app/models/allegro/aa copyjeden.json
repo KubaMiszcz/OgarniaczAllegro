@@ -1,0 +1,461 @@
+{
+  "myorderGroup": {
+    "groupId": "c2af3f4a-e796-34b5-a9a3-0942b45bbdf7",
+    "myorders": [
+      {
+        "id": "68dc4241-822c-11ec-8853-81b5175aaf53",
+        "purchaseId": "68cab610-822c-11ec-8853-81b5175aaf53",
+        "seller": {
+          "id": "41677639",
+          "login": "graal_2015",
+          "address": {
+            "firstName": "Kamil",
+            "lastName": "Gralak",
+            "zipCode": "95-100",
+            "city": "Zgierz",
+            "country": "PL",
+            "street": "Urzędnicza 27",
+            "phoneNumber": "+48 570 945 429",
+            "company": "Przedsiębiorstwo Wielobranżowe GRAAL Kamil Gralak",
+            "taxId": "7322075071",
+            "regon": "360506628",
+            "email": "1pfaontutv@allegromail.pl"
+          },
+          "contactDetails": {
+            "phones": [
+              {
+                "number": "+48570945429",
+                "numberLabel": "+48 570 945 429",
+                "numberLabelMasked": "+48 570  *** ***"
+              }
+            ],
+            "emails": [
+              {
+                "address": "1pfaontutv@allegromail.pl",
+                "addressMasked": "1*********@a**********.pl"
+              }
+            ],
+            "openingHours": [
+              {
+                "daysLabel": "poniedziałek - piątek",
+                "daysShortLabel": "pon. - pt.",
+                "hoursLabels": [
+                  "17:00 - 19:00"
+                ]
+              },
+              {
+                "daysLabel": "sobota - niedziela",
+                "daysShortLabel": "sob. - nd.",
+                "hoursLabels": [
+                  "zamknięte"
+                ]
+              }
+            ]
+          }
+        },
+        "offers": [
+          {
+            "id": "10813961257",
+            "title": "SKRZYNKA NARZĘDZIOWA QBRICK SYSTEM PRO TOOLBOX",
+            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fskrzynka-narzedziowa-qbrick-system-pro-toolbox-10813961257?navCategoryId=306189&snapshot=MjAyMi0wMS0zMVQwMDoyNjoyOC42OTRaO2J1eWVyO2JiZTM4ZjJmMzc5ZTQxYjgxNTlhMzkzMzgzYTJiMWJjM2JlMzg2NTM3OTE5MjJiNTZhZDAxODg4YTQ2MzU4MjI%3D",
+            "unitPrice": {
+              "amount": "94.44",
+              "currency": "PLN"
+            },
+            "originalUnitPrice": {
+              "amount": "94.44",
+              "currency": "PLN"
+            },
+            "quantity": 1,
+            "type": "UNIT",
+            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F113d37\u002Fd33aee12436c94d011ac8eb44e2e",
+            "productId": "69b10c6a-3f61-41fa-b036-ad83391bca4c",
+            "orderDate": "2022-01-31T00:26:28.694Z",
+            "gold": false,
+            "pharmacy": false,
+            "auction": false,
+            "toRate": true,
+            "orderOfferId": "68dc4240-822c-11ec-8853-81b5175aaf53",
+            "originalOfferPrice": {
+              "amount": "94.44",
+              "currency": "PLN"
+            },
+            "offerPrice": {
+              "amount": "94.44",
+              "currency": "PLN"
+            },
+            "showOriginalPrice": false
+          }
+        ],
+        "delivery": {
+          "cost": {
+            "amount": "0.00",
+            "currency": "PLN"
+          },
+          "name": "Allegro Paczkomaty InPost",
+          "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
+          "id": "68fc7470-822c-11ec-b292-2540091e29fc",
+          "address": {
+            "id": "70df85b7-e65c-4fd2-a791-e72738b569ec",
+            "firstName": "Jakub",
+            "lastName": "Bełch",
+            "city": "Rzeszów",
+            "street": "Osmeckiego 41\u002F16",
+            "countryCode": "PL",
+            "zipCode": "35-506",
+            "phoneNumber": "534 883 128"
+          },
+          "generalDelivery": {
+            "id": "222574",
+            "name": "Paczkomat RZE10N",
+            "description": "Przy przedszkolu",
+            "address": {
+              "street": "Brydaka 10A",
+              "code": "35-001",
+              "city": "Rzeszów"
+            }
+          },
+          "discount": {
+            "originalCost": {
+              "amount": "8.99",
+              "currency": "PLN"
+            },
+            "type": "FREEBOX",
+            "planType": "FREEBOX_STANDARD"
+          },
+          "status": "DELIVERED",
+          "timestamp": "2022-02-02T17:57:20.000Z",
+          "paymentType": {
+            "name": "płatne z góry",
+            "type": "PREPAID"
+          }
+        },
+        "totalCost": {
+          "amount": "94.44",
+          "currency": "PLN"
+        },
+        "summary": {
+          "totalCost": {
+            "amount": "94.44",
+            "currency": "PLN"
+          },
+          "exchangeRateDate": "2022-01-31T00:26:31.288Z",
+          "showExchangeRateInformation": false
+        },
+        "payment": {
+          "id": "6c128e11-822c-11ec-bb65-e7e2e7fe6949",
+          "provider": "PAYU",
+          "amount": {
+            "amount": "94.44",
+            "currency": "PLN"
+          },
+          "method": "Karta płatnicza",
+          "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
+          "status": "COMPLETED",
+          "date": "2022-01-31T00:26:31.288Z",
+          "isInstallments": false,
+          "isMultipleSellers": false,
+          "cardMask": "482436******6807"
+        },
+        "createDate": "2022-01-31T00:26:18.993Z",
+        "orderDate": "2022-01-31T00:26:28.694Z",
+        "serviceCountry": "PL",
+        "hiddenInMyOrders": false,
+        "boughtOnDevice": "DESKTOP",
+        "cancelled": false,
+        "status": {
+          "primary": {
+            "status": "RETURNED",
+            "hint": "Zwrócony pt. 04 lut. 2022."
+          },
+          "traits": [
+            "DELIVERY_SMART",
+            "IS_SURCHARGE_ALLOWED"
+          ],
+          "actions": [
+            {
+              "type": "HIDE_ORDER",
+              "enabled": true
+            },
+            {
+              "type": "BUY_AGAIN",
+              "enabled": true
+            },
+            {
+              "type": "RATE_SELLER",
+              "enabled": true,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Wystaw ocenę do"
+                },
+                {
+                  "type": "SPACE"
+                },
+                {
+                  "type": "TEXT",
+                  "value": "1 maja 2022, 2:26"
+                }
+              ]
+            },
+            {
+              "type": "RETURN_PRODUCTS",
+              "enabled": false,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Zwróciłeś wszystkie przedmioty z tego zamówienia."
+                }
+              ]
+            },
+            {
+              "type": "QUESTION_TO_SELLER",
+              "enabled": true
+            },
+            {
+              "type": "DISCUSSION_ASK_FOR_HELP",
+              "enabled": true,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 30.07.2022, 02:26. W razie potrzeby udzielimy Ci wsparcia."
+                }
+              ]
+            },
+            {
+              "type": "RATE_PRODUCT",
+              "enabled": true
+            }
+          ]
+        },
+        "coins": {
+          "total": 0
+        },
+        "invoiceAddress": {
+          "id": "60f931f0f0282b439374fa22",
+          "zipCode": "35-506",
+          "city": "Rzeszów",
+          "countryCode": "PL",
+          "street": "płk. Kazimierza Iranka-Osmeckiego 41\u002F16",
+          "company": "Jakub Bełch it-kom",
+          "taxId": "8133395094"
+        },
+        "timelines": [
+          {
+            "status": "DELIVERED",
+            "waybillId": "695100969235001132481095",
+            "details": [
+              {
+                "type": "TEXT",
+                "value": "2 lut. 2022, 18:57"
+              }
+            ],
+            "steps": [
+              {
+                "type": "PAYMENT_PAID",
+                "hint": "31 sty. 2022, 01:26",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "TO_BE_SENT",
+                "hint": "Od 31. sty. 11:51",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "IN_TRANSIT",
+                "hint": "Od 1. lut. 15:14",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "AVAILABLE_FOR_PICKUP",
+                "hint": "Od 2. lut. 11:27",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "DELIVERED",
+                "hint": "2 lut. 18:57",
+                "active": true,
+                "error": false
+              }
+            ],
+            "pickup": {
+              "point": {
+                "id": "222574",
+                "name": "Paczkomat RZE10N",
+                "description": "Przy przedszkolu",
+                "address": {
+                  "city": "Rzeszów",
+                  "code": "35-001",
+                  "street": "Brydaka 10A"
+                }
+              }
+            },
+            "carrier": {
+              "id": "INPOST",
+              "name": "InPost",
+              "url": "https:\u002F\u002Finpost.pl\u002Fpl\u002Fpomoc\u002Fznajdz-przesylke?parcel=695100969235001132481095"
+            },
+            "detailedHistoryAvailable": true,
+            "alert": {}
+          }
+        ],
+        "isFulfilment": false,
+        "groupId": "c2af3f4a-e796-34b5-a9a3-0942b45bbdf7",
+        "rescissions": {
+          "rescissions": [
+            {
+              "rescissionId": "f83a37ac-e1db-4fe1-8d01-3e1c490b1750",
+              "status": "SHIPMENT_SELECTED",
+              "shipmentExpirationDate": "2022-02-18T22:59:59.012Z",
+              "sellerLogin": "graal_2015",
+              "requestDate": "2022-02-04T19:21:08.012Z",
+              "referenceNumber": "P033\u002F2022",
+              "timelineStatus": {
+                "status": "IN_TRANSIT",
+                "label": "Zwrot w drodze",
+                "hint": "Od 5 lut 09:51",
+                "steps": [
+                  {
+                    "type": "CREATED",
+                    "active": false,
+                    "label": "Zwrot zgłoszony",
+                    "hint": "Od 4 lut 20:21"
+                  },
+                  {
+                    "type": "IN_TRANSIT",
+                    "active": true,
+                    "label": "Zwrot w drodze",
+                    "hint": "Od 5 lut 09:51"
+                  },
+                  {
+                    "type": "DELIVERED",
+                    "active": false,
+                    "label": "Zwrot u sprzedającego"
+                  },
+                  {
+                    "type": "FINISHED",
+                    "active": false,
+                    "label": "Zwrot zakończony"
+                  }
+                ]
+              },
+              "returnParcels": [
+                {
+                  "returnParcelId": "c8db0450-b5bc-4c24-a1b1-15eb174d86d8",
+                  "authorType": "BUYER",
+                  "deliveryMethodType": "ALLEGRO_INPOST",
+                  "returnCode": "872 394 589 1",
+                  "tracking": {
+                    "carrier": "INPOST",
+                    "detailedHistoryAvailable": true,
+                    "link": "https:\u002F\u002Finpost.pl\u002Fsledzenie-przesylek?number=600000569295100037466399",
+                    "number": "600000569295100037466399"
+                  },
+                  "expiresAt": "2022-02-18T22:59:59.539Z",
+                  "receiver": {
+                    "fullName": "Przedsiębiorstwo Wielobranżowe GRAAL Kamil Gralak",
+                    "address": {
+                      "street": "Urzędnicza 27",
+                      "city": "Zgierz",
+                      "zipCode": "95-100",
+                      "country": "PL"
+                    }
+                  },
+                  "costCoveredBySeller": false
+                }
+              ],
+              "rescissionOffers": [
+                {
+                  "product": {
+                    "name": "SKRZYNKA NARZĘDZIOWA QBRICK SYSTEM PRO TOOLBOX",
+                    "image": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F113d37\u002Fd33aee12436c94d011ac8eb44e2e"
+                  },
+                  "quantity": 1,
+                  "price": {
+                    "amount": "94.44",
+                    "currency": "PLN"
+                  },
+                  "reason": {
+                    "type": "DONT_LIKE_IT",
+                    "comment": ""
+                  },
+                  "offerSnapshotHash": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fskrzynka-narzedziowa-qbrick-system-pro-toolbox-10813961257?navCategoryId=306189&snapshot=MjAyMi0wMS0zMVQwMDoyNjoyOC42OTRaO2J1eWVyO2JiZTM4ZjJmMzc5ZTQxYjgxNTlhMzkzMzgzYTJiMWJjM2JlMzg2NTM3OTE5MjJiNTZhZDAxODg4YTQ2MzU4MjI%3D"
+                }
+              ]
+            }
+          ],
+          "retails": false
+        }
+      }
+    ],
+    "status": {
+      "primary": {
+        "status": "RETURNED",
+        "hint": "Zwrócony pt. 04 lut. 2022."
+      },
+      "traits": [
+        "DELIVERY_SMART",
+        "IS_SURCHARGE_ALLOWED"
+      ],
+      "actions": [
+        {
+          "type": "HIDE_ORDER",
+          "enabled": true
+        },
+        {
+          "type": "BUY_AGAIN",
+          "enabled": true
+        },
+        {
+          "type": "RATE_SELLER",
+          "enabled": true,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Wystaw ocenę do"
+            },
+            {
+              "type": "SPACE"
+            },
+            {
+              "type": "TEXT",
+              "value": "1 maja 2022, 2:26"
+            }
+          ]
+        },
+        {
+          "type": "RETURN_PRODUCTS",
+          "enabled": false,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Zwróciłeś wszystkie przedmioty z tego zamówienia."
+            }
+          ]
+        },
+        {
+          "type": "QUESTION_TO_SELLER",
+          "enabled": true
+        },
+        {
+          "type": "DISCUSSION_ASK_FOR_HELP",
+          "enabled": true,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 30.07.2022, 02:26. W razie potrzeby udzielimy Ci wsparcia."
+            }
+          ]
+        },
+        {
+          "type": "RATE_PRODUCT",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}
