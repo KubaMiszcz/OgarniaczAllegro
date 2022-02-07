@@ -1,6 +1,8 @@
-import { IAllegroAllOrders } from './../models/allegro/all-orders-models';
+import { AllegroService } from './../services/allegro.service';
+import { OrderService } from './../services/order.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 import { MyorderGroup } from './models';
 
 @Component({
@@ -12,20 +14,22 @@ export class ImportOrderComponent implements OnInit {
   source = '';
   ouput = '';
 
-  allegroAllOrders!: IAllegroAllOrders; // = new Object();
-
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private orderService: OrderService,
   ) { }
 
   ngOnInit(): void {
   }
 
   importAllOrders() {
-    // "filter": "all"
+    let allAllegroOrders: IAllegroAllOrders = JSON.parse(this.getAllAllegroOrdersJSON(this.source));
+    this.orderService.fillOrdersFromAllegroImport(allAllegroOrders);
+  }
+
+  getAllAllegroOrdersJSON(source: string): string {
     let beginMark = '"filter":';
     let endingMark = '"slots":';
-
 
     let foundedByBeginMark = this.source.split(beginMark);
     let possibleJsons: string[] = [];
@@ -42,28 +46,22 @@ export class ImportOrderComponent implements OnInit {
     }
 
     // let finalJson = possibleJsons[0]?.slice(0, -1); //remove last char - comma
-    let finalJson = possibleJsons[0]; //remove last char - comma
+    let finalJson = possibleJsons[0];
 
     finalJson = '{' + beginMark + finalJson + endingMark + '{}}';
 
-    console.log('JSON', finalJson);
-
-    this.testSomeData(finalJson);
-    // let resobj = JSON.parse(finalJson) as MyorderGroup;
-    // console.log('xxx', resobj);
-    // console.log('===========================================');
-    // console.log(resobj.myorders[0].offers[0].offerPrice);
-
-
+    return finalJson;
   }
 
-  testSomeData(json: string) {
-    let obj: IAllegroAllOrders = JSON.parse(json);
-    obj.myorders.orderGroups.forEach(item => {
-      console.log(item.myorders.forEach(i => console.log(i.seller)
-      ));
-    });
-  }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,17 +99,6 @@ export class ImportOrderComponent implements OnInit {
   }
 
 
-  importAllegro() {
-    let url = ''
-    this.http.get('https://allegro.pl/moje-allegro/zakupy/kupione/68dc4241-822c-11ec-8853-81b5175aaf53').subscribe(res => {
-      console.log(res);
-
-    },
-      error => {
-        console.log(error);
-
-      })
-  }
 
 
 
@@ -144,17 +131,19 @@ export class ImportOrderComponent implements OnInit {
     });
   }
 
+
+  importAllegro() {
+    let url = ''
+    this.http.get('https://allegro.pl/moje-allegro/zakupy/kupione/68dc4241-822c-11ec-8853-81b5175aaf53').subscribe(res => {
+      console.log(res);
+
+    },
+      error => {
+        console.log(error);
+
+      })
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 

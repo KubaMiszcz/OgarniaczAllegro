@@ -3,8 +3,7 @@ import { StatusEnum } from './status.enum';
 import { IMyDate } from "./my-date";
 
 export interface IOrder {
-  id: number;
-  // seller:string;  // sprzedajacy
+  id: string;
   name: string; //zamowienie
   isAllegroPay?: StatusEnum;// allegro Pay
   hasInvoice?: StatusEnum; //na firme?
@@ -43,7 +42,12 @@ export interface IOrder {
 }
 
 export class Order implements IOrder {
-  id = 0;
+  id = '';
+  orderValue?: number | undefined;
+  receivedDate?: IMyDate | undefined;
+  returnCode?: string | undefined;
+  returnValue?: number | undefined;
+  comment?: string | undefined;
   // seller:string;  // sprzedajacy 
   name = ''; //zamowienie
   isAllegroPay?: StatusEnum = StatusEnum.Unknown;
@@ -72,7 +76,7 @@ export class Order implements IOrder {
 
 export const EXAMPLE_ROWS: IOrder[] = [
   {
-    id: 1,
+    id: '1',
     name: 'spieniacz do mleka ten drugi zwracany',
     isAllegroPay: StatusEnum.Yes,
     hasInvoice: StatusEnum.Yes,
@@ -89,7 +93,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
     comment: 'anycomm'
   },
   {
-    id: 2,
+    id: '2',
     name: 'sonoff zwracany bo pomylka  ',
     isAllegroPay: StatusEnum.No,
     hasInvoice: StatusEnum.Yes,
@@ -104,7 +108,7 @@ export const EXAMPLE_ROWS: IOrder[] = [
     comment: 'soncom'
   },
   {
-    id: 3,
+    id: '3',
     name: 'ubranka z atomizerem  ',
     isAllegroPay: StatusEnum.Unknown,
     hasInvoice: StatusEnum.No,

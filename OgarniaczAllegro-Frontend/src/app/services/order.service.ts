@@ -1,3 +1,4 @@
+import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
@@ -5,13 +6,13 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { StatusService } from './status.service';
 import { environment } from 'src/environments/environment';
+import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
-
   ordersList$ = new BehaviorSubject<IOrder[]>([]);
   selectedOrder$ = new BehaviorSubject<IOrder>(new Order());
   showAddNewOrderRow$ = new BehaviorSubject<boolean>(true);
@@ -20,10 +21,17 @@ export class OrderService {
 
   constructor(
     private statusService: StatusService,
+    private allegroService: AllegroService,
     private helperService: HelperService,
     private http: HttpClient,
   ) {
-    this.ordersList$.next(EXAMPLE_ROWS);
+
+    let list = JSON.parse(localStorage.getItem('orders') ?? '');
+    if (!list) {
+      list = EXAMPLE_ROWS;
+    }
+
+    this.ordersList$.next(list);
   }
 
   selectOrder(order: IOrder | null) {
@@ -33,8 +41,8 @@ export class OrderService {
   addNewOrder(newOrder: IOrder) {
     newOrder = { ...newOrder };
     let list = this.ordersList$.value;
-    if (newOrder.id === 0) {
-      newOrder.id = Math.max(...list.map(o => o.id)) + 1;
+    if (newOrder.id === '') {
+      newOrder.id = (Math.round(Math.random() * 100000)).toString(); //lodash=>guid
       list.push(newOrder);
     }
   }
@@ -75,5 +83,13 @@ export class OrderService {
       // }
     }
   }
+
+
+  fillOrdersFromAllegroImport(allAllegroOrders: IAllegroAllOrders) {
+    let currentList = this.ordersList$.value;
+    let newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, currentList);
+  }
+
+
 
 }

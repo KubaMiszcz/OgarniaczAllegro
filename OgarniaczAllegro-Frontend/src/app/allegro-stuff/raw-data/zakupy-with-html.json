@@ -261,12 +261,12 @@
       background-color: #ECEFF1;
 }
   </style>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     dataLayer = [
   {}
 ]
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     var opbox = opbox || {};
     opbox.config = opbox.config || {
   "baseDomain": "allegro.pl",
@@ -280,7 +280,7 @@
       "pv": {
         "_opbox": {
           "routePath": "/moje-allegro/zakupy/kupione",
-          "publicationId": "allegro.pl-moje_allegro _ zakupy-525-1280424-37-38-1641896049317-1959463398"
+          "publicationId": "allegro.pl-moje_allegro _ zakupy-525-1280424-38-38-1641896049317-1959413426"
         }
       },
       "ev": {}
@@ -300,19 +300,7 @@
   },
   "allowedPlugins": [
     {
-      "name": "pinter"
-    },
-    {
-      "name": "facebookTracking"
-    },
-    {
-      "name": "cart"
-    },
-    {
-      "name": "chatPlugin"
-    },
-    {
-      "name": "dspPlugin"
+      "name": "medallia"
     },
     {
       "name": "gemius"
@@ -321,22 +309,34 @@
       "name": "sentry"
     },
     {
+      "name": "skins"
+    },
+    {
+      "name": "pinter"
+    },
+    {
+      "name": "cart"
+    },
+    {
+      "name": "facebookTracking"
+    },
+    {
+      "name": "dspPlugin"
+    },
+    {
       "name": "gtm"
     },
     {
       "name": "botDetector"
     },
     {
-      "name": "medallia"
-    },
-    {
-      "name": "skins"
+      "name": "chatPlugin"
     }
   ],
-  "viewId": "47dd2b0e-a841-43dd-a52b-250e0afc4b2e"
+  "viewId": "e0db301e-9254-4779-a0bf-4191ce3872d8"
 } || {};
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     ! function () {
       var n = Object.assign,
         e = Array.from;
@@ -482,7 +482,7 @@
   })
 }();
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     var placeholder = function (e) {
       var r = Object.assign,
         t = Array.from;
@@ -610,7 +610,7 @@
       return i(window), e.createQueue = n, e.default = o, e.getOpboxApiSchema = a, e.init = i, e
 }({});
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" data-role="performance-header">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" data-role="performance-header">
     ! function () {
       var i, n, e, t, r = "TimeToFirstInteractive",
         o = "TimeToInteractive";
@@ -643,14 +643,14 @@
   })), e.setResourceTimingBufferSize(512)
 }();
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-cart-plugin-cd7="">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-cart-plugin-cd7="">
     {
   "cartConfiguration": {
     "precartLayerUrl": "/koszyk/warstwa"
   }
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-opbox-plugin-chat="">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-opbox-plugin-chat="">
     {
   "chatConfiguration": {
     "enabled": true
@@ -720,14 +720,14 @@
          data-prototype-id="layout.container" data-prototype-version="9.0" data-analytics-category="layout.container"
          data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%5D"><a name="header"></a>
       <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_k4 carousel-item">
-        <div class="opbox-sheet opbox-sheet-d8c22 _26e29_11PCu" style="">
+        <div class="opbox-sheet opbox-sheet-c7a2c _26e29_11PCu" style="">
           <div data-box-name="allegro.header.default"
                data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==sS8oqX2-SD64YuhBeIJPmg=="
                data-prototype-id="layout.container" data-prototype-version="9.0" data-analytics-category="layout.container"
                data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%5D"><a
                name="allegro-header-default"></a>
             <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_k4 carousel-item">
-              <div class="opbox-sheet opbox-sheet-0168b _26e29_11PCu" style="">
+              <div class="opbox-sheet opbox-sheet-f7931 _26e29_11PCu" style="">
                 <div data-box-name="medallia.users-with-smart"
                      data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==zk1VczKaQCq5K79bnCPbWw=="
                      data-prototype-id="allegro.medalliaTrigger" data-prototype-version="2.1" data-analytics-enabled
@@ -1246,7 +1246,7 @@
                                                  data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D">
                                               <a name="sprzedaz-na-allegro-user-person"></a>
                                               <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item">
-                                                <div class="opbox-sheet opbox-sheet-0276c _26e29_11PCu" style="">
+                                                <div class="opbox-sheet opbox-sheet-3f816 _26e29_11PCu" style="">
                                                   <div data-box-name="Sprzedaż na Allegro – user.person + charity | 2021-12-02 8:00 - 2022-02-12 23:00"
                                                        data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==55gu-thXTPOcJvWxT5EORQ=="
                                                        data-prototype-id="allegro.links.panel" data-prototype-version="1.0" data-civ="418"
@@ -1389,7 +1389,7 @@
                                                  data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D">
                                               <a name="allegro-family"></a>
                                               <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item">
-                                                <div class="opbox-sheet opbox-sheet-1bbc7 _26e29_11PCu" style="">
+                                                <div class="opbox-sheet opbox-sheet-5d23a _26e29_11PCu" style="">
                                                   <div data-box-name="V2_V4 - member OR owner OR user who sent the invitation"
                                                        data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==PXPRvA-VSianiZSF_RMhIQ=="
                                                        data-prototype-id="allegro.links.panel" data-prototype-version="1.0" data-civ="418"
@@ -1498,7 +1498,7 @@
                      data-analytics-category="allegro.performance.mark"
                      data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%5D"><a
                      name="allegro-performance-mark"></a>
-                  <script nonce="HYvby1i6pBxJ5E7yxBnkDA=="> </script>
+                  <script nonce="WCbYJblGGCjw0ll1+NMwoQ=="> </script>
                 </div>
               </div>
             </div>
@@ -1511,12 +1511,12 @@
          data-analytics-category="layout.container" data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%5D"><a
          name="background"></a>
       <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_k4 carousel-item">
-        <div class="opbox-sheet opbox-sheet-17e18 _26e29_11PCu" style="">
+        <div class="opbox-sheet opbox-sheet-d1881 _26e29_11PCu" style="">
           <div data-box-name="page container" data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==MwIj0sS-QRSTOtgXL62X4w=="
                data-prototype-id="layout.container" data-prototype-version="9.0" data-analytics-category="layout.container"
                data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%5D"><a name="page-container"></a>
             <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_k4 carousel-item">
-              <div class="opbox-sheet opbox-sheet-cf5e6 _26e29_11PCu" style="">
+              <div class="opbox-sheet opbox-sheet-3207e _26e29_11PCu" style="">
                 <div data-box-name="allegro.myallegro.menu-pl"
                      data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==qxnfusP5Thyl9IjZlrbZqg==wDjUa1YpSOmi2LCYkm2nHA=="
                      data-prototype-id="allegro.myallegro.menu" data-prototype-version="1.5" data-civ="d54" data-analytics-enabled
@@ -4044,13 +4044,13 @@
                            data-prototype-id="layout.container" data-prototype-version="9.0" data-analytics-category="layout.container"
                            data-analytics-groups="%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%5D"><a name="content-container"></a>
                         <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item">
-                          <div class="opbox-sheet opbox-sheet-1610c _26e29_11PCu" style="margin-top:8px;margin-bottom:16px;">
+                          <div class="opbox-sheet opbox-sheet-099a9 _26e29_11PCu" style="margin-top:8px;margin-bottom:16px;">
                             <div data-box-name="listing.container"
                                  data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==8C4BFxNpQh278uXK8YbAag=="
                                  data-prototype-id="layout.container" data-prototype-version="9.0" data-analytics-category="layout.container"
                                  data-analytics-groups="%5B%22allegro.myordersListing%22%5D"><a name="listing-container"></a>
                               <div class="opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_vb carousel-item">
-                                <div class="opbox-sheet opbox-sheet-eda23 _26e29_11PCu" style="">
+                                <div class="opbox-sheet opbox-sheet-2fc5a _26e29_11PCu" style="">
                                   <div data-box-name="allegro.myorder.listingV2"
                                        data-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==1mB_2DuURJOrLPNLgxn7xQ=="
                                        data-prototype-id="allegro.myorder.listingV2" data-prototype-version="1.2" data-analytics-enabled
@@ -4073,11 +4073,11 @@
                                                       data-button-type="select-all-mobile"
                                                       class="mgn2_14 mp0t_0a m9qz_yp mp7g_oh mse2_40 mqu1_40 mtsp_ib mli8_k4 mp4t_0 m3h2_0 mryx_0 munh_0 m911_5r mefy_5r mnyp_5r mdwl_5r msbw_2 mldj_2 mtag_2 mm2b_2 mqvr_2 msa3_z4 mqen_m6 meqh_en m0qj_5r msts_n7 mh36_16 mvrt_16 mg9e_0 mj7a_0 mjir_sv m2ha_2 m8qd_qh mjt1_n2 b1la9 mgmw_vz mrmn_qo mrhf_u8 m31c_kb m0ux_fp bgkgt mpof_5r_m"><svg
                                                      class="iohzf i1b4n"><svg width="0" height="0" style="position: absolute;">
-                                                    <filter id="xZKr8c8PpQnH1NcdQ4Pe_" color-interpolationfilters="sRGB">
+                                                    <filter id="Mql8kOZ_l8HirZQR9Moeq" color-interpolationfilters="sRGB">
                                                       <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.654 0 0 0 0 0.564 0 0 0 1 0"></feColorMatrix>
                                                     </filter>
                                                   </svg>
-                                                  <image style="filter: url(#xZKr8c8PpQnH1NcdQ4Pe_);"
+                                                  <image style="filter: url(#Mql8kOZ_l8HirZQR9Moeq);"
                                                          xlink:href="https://assets.allegrostatic.com/metrum/icon/check-mark-double-4f874766e9.svg"
                                                          width="100%" height="100%"></image>
                                                 </svg></button><button type="button" data-button-type="select-all-desktop"
@@ -4255,7 +4255,7 @@
                                                        data-analytics-enabled data-analytics-category="allegro.performance.mark"
                                                        data-analytics-groups="%5B%22allegro.myordersListing%22%5D"><a
                                                        name="allegro-performance-mark"></a>
-                                                    <script nonce="HYvby1i6pBxJ5E7yxBnkDA=="> </script>
+                                                    <script nonce="WCbYJblGGCjw0ll1+NMwoQ=="> </script>
                                                   </div>
                                                 </div>
                                               </div>
@@ -8356,7 +8356,7 @@
       </footer>
     </div>
   </div>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==sNheQn2-T-ScEdWcIAt7Ww==D202Ro9xTmyLjQUM1sGKKw==">
     {
   "showOnlyOnceADay": false,
@@ -8369,7 +8369,7 @@
   "hashMatchStrategy": "exact"
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==ChaRLenNTzaTcZ8NPNdF9g==">
     {
   "showOnlyOnceADay": false,
@@ -8382,7 +8382,7 @@
   "hashMatchStrategy": "exact"
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==jJ19KD4DSBW1rZRgKvIYrA==">
     {
   "subscribedNotificationBadges": [
@@ -8391,46 +8391,19 @@
   ]
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
-          data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==_rpuXEnNQD2E1-2ntGOlzA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
+          data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==tIOj6Ir_R-arVQDKwjYKMg==">
     {
-  "isAnonymised": false,
-  "mobileModeEnabled": false,
-  "isAuthenticated": true,
-  "requestUrl": {
-    "path": "\u002Fmoje-allegro\u002Fzakupy\u002Fkupione",
-    "query": null
-  },
-  "userIconsBoxes": "",
-  "loggedOutUserContentBoxes": "",
-  "authenticatedUserTabs": [
-    {
-      "label": "Zakupy",
-      "content": "\u003Cdiv data-box-name=\"layout.container.shoppingTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==zdKaWLNISjOvPG3qH6pRqw==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-shoppingtab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Zakupy na Allegro\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==K_T-ZzUvRW6QIcgX5jwpoQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"zakupy-na-allegro\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EZakupy na Allegro\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zakupy\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fkupione\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zakupy\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Licytuję\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Flicytuje\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ELicytuję\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Obserwowane\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fobserwowane\u002Foferty\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EObserwowane\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Oceń produkty\" rel=\"nofollow\" href=\"\u002Fopinie-produktowe\u002Fdodaj-opinie\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EOceń produkty\u003C\u002Fp\u003E  \u003Cspan class=\"_4fbj1 mli2_0 munh_8 mp7g_q5\" data-notification-tag=\"reviews\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Oceń sprzedawcę\" rel=\"nofollow\" href=\"\u002Fuser-rating-landing-page\u002Findex\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EOceń sprzedawcę\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Zakupy na Allegro Lokalnie\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==qISZ6iGCQrG_yMADZFoC9Q==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"zakupy-na-allegro-lokalnie\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EZakupy na Allegro Lokalnie\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12b24e\u002Fed1c871940b0814a77c51341e707\" alt=\"Allegro Lokalnie\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zakupy\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fkupione\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zakupy\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Licytuję\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Flicytuje\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ELicytuję\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zarezerwowane dla mnie\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fzarezerwowane\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZarezerwowane dla mnie\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Programy zniżkowe\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==STaWZm87SI6UP72A_bGXyg==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"programy-znizkowe\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EProgramy zniżkowe\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_8 mvrt_16 mj7a_8 mh36_16\"\u003E\u003Cdiv data-box-name=\"Smart\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==ymX_GI8MSKKdHXxAvqPAlA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"smart\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"layout.clickableContainer\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==zAyLL-QuRPakLjfqyr-cyA==\" data-prototype-id=\"layout.clickableContainer\" data-prototype-version=\"1.0\" data-analytics-enabled data-analytics-category=\"layout.clickableContainer\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-clickablecontainer\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"_26e29_3WNEg mp7g_oh carousel-item\" data-role=\"clickable-container\"\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"mp7g_f6 mq1m_0 mnjl_0 mqm6_0 mj7u_0\"   data-analytics-clickable data-role=\"clickable-container-link\"\u003E\u003C\u002Fa\u003E \u003Cdiv class=\"_26e29_1xmRp\" data-role=\"clickable-container-slot\"\u003E\u003Cdiv data-box-name=\"allegro.richText.smart.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==JdLSrYHOT7ebYoowj2cL6w==\" data-prototype-id=\"allegro.richText\" data-prototype-version=\"1.0\" data-civ=\"c83\" data-analytics-enabled data-analytics-category=\"allegro.richText\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-richtext-smart-status\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"rich-text _5b60e_N_DQ3 _5b60e_1rcaN\"\u003E\u003Cp class=\"_1h7wt mp4t_0 m3h2_0 munh_0 mryx_16 _5b60e_IsMK3 \"\u003EAllegro Smart!\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"allegro.smart.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==MKrHZzKgRSyzH-HMyVfcmQ==\" data-prototype-id=\"allegro.smart.status\" data-prototype-version=\"3.0\" data-civ=\"28d\" data-analytics-enabled data-analytics-category=\"allegro.smart.status\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-smart-status\"\u003E\u003C\u002Fa\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"_1h7wt _1dd5x msa3_z4 mj9z_5r _cd074_3wzJe mgmw_s9\" data-analytics-clickable title=\"jesteś Smart\"\u003Ejesteś \u003Cimg class=\"_cd074_1TAMX\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fmetrum\u002Ficon\u002Fsmart-098a60541f.svg\" title=\"Smart\" alt=\"Smart\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag\"\u003E\u003Cdiv data-box-name=\"Monety i kupony, Allegro Polecam\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==RxVfZCOaTLKsmE27TFGbLg==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"monety-i-kupony-allegro-polecam\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Centrum kuponów\" rel=\"nofollow\" href=\"\u002Fzobacz\u002Fkupony\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ECentrum kuponów\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Twoje monety i kupony\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fmonety\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ETwoje monety i kupony\u003C\u002Fp\u003E  \u003Cspan class=\"_4fbj1 mli2_0 munh_8 mp7g_q5\" data-notification-tag=\"coins\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Allegro Finanse (Zakupy)\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==VkhIOkT8QRyG9mZfgnY6xQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-finanse-zakupy\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EAllegro Finanse\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_8 mvrt_16 mj7a_8 mh36_16\"\u003E\u003Cdiv data-box-name=\"Allegro Pay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WOLqq74ETe6Cyq7cu1yHWA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-pay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"layout.clickableContainer.allegroPay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==BWPd2gUyTvSIXq0GFKJPww==\" data-prototype-id=\"layout.clickableContainer\" data-prototype-version=\"1.0\" data-analytics-enabled data-analytics-category=\"layout.clickableContainer\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-clickablecontainer-allegropay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"_26e29_3WNEg mp7g_oh carousel-item\" data-role=\"clickable-container\"\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" class=\"mp7g_f6 mq1m_0 mnjl_0 mqm6_0 mj7u_0\"   data-analytics-clickable data-role=\"clickable-container-link\"\u003E\u003C\u002Fa\u003E \u003Cdiv class=\"_26e29_1xmRp\" data-role=\"clickable-container-slot\"\u003E\u003Cdiv data-box-name=\"allegro.richText.allegroPay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==LEeVhDofT5uJekOps5ob5g==\" data-prototype-id=\"allegro.richText\" data-prototype-version=\"1.0\" data-civ=\"c83\" data-analytics-enabled data-analytics-category=\"allegro.richText\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-richtext-allegropay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"rich-text _5b60e_N_DQ3 _5b60e_1rcaN\"\u003E\u003Cp class=\"_1h7wt mp4t_0 m3h2_0 munh_0 mryx_16 _5b60e_IsMK3 \"\u003EAllegro Pay\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"allegro.allegroPayStatus.default\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==JyEL6ODMS0K4E2rek_rMlA==\" data-prototype-id=\"allegro.allegroPayStatus\" data-prototype-version=\"1.1\" data-civ=\"3b7\" data-analytics-enabled data-analytics-category=\"allegro.allegroPayStatus\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegropaystatus-default\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mpof_ki msbw_2 mldj_2 mtag_2 mm2b_2 mp0t_ji mgn2_12 mj9z_5r mqu1_16 msa3_z4 m389_6m\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" aria-label=\"284,93 zł Allegro Pay\" data-analytics-clickable\u003E\u003Cspan class=\"mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0 mvrt_4\"\u003E284,93 zł\u003C\u002Fspan\u003E\u003Cimg class=\"mp7g_oh _ca91f_wyR5X mvrt_4 mh36_4 mg9e_4 mj7a_4 mgmw_9u _ca91f_2BoyK\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14216\u002Fstatics\u002Fallegro-pay-icon_87545089.svg\" title=\"Allegro Pay\" alt=\"Allegro Pay\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
-      "isActive": true,
-      "userStatusEnabled": false,
-      "logoutButtonEnabled": false
-    },
-    {
-      "label": "Sprzedaż",
-      "content": "\u003Cdiv data-box-name=\"layout.container.sellingTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==x3Uri1SJTHa7ffYRHRBWjQ==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-sellingtab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Sprzedaż na Allegro Lokalnie\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==dQUfavQyR8WmjxOPYsv4GA==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-lokalnie\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ESprzedaż na Allegro Lokalnie\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12b24e\u002Fed1c871940b0814a77c51341e707\" alt=\"Allegro Lokalnie\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystaw przedmiot\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Foferty\u002Fwystaw\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystaw przedmiot\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystawione\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Faktywne\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystawione\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zamówienia\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fsprzedane\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zamówienia\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zakończone\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fzakonczone\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZakończone\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Sprzedaż na Allegro - user.person\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WenG-p7MSJGIIuwAmEU0Fg==\" data-prototype-id=\"layout.container\" data-prototype-version=\"9.0\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-user-person\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet opbox-sheet-0276c _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Sprzedaż na Allegro – user.person + charity | 2021-12-02 8:00 - 2022-02-12 23:00\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==55gu-thXTPOcJvWxT5EORQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-user-person-charity-2021-12-02-8-00-2022-02-12-23-00\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ESprzedaż na Allegro\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystaw na WOŚP\" rel=\"nofollow\" href=\"\u002FcharityOffer\u002F?fundraisingCampaignId=60f634f1-83bd-453a-a607-1dbb9fd94bee\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystaw na WOŚP\u003C\u002Fp\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F121841\u002F871a416b4469aa62fc27d2e894f5\" alt=\"WOŚP\"\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moja sprzedaż\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fsprzedaz\u002Fmoje-oferty\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoja sprzedaż\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zamówienia od kupujących\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fsprzedaz\u002Fzamowienia\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZamówienia od kupujących\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
-      "isActive": false,
-      "userStatusEnabled": false,
-      "logoutButtonEnabled": false
-    },
-    {
-      "label": "Konto",
-      "content": "\u003Cdiv data-box-name=\"layout.container.accountTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==AUcEwdOyTpWXf1zd5AoJSw==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-accounttab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"allegro.user.profile.card.container\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==6OzwsjADRGew2bg4n-F66g==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-user-profile-card-container\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_16 mvrt_16 mh36_16\"\u003E\u003Cdiv data-box-name=\"allegro.user.profile.card\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==0LrYN0hOQEWRrc0_DZgNnA==\" data-prototype-id=\"allegro.user.profile.card\" data-prototype-version=\"0.2\" data-civ=\"ddf\" data-analytics-enabled data-analytics-category=\"allegro.user.profile.card\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-user-profile-card\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"mpof_ki m7f5_sf\"\u003E\u003Cdiv class=\"meqh_en\"\u003E\u003Ch5 class=\"mp0t_ji munh_0 m3h2_0 mp4t_0 mqu1_1j mgmw_wo m9qz_yq mgn2_16 mgn2_17_s mryx_0\"\u003ECześć\u003Cspan data-role=\"user-card-first-name\"\u003E Jakub\u003C\u002Fspan\u003E!\u003C\u002Fh5\u003E\u003Ch6 data-role=\"user-card-login\" class=\"m6ax_n4 meqh_en mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0\" title=\"zielonyeufor\"\u003Ezielonyeufor\u003C\u002Fh6\u003E\u003Ch6 data-role=\"user-card-email\" class=\"m6ax_n4 meqh_en mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0\" title=\"zielonyeufor@gmail.com\"\u003Ezielonyeufor@gmail.com\u003C\u002Fh6\u003E\u003C\u002Fdiv\u003E \u003Cdiv class=\"mh36_8 mli2_0 _adc9e_3ekTY\"\u003E\u003Cimg alt=\"\" class=\"m7er_k4 mse2_k4 _adc9e_3OWND lazyload\" data-src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1db67e\u002F0cd495134989aa49d24d7a94d277\" \u002F\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"mpof_ki mwdn_1 _adc9e_2A-LN\"\u003E\u003Cdiv data-box-name=\"allegro.coins.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==aW0Wj49mQ0SsBaHDVml4vw==\" data-prototype-id=\"allegro.coins.status\" data-prototype-version=\"1.0\" data-civ=\"3bd\" data-analytics-enabled data-analytics-category=\"allegro.coins.status\" data-analytics-tags=\"U-Monety\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-coins-status\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mg9e_2 mj7a_2 mvrt_4 mh36_4 mj9z_5r msts_k9\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fmonety\" aria-label=\"masz 8 Monet\" data-analytics-clickable\u003E8 \u003Cimg class=\"_6b777_3HAxL\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14277\u002Fstatics\u002Fcoins_white_39a884d4.svg\" alt=\"\" \u002F\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.smart.status--badge\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==NCK4AROYSU-FJBOMyOwwJA==\" data-prototype-id=\"allegro.smart.status\" data-prototype-version=\"3.0\" data-civ=\"28d\" data-analytics-enabled data-analytics-category=\"allegro.smart.status\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-smart-status-badge\"\u003E\u003C\u002Fa\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mj9z_5r mvrt_4 mh36_4 _cd074_3hmRf _cd074_A3L6l\" data-analytics-clickable title=\"jesteś Smart\"\u003Ejesteś \u003Cimg class=\"_cd074_1TAMX\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-11403\u002Fstatics\u002Fsmart_white_d525e434.svg\" title=\"Smart\" alt=\"Smart\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.allegroPayStatus\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==_O-XzXp-SbeicCjp51hqJQ==\" data-prototype-id=\"allegro.allegroPayStatus\" data-prototype-version=\"1.0\" data-civ=\"3b7\" data-analytics-enabled data-analytics-category=\"allegro.allegroPayStatus\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegropaystatus\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"msbw_2 mldj_2 mtag_2 mm2b_2 mp0t_ji mgn2_12 mj9z_5r mqu1_16 msa3_z4 mvrt_4 mh36_4 mgmw_9u _ca91f_2IHwY _ca91f_i5UZ1\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" aria-label=\"284,93 zł Allegro Pay\" data-analytics-clickable\u003E284,93 zł \u003Cimg class=\"mp7g_oh _ca91f_wyR5X \" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14216\u002Fstatics\u002Fallegro-pay-icon_87545089.svg\" title=\"Allegro Pay\" alt=\"Allegro Pay\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.allegroFamilyStatus\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WNdIS_mZROWkfkHkBHZPNg==\" data-prototype-id=\"allegro.allegroFamilyStatus\" data-prototype-version=\"1.0\" data-civ=\"d91\" data-analytics-enabled data-analytics-category=\"allegro.allegroFamilyStatus\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegrofamilystatus\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mg9e_2 mj7a_2 mvrt_4 mh36_4 msts_enp mj9z_5r\" href=\"https:\u002F\u002Fallegro.pl\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family\u002Fprosby-o-zakup?bi_m=Badge\" data-analytics-clickable data-analytics-click-value=allegroFamilyBadge\u003EJesteś w Family \u003Cimg class=\"mp7g_oh m0s5_9u _55472_3583s\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fmetrum\u002Ficon\u002Fhouse-and-heart-08872a341b.svg\" alt=\"\" width=\"12\" height=\"12\" \u002F\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003Chr class=\"mpof_z0 m7er_k4 m3h2_0 mryx_0 munh_0 m911_5r mefy_5r mnyp_5r mdwl_5r mse2_1 msts_me mp4t_16\"\u003E\u003Ca rel=\"nofollow\" class=\"mgn2_14 mp0t_0a m9qz_yp mp7g_oh mse2_40 mqu1_40 mtsp_ib mli8_k4 mp4t_0 m3h2_0 mryx_0 munh_0 m911_5r mefy_5r mnyp_5r mdwl_5r msbw_2 mldj_2 mtag_2 mm2b_2 mqvr_2 msa3_z4 mqen_m6 meqh_en m0qj_5r msts_n7 mh36_16 mvrt_16 mg9e_0 mj7a_0 mjir_sv m2ha_2 m8qd_qh mjt1_n2 b1la9 mjyo_6x mzmg_6m mj9z_5r mpof_vs mupj_5k mgmw_vz mrmn_qo mrhf_u8 m31c_kb m0ux_fp bgkgt m7er_k4\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\" data-analytics-clickable\u003EMoje Konto\u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Allegro Family\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==0M9W2Q-sRTGUpBK246gWeQ==\" data-prototype-id=\"layout.container\" data-prototype-version=\"9.0\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-family\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet opbox-sheet-1bbc7 _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"V2_V4 - member OR owner OR user who sent the invitation\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==PXPRvA-VSianiZSF_RMhIQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"v2_v4-member-or-owner-or-user-who-sent-the-invitation\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EAllegro Family\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12fbef\u002F52f336554ab892e4f480206b1d00\" alt=\"Allegro Family\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Twoja rodzina\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family?bi_m=Nawigacja\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ETwoja rodzina\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Prośby o zakup\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family\u002Fprosby-o-zakup?bi_m=Nawigacja\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EProśby o zakup\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Rachunki\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==69rxRAIySEK7gg2Uuz11fA==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"rachunki\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8 mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ERachunki\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Rozliczenia z Allegro\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Frachunki\u002Frozliczenia-z-allegro\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ERozliczenia z Allegro\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Faktury\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Ffaktury \"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EFaktury\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Centrum pomocy\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==QNAV66mZSHS-haaR-8imSw==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"centrum-pomocy\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ECentrum pomocy\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Pomoc\" rel=\"nofollow\" href=\"\u002Fpomoc\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EPomoc\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zapytaj Społeczność\" rel=\"nofollow\" href=\"https:\u002F\u002Fspolecznosc.allegro.pl\u002F\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZapytaj Społeczność\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Skorzystaj ze szkoleń\" rel=\"nofollow\" href=\"\u002Fkampania\u002Fakademia-allegro\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ESkorzystaj ze szkoleń\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
-      "isActive": false,
-      "userStatusEnabled": true,
-      "logoutButtonEnabled": true
-    }
-  ],
-  "activeTabIndex": 0,
-  "implementationVariant": null
+  "parameters": {
+    "isAuthenticated": true,
+    "isPageCached": false,
+    "messageCenterBasePath": "\u002Fmoje-allegro\u002Fmoje-konto\u002Fcentrum-wiadomosci\u002Fwiadomosci",
+    "displayMessageCenterSurvey": false,
+    "messageCenterSurveyLink": "https:\u002F\u002Fankieta.allegro.pl\u002Findex.php\u002F665263?lang=pl"
+  }
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==MGW2gATtQkKizzQ2dQGp-A==">
     {
   "fullscreenVariant": null,
@@ -8602,21 +8575,49 @@
   "staticQueryParameters": []
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
-          data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==tIOj6Ir_R-arVQDKwjYKMg==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
+          data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==_rpuXEnNQD2E1-2ntGOlzA==">
     {
-  "parameters": {
-    "isAuthenticated": true,
-    "isPageCached": false,
-    "messageCenterBasePath": "\u002Fmoje-allegro\u002Fmoje-konto\u002Fcentrum-wiadomosci\u002Fwiadomosci",
-    "displayMessageCenterSurvey": false,
-    "messageCenterSurveyLink": "https:\u002F\u002Fankieta.allegro.pl\u002Findex.php\u002F665263?lang=pl"
-  }
+  "isAuthenticated": true,
+  "isAnonymised": false,
+  "mobileModeEnabled": false,
+  "requestUrl": {
+    "path": "\u002Fmoje-allegro\u002Fzakupy\u002Fkupione",
+    "query": null
+  },
+  "userIconsBoxes": "",
+  "loggedOutUserContentBoxes": "",
+  "authenticatedUserTabs": [
+    {
+      "label": "Zakupy",
+      "content": "\u003Cdiv data-box-name=\"layout.container.shoppingTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==zdKaWLNISjOvPG3qH6pRqw==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-shoppingtab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Zakupy na Allegro\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==K_T-ZzUvRW6QIcgX5jwpoQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"zakupy-na-allegro\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EZakupy na Allegro\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zakupy\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fkupione\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zakupy\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Licytuję\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Flicytuje\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ELicytuję\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Obserwowane\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fobserwowane\u002Foferty\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EObserwowane\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Oceń produkty\" rel=\"nofollow\" href=\"\u002Fopinie-produktowe\u002Fdodaj-opinie\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EOceń produkty\u003C\u002Fp\u003E  \u003Cspan class=\"_4fbj1 mli2_0 munh_8 mp7g_q5\" data-notification-tag=\"reviews\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Oceń sprzedawcę\" rel=\"nofollow\" href=\"\u002Fuser-rating-landing-page\u002Findex\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EOceń sprzedawcę\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Zakupy na Allegro Lokalnie\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==qISZ6iGCQrG_yMADZFoC9Q==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"zakupy-na-allegro-lokalnie\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EZakupy na Allegro Lokalnie\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12b24e\u002Fed1c871940b0814a77c51341e707\" alt=\"Allegro Lokalnie\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zakupy\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fkupione\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zakupy\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Licytuję\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Flicytuje\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ELicytuję\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zarezerwowane dla mnie\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fzarezerwowane\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZarezerwowane dla mnie\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Programy zniżkowe\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==STaWZm87SI6UP72A_bGXyg==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"programy-znizkowe\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EProgramy zniżkowe\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_8 mvrt_16 mj7a_8 mh36_16\"\u003E\u003Cdiv data-box-name=\"Smart\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==ymX_GI8MSKKdHXxAvqPAlA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"smart\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"layout.clickableContainer\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==zAyLL-QuRPakLjfqyr-cyA==\" data-prototype-id=\"layout.clickableContainer\" data-prototype-version=\"1.0\" data-analytics-enabled data-analytics-category=\"layout.clickableContainer\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-clickablecontainer\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"_26e29_3WNEg mp7g_oh carousel-item\" data-role=\"clickable-container\"\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"mp7g_f6 mq1m_0 mnjl_0 mqm6_0 mj7u_0\"   data-analytics-clickable data-role=\"clickable-container-link\"\u003E\u003C\u002Fa\u003E \u003Cdiv class=\"_26e29_1xmRp\" data-role=\"clickable-container-slot\"\u003E\u003Cdiv data-box-name=\"allegro.richText.smart.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==JdLSrYHOT7ebYoowj2cL6w==\" data-prototype-id=\"allegro.richText\" data-prototype-version=\"1.0\" data-civ=\"c83\" data-analytics-enabled data-analytics-category=\"allegro.richText\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-richtext-smart-status\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"rich-text _5b60e_N_DQ3 _5b60e_1rcaN\"\u003E\u003Cp class=\"_1h7wt mp4t_0 m3h2_0 munh_0 mryx_16 _5b60e_IsMK3 \"\u003EAllegro Smart!\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"allegro.smart.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==MKrHZzKgRSyzH-HMyVfcmQ==\" data-prototype-id=\"allegro.smart.status\" data-prototype-version=\"3.0\" data-civ=\"28d\" data-analytics-enabled data-analytics-category=\"allegro.smart.status\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-smart-status\"\u003E\u003C\u002Fa\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"_1h7wt _1dd5x msa3_z4 mj9z_5r _cd074_3wzJe mgmw_s9\" data-analytics-clickable title=\"jesteś Smart\"\u003Ejesteś \u003Cimg class=\"_cd074_1TAMX\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fmetrum\u002Ficon\u002Fsmart-098a60541f.svg\" title=\"Smart\" alt=\"Smart\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag\"\u003E\u003Cdiv data-box-name=\"Monety i kupony, Allegro Polecam\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==RxVfZCOaTLKsmE27TFGbLg==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"monety-i-kupony-allegro-polecam\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Centrum kuponów\" rel=\"nofollow\" href=\"\u002Fzobacz\u002Fkupony\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ECentrum kuponów\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Twoje monety i kupony\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fmonety\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ETwoje monety i kupony\u003C\u002Fp\u003E  \u003Cspan class=\"_4fbj1 mli2_0 munh_8 mp7g_q5\" data-notification-tag=\"coins\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Allegro Finanse (Zakupy)\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==VkhIOkT8QRyG9mZfgnY6xQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-finanse-zakupy\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EAllegro Finanse\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_8 mvrt_16 mj7a_8 mh36_16\"\u003E\u003Cdiv data-box-name=\"Allegro Pay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WOLqq74ETe6Cyq7cu1yHWA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-pay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"layout.clickableContainer.allegroPay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==BWPd2gUyTvSIXq0GFKJPww==\" data-prototype-id=\"layout.clickableContainer\" data-prototype-version=\"1.0\" data-analytics-enabled data-analytics-category=\"layout.clickableContainer\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-clickablecontainer-allegropay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"_26e29_3WNEg mp7g_oh carousel-item\" data-role=\"clickable-container\"\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" class=\"mp7g_f6 mq1m_0 mnjl_0 mqm6_0 mj7u_0\"   data-analytics-clickable data-role=\"clickable-container-link\"\u003E\u003C\u002Fa\u003E \u003Cdiv class=\"_26e29_1xmRp\" data-role=\"clickable-container-slot\"\u003E\u003Cdiv data-box-name=\"allegro.richText.allegroPay\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==LEeVhDofT5uJekOps5ob5g==\" data-prototype-id=\"allegro.richText\" data-prototype-version=\"1.0\" data-civ=\"c83\" data-analytics-enabled data-analytics-category=\"allegro.richText\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-richtext-allegropay\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"rich-text _5b60e_N_DQ3 _5b60e_1rcaN\"\u003E\u003Cp class=\"_1h7wt mp4t_0 m3h2_0 munh_0 mryx_16 _5b60e_IsMK3 \"\u003EAllegro Pay\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"allegro.allegroPayStatus.default\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==JyEL6ODMS0K4E2rek_rMlA==\" data-prototype-id=\"allegro.allegroPayStatus\" data-prototype-version=\"1.1\" data-civ=\"3b7\" data-analytics-enabled data-analytics-category=\"allegro.allegroPayStatus\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegropaystatus-default\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mpof_ki msbw_2 mldj_2 mtag_2 mm2b_2 mp0t_ji mgn2_12 mj9z_5r mqu1_16 msa3_z4 m389_6m\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" aria-label=\"284,93 zł Allegro Pay\" data-analytics-clickable\u003E\u003Cspan class=\"mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0 mvrt_4\"\u003E284,93 zł\u003C\u002Fspan\u003E\u003Cimg class=\"mp7g_oh _ca91f_wyR5X mvrt_4 mh36_4 mg9e_4 mj7a_4 mgmw_9u _ca91f_2BoyK\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14216\u002Fstatics\u002Fallegro-pay-icon_87545089.svg\" title=\"Allegro Pay\" alt=\"Allegro Pay\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
+      "isActive": true,
+      "userStatusEnabled": false,
+      "logoutButtonEnabled": false
+    },
+    {
+      "label": "Sprzedaż",
+      "content": "\u003Cdiv data-box-name=\"layout.container.sellingTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==x3Uri1SJTHa7ffYRHRBWjQ==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-sellingtab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Sprzedaż na Allegro Lokalnie\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==dQUfavQyR8WmjxOPYsv4GA==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-lokalnie\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ESprzedaż na Allegro Lokalnie\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12b24e\u002Fed1c871940b0814a77c51341e707\" alt=\"Allegro Lokalnie\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystaw przedmiot\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Foferty\u002Fwystaw\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystaw przedmiot\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystawione\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Faktywne\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystawione\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moje zamówienia\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fsprzedane\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoje zamówienia\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zakończone\" rel=\"nofollow\" href=\"https:\u002F\u002Fallegrolokalnie.pl\u002Fkonto\u002Foferty\u002Fzakonczone\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZakończone\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Sprzedaż na Allegro - user.person\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WenG-p7MSJGIIuwAmEU0Fg==\" data-prototype-id=\"layout.container\" data-prototype-version=\"9.0\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-user-person\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet opbox-sheet-3f816 _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"Sprzedaż na Allegro – user.person + charity | 2021-12-02 8:00 - 2022-02-12 23:00\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==55gu-thXTPOcJvWxT5EORQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"sprzedaz-na-allegro-user-person-charity-2021-12-02-8-00-2022-02-12-23-00\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ESprzedaż na Allegro\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Wystaw na WOŚP\" rel=\"nofollow\" href=\"\u002FcharityOffer\u002F?fundraisingCampaignId=60f634f1-83bd-453a-a607-1dbb9fd94bee\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EWystaw na WOŚP\u003C\u002Fp\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F121841\u002F871a416b4469aa62fc27d2e894f5\" alt=\"WOŚP\"\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Moja sprzedaż\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fsprzedaz\u002Fmoje-oferty\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EMoja sprzedaż\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zamówienia od kupujących\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fsprzedaz\u002Fzamowienia\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZamówienia od kupujących\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
+      "isActive": false,
+      "userStatusEnabled": false,
+      "logoutButtonEnabled": false
+    },
+    {
+      "label": "Konto",
+      "content": "\u003Cdiv data-box-name=\"layout.container.accountTab\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==AUcEwdOyTpWXf1zd5AoJSw==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"layout-container-accounttab\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"allegro.user.profile.card.container\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==6OzwsjADRGew2bg4n-F66g==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-user-profile-card-container\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u\"\u003E  \u003Cdiv class=\"msts_9u mjyo_6x mx7m_1 mnyp_co mlkp_ag mg9e_16 mvrt_16 mh36_16\"\u003E\u003Cdiv data-box-name=\"allegro.user.profile.card\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==0LrYN0hOQEWRrc0_DZgNnA==\" data-prototype-id=\"allegro.user.profile.card\" data-prototype-version=\"0.2\" data-civ=\"ddf\" data-analytics-enabled data-analytics-category=\"allegro.user.profile.card\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-user-profile-card\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"mpof_ki m7f5_sf\"\u003E\u003Cdiv class=\"meqh_en\"\u003E\u003Ch5 class=\"mp0t_ji munh_0 m3h2_0 mp4t_0 mqu1_1j mgmw_wo m9qz_yq mgn2_16 mgn2_17_s mryx_0\"\u003ECześć\u003Cspan data-role=\"user-card-first-name\"\u003E Jakub\u003C\u002Fspan\u003E!\u003C\u002Fh5\u003E\u003Ch6 data-role=\"user-card-login\" class=\"m6ax_n4 meqh_en mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0\" title=\"zielonyeufor\"\u003Ezielonyeufor\u003C\u002Fh6\u003E\u003Ch6 data-role=\"user-card-email\" class=\"m6ax_n4 meqh_en mgn2_14 mp0t_0a mqu1_21 mli8_k4 mgmw_k1 m9qz_yp mp4t_0 m3h2_0 mryx_0 munh_0\" title=\"zielonyeufor@gmail.com\"\u003Ezielonyeufor@gmail.com\u003C\u002Fh6\u003E\u003C\u002Fdiv\u003E \u003Cdiv class=\"mh36_8 mli2_0 _adc9e_3ekTY\"\u003E\u003Cimg alt=\"\" class=\"m7er_k4 mse2_k4 _adc9e_3OWND lazyload\" data-src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1db67e\u002F0cd495134989aa49d24d7a94d277\" \u002F\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"mpof_ki mwdn_1 _adc9e_2A-LN\"\u003E\u003Cdiv data-box-name=\"allegro.coins.status\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==aW0Wj49mQ0SsBaHDVml4vw==\" data-prototype-id=\"allegro.coins.status\" data-prototype-version=\"1.0\" data-civ=\"3bd\" data-analytics-enabled data-analytics-category=\"allegro.coins.status\" data-analytics-tags=\"U-Monety\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-coins-status\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mg9e_2 mj7a_2 mvrt_4 mh36_4 mj9z_5r msts_k9\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fmonety\" aria-label=\"masz 8 Monet\" data-analytics-clickable\u003E8 \u003Cimg class=\"_6b777_3HAxL\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14277\u002Fstatics\u002Fcoins_white_39a884d4.svg\" alt=\"\" \u002F\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.smart.status--badge\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==NCK4AROYSU-FJBOMyOwwJA==\" data-prototype-id=\"allegro.smart.status\" data-prototype-version=\"3.0\" data-civ=\"28d\" data-analytics-enabled data-analytics-category=\"allegro.smart.status\" data-analytics-tags=\"U-Smart\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-smart-status-badge\"\u003E\u003C\u002Fa\u003E\u003Ca href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-smart\" class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mj9z_5r mvrt_4 mh36_4 _cd074_3hmRf _cd074_A3L6l\" data-analytics-clickable title=\"jesteś Smart\"\u003Ejesteś \u003Cimg class=\"_cd074_1TAMX\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-11403\u002Fstatics\u002Fsmart_white_d525e434.svg\" title=\"Smart\" alt=\"Smart\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.allegroPayStatus\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==_O-XzXp-SbeicCjp51hqJQ==\" data-prototype-id=\"allegro.allegroPayStatus\" data-prototype-version=\"1.0\" data-civ=\"3b7\" data-analytics-enabled data-analytics-category=\"allegro.allegroPayStatus\" data-analytics-tags=\"U-Pay\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegropaystatus\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"msbw_2 mldj_2 mtag_2 mm2b_2 mp0t_ji mgn2_12 mj9z_5r mqu1_16 msa3_z4 mvrt_4 mh36_4 mgmw_9u _ca91f_2IHwY _ca91f_i5UZ1\" href=\"\u002Fmoje-allegro\u002Fzakupy\u002Fallegro-pay\" aria-label=\"284,93 zł Allegro Pay\" data-analytics-clickable\u003E284,93 zł \u003Cimg class=\"mp7g_oh _ca91f_wyR5X \" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fsc-14216\u002Fstatics\u002Fallegro-pay-icon_87545089.svg\" title=\"Allegro Pay\" alt=\"Allegro Pay\"\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E \u003Cdiv data-box-name=\"allegro.allegroFamilyStatus\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==WNdIS_mZROWkfkHkBHZPNg==\" data-prototype-id=\"allegro.allegroFamilyStatus\" data-prototype-version=\"1.0\" data-civ=\"d91\" data-analytics-enabled data-analytics-category=\"allegro.allegroFamilyStatus\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-allegrofamilystatus\"\u003E\u003C\u002Fa\u003E\u003Ca class=\"mp0t_ji mgn2_12 mqu1_16 mgmw_9u msbw_2 mldj_2 mtag_2 mm2b_2 msa3_z4 mg9e_2 mj7a_2 mvrt_4 mh36_4 msts_enp mj9z_5r\" href=\"https:\u002F\u002Fallegro.pl\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family\u002Fprosby-o-zakup?bi_m=Badge\" data-analytics-clickable data-analytics-click-value=allegroFamilyBadge\u003EJesteś w Family \u003Cimg class=\"mp7g_oh m0s5_9u _55472_3583s\" src=\"https:\u002F\u002Fassets.allegrostatic.com\u002Fmetrum\u002Ficon\u002Fhouse-and-heart-08872a341b.svg\" alt=\"\" width=\"12\" height=\"12\" \u002F\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003Chr class=\"mpof_z0 m7er_k4 m3h2_0 mryx_0 munh_0 m911_5r mefy_5r mnyp_5r mdwl_5r mse2_1 msts_me mp4t_16\"\u003E\u003Ca rel=\"nofollow\" class=\"mgn2_14 mp0t_0a m9qz_yp mp7g_oh mse2_40 mqu1_40 mtsp_ib mli8_k4 mp4t_0 m3h2_0 mryx_0 munh_0 m911_5r mefy_5r mnyp_5r mdwl_5r msbw_2 mldj_2 mtag_2 mm2b_2 mqvr_2 msa3_z4 mqen_m6 meqh_en m0qj_5r msts_n7 mh36_16 mvrt_16 mg9e_0 mj7a_0 mjir_sv m2ha_2 m8qd_qh mjt1_n2 b1la9 mjyo_6x mzmg_6m mj9z_5r mpof_vs mupj_5k mgmw_vz mrmn_qo mrhf_u8 m31c_kb m0ux_fp bgkgt m7er_k4\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\" data-analytics-clickable\u003EMoje Konto\u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Allegro Family\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==0M9W2Q-sRTGUpBK246gWeQ==\" data-prototype-id=\"layout.container\" data-prototype-version=\"9.0\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"allegro-family\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet opbox-sheet-5d23a _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"V2_V4 - member OR owner OR user who sent the invitation\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==PXPRvA-VSianiZSF_RMhIQ==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"v2_v4-member-or-owner-or-user-who-sent-the-invitation\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003EAllegro Family\u003C\u002Fspan\u003E\u003Cimg class=\"munh_8 _a095c_3583s\" src=\"https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F12fbef\u002F52f336554ab892e4f480206b1d00\" alt=\"Allegro Family\"\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Twoja rodzina\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family?bi_m=Nawigacja\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ETwoja rodzina\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Prośby o zakup\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Fallegro-family\u002Fprosby-o-zakup?bi_m=Nawigacja\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EProśby o zakup\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Rachunki\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==69rxRAIySEK7gg2Uuz11fA==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"rachunki\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mp4t_8 mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ERachunki\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Rozliczenia z Allegro\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Frachunki\u002Frozliczenia-z-allegro\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ERozliczenia z Allegro\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Faktury\" rel=\"nofollow\" href=\"\u002Fmoje-allegro\u002Fmoje-konto\u002Ffaktury \"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EFaktury\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv data-box-name=\"Centrum pomocy\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==fz9xRalRSdmT3XUap0c60w==Y4hEGgDnRPSXf_yGN9SDaw==QNAV66mZSHS-haaR-8imSw==\" data-prototype-id=\"allegro.links.panel\" data-prototype-version=\"1.0\" data-civ=\"418\" data-analytics-enabled data-analytics-category=\"allegro.links.panel\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%2C%22allegro.myAllegro%22%2C%22header%22%2C%22allegro.header.accountDropdown.userMenu%22%5D\"\u003E\u003Ca name=\"centrum-pomocy\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"msts_9u mryx_8\"\u003E\u003Ch6 class=\"mpof_ki m389_6m mp0t_ji m9qz_yq mg9e_8 mj7a_8 mh36_16 mvrt_16 mgn2_12 mqu1_16 _a095c_1FWAo\"\u003E\u003Cspan class=\"_1vx3o\"\u003ECentrum pomocy\u003C\u002Fspan\u003E\u003C\u002Fh6\u003E \u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Pomoc\" rel=\"nofollow\" href=\"\u002Fpomoc\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EPomoc\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Zapytaj Społeczność\" rel=\"nofollow\" href=\"https:\u002F\u002Fspolecznosc.allegro.pl\u002F\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003EZapytaj Społeczność\u003C\u002Fp\u003E  \u003C\u002Fa\u003E\u003Ca class=\"mse2_48 mpof_ki m389_6m mg9e_8 mj7a_8 mh36_16 mvrt_16 mjyo_6x mx7m_1 mnyp_co mlkp_ag _1vx3o _w7z6o _uj8z7 _a095c_3F61t\" data-analytics-clickable data-analytics-click-value=\"Skorzystaj ze szkoleń\" rel=\"nofollow\" href=\"\u002Fkampania\u002Fakademia-allegro\"\u003E\u003Cp class=\"_9hx3e _1vx3o\"\u003ESkorzystaj ze szkoleń\u003C\u002Fp\u003E  \u003C\u002Fa\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
+      "isActive": false,
+      "userStatusEnabled": true,
+      "logoutButtonEnabled": true
+    }
+  ],
+  "activeTabIndex": 0,
+  "implementationVariant": null
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==qxnfusP5Thyl9IjZlrbZqg==wDjUa1YpSOmi2LCYkm2nHA==">
     {
+  "currentPath": "\u002Fmoje-allegro\u002Fzakupy\u002Fkupione",
   "menuItems": [
     {
       "children": [
@@ -9843,7 +9844,6 @@
       "name": "Konto"
     }
   ],
-  "currentPath": "\u002Fmoje-allegro\u002Fzakupy\u002Fkupione",
   "flatMenuItems": {
     "zakupy": {
       "id": "zakupy",
@@ -10908,7 +10908,7 @@
   "helperMenu": ""
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json"
           data-serialize-box-id="PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==1mB_2DuURJOrLPNLgxn7xQ==">
     {
   "filter": "all",
@@ -18869,14 +18869,19 @@
   },
   "detailsUrl": "\u002Fmoje-allegro\u002Fzakupy\u002Fkupione",
   "timeToShowCancelPaymentButton": 5,
-  "listingBanner": "\u003Cdiv data-box-name=\"banner\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==aT_XcgapQXSPtCfrsmTeqA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%5D\"\u003E\u003Ca name=\"banner\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"allegro.performance.mark\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==SIs4Kw-qRxyjJTCa_ivDbg==\" data-prototype-id=\"allegro.performance.mark\" data-prototype-version=\"0.2\" data-civ=\"04f\" data-analytics-enabled data-analytics-category=\"allegro.performance.mark\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%5D\"\u003E\u003Ca name=\"allegro-performance-mark\"\u003E\u003C\u002Fa\u003E\u003Cscript nonce=\"HYvby1i6pBxJ5E7yxBnkDA==\"\u003E \u003C\u002Fscript\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
+  "listingBanner": "\u003Cdiv data-box-name=\"banner\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==aT_XcgapQXSPtCfrsmTeqA==\" data-prototype-id=\"layout.container\" data-prototype-version=\"8.1\" data-analytics-category=\"layout.container\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%5D\"\u003E\u003Ca name=\"banner\"\u003E\u003C\u002Fa\u003E\u003Cdiv class=\"opbox-sheet-wrapper m7er_k4 munh_56 m3h2_56 _26e29_2AYAm mjru_ey carousel-item\" \u003E  \u003Cdiv class=\"opbox-sheet _26e29_11PCu\" style=\"\"\u003E \u003Cdiv data-box-name=\"allegro.performance.mark\" data-box-id=\"PkQfyXWJRPa6iv0Ya1ESYw==i6n4UrdFREa7GvItytV9Cw==knqt9gsNQPeV4QzJGlNWgg==contentPkQfyXWJRPa6iv0Ya1ESYw==SIs4Kw-qRxyjJTCa_ivDbg==\" data-prototype-id=\"allegro.performance.mark\" data-prototype-version=\"0.2\" data-civ=\"04f\" data-analytics-enabled data-analytics-category=\"allegro.performance.mark\" data-analytics-groups=\"%5B%22allegro.myordersListing%22%5D\"\u003E\u003Ca name=\"allegro-performance-mark\"\u003E\u003C\u002Fa\u003E\u003Cscript nonce=\"WCbYJblGGCjw0ll1+NMwoQ==\"\u003E \u003C\u002Fscript\u003E\u003C\u002Fdiv\u003E \u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E",
   "forceFallbackAjaxUpdateForEmptyDS": false,
   "isRwd": false,
   "language": "pl-PL",
   "slots": {}
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-serialize-plugin-name="facebookTracking" data-civ="7e2">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-serialize-plugin-name="skins" data-civ="a8b">
+    {
+  "skin": "common"
+}
+  </script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-serialize-plugin-name="facebookTracking" data-civ="7e2">
     {
   "facebookTrackingConfiguration": {
     "hostUrl": "https:\u002F\u002Fwww.facebook.com",
@@ -18885,19 +18890,14 @@
   }
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-serialize-plugin-name="chatPlugin" data-civ="fef">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-serialize-plugin-name="chatPlugin" data-civ="fef">
     {
   "chatConfiguration": {
     "enabled": true
   }
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-serialize-plugin-name="skins" data-civ="a8b">
-    {
-  "skin": "common"
-}
-  </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-config="services">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-config="services">
     [
   [
     "@allegro/opbox-ept-activation-service",
@@ -19365,16 +19365,16 @@
   ]
 ]
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-12453/opbox-abe739f3.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-12453/opbox-abe739f3.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-12453/opbox-ddd56e39.es6.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-12453/opbox-ddd56e39.es6.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-12453/vendors-ab9f8ed8.js" async="async" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-9182/index.es6-pl-PL_a885d626.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-12453/vendors-ab9f8ed8.js" async="async" crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-9182/index.es6-pl-PL_a885d626.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-9182/index-pl-PL_5603ebd2.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-9182/index-pl-PL_5603ebd2.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     try {
       window.sessionStorage.setItem('userWithSmart', '1');
 } catch (err) {
@@ -19385,71 +19385,149 @@
       console.error(e);
 }
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-9181/main-header.es6-pl-PL_6385262f.js" type="module"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-9181/main-header.es6-pl-PL_6385262f.js" type="module"
           async="async" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-9181/main-header-pl-PL_faaa8590.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-9181/main-header-pl-PL_faaa8590.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-11691/index-authenticated.es6-pl-PL_42eb9711.js" type="module"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-11656/index-pl-PL_bc3f1271.js" async="async" nomodule="true"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-11656/index.es6-pl-PL_f3ba19bb.js" type="module" async="async"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-10556/index-pl-PL_bf590817.js" async="async" nomodule="true"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-10556/index.es6-pl-PL_9929ac08.js" type="module" async="async"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-12731/index.es6-pl-PL_c452e1e2.js" type="module" async="async"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-12731/index-pl-PL_30741156.js" async="async" nomodule="true"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-11691/index-authenticated.es6-pl-PL_42eb9711.js" type="module"
           async="async" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-11691/index-authenticated-pl-PL_b18e1791.js" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-11691/index-authenticated-pl-PL_b18e1791.js" async="async"
           nomodule="true" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-10556/index-pl-PL_bf590817.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14394/index.es6-pl-PL_b13dca04.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-10556/index.es6-pl-PL_9929ac08.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14394/index-pl-PL_4f0ab621.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-12731/index.es6-pl-PL_c452e1e2.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
+    var medalliaConfig_userLoggedIn = true;
+    var medalliaConfig_htmlLang = document.querySelector('html').getAttribute('lang');
+    var medalliaConfig_assignedExperimentVariants = {};
+  </script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
+    (function (window) {
+      function withFormContent(acc, data) {
+        acc.content = data.Content;
+  }
+
+      function withFeedbackUUID(acc, data) {
+        acc.feedbackUUID = data.Feedback_UUID;
+  }
+
+      function mEvent(name, action, opts) {
+        opts = opts || {};
+        var custom = opts.custom;
+        var label = opts.label;
+
+        function handle(event) {
+          var cm = window.cm || function () {};
+          var mData = event.detail;
+          var eData = {
+            category: 'medalia',
+            action: action,
+            label: label || mData.Form_Type,
+            value: mData.Form_ID,
+            customParams: {}
+      };
+
+          if (custom) {
+            for (var i = 0; i < custom.length; i++) custom[i
+        ](eData.customParams, mData);
+      }
+
+          cm('send', 'event', eData);
+    }
+
+        window.addEventListener('MDigital_' + name, handle);
+  }
+
+      mEvent('ShowForm_Called', 'FormCall');
+      mEvent('Form_Displayed', 'FormDisplay');
+      mEvent('Form_Next_Page', 'FormNextPage');
+      mEvent('Form_Back_Page', 'FormBackPage');
+      mEvent('Form_Close_Submitted', 'FormSubmit');
+      mEvent('Form_Close_No_Submit', 'FormNoSubmit');
+      mEvent('Submit_Feedback', 'FeedbackSubmit',
+  {
+        custom: [withFeedbackUUID, withFormContent
+    ]
+  });
+      mEvent('Feedback_Button_Clicked', 'FeedbackButton',
+  {
+        custom: [withFeedbackUUID
+    ]
+  });
+      mEvent('ThankYou_Displayed', 'ThankYouDisplayed',
+  {
+        custom: [withFeedbackUUID
+    ]
+  });
+      mEvent('Invite_Displayed', 'InviteDisplayed',
+  {
+        label: 'Invite'
+  });
+      mEvent('Invite_Accepted', 'InviteAccepted',
+  {
+        label: 'Invite'
+  });
+      mEvent('Invite_Declined', 'InviteDeclined',
+  {
+        label: 'Invite'
+  });
+      mEvent('Invite_Skipped', 'InviteSkipped',
+  {
+        label: 'Invite'
+  });
+}(window));
+  </script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://nebula-cdn.kampyle.com/we/250698/onsite/embed.js" async="async"></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
+    ! function (i) {
+      function e(e) {
+        i[e
+    ] = i[e
+    ] || function () {
+          var n = e + "_pdata",
+            _ = i[n
+      ] = i[n
+      ] || [];
+          _[_.length
+      ] = arguments
+    }
+  }
+      i.pp_gemius_identifier = ".WcwDSOFU5ZsoLDt7DRTv8QMPziK6iNsrOJZDqDbANT.07", i.gemius_pending = e, e("gemius_hit"), e("gemius_event"), e(
+        "pp_gemius_hit"), e("pp_gemius_event")
+}(window);
+  </script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-17184/lib_0bc3aa59.js" async="async" crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-7651/index.es6_7b7e6223.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-12731/index-pl-PL_30741156.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14307/index.es6-pl-PL_e4641356.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-11656/index-pl-PL_bc3f1271.js" async="async" nomodule="true"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14307/index-pl-PL_f4cdc139.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-11656/index.es6-pl-PL_f3ba19bb.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14352/index.es6_7a68e3e9.js" type="module" async="async"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14394/index.es6-pl-PL_b13dca04.js" type="module" async="async"
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14352/index_c9a98b1c.js" async="async" nomodule="true"
           crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14394/index-pl-PL_4f0ab621.js" async="async" nomodule="true"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-7651/index.es6_7b7e6223.js" type="module" async="async"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14352/index.es6_7a68e3e9.js" type="module" async="async"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14352/index_c9a98b1c.js" async="async" nomodule="true"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14307/index.es6-pl-PL_e4641356.js" type="module" async="async"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14307/index-pl-PL_f4cdc139.js" async="async" nomodule="true"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14778/index.es6_e8af1bc8.js" type="module" async="async"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-14778/index_7bc1c6dd.js" async="async" nomodule="true"
-          crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     fetch('https: //naanalle.pl/dsp-cookie/pixel.gif?naanid=w9D0VDPZH0CY355OS9NVpGhUa6OyFzueCgqJzgi2BTm9TOCdUFRmTCRvS%2BLdOyFa', {
       mode: 'cors',
       credentials: 'include'
 })
   </script><noscript><img height="1" width="1" style="display:none"
          src="https://naanalle.pl/dsp-cookie/pixel.gif?naanid=w9D0VDPZH0CY355OS9NVpGhUa6OyFzueCgqJzgi2BTm9TOCdUFRmTCRvS%2BLdOyFa" /></noscript>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
-    ! function (i) {
-      function e(e) {
-        i[e
-  ] = i[e
-  ] || function () {
-          var n = e + "_pdata",
-            _ = i[n
-    ] = i[n
-    ] || [];
-          _[_.length
-    ] = arguments
-  }
-}
-      i.pp_gemius_identifier = ".WcwDSOFU5ZsoLDt7DRTv8QMPziK6iNsrOJZDqDbANT.07", i.gemius_pending = e, e("gemius_hit"), e("gemius_event"), e(
-        "pp_gemius_hit"), e("pp_gemius_event")
-}(window);
-  </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/sc-17184/lib_0bc3aa59.js" async="async" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     (function (w, d, s, l, i) {
       w[l
 ] = w[l
@@ -19472,102 +19550,65 @@
 })(window, document, 'script', 'dataLayer', 'GTM-PXLB8XT');
   </script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXLB8XT" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       userHash: 'a6bcbf7a529e7633e9925c4df5c5162aef76668913705ad13c411d86e8d36a73'
 });
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==">
     window.ddjskey = "77DC0FFBAA0B77570F6B414F8E5BDB";
     window.ddoptions = {
       endpoint: "https://js-data.allegro.pl/js/"
 };
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://assets.allegrostatic.com/e09d28a6-external/dd-K89D9F1.js" async="async" crossorigin></script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
-    var medalliaConfig_userLoggedIn = true;
-    var medalliaConfig_htmlLang = document.querySelector('html').getAttribute('lang');
-    var medalliaConfig_assignedExperimentVariants = {};
-  </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==">
-    (function (window) {
-      function withFormContent(acc, data) {
-        acc.content = data.Content;
-}
-
-      function withFeedbackUUID(acc, data) {
-        acc.feedbackUUID = data.Feedback_UUID;
-}
-
-      function mEvent(name, action, opts) {
-        opts = opts || {};
-        var custom = opts.custom;
-        var label = opts.label;
-
-        function handle(event) {
-          var cm = window.cm || function () {};
-          var mData = event.detail;
-          var eData = {
-            category: 'medalia',
-            action: action,
-            label: label || mData.Form_Type,
-            value: mData.Form_ID,
-            customParams: {}
-    };
-
-          if (custom) {
-            for (var i = 0; i < custom.length; i++) custom[i
-      ](eData.customParams, mData);
-    }
-
-          cm('send', 'event', eData);
-  }
-
-        window.addEventListener('MDigital_' + name, handle);
-}
-
-      mEvent('ShowForm_Called', 'FormCall');
-      mEvent('Form_Displayed', 'FormDisplay');
-      mEvent('Form_Next_Page', 'FormNextPage');
-      mEvent('Form_Back_Page', 'FormBackPage');
-      mEvent('Form_Close_Submitted', 'FormSubmit');
-      mEvent('Form_Close_No_Submit', 'FormNoSubmit');
-      mEvent('Submit_Feedback', 'FeedbackSubmit',
-{
-        custom: [withFeedbackUUID, withFormContent
-  ]
-});
-      mEvent('Feedback_Button_Clicked', 'FeedbackButton',
-{
-        custom: [withFeedbackUUID
-  ]
-});
-      mEvent('ThankYou_Displayed', 'ThankYouDisplayed',
-{
-        custom: [withFeedbackUUID
-  ]
-});
-      mEvent('Invite_Displayed', 'InviteDisplayed',
-{
-        label: 'Invite'
-});
-      mEvent('Invite_Accepted', 'InviteAccepted',
-{
-        label: 'Invite'
-});
-      mEvent('Invite_Declined', 'InviteDeclined',
-{
-        label: 'Invite'
-});
-      mEvent('Invite_Skipped', 'InviteSkipped',
-{
-        label: 'Invite'
-});
-}(window));
-  </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" src="https://nebula-cdn.kampyle.com/we/250698/onsite/embed.js" async="async"></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/e09d28a6-external/dd-K89D9F1.js" async="async" crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14778/index.es6_e8af1bc8.js" type="module" async="async"
+          crossorigin></script>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" src="https://assets.allegrostatic.com/sc-14778/index_7bc1c6dd.js" async="async" nomodule="true"
+          crossorigin></script>
   <style>
+    ._7d0d9_3mKg0 {
+      width: 32px;
+      height: 32px
+}
+
+    ._7d0d9_2r8wf {
+      left: 40px
+}
+
+    ._7d0d9_3ELUB {
+      min-height: 0
+}
+
+    ._7d0d9_1xMMb:last-child {
+      border-bottom: 0
+}
+
+    ._7d0d9_39eFM {
+      border-radius: 50%
+}
+
+    ._7d0d9_1cWh5 {
+      line-height: 24px
+}
+
+    ._7d0d9_2RrhG {
+      line-height: 18px
+}
+
+    ._7d0d9_TNvmu {
+      width: inherit !important
+}
+
+    :not(#\9)._7d0d9_1kQmO {
+      color: #fff
+}
+
+    ._7d0d9_1lGUl {
+      width: 24px
+}
+
     ._5537a_sD30P {
       width: 80px;
       height: 80px
@@ -19721,75 +19762,34 @@
     ._5537a_uthZC {
       top: calc(100% - 16px)
 }
-
-    ._7d0d9_3mKg0 {
-      width: 32px;
-      height: 32px
-}
-
-    ._7d0d9_2r8wf {
-      left: 40px
-}
-
-    ._7d0d9_3ELUB {
-      min-height: 0
-}
-
-    ._7d0d9_1xMMb:last-child {
-      border-bottom: 0
-}
-
-    ._7d0d9_39eFM {
-      border-radius: 50%
-}
-
-    ._7d0d9_1cWh5 {
-      line-height: 24px
-}
-
-    ._7d0d9_2RrhG {
-      line-height: 18px
-}
-
-    ._7d0d9_TNvmu {
-      width: inherit !important
-}
-
-    :not(#\9)._7d0d9_1kQmO {
-      color: #fff
-}
-
-    ._7d0d9_1lGUl {
-      width: 24px
-}
   </style>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16217/index_98db4c28.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16410/index_d494773d.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-12824/index_babca02c.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13096/index_ed284951.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13219/index_b9366c04.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15596/index_4d6f04d5.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13325/index_d650d065.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13680/index_c3ef596f.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16146/index_af73fd0f.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14175/index_3587c07b.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13703/index_48bb4506.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14253/index_e4c41335.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-customer-chat-service/index_7ed6b995.js" nonce="HYvby1i6pBxJ5E7yxBnkDA=="
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16217/index_98db4c28.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16410/index_d494773d.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-12824/index_babca02c.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13096/index_ed284951.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13219/index_b9366c04.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15596/index_4d6f04d5.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13325/index_d650d065.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13680/index_c3ef596f.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-16146/index_af73fd0f.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14175/index_3587c07b.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-13703/index_48bb4506.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14253/index_e4c41335.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-customer-chat-service/index_7ed6b995.js" nonce="WCbYJblGGCjw0ll1+NMwoQ=="
         crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-affiliate-program-service/index_39813266.js" nonce="HYvby1i6pBxJ5E7yxBnkDA=="
+  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-affiliate-program-service/index_39813266.js" nonce="WCbYJblGGCjw0ll1+NMwoQ=="
         crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15794/index_66bfb109.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14057/index_9e1aaa45.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14166/index_369f11a8.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-social-share-service/index_951b8f0b.js" nonce="HYvby1i6pBxJ5E7yxBnkDA=="
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15794/index_66bfb109.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14057/index_9e1aaa45.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14166/index_369f11a8.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-social-share-service/index_951b8f0b.js" nonce="WCbYJblGGCjw0ll1+NMwoQ=="
         crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14534/index_63fbbd8f.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15028/index_dbefa401.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-service-message-center/index_e93349c6.js" nonce="HYvby1i6pBxJ5E7yxBnkDA=="
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-14534/index_63fbbd8f.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-15028/index_dbefa401.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <link rel="prefetch" href="https://assets.allegrostatic.com/opbox-service-message-center/index_e93349c6.js" nonce="WCbYJblGGCjw0ll1+NMwoQ=="
         crossorigin>
-  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-17214/index_2b8937ce.js" nonce="HYvby1i6pBxJ5E7yxBnkDA==" crossorigin>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-config="lazy-scripts-map">
+  <link rel="prefetch" href="https://assets.allegrostatic.com/sc-17214/index_2b8937ce.js" nonce="WCbYJblGGCjw0ll1+NMwoQ==" crossorigin>
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-config="lazy-scripts-map">
     [
 {
   "prototypeId": "allegro.metrumHeader.cart",
@@ -19847,7 +19847,7 @@
 }
 ]
   </script>
-  <script nonce="HYvby1i6pBxJ5E7yxBnkDA==" type="application/json" data-config="bundled-styles-map">
+  <script nonce="WCbYJblGGCjw0ll1+NMwoQ==" type="application/json" data-config="bundled-styles-map">
     [
 {
   "url": "https://assets.allegrostatic.com/metrum/spinner/main-21a35acfee.m.css"

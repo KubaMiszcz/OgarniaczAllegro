@@ -1,14 +1,14 @@
 <td class="col-12">
   <div class="d-flex align-items-center">
 
-    <button *ngIf="order.id===0" type="button" class="btn btn-primary add-button" (click)="addNew()">
+    <button *ngIf="order.id === ''" type="button" class="btn btn-primary add-button" (click)="addNew()">
       <div class="add-icon"><i class="fa fa-plus " aria-hidden="true"></i></div>
     </button>
 
     <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
               class="form-control name" id="exampleFormControlTextarea1"
-              [rows]="order.id===0 ? 1 : 3" 
+              [rows]="order.id === '' ? 1 : 3" 
               (focusout)="onLostFocus($event)"
               aria-label="With textarea"
               >
@@ -109,7 +109,7 @@
     <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
               id="exampleFormControlTextarea1" class="form-control name return-code" 
-              [rows]="order.id===0 ? 1 : 4" 
+              [rows]="order.id === '' ? 1 : 4" 
               aria-label="With textarea">
             </textarea>
   </div>
@@ -160,7 +160,7 @@
     <span *ngIf="!isInEdit" class="">{{order.comment}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
     id="exampleFormControlTextarea1" class="form-control name" 
-    [rows]="order.id===0 ? 1 : 3" 
+    [rows]="order.id === '' ? 1 : 3" 
     aria-label="With textarea">
   </textarea>
 </div>
