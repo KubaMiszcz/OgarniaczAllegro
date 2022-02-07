@@ -13,6 +13,7 @@ import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
   providedIn: 'root'
 })
 export class OrderService {
+
   ordersList$ = new BehaviorSubject<IOrder[]>([]);
   selectedOrder$ = new BehaviorSubject<IOrder>(new Order());
   showAddNewOrderRow$ = new BehaviorSubject<boolean>(true);
@@ -26,7 +27,7 @@ export class OrderService {
     private http: HttpClient,
   ) {
 
-    let list = JSON.parse(localStorage.getItem('orders') ?? '');
+    let list = JSON.parse(localStorage.getItem('orders') ?? '[]');
     if (!list) {
       list = EXAMPLE_ROWS;
     }
@@ -83,6 +84,41 @@ export class OrderService {
       // }
     }
   }
+
+
+
+
+
+
+
+
+
+  importAllegroOrdersFromResponse(source: string) {
+    let json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
+    let allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
+    let oldList = this.ordersList$.value;
+    this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   fillOrdersFromAllegroImport(allAllegroOrders: IAllegroAllOrders) {

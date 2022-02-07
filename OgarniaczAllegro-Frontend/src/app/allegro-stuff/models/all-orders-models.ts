@@ -1,11 +1,12 @@
 export interface IAllegroAllOrders {
+  myorders: IMyorders;
+  //====
   filter: string;
   limit: number;
   offset: number;
   sort: string;
   order: string;
   selectionMode: boolean;
-  myorders: IMyorders;
   detailsUrl: string;
   timeToShowCancelPaymentButton: number;
   listingBanner: string;
@@ -239,7 +240,5 @@ export interface IMyorders {
 
 export interface ISlots {
 }
-
-
 
 

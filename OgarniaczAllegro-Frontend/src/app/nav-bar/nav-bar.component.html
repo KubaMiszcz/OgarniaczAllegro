@@ -37,17 +37,22 @@
         </div>
 
         <div class="nav-item col p-1 center ">
-          <button type="button" class="btn btn-outline-warning" (click)="save()">
+          <button type="button" class="btn btn-outline-warning" (click)="manageLocalStorage('save')">
             SaveALL
           </button>
         </div>
 
         <div class="nav-item col p-1 center ">
-          <button type="button" class="btn btn-outline-warning" (click)="load()">
+          <button type="button" class="btn btn-outline-warning" (click)="manageLocalStorage('load')">
             LoadALL
           </button>
         </div>
 
+        <div class="nav-item col p-1 center ">
+          <button type="button" class="btn btn-outline-warning" (click)="manageLocalStorage('clear')">
+            ClearALL
+          </button>
+        </div>
 
 
         <!-- <div class="col-3">

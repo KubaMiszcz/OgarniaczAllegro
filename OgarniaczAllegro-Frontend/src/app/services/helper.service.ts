@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IDateYMD } from '../models/dateYMD';
 import { IOrder } from '../models/order';
 
 
@@ -12,5 +13,15 @@ export class HelperService {
   }
 
   nameof = <T>(name: keyof T) => name;
+
+  getDateYMD(timestamp: Date): IDateYMD {
+    //todo what if no delivery? ''? null as timestamp?
+    let date = new Date(timestamp);
+    return {
+      year: date.getFullYear(),
+      month: date.getMonth() + 1,
+      day: date.getDate(),
+    };
+  }
 
 }

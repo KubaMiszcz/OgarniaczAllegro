@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersTableComponent implements OnInit {
   ordersList: IOrder[] = [];
-  editedOrder = new Order();
+  editedOrder: IOrder = new Order();
   showAddNewRow = false;
 
   constructor(

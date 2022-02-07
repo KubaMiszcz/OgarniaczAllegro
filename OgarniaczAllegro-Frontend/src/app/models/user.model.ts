@@ -2,6 +2,7 @@ export interface IUser {
   id: number;
   username: string;
   fullName?: string;
+  lastNumberOfOrders?: number
 }
 
 export const CURRENT_USER: IUser = {

@@ -28,13 +28,24 @@ export class NavBarComponent implements OnInit {
     this.orderService.showAddNewOrderRow$.next(this.showAddNewRow);
   }
 
-  save() {
-    localStorage.setItem('orders', JSON.stringify(this.orderService.ordersList$.value));
-  }
+  manageLocalStorage(value: string) {
+    switch (value) {
+      case 'save':
+        localStorage.setItem('orders', JSON.stringify(this.orderService.ordersList$.value));
+        break;
 
-  load() {
-    this.orderService.ordersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
-    console.log(this.orderService.ordersList$.value);
+      case 'load':
+        this.orderService.ordersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
+        break;
+
+      case 'clear':
+        localStorage.clear();
+        this.orderService.ordersList$.next([]);
+        break;
+
+      default:
+        break;
+    }
   }
 
 

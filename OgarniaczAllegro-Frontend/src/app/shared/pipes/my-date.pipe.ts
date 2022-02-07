@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IMyDate } from '../../models/my-date';
+import { IDateYMD } from '../../models/dateYMD';
 
 @Pipe({
   name: 'myDate',
 })
 export class MyDatePipe implements PipeTransform {
-  transform(value: IMyDate | undefined, ...args: any[]): string {
+  transform(value: IDateYMD | undefined, ...args: any[]): string {
     if (!value) {
       return 'n/a';
     }
