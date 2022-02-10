@@ -3,7 +3,7 @@ import { HelperService } from './helper.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { StatusService } from './status.service';
 import { environment } from 'src/environments/environment';
 import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
@@ -38,6 +38,12 @@ export class OrderService {
   selectOrder(order: IOrder | null) {
     this.selectedOrder$.next({ ...order } as IOrder);
   }
+
+  // showDetailsModal(order: IOrder) {
+  //   order = { ...order } as IOrder
+  //   this.selectedOrder$.next({ ...order } as IOrder);
+  //   this.showOrderDetailsModal$.next(order);
+  // }
 
   addNewOrder(newOrder: IOrder) {
     newOrder = { ...newOrder };

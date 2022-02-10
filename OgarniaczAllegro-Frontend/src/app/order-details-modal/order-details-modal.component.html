@@ -1,0 +1,56 @@
+  <div class="modal-content" (keydown)="onKeyPressed($event)">
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Nowy Tydzien</h4>
+      <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body py-2">
+
+      <div class="row m-0 mt-3 mb-4 p-0 events">
+          <!-- <div *ngFor="let item of eventTypes" class="event-type-tile card col"
+               [ngClass]="{ 'active-tile' : item.name === activeTypeName } ">
+            <div class="card-body">
+              {{item.name}}
+            </div>
+          </div> -->
+          asdasdasdasd
+        </div>
+  
+        <div class="col">
+          <!-- <div *ngIf="currentEvent" class="card-body m-0 p-0" [ngClass]="{ 'blur-event-card' : !eventPickingFinished} ">
+            <app-event-card [event]="currentEvent" (result)="onDialogClose($event)"></app-event-card>
+          </div> -->
+        </div>
+  
+
+
+      <div class="modal-footer p-2">
+        <button type="button" name="" id=""
+                class="col-4 btn btn-outline-danger btn-md btn-bloxck mr-1"
+                (click)="closeModal('')">
+          Odrzuc</button>
+        <button type="button" name="" id="" data-bs-dismiss="modal"
+                class="col-4 btn btn-outline-success btn-md btn-blxock"
+                (click)="closeModal('')">
+          OK
+        </button>
+      </div>
+
+
+
+
+      <div class="modal-footer">
+          <button type="button" name="" id="" data-bs-dismiss="modal"
+                  class="col-4 btn btn-outline-success btn-md btn-blxock"
+                  (click)="closeModal('OK')">
+            OK
+          </button>
+        </div>
+
+    </div>
+
+
+  </div>

@@ -1,4 +1,4 @@
-import { MyDatePipe } from './shared/pipes/my-date.pipe';
+import { DateYMDPipe } from './shared/pipes/date-YMD.pipe';
 import { PlnPipe } from './shared/pipes/pln.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +15,7 @@ import { DatePipe } from '@angular/common';
 import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-state-check-box.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImportOrderComponent } from './import-order/import-order.component';
+import { OrderDetailsModalComponent } from './order-details-modal/order-details-modal.component';
 
 
 @NgModule({
@@ -25,9 +26,10 @@ import { ImportOrderComponent } from './import-order/import-order.component';
     OrdersTableComponent,
     FooterComponent,
     PlnPipe,
-    MyDatePipe,
+    DateYMDPipe,
     TriStateCheckBoxComponent,
     ImportOrderComponent,
+    OrderDetailsModalComponent,
   ],
   imports: [
     FormsModule,

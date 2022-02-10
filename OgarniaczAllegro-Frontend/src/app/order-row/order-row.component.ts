@@ -14,7 +14,7 @@ export class OrderRowComponent implements OnInit {
   @Input() isInEdit = false;
 
   @Output() editComplete = new EventEmitter<IOrder>();
-  // editedField = '';
+  @Output() openDetails = new EventEmitter<IOrder>();
 
   constructor(
     private helperService: HelperService
@@ -43,8 +43,11 @@ export class OrderRowComponent implements OnInit {
 
 
   onLostFocus(event: any) {
-
     this.editComplete.emit(this.order);
+  }
+
+  onOpenDetails(value: IOrder) {
+    this.openDetails.emit(this.order);
   }
 }
 
