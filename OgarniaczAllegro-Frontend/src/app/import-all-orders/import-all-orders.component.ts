@@ -14,6 +14,8 @@ export class ImportOrderComponent implements OnInit {
   source = '';
   ouput = '';
 
+  isLoading = false;
+
   constructor(
     private http: HttpClient,
     private orderService: OrderService,
@@ -23,6 +25,7 @@ export class ImportOrderComponent implements OnInit {
   }
 
   importAllOrders() {
+    this.isLoading = true;
     this.orderService.importAllegroOrdersFromResponse(this.source);
   }
 

@@ -14,18 +14,9 @@ export class NavBarComponent implements OnInit {
 
   constructor(
     private orderService: OrderService,
-    private statusService: StatusService,
   ) { }
-
-  ngOnInit(): void { }
-
-  testDEV() {
-    console.log(this.statusService.statuses)
-  }
-
-  toggleAddNewRow() {
-    this.showAddNewRow = !this.showAddNewRow;
-    this.orderService.showAddNewOrderRow$.next(this.showAddNewRow);
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   manageLocalStorage(value: string) {

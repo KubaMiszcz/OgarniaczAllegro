@@ -1,11 +1,16 @@
 <div class="col">
-        <h2>paste all orders</h2>
-        <div class="d-flex">
-          <textarea [(ngModel)]="source"
-                    id="exampleFormControlTextarea1" class="form-control" 
-                    [rows]="10" 
-                    aria-label="With textarea">
+  <h2>paste all orders</h2>
+
+<app-spinner *ngIf="isLoading"></app-spinner>
+
+  <div *ngIf="!isLoading">
+    <div class="d-flex">
+      <textarea [(ngModel)]="source"
+                id="exampleFormControlTextarea1" class="form-control"
+                [rows]="10"
+                aria-label="With textarea">
                   </textarea>
-        </div>
-        <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="importAllOrders()">import all</button>
+    </div>
+    <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="importAllOrders()">import all</button>
+  </div>
 </div>

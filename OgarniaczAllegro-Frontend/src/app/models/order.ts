@@ -95,7 +95,7 @@ export class Order implements IOrder {
 
 
 
-export const EXAMPLE_ROWS: IOrder[] = [
+export const EXAMPLE_ROWS_XXX: IOrder[] = [
   // {
   //   id: '1',
   //   name: 'spieniacz do mleka ten drugi zwracany',

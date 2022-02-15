@@ -1,6 +1,6 @@
 import { IStatus } from '../models/status.model';
 import { CURRENT_USER as CURRENT_USER } from '../models/user.model';
-import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
+import { IOrder, Order } from '../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IUser } from '../models/user.model';

@@ -31,10 +31,10 @@
   </thead>
   <tbody>
 
-    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true"
+    <!-- <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true"
         (click)="selectRow(null)"
         (editComplete)="addNewOrder($event)">
-    </tr>
+    </tr> -->
 
     <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)"
         (click)="selectRow(order)"
@@ -52,10 +52,10 @@
 </ng-template>-->
 
 
-<ng-template #orderDetailsModal let-modal>
+<!-- <ng-template #orderDetailsModal let-modal>
   <app-order-details-modal (close)="closeModal($event)" ></app-order-details-modal>
 </ng-template>
-
+ -->
 
 
 

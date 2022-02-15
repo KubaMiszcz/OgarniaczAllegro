@@ -1,7 +1,7 @@
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
+import { IOrder, Order } from '../models/order';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { StatusService } from './status.service';
@@ -15,8 +15,12 @@ import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 export class OrderService {
 
   ordersList$ = new BehaviorSubject<IOrder[]>([]);
+
+
   selectedOrder$ = new BehaviorSubject<IOrder>(new Order());
-  showAddNewOrderRow$ = new BehaviorSubject<boolean>(true);
+
+
+  // showAddNewOrderRow$ = new BehaviorSubject<boolean>(true);
 
   private apiPath = `${environment.apiPath}/order`;
 
@@ -28,9 +32,9 @@ export class OrderService {
   ) {
 
     let list = JSON.parse(localStorage.getItem('orders') ?? '[]');
-    if (!list) {
-      list = EXAMPLE_ROWS;
-    }
+    // if (!list) {
+    //   list = EXAMPLE_ROWS;
+    // }
 
     this.ordersList$.next(list);
   }

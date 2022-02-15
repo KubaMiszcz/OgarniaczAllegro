@@ -11,12 +11,12 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 })
 export class OrdersTableComponent implements OnInit {
   ordersList: IOrder[] = [];
+
   selectedOrder: IOrder = new Order();
-  showAddNewRow = false;
+  // showAddNewRow = false;
 
   // showOrderDetailsModal$ = this.orderService.showOrderDetailsModal$;
   private modalRef!: NgbModalRef;
-
 
   @ViewChild('orderDetailsModal') orderDetailsModal: any;
 
@@ -26,7 +26,7 @@ export class OrdersTableComponent implements OnInit {
     private modalService: NgbModal,
 
   ) {
-    this.orderService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
+    // this.orderService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
 
     this.orderService.ordersList$.subscribe(ol => this.ordersList = ol);
     this.orderService.selectedOrder$.subscribe(o => this.selectedOrder = o);
