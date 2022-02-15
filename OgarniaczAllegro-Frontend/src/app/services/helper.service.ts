@@ -16,12 +16,18 @@ export class HelperService {
 
   getDateYMD(timestamp: Date): IDateYMD {
     //todo what if no delivery? ''? null as timestamp?
-    let date = new Date(timestamp);
+    const date = new Date(timestamp);
+
     return {
       year: date.getFullYear(),
       month: date.getMonth() + 1,
       day: date.getDate(),
     };
   }
+
+  getDeepCopy<T>(obj: T) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+
 
 }

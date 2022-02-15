@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 import { MyorderGroup } from './models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-import-all-orders',
@@ -12,21 +13,19 @@ import { MyorderGroup } from './models';
 })
 export class ImportOrderComponent implements OnInit {
   source = '';
-  ouput = '';
-
-  isLoading = false;
 
   constructor(
     private http: HttpClient,
     private orderService: OrderService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
   }
 
   importAllOrders() {
-    this.isLoading = true;
     this.orderService.importAllegroOrdersFromResponse(this.source);
+    this.router.navigate(['/orders-table']);
   }
 
 

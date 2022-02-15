@@ -15,9 +15,7 @@ export class NavBarComponent implements OnInit {
   constructor(
     private orderService: OrderService,
   ) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void { }
 
   manageLocalStorage(value: string) {
     switch (value) {

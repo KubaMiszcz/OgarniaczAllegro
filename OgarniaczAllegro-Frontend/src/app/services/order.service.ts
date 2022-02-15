@@ -105,9 +105,18 @@ export class OrderService {
 
   importAllegroOrdersFromResponse(source: string) {
     const json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
-    const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
-    const oldList = this.ordersList$.value;
-    this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+    const oldList = this.helperService.getDeepCopy(this.ordersList$.value);
+    let newList: IOrder[] = [];
+    try {
+      const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
+      newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+    } catch (error) {
+      console.warn('something wrong with importAllegroOrdersFromResponse');
+      alert('something wrong with importAllegroOrdersFromResponse');
+      newList = oldList;
+    } finally {
+      this.ordersList$.next(oldList);
+    }
   }
 
 

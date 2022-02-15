@@ -50,7 +50,7 @@ export class AllegroService {
     return finalJson;
   }
 
-  fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]) {
+  fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]): IOrder[] {
     importedList.myorders.orderGroups.forEach(group => {
       const existedOrderIdx = oldOrderList.findIndex(o => o.id === group.groupId);
 
@@ -61,11 +61,12 @@ export class AllegroService {
       } else {
         oldOrderList.push(this.createOrderFromGroup(group));
       }
-
     });
 
     //show toast
     console.log(`first ${importedList.limit} order from ${importedList.myorders.total} imported sucessfully`);
+
+    return oldOrderList;
   }
 
 
