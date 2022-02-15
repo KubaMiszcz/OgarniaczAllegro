@@ -1,15 +1,11 @@
-import { IDateYMD } from './../models/dateYMD';
-import { AllegroEnums } from './../allegro-stuff/models/allegro-enums';
-import { OrderService } from './order.service';
-import { HelperService } from './helper.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { StatusService } from './status.service';
-import { environment } from 'src/environments/environment';
-import { IAllegroAllOrders, IMyorder, IOrderGroup } from '../allegro-stuff/models/all-orders-models';
-import { IOrder, Order } from '../models/order';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { IAllegroAllOrders, IOrderGroup } from '../allegro-stuff/models/all-orders-models';
+import { IOrder } from '../models/order';
 import { StatusEnum } from '../models/status.enum';
+import { AllegroEnums } from './../allegro-stuff/models/allegro-enums';
+import { HelperService } from './helper.service';
+import { StatusService } from './status.service';
 
 
 @Injectable({
@@ -25,25 +21,25 @@ export class AllegroService {
 
   getJSONFromAllegroOrdersResponse(source: string) {
 
-    let beginJson = '"filter":';
-    let endingJson = '"slots":';
+    const beginJson = '"filter":';
+    const endingJson = '"slots":';
 
     //for single order
     // let beginJson ='"myorderGroup":';
     // let endJson='"myorderGroup.$meta":';
 
-    let foundedByBeginMark = source.split(beginJson);
-    let possibleJsons: string[] = [];
+    const foundedByBeginMark = source.split(beginJson);
+    const possibleJsons: string[] = [];
 
     foundedByBeginMark.forEach(part => {
-      let json = part.split(endingJson);
+      const json = part.split(endingJson);
       if (json.length > 1) {
         possibleJsons.push(json[0]);
       }
     });
 
     if (possibleJsons.length > 1) {
-      this.checkIfAllJsonsIdentical(possibleJsons)
+      this.checkIfAllJsonsIdentical(possibleJsons);
     }
 
     // let finalJson = possibleJsons[0]?.slice(0, -1); //remove last char - comma
@@ -56,10 +52,10 @@ export class AllegroService {
 
   fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]) {
     importedList.myorders.orderGroups.forEach(group => {
-      let existedOrderIdx = oldOrderList.findIndex(o => o.id === group.groupId);
+      const existedOrderIdx = oldOrderList.findIndex(o => o.id === group.groupId);
 
       if (existedOrderIdx >= 0) {
-        let order = this.getUpdatedOrder(oldOrderList[existedOrderIdx], group);
+        const order = this.getUpdatedOrder(oldOrderList[existedOrderIdx], group);
         oldOrderList[existedOrderIdx] = order;
 
       } else {
@@ -76,25 +72,26 @@ export class AllegroService {
 
 
   private getUpdatedOrder(oldOrder: IOrder, group: IOrderGroup): IOrder {
-    let order = group.myorders[0];
+    const order = group.myorders[0];
 
     return {
       ...oldOrder,
       isPackageDelivered: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
       receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
-    }
+    };
   }
 
   createOrderFromGroup(group: IOrderGroup) {
     // createOrderFromGroup(group: IOrderGroup): IOrder {
     // !!!!!!!!!!!!!!!!
-    // dont use group.myorders, just go straight into 
+    // dont use group.myorders, just go straight into
     // group.myorders[0].order
     // myorders has alway one item: order
     // and there is all info about it
 
-    let order = group.myorders[0];
-    let name = order.offers.map(o => '- ' + o.title).join('\n');
+    const order = group.myorders[0];
+    const name = order.offers.map(o => '- ' + o.title).join('\n');
+
     return {
       id: group.groupId,
       name: name,
@@ -107,7 +104,7 @@ export class AllegroService {
 
       isFinished: StatusEnum.No
 
-    }
+    };
   }
 
 
