@@ -14,8 +14,7 @@ import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 })
 export class OrderService {
 
-  ordersList$ = new BehaviorSubject<IOrder[]>([]);
-
+  allOrdersList$ = new BehaviorSubject<IOrder[]>([]);
 
   selectedOrder$ = new BehaviorSubject<IOrder>(new Order());
 
@@ -36,7 +35,7 @@ export class OrderService {
     //   list = EXAMPLE_ROWS;
     // }
 
-    this.ordersList$.next(list);
+    this.allOrdersList$.next(list);
   }
 
   selectOrder(order: IOrder | null) {
@@ -51,7 +50,7 @@ export class OrderService {
 
   addNewOrder(newOrder: IOrder) {
     newOrder = { ...newOrder };
-    const list = this.ordersList$.value;
+    const list = this.allOrdersList$.value;
     if (newOrder.id === '') {
       newOrder.id = (Math.round(Math.random() * 100000)).toString(); //lodash=>guid
       list.push(newOrder);
@@ -105,7 +104,7 @@ export class OrderService {
 
   importAllegroOrdersFromResponse(source: string) {
     const json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
-    const oldList = this.helperService.getDeepCopy(this.ordersList$.value);
+    const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
     try {
       const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
@@ -115,7 +114,7 @@ export class OrderService {
       alert('something wrong with importAllegroOrdersFromResponse');
       newList = oldList;
     } finally {
-      this.ordersList$.next(oldList);
+      this.allOrdersList$.next(oldList);
     }
   }
 
@@ -135,7 +134,7 @@ export class OrderService {
 
 
   fillOrdersFromAllegroImport(allAllegroOrders: IAllegroAllOrders) {
-    const currentList = this.ordersList$.value;
+    const currentList = this.allOrdersList$.value;
     const newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, currentList);
   }
 

@@ -1,5 +1,7 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { IOrder, Order } from './../models/order';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { DialogResultEnum } from '../models/constants/dialog-result.enum';
 
 @Component({
   selector: 'app-order-details-modal',
@@ -7,48 +9,29 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./order-details-modal.component.scss']
 })
 export class OrderDetailsModalComponent implements OnInit {
+  @Input() order: IOrder = new Order();
 
   @Output() close = new EventEmitter<string>();
 
-  constructor(
-    // private modalService: NgbModal,
+  constructor() { }
 
-  ) {
+  ngOnInit(): void { }
+
+  closeModal(result: string = DialogResultEnum.Cancel): void {
+    this.close.emit(result);
   }
-
-  ngOnInit(): void {
-    // this.showModal()
-    // this.gameService.showNextTurnModalE$.subscribe(v => {
-    //   if (v) {
-    //     this.showModal()
-    //   } else {
-    //     this.closeModal()
-    //   }
-    // });
-
-    // this.gameService.currentEvent$.subscribe(e => this.currentEvent = e);
-  }
-
-  closeModal(result: string): void {
-    this.close.emit('');
-  }
-
 
 
   onKeyPressed(event: KeyboardEvent) {
-    // if (
-    //   !this.currentEvent.isRejectable
-    //   || event.code === "Enter"
-    //   || event.code === "Space"
-    // ) {
-    //   this.onDialogClose(DialogResultEnum.Accept);
-    // }else{
-    // // if (event.code === "Escape" && this.currentEvent.isRejectable) {
-    // this.onDialogClose(DialogResultEnum.Reject);
-    // }
-
-
-    // this.closeModal();
+    if (
+      event.code === 'Enter'
+      // || event.code === 'Space'
+      // || event.code === 'Escape'
+    ) {
+      this.closeModal(DialogResultEnum.OK);
+    } else {
+      this.closeModal(DialogResultEnum.Cancel);
+    }
   }
 
 }

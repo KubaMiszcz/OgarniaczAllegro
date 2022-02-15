@@ -1,7 +1,7 @@
   <div class="modal-content" (keydown)="onKeyPressed($event)">
 
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Nowy Tydzien</h4>
+      <h4 class="modal-title" id="modal-basic-title">Order {{order.id}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -30,11 +30,11 @@
       <div class="modal-footer p-2">
         <button type="button" name="" id=""
                 class="col-4 btn btn-outline-danger btn-md btn-bloxck mr-1"
-                (click)="closeModal('')">
-          Odrzuc</button>
+                (click)="closeModal('Cancel')">
+          Cancel</button>
         <button type="button" name="" id="" data-bs-dismiss="modal"
                 class="col-4 btn btn-outline-success btn-md btn-blxock"
-                (click)="closeModal('')">
+                (click)="closeModal('OK')">
           OK
         </button>
       </div>
@@ -42,13 +42,13 @@
 
 
 
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
           <button type="button" name="" id="" data-bs-dismiss="modal"
                   class="col-4 btn btn-outline-success btn-md btn-blxock"
                   (click)="closeModal('OK')">
             OK
           </button>
-        </div>
+        </div> -->
 
     </div>
 
