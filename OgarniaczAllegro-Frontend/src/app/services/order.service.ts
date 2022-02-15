@@ -47,7 +47,7 @@ export class OrderService {
 
   addNewOrder(newOrder: IOrder) {
     newOrder = { ...newOrder };
-    let list = this.ordersList$.value;
+    const list = this.ordersList$.value;
     if (newOrder.id === '') {
       newOrder.id = (Math.round(Math.random() * 100000)).toString(); //lodash=>guid
       list.push(newOrder);
@@ -69,7 +69,7 @@ export class OrderService {
       //   name: newOrder.name,
       //   isAllegroPay: newOrder.isAllegroPay
       // };
-      let value = newOrder;
+      const value = newOrder;
       // let date=newOrder.receivedDate
       // value.receivedDate = new Date(date?.year, date?.month - 1, date?.day);
       console.log(value.orderValue);
@@ -100,9 +100,9 @@ export class OrderService {
 
 
   importAllegroOrdersFromResponse(source: string) {
-    let json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
-    let allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
-    let oldList = this.ordersList$.value;
+    const json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
+    const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
+    const oldList = this.ordersList$.value;
     this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
   }
 
@@ -121,15 +121,9 @@ export class OrderService {
 
 
 
-
-
-
-
-
-
   fillOrdersFromAllegroImport(allAllegroOrders: IAllegroAllOrders) {
-    let currentList = this.ordersList$.value;
-    let newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, currentList);
+    const currentList = this.ordersList$.value;
+    const newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, currentList);
   }
 
 
