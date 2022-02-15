@@ -1,17 +1,18 @@
 import { IUser } from './user.model';
-import { StatusEnum } from './status.enum';
-import { IDateYMD } from "./dateYMD";
+import { StatusEnum } from './constants/status.enum';
+import { IDateYMD } from './date-YMD';
 import { IOrderItem } from './order-item';
 
 
 export interface IOrder {
   id: string;
   name: string; //zamowienie
-  isAllegroPay: StatusEnum;// allegro Pay
+  isNew: boolean;
+  isAllegroPay: StatusEnum; // allegro Pay
   orderItems: IOrderItem[];
   orderValue: number;
   isPackageDelivered?: StatusEnum; // Przesyłka odebrana
-  receivedDate?: IDateYMD;// Data odebrania -> 
+  receivedDate?: IDateYMD; // Data odebrania ->
 
 
 
@@ -27,18 +28,18 @@ export interface IOrder {
 
   hasInvoice?: StatusEnum; //na firme?
 
-  isInvoiceReceived?: StatusEnum;// faktura OK ?
+  isInvoiceReceived?: StatusEnum; // faktura OK ?
 
   isReturnIssued?: StatusEnum; //Zwrot zgłoszony
 
-  returnToDate?: IDateYMD;// odeslij do
-  returnCode?: string;// kod zwrotu
+  returnToDate?: IDateYMD; // odeslij do
+  returnCode?: string; // kod zwrotu
   returnValue?: number; // kwota do zwrotu
 
-  isReturnSended?: StatusEnum;// Zwrot wysłany
-  isReturnDelivered?: StatusEnum;// Zwrot u sprzedającego
-  isCashReturned?: StatusEnum;// zwrot na koncie
-  isInvoiceCorrectionReceived?: StatusEnum;// korekta OK ?
+  isReturnSended?: StatusEnum; // Zwrot wysłany
+  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego
+  isCashReturned?: StatusEnum; // zwrot na koncie
+  isInvoiceCorrectionReceived?: StatusEnum; // korekta OK ?
 
 
 
@@ -58,6 +59,7 @@ export interface IOrder {
 export class Order implements IOrder {
   id = '';
   name = '';
+  isNew = false;
   isAllegroPay = StatusEnum.Unknown;
   orderItems = [];
   orderValue = 0;
@@ -71,22 +73,22 @@ export class Order implements IOrder {
   returnCode?: string | undefined;
   returnValue?: number | undefined;
   comment?: string | undefined;
-  // seller:string;  // sprzedajacy 
+  // seller:string;  // sprzedajacy
   hasInvoice?: StatusEnum = StatusEnum.Unknown;
   // hasInvoice = StatusEnum.Unknown; //na firme?
   // orderValue?: number;// suma kupionych
-  isInvoiceReceived?: StatusEnum = StatusEnum.No;// faktura OK ?
+  isInvoiceReceived?: StatusEnum = StatusEnum.No; // faktura OK ?
   isPackageDelivered?: StatusEnum = StatusEnum.No; // Przesyłka odebrana
-  // receivedDate?: IMyDate;// Data odebrania -> 
+  // receivedDate?: IMyDate;// Data odebrania ->
   isReturnIssued?: StatusEnum = StatusEnum.No; //Zwrot zgłoszony
-  returnToDate?: IDateYMD;// odeslij do
+  returnToDate?: IDateYMD; // odeslij do
   // returnCode?: string;// kod zwrotu
   // returnValue?: number; // kwota do zwrotu
-  isReturnSended?: StatusEnum = StatusEnum.No;// Zwrot wysłany
-  isReturnDelivered?: StatusEnum = StatusEnum.No;// Zwrot u sprzedającego
-  isCashReturned?: StatusEnum = StatusEnum.No;// zwrot na koncie
-  isInvoiceCorrectionReceived?: StatusEnum = StatusEnum.No;// korekta OK ?
-  isFinished = StatusEnum.No;// ALL OK
+  isReturnSended?: StatusEnum = StatusEnum.No; // Zwrot wysłany
+  isReturnDelivered?: StatusEnum = StatusEnum.No; // Zwrot u sprzedającego
+  isCashReturned?: StatusEnum = StatusEnum.No; // zwrot na koncie
+  isInvoiceCorrectionReceived?: StatusEnum = StatusEnum.No; // korekta OK ?
+  isFinished = StatusEnum.No; // ALL OK
 }
 
 
@@ -142,5 +144,5 @@ export const EXAMPLE_ROWS_XXX: IOrder[] = [
   //   isCashReturned: StatusEnum.No,
   //   isFinished: StatusEnum.No,
   // },
-]
+];
 

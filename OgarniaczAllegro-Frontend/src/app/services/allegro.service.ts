@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IAllegroAllOrders, IOrderGroup } from '../allegro-stuff/models/all-orders-models';
 import { IOrder } from '../models/order';
-import { StatusEnum } from '../models/status.enum';
-import { AllegroEnums } from './../allegro-stuff/models/allegro-enums';
+import { StatusEnum } from '../models/constants/status.enum';
+import { AllegroEnums } from '../allegro-stuff/models/allegro-enums';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
 
@@ -77,12 +77,13 @@ export class AllegroService {
 
     return {
       ...oldOrder,
+      isNew: false,
       isPackageDelivered: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
       receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
     };
   }
 
-  createOrderFromGroup(group: IOrderGroup) {
+  createOrderFromGroup(group: IOrderGroup): IOrder {
     // createOrderFromGroup(group: IOrderGroup): IOrder {
     // !!!!!!!!!!!!!!!!
     // dont use group.myorders, just go straight into
@@ -96,6 +97,7 @@ export class AllegroService {
     return {
       id: group.groupId,
       name: name,
+      isNew: true,
       isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
       orderItems: order.offers,
       orderValue: Number(order.totalCost.amount),

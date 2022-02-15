@@ -1,5 +1,5 @@
 import { HelperService } from './../services/helper.service';
-import { StatusEnum } from './../models/status.enum';
+import { StatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from './../models/order';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 

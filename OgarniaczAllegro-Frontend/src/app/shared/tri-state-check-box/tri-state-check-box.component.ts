@@ -1,4 +1,4 @@
-import { StatusEnum } from '../../models/status.enum';
+import { StatusEnum } from '../../models/constants/status.enum';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -21,7 +21,7 @@ export class TriStateCheckBoxComponent implements OnInit {
   }
 
   toggleState() {
-    let statuses = Object.values(StatusEnum);
+    const statuses = Object.values(StatusEnum);
     let nextStatusIdx = statuses.findIndex(s => this.value === s) + 1;
     nextStatusIdx = nextStatusIdx >= statuses.length ? 0 : nextStatusIdx;
     this.value = statuses[nextStatusIdx];

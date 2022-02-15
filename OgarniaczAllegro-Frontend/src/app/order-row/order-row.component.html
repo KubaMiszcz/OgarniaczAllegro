@@ -1,6 +1,8 @@
 <td class="col-12">
   <div class="d-flex align-items-center">
 
+    
+
 
 <!-- <i class="fa fa-cloud-download" aria-hidden="true"></i>
 <i class="fas fa-cloud-download    "></i>
@@ -19,6 +21,8 @@
     <i class="fa-regular fa-cloud-arrow-down"></i> -->
 
 
+
+
     <!-- <i class="fas fa-cloud-download-alt    "></i> -->
 <span (click)="onOpenDetails(order)">
   <i class="fas fa-file-import    "></i>
@@ -28,7 +32,7 @@
     <!-- <button *ngIf="order.id === ''" type="button" class="btn btn-primary add-button" (click)="addNew()">
       <div class="add-icon"><i class="fa fa-plus " aria-hidden="true"></i></div>
     </button> -->
-
+    <span *ngIf="order.isNew" class="badge badge-pill bg-primary">New</span>
     <span *ngIf="!isInEdit" class="">{{order.name}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
               class="form-control name" id="exampleFormControlTextarea1"
