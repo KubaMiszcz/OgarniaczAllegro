@@ -2,7 +2,7 @@ import { AllegroService } from '../services/allegro.service';
 import { OrderService } from '../services/order.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
+import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-model';
 import { MyorderGroup } from './models';
 import { Router } from '@angular/router';
 
@@ -24,7 +24,7 @@ export class ImportOrderComponent implements OnInit {
   }
 
   importAllOrders() {
-    this.orderService.importAllegroALlOrdersFromResponse(this.source);
+    this.orderService.importAllegroAllOrdersFromResponse(this.source);
     this.router.navigate(['/orders-table']);
   }
 

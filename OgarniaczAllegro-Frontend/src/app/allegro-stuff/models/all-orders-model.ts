@@ -240,5 +240,3 @@ export interface IMyorders {
 
 export interface ISlots {
 }
-
-

@@ -73,7 +73,7 @@
     ],
     "no-consecutive-blank-lines": [
       true,
-      20
+      40
     ],
     "comment-format": [
       false,
