@@ -38,6 +38,7 @@ export interface IOrder {
 
   isNew: boolean;
   name: string; //zamowienie
+  stage?: string;
 
   purchase: IPurchase;
   return: IReturn;
@@ -66,40 +67,15 @@ export interface IOrder {
 
 export class Order implements IOrder {
   allegroJson?: string | undefined;
-  purchase!: IPurchase;
-  return!: IReturn;
-  finishingDate?: IDateYMD | undefined;
+
   id = '';
   name = '';
   isNew = false;
   isAllegroPay = StatusEnum.Unknown;
-  orderItems = [];
-  orderValue = 0;
 
+  purchase!: IPurchase;
+  return!: IReturn;
 
-
-
-
-
-  receivedDate?: IDateYMD | undefined;
-  returnCode?: string | undefined;
-  returnValue?: number | undefined;
-  comment?: string | undefined;
-  // seller:string;  // sprzedajacy
-  hasInvoice?: StatusEnum = StatusEnum.Unknown;
-  // hasInvoice = StatusEnum.Unknown; //na firme?
-  // orderValue?: number;// suma kupionych
-  isInvoiceReceived?: StatusEnum = StatusEnum.No; // faktura OK ?
-  isPackageReceived?: StatusEnum = StatusEnum.No; // Przesyłka odebrana
-  // receivedDate?: IMyDate;// Data odebrania ->
-  isReturnIssued?: StatusEnum = StatusEnum.No; //Zwrot zgłoszony
-  returnToDate?: IDateYMD; // odeslij do
-  // returnCode?: string;// kod zwrotu
-  // returnValue?: number; // kwota do zwrotu
-  isReturnSended?: StatusEnum = StatusEnum.No; // Zwrot wysłany
-  isReturnDelivered?: StatusEnum = StatusEnum.No; // Zwrot u sprzedającego
-  isCashReturned?: StatusEnum = StatusEnum.No; // zwrot na koncie
-  isInvoiceCorrectionReceived?: StatusEnum = StatusEnum.No; // korekta OK ?
   isFinished = StatusEnum.No; // ALL OK
 }
 

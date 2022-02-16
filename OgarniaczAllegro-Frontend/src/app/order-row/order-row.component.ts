@@ -28,13 +28,13 @@ export class OrderRowComponent implements OnInit {
 
   triStateClicked(colName: string) {
     switch (colName) {
-      case this.helperService.nameof<Order>('hasInvoice'):
+      // case this.helperService.nameof<Order>('hasInvoice'):
 
-        // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.Yes ? StatusEnum.NA : StatusEnum.Unknown;
-        // console.log(colName, this.order[colName], this.order.isInvoiceCorrectionReceived)
+      // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.Yes ? StatusEnum.NA : StatusEnum.Unknown;
+      // console.log(colName, this.order[colName], this.order.isInvoiceCorrectionReceived)
 
 
-        break;
+      // break;
 
       default:
         break;

@@ -24,7 +24,7 @@ export class NavBarComponent implements OnInit {
         break;
 
       case 'load':
-        this.orderService.allOrdersList$.next(JSON.parse(localStorage.getItem('orders') ?? ''));
+        this.orderService.allOrdersList$.next(JSON.parse(localStorage.getItem('orders') ?? '[]'));
         break;
 
       case 'clear':

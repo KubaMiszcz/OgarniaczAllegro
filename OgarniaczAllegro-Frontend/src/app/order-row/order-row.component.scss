@@ -1,12 +1,16 @@
-.name {
-  border-radius: 10px;
-}
-
-th,
 td {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
   border-collapse: collapse;
+}
+
+.text-area {
+  border-radius: 10px;
+}
+
+.order-name {
+  max-height: 4rem;
+  overflow: auto;
 }
 
 .return-code {

@@ -66,7 +66,6 @@ export class OrdersTableComponent implements OnInit {
 
   onCloseModal(result: string) {
     this.modalRef.close();
-    console.log(result);
   }
 
 }
