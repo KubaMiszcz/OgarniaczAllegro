@@ -206,7 +206,7 @@ export class OrderService {
     return {
       ...oldOrder,
       isNew: false,
-      isPackageDelivered: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
+      isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
       receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
     };
   }
@@ -221,7 +221,7 @@ export class OrderService {
     // and there is all info about it
 
     const order = group.myorders[0];
-    const name = order.offers.map(o => '- ' + o.title).join('\n');
+    const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
     return {
       id: group.groupId,
@@ -230,7 +230,7 @@ export class OrderService {
       isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
       orderItems: order.offers,
       orderValue: Number(order.totalCost.amount),
-      isPackageDelivered: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
+      isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
       receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
 
 

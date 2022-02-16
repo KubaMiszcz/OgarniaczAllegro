@@ -5,50 +5,57 @@ import { IOrderItem } from './order-item';
 
 
 export interface IOrder {
+  allegroJson?: string; //remove later
   id: string;
-  name: string; //zamowienie
+
+
   isNew: boolean;
+  name: string; //zamowienie
   isAllegroPay: StatusEnum; // allegro Pay
-  orderItems: IOrderItem[];
+  hasInvoice?: StatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
   orderValue: number;
-  isPackageDelivered?: StatusEnum; // Przesyłka odebrana
+
+
+
+
+
+  isInvoiceReceived?: StatusEnum; // faktura OK ?
+  isPackageReceived?: StatusEnum; // Przesyłka odebrana
   receivedDate?: IDateYMD; // Data odebrania ->
 
 
 
 
-
-
-  isFinished: StatusEnum; // ALL OK
-  comment?: string; // notatka
-
-
-
-
-
-  hasInvoice?: StatusEnum; //na firme?
-
-  isInvoiceReceived?: StatusEnum; // faktura OK ?
-
   isReturnIssued?: StatusEnum; //Zwrot zgłoszony
-
   returnToDate?: IDateYMD; // odeslij do
   returnCode?: string; // kod zwrotu
   returnValue?: number; // kwota do zwrotu
-
   isReturnSended?: StatusEnum; // Zwrot wysłany
-  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego
+  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego  
   isCashReturned?: StatusEnum; // zwrot na koncie
   isInvoiceCorrectionReceived?: StatusEnum; // korekta OK ?
 
 
 
 
+  isFinished: StatusEnum; // ALL OK
+  finishingDate?: IDateYMD;
+
+  comment?: string; // notatka
+
+
+
+
+  orderItems: IOrderItem[];
   // owner?:IUser; //remove nullable
-  // finishingDare?: IMyDate;
-  // putchase as object
+
+
+
+  //=====================
+
+
+  // purchase as object
   // return as object
-  // data odebrania paczki
   // czas na zwrot +14dni albo custom
   // Zwrot zgłoszony +data
   // Zwrot w drodze  +data
@@ -78,7 +85,7 @@ export class Order implements IOrder {
   // hasInvoice = StatusEnum.Unknown; //na firme?
   // orderValue?: number;// suma kupionych
   isInvoiceReceived?: StatusEnum = StatusEnum.No; // faktura OK ?
-  isPackageDelivered?: StatusEnum = StatusEnum.No; // Przesyłka odebrana
+  isPackageReceived?: StatusEnum = StatusEnum.No; // Przesyłka odebrana
   // receivedDate?: IMyDate;// Data odebrania ->
   isReturnIssued?: StatusEnum = StatusEnum.No; //Zwrot zgłoszony
   returnToDate?: IDateYMD; // odeslij do
