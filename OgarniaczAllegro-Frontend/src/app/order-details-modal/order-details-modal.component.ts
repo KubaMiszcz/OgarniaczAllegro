@@ -24,7 +24,6 @@ export class OrderDetailsModalComponent implements OnInit {
 
   importOrder() {
     this.orderService.importAllegroSingleOrderFromResponse(this.source);
-
   }
 
   closeModal(result: string = DialogResultEnum.Cancel): void {

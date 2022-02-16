@@ -1,4 +1,4 @@
 export enum DialogResultEnum {
   OK = 'OK',
-  Cancel = 'Cancel',
+  Cancel = 'cancel',
 }

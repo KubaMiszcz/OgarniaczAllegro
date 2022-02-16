@@ -1,7 +1,7 @@
 <div class="modal-content " (keydown)="onKeyPressed($event)">
 
   <div class="modal-header">
-    <h4 class="modal-title " id="modal-basic-title">Order Id:<br>{{order.id}}</h4>
+    <h4 class="modal-title " id="modal-basic-title">Order Details</h4>
     <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -9,9 +9,23 @@
 
   <div class="modal-body modal-lg py-2">
 
-    <div class="rxow m-0 mt-3 mb-4 p-0">
-      Name: {{order.name}}
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Order Id</div>
+      </div>
+      <input [(ngModel)]="order.id" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
     </div>
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Name</div>
+      </div>
+      <input [(ngModel)]="order.name" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+    </div>
+
+
+
+
 
     <div>
       <a [href]="'https://allegro.pl/moje-allegro/zakupy/kupione/' +order.id" class="badge bg-primary" target="_blank">
@@ -31,9 +45,6 @@
                           </textarea>
         </div>
 
-        <div>
-          <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="importOrder()">Import</button>
-        </div>
 
       </div>
 
@@ -41,12 +52,17 @@
 
 
     <div class="modal-footer p-2">
+
       <button type="button" name="" id=""
-              class="col-4 btn btn-outline-danger btn-md btn-bloxck mr-1"
-              (click)="closeModal('Cancel')">
+              class="col s-4 btn btn-primary btn-md btn-bloxck mr-1"
+              (click)="importOrder()">
+        Import</button>
+      <button type="button" name="" id=""
+              class="col s-4 btn btn-outline-danger btn-md btn-bloxck"
+              (click)="closeModal('cancel')">
         Cancel</button>
       <button type="button" name="" id="" data-bs-dismiss="modal"
-              class="col-4 btn btn-outline-success btn-md btn-blxock"
+              class="col s-4 btn btn-outline-success btn-md btn-blxock"
               (click)="closeModal('OK')">
         OK
       </button>
