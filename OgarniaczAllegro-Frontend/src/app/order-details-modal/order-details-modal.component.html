@@ -1,48 +1,61 @@
-  <div class="modal-content" (keydown)="onKeyPressed($event)">
+<div class="modal-content " (keydown)="onKeyPressed($event)">
 
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Order {{order.id}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
-        <span aria-hidden="true">&times;</span>
+  <div class="modal-header">
+    <h4 class="modal-title " id="modal-basic-title">Order Id:<br>{{order.id}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body modal-lg py-2">
+
+    <div class="rxow m-0 mt-3 mb-4 p-0">
+      Name: {{order.name}}
+    </div>
+
+    <div>
+      <a [href]="'https://allegro.pl/moje-allegro/zakupy/kupione/' +order.id" class="badge bg-primary" target="_blank">
+        https://allegro.pl/moje-allegro/zakupy/kupione/{{order.id}}
+      </a>
+    </div>
+
+    <div class="col">
+      <div>paste raw data from allegro</div>
+
+      <div>
+        <div class="d-flex">
+          <textarea [(ngModel)]="source"
+                    id="exampleFormControlTextarea1" class="form-control"
+                    [rows]="2"
+                    aria-label="With textarea">
+                          </textarea>
+        </div>
+
+        <div>
+          <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="importOrder()">Import</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="modal-footer p-2">
+      <button type="button" name="" id=""
+              class="col-4 btn btn-outline-danger btn-md btn-bloxck mr-1"
+              (click)="closeModal('Cancel')">
+        Cancel</button>
+      <button type="button" name="" id="" data-bs-dismiss="modal"
+              class="col-4 btn btn-outline-success btn-md btn-blxock"
+              (click)="closeModal('OK')">
+        OK
       </button>
     </div>
 
-    <div class="modal-body py-2">
-
-      <div class="row m-0 mt-3 mb-4 p-0 events">
-          <!-- <div *ngFor="let item of eventTypes" class="event-type-tile card col"
-               [ngClass]="{ 'active-tile' : item.name === activeTypeName } ">
-            <div class="card-body">
-              {{item.name}}
-            </div>
-          </div> -->
-          asdasdasdasd
-        </div>
-  
-        <div class="col">
-          <!-- <div *ngIf="currentEvent" class="card-body m-0 p-0" [ngClass]="{ 'blur-event-card' : !eventPickingFinished} ">
-            <app-event-card [event]="currentEvent" (result)="onDialogClose($event)"></app-event-card>
-          </div> -->
-        </div>
-  
 
 
-      <div class="modal-footer p-2">
-        <button type="button" name="" id=""
-                class="col-4 btn btn-outline-danger btn-md btn-bloxck mr-1"
-                (click)="closeModal('Cancel')">
-          Cancel</button>
-        <button type="button" name="" id="" data-bs-dismiss="modal"
-                class="col-4 btn btn-outline-success btn-md btn-blxock"
-                (click)="closeModal('OK')">
-          OK
-        </button>
-      </div>
 
- 
-
-
-      <!-- <div class="modal-footer">
+    <!-- <div class="modal-footer">
           <button type="button" name="" id="" data-bs-dismiss="modal"
                   class="col-4 btn btn-outline-success btn-md btn-blxock"
                   (click)="closeModal('OK')">
@@ -50,7 +63,7 @@
           </button>
         </div> -->
 
-    </div>
-
-
   </div>
+
+
+</div>

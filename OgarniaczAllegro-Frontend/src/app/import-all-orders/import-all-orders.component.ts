@@ -24,7 +24,7 @@ export class ImportOrderComponent implements OnInit {
   }
 
   importAllOrders() {
-    this.orderService.importAllegroOrdersFromResponse(this.source);
+    this.orderService.importAllegroALlOrdersFromResponse(this.source);
     this.router.navigate(['/orders-table']);
   }
 

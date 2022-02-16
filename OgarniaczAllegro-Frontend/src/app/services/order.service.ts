@@ -14,6 +14,7 @@ import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
 })
 export class OrderService {
 
+
   allOrdersList$ = new BehaviorSubject<IOrder[]>([]);
 
   selectedOrder$ = new BehaviorSubject<IOrder>(new Order());
@@ -102,12 +103,16 @@ export class OrderService {
 
 
 
-  importAllegroOrdersFromResponse(source: string) {
-    const json = this.allegroService.getJSONFromAllegroOrdersResponse(source);
+  importAllegroALlOrdersFromResponse(source: string) {
+    const allOrdersJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
+
+
+
     const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
+
     try {
-      const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
+      const allAllegroOrders: IAllegroAllOrders = JSON.parse(allOrdersJSON);
       newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
     } catch (error) {
       console.warn('something wrong with importAllegroOrdersFromResponse');
@@ -116,6 +121,27 @@ export class OrderService {
     } finally {
       this.allOrdersList$.next(oldList);
     }
+
+  }
+
+  importAllegroSingleOrderFromResponse(source: string) {
+    const json = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
+    console.log(json);
+
+
+
+    // const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
+    // let newList: IOrder[] = [];
+    // try {
+    //   const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
+    //   newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+    // } catch (error) {
+    //   console.warn('something wrong with importAllegroOrdersFromResponse');
+    //   alert('something wrong with importAllegroOrdersFromResponse');
+    //   newList = oldList;
+    // } finally {
+    //   this.allOrdersList$.next(oldList);
+    // }
   }
 
 

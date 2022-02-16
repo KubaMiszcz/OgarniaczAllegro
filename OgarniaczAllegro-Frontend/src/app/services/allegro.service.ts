@@ -13,44 +13,60 @@ import { StatusService } from './status.service';
 })
 export class AllegroService {
 
+
   constructor(
     private statusService: StatusService,
     private helperService: HelperService,
     private http: HttpClient,
   ) { }
 
-  getJSONFromAllegroOrdersResponse(source: string) {
+  getJSONFromAllegroAllOrdersResponse(source: string): string {
+    const beginningSubstring = '"filter":';
+    const endingSubstring = '"slots":';
 
-    const beginJson = '"filter":';
-    const endingJson = '"slots":';
+    return this.getJSONFromAllegroResponse(source, beginningSubstring, endingSubstring);
+
 
     //for single order
     // let beginJson ='"myorderGroup":';
     // let endJson='"myorderGroup.$meta":';
 
-    const foundedByBeginMark = source.split(beginJson);
-    const possibleJsons: string[] = [];
+    // const foundedByBeginMark = source.split(beginningSubstring);
+    // const possibleJsons: string[] = [];
 
-    foundedByBeginMark.forEach(part => {
-      const json = part.split(endingJson);
-      if (json.length > 1) {
-        possibleJsons.push(json[0]);
-      }
-    });
+    // foundedByBeginMark.forEach(part => {
+    //   const json = part.split(endingSubstring);
+    //   if (json.length > 1) {
+    //     possibleJsons.push(json[0]);
+    //   }
+    // });
 
-    if (possibleJsons.length > 1) {
-      this.checkIfAllJsonsIdentical(possibleJsons);
-    }
+    // if (possibleJsons.length > 1) {
+    //   this.checkIfAllJsonsIdentical(possibleJsons);
+    // }
 
-    // let finalJson = possibleJsons[0]?.slice(0, -1); //remove last char - comma
-    let finalJson = possibleJsons[0];
+    // // let finalJson = possibleJsons[0]?.slice(0, -1); //remove last char - comma
+    // let finalJson = possibleJsons[0];
 
-    finalJson = '{' + beginJson + finalJson + endingJson + '{}}';
+    // finalJson = '{' + beginningSubstring + finalJson + endingSubstring + '{}}';
 
-    return finalJson;
+    // return finalJson;
   }
 
-  fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]): IOrder[] {
+  getJSONFromAllegroSingleOrderResponse(source: string) {
+    const beginningSubstring = '"myorderGroup":';
+    const endingSubstring = '"myorderGroup.$meta":';
+
+    return this.getJSONFromAllegroResponse(source, beginningSubstring, endingSubstring);
+  }
+
+
+  public fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]): IOrder[] {
+    console.log(
+      JSON.stringify(importedList.myorders.orderGroups.find(o => o.groupId === 'c6d77471-a24a-3c73-b37f-c9fab6bed611'))
+    );
+
+
     importedList.myorders.orderGroups.forEach(group => {
       const existedOrderIdx = oldOrderList.findIndex(o => o.id === group.groupId);
 
@@ -72,6 +88,29 @@ export class AllegroService {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   private getUpdatedOrder(oldOrder: IOrder, group: IOrderGroup): IOrder {
     const order = group.myorders[0];
 
@@ -83,7 +122,7 @@ export class AllegroService {
     };
   }
 
-  createOrderFromGroup(group: IOrderGroup): IOrder {
+  private createOrderFromGroup(group: IOrderGroup): IOrder {
     // createOrderFromGroup(group: IOrderGroup): IOrder {
     // !!!!!!!!!!!!!!!!
     // dont use group.myorders, just go straight into
@@ -111,6 +150,27 @@ export class AllegroService {
   }
 
 
+  private getJSONFromAllegroResponse(source: string, beginningSubstring: string, endingSubstring: string) {
+    const foundedByBeginMark = source.split(beginningSubstring);
+    const possibleJsons: string[] = [];
+
+    foundedByBeginMark.forEach(part => {
+      const json = part.split(endingSubstring);
+      if (json.length > 1) {
+        possibleJsons.push(json[0]);
+      }
+    });
+
+    if (possibleJsons.length > 1) {
+      this.checkIfAllJsonsIdentical(possibleJsons);
+    }
+
+    let finalJson = possibleJsons[0];
+
+    finalJson = '{' + beginningSubstring + finalJson + endingSubstring + '{}}';
+
+    return finalJson;
+  }
 
   private checkIfAllJsonsIdentical(list: string[]) {
     list.forEach(item => {

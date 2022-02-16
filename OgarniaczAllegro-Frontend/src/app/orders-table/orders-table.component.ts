@@ -57,7 +57,11 @@ export class OrdersTableComponent implements OnInit {
 
   onOpenDetails(order: IOrder) {
     // this.orderService.showDetailsModal(order);
-    this.modalRef = this.modalService.open(this.orderDetailsModal, { ariaLabelledBy: 'modal-basic-title' });
+    this.modalRef = this.modalService.open(this.orderDetailsModal, {
+      size: 'lg',
+      backdrop: 'static',
+      ariaLabelledBy: 'modal-basic-title'
+    });
   }
 
   onCloseModal(result: string) {

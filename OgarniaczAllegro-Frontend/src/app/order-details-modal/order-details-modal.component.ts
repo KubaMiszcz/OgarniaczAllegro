@@ -1,3 +1,4 @@
+import { OrderService } from './../services/order.service';
 import { IOrder, Order } from './../models/order';
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -11,11 +12,20 @@ import { DialogResultEnum } from '../models/constants/dialog-result.enum';
 export class OrderDetailsModalComponent implements OnInit {
   @Input() order: IOrder = new Order();
 
+  source = '';
+
   @Output() close = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(
+    private orderService: OrderService,
+  ) { }
 
   ngOnInit(): void { }
+
+  importOrder() {
+    this.orderService.importAllegroSingleOrderFromResponse(this.source);
+
+  }
 
   closeModal(result: string = DialogResultEnum.Cancel): void {
     this.close.emit(result);
@@ -26,10 +36,11 @@ export class OrderDetailsModalComponent implements OnInit {
     if (
       event.code === 'Enter'
       // || event.code === 'Space'
-      // || event.code === 'Escape'
     ) {
       this.closeModal(DialogResultEnum.OK);
-    } else {
+    } else if (
+      event.code === 'Escape'
+    ) {
       this.closeModal(DialogResultEnum.Cancel);
     }
   }

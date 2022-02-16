@@ -1,0 +1,470 @@
+{
+  "myorderGroup": {
+    "groupId": "ac850b01-f72d-36d6-9102-14ec92cc9d68",
+    "myorders": [
+      {
+        "id": "01f8a1a3-8e42-11ec-9b49-cf0f8095b327",
+        "purchaseId": "01dc6710-8e42-11ec-9b49-cf0f8095b327",
+        "seller": {
+          "id": "17182143",
+          "login": "PanPlastik",
+          "address": {
+            "firstName": "Robert",
+            "lastName": "Mazurek",
+            "zipCode": "42-400",
+            "city": "Zawiercie",
+            "country": "PL",
+            "street": "Polska 36",
+            "phoneNumber": "+48 32 670 24 47",
+            "company": "Hotair",
+            "taxId": "649-158-92-57",
+            "regon": "276078198",
+            "email": "55qilpz4rf@allegromail.pl"
+          },
+          "contactDetails": {
+            "phones": [
+              {
+                "number": "668255231",
+                "numberLabel": "668 255 231",
+                "numberLabelMasked": "668  *** ***"
+              }
+            ],
+            "emails": [
+              {
+                "address": "55qilpz4rf@allegromail.pl",
+                "addressMasked": "5*********@a**********.pl"
+              }
+            ],
+            "openingHours": [
+              {
+                "daysLabel": "poniedziałek - piątek",
+                "daysShortLabel": "pon. - pt.",
+                "hoursLabels": [
+                  "06:00 - 14:00"
+                ]
+              },
+              {
+                "daysLabel": "sobota - niedziela",
+                "daysShortLabel": "sob. - nd.",
+                "hoursLabels": [
+                  "zamknięte"
+                ]
+              }
+            ]
+          }
+        },
+        "offers": [
+          {
+            "id": "8033675399",
+            "title": "BUT DYSZA - SZYBKIE SPAWANIE PLASTIKU DLA SPAWARKA",
+            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fbut-dysza-szybkie-spawanie-plastiku-dla-spawarka-8033675399?navCategoryId=259804&snapshot=MjAyMi0wMi0xNVQwOTozMTozNS43NDNaO2J1eWVyOzczYTNlNjgzNmYyZGNhMTBiMWI4ZTc2MDE1ZGI0ZDExNzk2ODVmYzE5YTU2NmY0YTg0MTM1NDMxZTIwN2E0ZTI%3D",
+            "unitPrice": {
+              "amount": "35.65",
+              "currency": "PLN"
+            },
+            "originalUnitPrice": {
+              "amount": "35.65",
+              "currency": "PLN"
+            },
+            "quantity": 1,
+            "type": "UNIT",
+            "imageUrl": "https:\u002F\u002Fc.allegroimg.com\u002Foriginal\u002F033c67\u002Ffbf690f04c5f8ffe1fa412ad305c",
+            "productId": "933e1b04-3f1b-4aad-8f25-5cd39d0176b8",
+            "orderDate": "2022-02-15T09:31:35.743Z",
+            "gold": false,
+            "pharmacy": false,
+            "auction": false,
+            "toRate": false,
+            "orderOfferId": "01f8a1a2-8e42-11ec-9b49-cf0f8095b327",
+            "originalOfferPrice": {
+              "amount": "35.65",
+              "currency": "PLN"
+            },
+            "showOriginalPrice": false,
+            "offerPrice": {
+              "amount": "35.65",
+              "currency": "PLN"
+            }
+          },
+          {
+            "id": "7556188342",
+            "title": "Tworzywo Plastik Spoiwo ABS Pasek 8mm 135cm",
+            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Ftworzywo-plastik-spoiwo-abs-pasek-8mm-135cm-7556188342?navCategoryId=252416&snapshot=MjAyMi0wMi0xNVQwOTozMTozNS43NDNaO2J1eWVyOzk3NjZkYTExMzBiMmYxOTAxZjA3NDRjOGNlZjNlZDVjNjczMDgwODQwOTJjMzUyY2QwYTk3MGNkZTI2Mzg0YWQ%3D",
+            "unitPrice": {
+              "amount": "2.69",
+              "currency": "PLN"
+            },
+            "originalUnitPrice": {
+              "amount": "2.69",
+              "currency": "PLN"
+            },
+            "quantity": 1,
+            "type": "UNIT",
+            "imageUrl": "https:\u002F\u002F0.allegroimg.com\u002Foriginal\u002F06b762\u002F567f9e9a493480b9c407695d8440",
+            "orderDate": "2022-02-15T09:31:35.743Z",
+            "gold": false,
+            "pharmacy": false,
+            "auction": false,
+            "toRate": false,
+            "orderOfferId": "01f8a1a1-8e42-11ec-9b49-cf0f8095b327",
+            "originalOfferPrice": {
+              "amount": "2.69",
+              "currency": "PLN"
+            },
+            "showOriginalPrice": false,
+            "offerPrice": {
+              "amount": "2.69",
+              "currency": "PLN"
+            }
+          },
+          {
+            "id": "7556188220",
+            "title": "Tworzywo Plastik Spoiwo PP Pasek 8mm 135cm",
+            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Ftworzywo-plastik-spoiwo-pp-pasek-8mm-135cm-7556188220?navCategoryId=252416&snapshot=MjAyMi0wMi0xNVQwOTozMTozNS43NDNaO2J1eWVyOzk4MjM0YTAxOTE4ODMwYjMyZmRkYTdmYjJhZTE5NTkxNTRmOTczM2IwYjU3OTA4MzY4NmJlNmZiOGFjYWZhNTQ%3D",
+            "unitPrice": {
+              "amount": "2.65",
+              "currency": "PLN"
+            },
+            "originalUnitPrice": {
+              "amount": "2.65",
+              "currency": "PLN"
+            },
+            "quantity": 1,
+            "type": "UNIT",
+            "imageUrl": "https:\u002F\u002F8.allegroimg.com\u002Foriginal\u002F063a63\u002Fb0141d20497b81c697612d00d948",
+            "orderDate": "2022-02-15T09:31:35.743Z",
+            "gold": false,
+            "pharmacy": false,
+            "auction": false,
+            "toRate": false,
+            "orderOfferId": "01f8a1a0-8e42-11ec-9b49-cf0f8095b327",
+            "originalOfferPrice": {
+              "amount": "2.65",
+              "currency": "PLN"
+            },
+            "showOriginalPrice": false,
+            "offerPrice": {
+              "amount": "2.65",
+              "currency": "PLN"
+            }
+          }
+        ],
+        "delivery": {
+          "cost": {
+            "amount": "0.00",
+            "currency": "PLN"
+          },
+          "name": "Allegro Paczkomaty InPost",
+          "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
+          "id": "022c82e0-8e42-11ec-b93c-df432b1414a4",
+          "address": {
+            "id": "70df85b7-e65c-4fd2-a791-e72738b569ec",
+            "firstName": "Jakub",
+            "lastName": "Bełch",
+            "city": "Rzeszów",
+            "street": "Osmeckiego 41\u002F16",
+            "countryCode": "PL",
+            "zipCode": "35-506",
+            "phoneNumber": "534 883 128"
+          },
+          "generalDelivery": {
+            "id": "673168",
+            "name": "Paczkomat RZE34M",
+            "description": "Z boku sklepu od strony magazynu",
+            "address": {
+              "street": "Brydaka 13",
+              "code": "35-507",
+              "city": "Rzeszów"
+            },
+            "coordinates": {
+              "lat": 50.05841,
+              "lon": 21.98412
+            }
+          },
+          "discount": {
+            "originalCost": {
+              "amount": "8.99",
+              "currency": "PLN"
+            },
+            "type": "FREEBOX",
+            "planType": "FREEBOX_STANDARD"
+          },
+          "status": "IN_TRANSIT",
+          "timestamp": "2022-02-15T13:03:55.000Z",
+          "paymentType": {
+            "name": "płatne z góry",
+            "type": "PREPAID"
+          }
+        },
+        "totalCost": {
+          "amount": "40.99",
+          "currency": "PLN"
+        },
+        "summary": {
+          "totalCost": {
+            "amount": "40.99",
+            "currency": "PLN"
+          },
+          "exchangeRateDate": "2022-02-15T09:31:38.688Z",
+          "showExchangeRateInformation": false
+        },
+        "payment": {
+          "id": "10034c01-8e42-11ec-b387-ef25b876dbc4",
+          "provider": "PAYU",
+          "amount": {
+            "amount": "40.99",
+            "currency": "PLN"
+          },
+          "method": "Karta płatnicza",
+          "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
+          "status": "COMPLETED",
+          "date": "2022-02-15T09:31:38.688Z",
+          "isInstallments": false,
+          "isMultipleSellers": false,
+          "cardMask": "482436******6807"
+        },
+        "createDate": "2022-02-15T09:31:09.185Z",
+        "orderDate": "2022-02-15T09:31:35.743Z",
+        "serviceCountry": "PL",
+        "hiddenInMyOrders": false,
+        "boughtOnDevice": "DESKTOP",
+        "cancelled": false,
+        "status": {
+          "primary": {
+            "status": "IN_TRANSIT"
+          },
+          "traits": [
+            "DELIVERY_SMART",
+            "IS_SURCHARGE_ALLOWED"
+          ],
+          "actions": [
+            {
+              "type": "HIDE_ORDER",
+              "enabled": true
+            },
+            {
+              "type": "BUY_AGAIN",
+              "enabled": true
+            },
+            {
+              "type": "RATE_SELLER",
+              "enabled": true,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Wystaw ocenę do"
+                },
+                {
+                  "type": "SPACE"
+                },
+                {
+                  "type": "TEXT",
+                  "value": "16 maja 2022, 11:31"
+                }
+              ]
+            },
+            {
+              "type": "RETURN_PRODUCTS",
+              "enabled": true,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Pozostało 20 dni na zwrot (do pon. 07 mar.)."
+                },
+                {
+                  "type": "BREAK_LINE"
+                },
+                {
+                  "type": "ACTION",
+                  "value": "Dowiedz się więcej.",
+                  "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
+                }
+              ]
+            },
+            {
+              "type": "QUESTION_TO_SELLER",
+              "enabled": true
+            },
+            {
+              "type": "DISCUSSION_ASK_FOR_HELP",
+              "enabled": true,
+              "details": [
+                {
+                  "type": "TEXT",
+                  "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 14.08.2022, 11:31. W razie potrzeby udzielimy Ci wsparcia."
+                }
+              ]
+            }
+          ]
+        },
+        "coins": {
+          "total": 0
+        },
+        "invoiceAddress": {
+          "id": "60f931f0f0282b439374fa22",
+          "zipCode": "35-506",
+          "city": "Rzeszów",
+          "countryCode": "PL",
+          "street": "płk. Kazimierza Iranka-Osmeckiego 41\u002F16",
+          "company": "Jakub Bełch it-kom",
+          "taxId": "8133395094"
+        },
+        "timelines": [
+          {
+            "status": "EMPTY",
+            "waybillId": "642400459235507110273463",
+            "details": [
+              {
+                "type": "TEXT",
+                "value": "Przewidywana dostawa w punkcie: "
+              },
+              {
+                "type": "TEXT",
+                "value": "śr. 16 lut.",
+                "options": {
+                  "bold": false,
+                  "unbreakable": true
+                }
+              }
+            ],
+            "steps": [
+              {
+                "type": "PAYMENT_PAID",
+                "hint": "15 lut. 2022, 10:31",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "TO_BE_SENT",
+                "hint": "Od 15. lut. 11:01",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "IN_TRANSIT",
+                "hint": "Od 15. lut. 14:03",
+                "active": true,
+                "error": false
+              },
+              {
+                "type": "AVAILABLE_FOR_PICKUP",
+                "active": false,
+                "error": false
+              },
+              {
+                "type": "DELIVERED",
+                "active": false,
+                "error": false
+              }
+            ],
+            "pickup": {
+              "point": {
+                "id": "673168",
+                "name": "Paczkomat RZE34M",
+                "description": "Z boku sklepu od strony magazynu",
+                "address": {
+                  "city": "Rzeszów",
+                  "code": "35-507",
+                  "street": "Brydaka 13"
+                }
+              }
+            },
+            "carrier": {
+              "id": "INPOST",
+              "name": "InPost",
+              "url": "https:\u002F\u002Finpost.pl\u002Fpl\u002Fpomoc\u002Fznajdz-przesylke?parcel=642400459235507110273463"
+            },
+            "detailedHistoryAvailable": true,
+            "alert": {}
+          }
+        ],
+        "isFulfilment": false,
+        "groupId": "ac850b01-f72d-36d6-9102-14ec92cc9d68",
+        "rescissions": {
+          "retails": false
+        }
+      }
+    ],
+    "status": {
+      "primary": {
+        "status": "IN_TRANSIT"
+      },
+      "traits": [
+        "DELIVERY_SMART",
+        "IS_SURCHARGE_ALLOWED"
+      ],
+      "actions": [
+        {
+          "type": "HIDE_ORDER",
+          "enabled": true
+        },
+        {
+          "type": "BUY_AGAIN",
+          "enabled": true
+        },
+        {
+          "type": "RATE_SELLER",
+          "enabled": true,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Wystaw ocenę do"
+            },
+            {
+              "type": "SPACE"
+            },
+            {
+              "type": "TEXT",
+              "value": "16 maja 2022, 11:31"
+            }
+          ]
+        },
+        {
+          "type": "RETURN_PRODUCTS",
+          "enabled": true,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Pozostało 20 dni na zwrot (do pon. 07 mar.)."
+            },
+            {
+              "type": "BREAK_LINE"
+            },
+            {
+              "type": "ACTION",
+              "value": "Dowiedz się więcej.",
+              "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
+            }
+          ]
+        },
+        {
+          "type": "QUESTION_TO_SELLER",
+          "enabled": true
+        },
+        {
+          "type": "DISCUSSION_ASK_FOR_HELP",
+          "enabled": true,
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 14.08.2022, 11:31. W razie potrzeby udzielimy Ci wsparcia."
+            }
+          ]
+        }
+      ]
+    },
+    "summary": {
+      "totalCost": {
+        "amount": "40.99",
+        "currency": "PLN"
+      },
+      "totalCostBeforeExchange": {
+        "amount": "0",
+        "currency": "PLN"
+      },
+      "exchangeRateDate": "2022-02-15T09:31:38.688Z",
+      "showExchangeRateInformation": false
+    }
+  },
+  "myorderGroup.$meta": {}
+}

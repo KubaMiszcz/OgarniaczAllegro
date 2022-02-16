@@ -25,7 +25,7 @@ export class HelperService {
     };
   }
 
-  getDeepCopy<T>(obj: T) {
+  getDeepCopy<T>(obj: T): T {
     return JSON.parse(JSON.stringify(obj));
   }
 
