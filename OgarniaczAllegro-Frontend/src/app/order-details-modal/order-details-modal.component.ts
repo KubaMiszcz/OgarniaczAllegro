@@ -20,7 +20,10 @@ export class OrderDetailsModalComponent implements OnInit {
     private orderService: OrderService,
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log(this.order.allegroJson, JSON.parse(this.order.allegroJson ?? ''));
+
+  }
 
   importOrder() {
     this.orderService.importAllegroSingleOrderFromResponse(this.source);

@@ -34,7 +34,7 @@ export class OrderService {
     private http: HttpClient,
   ) {
 
-    let list = JSON.parse(localStorage.getItem('orders') ?? '[]');
+    const list = JSON.parse(localStorage.getItem('orders') ?? '[]');
     // if (!list) {
     //   list = EXAMPLE_ROWS;
     // }
@@ -79,8 +79,8 @@ export class OrderService {
       const value = newOrder;
       // let date=newOrder.receivedDate
       // value.receivedDate = new Date(date?.year, date?.month - 1, date?.day);
-      console.log(value.orderValue);
-      console.log(newOrder.orderValue);
+      console.log(value.purchase.orderValue);
+      console.log(newOrder.purchase.orderValue);
       this.http.post<IOrder>(`${this.apiPath}`, newOrder).subscribe(res => {
         console.log(res);
 
@@ -205,9 +205,13 @@ export class OrderService {
 
     return {
       ...oldOrder,
+      allegroJson: JSON.stringify(order),
       isNew: false,
-      isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
-      receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
+      purchase: {
+        ...oldOrder.purchase,
+        isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
+        receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
+      }
     };
   }
 
@@ -224,18 +228,19 @@ export class OrderService {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
     return {
+      allegroJson: JSON.stringify(order),
       id: group.groupId,
       name: name,
       isNew: true,
-      isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
-      orderItems: order.offers,
-      orderValue: Number(order.totalCost.amount),
-      isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
-      receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
-
-
+      purchase: {
+        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
+        orderItems: order.offers,
+        orderValue: Number(order.totalCost.amount),
+        isPackageReceived: order.delivery.status === AllegroEnums.statusDELIVERED ? StatusEnum.Yes : StatusEnum.No,
+        receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
+      },
+      return: {},
       isFinished: StatusEnum.No
-
     };
   }
 

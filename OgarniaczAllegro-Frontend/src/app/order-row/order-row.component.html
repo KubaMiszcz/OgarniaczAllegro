@@ -46,18 +46,18 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isAllegroPay"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.purchase.isAllegroPay"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.hasInvoice" (click)="triStateClicked('hasInvoice')"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.purchase.hasInvoice" (click)="triStateClicked('hasInvoice')"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center text-nowrap">
-  <span *ngIf="!isInEdit" class="">{{order.orderValue | plnPipe}}</span>
-  <input *ngIf="isInEdit" [(ngModel)]="order.orderValue"
+  <span *ngIf="!isInEdit" class="">{{order.purchase.orderValue | plnPipe}}</span>
+  <input *ngIf="isInEdit" [(ngModel)]="order.purchase.orderValue"
          class="form-control" type="number">
 </td>
 
@@ -66,12 +66,12 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isInvoiceReceived"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isPackageReceived"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.purchase.isPackageReceived"></app-tri-state-check-box>
 </td>
 
 
@@ -82,11 +82,11 @@
       <div class="d-flex">
         <span *ngIf="!isInEdit"
               class="return-to-date"
-              (click)="d.toggle()">{{order?.receivedDate | myDate}}
+              (click)="d.toggle()">{{order?.purchase?.receivedDate | myDate}}
         </span>
 
         <input [hidden]="!isInEdit"
-               [(ngModel)]="order.receivedDate"
+               [(ngModel)]="order.purchase.receivedDate"
                class="form-control return-to-date"
                name="dp"
                (click)="d.toggle()"
@@ -102,7 +102,7 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnIssued"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.return.isReturnIssued"></app-tri-state-check-box>
 </td>
 
 
@@ -113,11 +113,11 @@
       <div class="d-flex">
         <span *ngIf="!isInEdit"
               class="return-to-date"
-              (click)="d.toggle()">{{order?.returnToDate | myDate}}
+              (click)="d.toggle()">{{order?.return?.returnToDate | myDate}}
         </span>
 
         <input [hidden]="!isInEdit"
-               [(ngModel)]="order.returnToDate"
+               [(ngModel)]="order.return.returnToDate"
                class="form-control return-to-date"
                name="dp"
                (click)="d.toggle()"
@@ -134,8 +134,8 @@
 
 <td class="text-center">
   <div class="d-flex">
-    <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
-    <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
+    <span *ngIf="!isInEdit" class="return-code">{{order.return.returnCode}}</span>
+    <textarea *ngIf="isInEdit" [(ngModel)]="order.return.returnCode"
               id="exampleFormControlTextarea1" class="form-control name return-code" 
               [rows]="order.id === '' ? 1 : 4" 
               aria-label="With textarea">
@@ -145,19 +145,19 @@
 
 
 <td class="text-center text-nowrap">
-  <span *ngIf="!isInEdit" class="">{{order.returnValue | plnPipe}}</span>
-  <input *ngIf="isInEdit" [(ngModel)]="order.returnValue"
+  <span *ngIf="!isInEdit" class="">{{order.return.returnValue | plnPipe}}</span>
+  <input *ngIf="isInEdit" [(ngModel)]="order.return.returnValue"
          class="form-control" type="number">
 </td>
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnSended"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.return.isReturnSended"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnDelivered"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.return.isReturnDelivered"></app-tri-state-check-box>
 </td>
 
 
@@ -169,12 +169,12 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isCashReturned"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.return.isCashReturned"></app-tri-state-check-box>
 </td>
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isInvoiceCorrectionReceived"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.return.isInvoiceCorrectionReceived"></app-tri-state-check-box>
 </td>
 
 

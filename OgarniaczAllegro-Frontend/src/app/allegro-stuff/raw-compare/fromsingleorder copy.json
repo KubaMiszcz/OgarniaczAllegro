@@ -1,668 +1,353 @@
 {
-  "myorderGroup": {
-    "groupId": "c6d77471-a24a-3c73-b37f-c9fab6bed611",
-    "myorders": [
-      {
-        "id": "2f272155-8362-11ec-9d6c-e5c75239de42",
-        "purchaseId": "2f0f2c80-8362-11ec-9d6c-e5c75239de42",
-        "seller": {
-          "id": "39290283",
-          "login": "MIX24SHOP",
-          "address": {
-            "firstName": "Dawid",
-            "lastName": "Kowal",
-            "zipCode": "45-349",
-            "city": "Opole",
-            "country": "PL",
-            "street": "Fabryczna 1",
-            "phoneNumber": "+48 666 663 353",
-            "company": "mix-shop",
-            "taxId": "7471895514",
-            "email": "vmt2nv4w4r@allegromail.pl"
-          },
-          "contactDetails": {
-            "phones": [
-              {
-                "number": "666663353",
-                "numberLabel": "666 663 353",
-                "numberLabelMasked": "666  *** ***"
-              }
-            ],
-            "emails": [
-              {
-                "address": "vmt2nv4w4r@allegromail.pl",
-                "addressMasked": "v*********@a**********.pl"
-              }
-            ],
-            "openingHours": [
-              {
-                "daysLabel": "poniedziałek - piątek",
-                "daysShortLabel": "pon. - pt.",
-                "hoursLabels": [
-                  "09:00 - 16:00"
-                ]
-              },
-              {
-                "daysLabel": "sobota - niedziela",
-                "daysShortLabel": "sob. - nd.",
-                "hoursLabels": [
-                  "zamknięte"
-                ]
-              }
-            ]
-          }
-        },
-        "offers": [
-          {
-            "id": "11350669872",
-            "title": "Karta sieciowa WiFI AR5B195 Atheros",
-            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b195-atheros-11350669872?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzM2Y2UxODRjMzE3N2FlOTdhY2I3ZjM4NGI3OTkyNWYzOTBlZGM2MGNlZTEyMmU5YTU0YmMwMzA2YmMwYmYzNjY%3D",
-            "unitPrice": {
-              "amount": "14.9",
-              "currency": "PLN"
-            },
-            "originalUnitPrice": {
-              "amount": "14.9",
-              "currency": "PLN"
-            },
-            "quantity": 1,
-            "type": "UNIT",
-            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1111dc\u002Fb933e9c14834b597e4a276705607",
-            "productId": "c45a3143-0b80-4480-af8d-c2e4b6dd3e21",
-            "orderDate": "2022-02-01T13:24:12.743Z",
-            "gold": false,
-            "pharmacy": false,
-            "auction": false,
-            "toRate": false,
-            "orderOfferId": "2f272154-8362-11ec-9d6c-e5c75239de42",
-            "showOriginalPrice": false,
-            "offerPrice": {
-              "amount": "14.9",
-              "currency": "PLN"
-            },
-            "originalOfferPrice": {
-              "amount": "14.9",
-              "currency": "PLN"
-            }
-          },
-          {
-            "id": "11326774019",
-            "title": "karta sieciowa WiFI AR5B125 miniPCIe Atheros",
-            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b125-minipcie-atheros-11326774019?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzcwNGI1MTY3YjY4OTViMDQ3NzY5ZTUxYmU3MWJjMDE4MWJlYjE5YzM0YzE0YjBiNTk2NGM0YTI3MjliMTg1NzE%3D",
-            "unitPrice": {
-              "amount": "14.5",
-              "currency": "PLN"
-            },
-            "originalUnitPrice": {
-              "amount": "14.5",
-              "currency": "PLN"
-            },
-            "quantity": 1,
-            "type": "UNIT",
-            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1162b6\u002F8c2cb3004034960dc3cb72c3304e",
-            "productId": "faec51b9-c9d5-4588-bef3-020813919424",
-            "orderDate": "2022-02-01T13:24:12.743Z",
-            "gold": false,
-            "pharmacy": false,
-            "auction": false,
-            "toRate": false,
-            "orderOfferId": "2f272151-8362-11ec-9d6c-e5c75239de42",
-            "showOriginalPrice": false,
-            "offerPrice": {
-              "amount": "14.5",
-              "currency": "PLN"
-            },
-            "originalOfferPrice": {
-              "amount": "14.5",
-              "currency": "PLN"
-            }
-          },
-          {
-            "id": "11021956812",
-            "title": "karta sieciowa WiFi AR5B93 atheros",
-            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b93-atheros-11021956812?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzdhNTAwYmQxYzU2ODk4Nzc5Zjc2NjExOGIzZmI4NzhmM2EyMmZjNzJmNGI2MTRiZTk2ZDNhZWNmNzA2NWVhMWQ%3D",
-            "unitPrice": {
-              "amount": "8.9",
-              "currency": "PLN"
-            },
-            "originalUnitPrice": {
-              "amount": "8.9",
-              "currency": "PLN"
-            },
-            "quantity": 1,
-            "type": "UNIT",
-            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1106da\u002Fda499300483785a1129f81e21ff4",
-            "productId": "6f365bdc-c5a1-41a7-bd67-290ac5d5b797",
-            "orderDate": "2022-02-01T13:24:12.743Z",
-            "gold": false,
-            "pharmacy": false,
-            "auction": false,
-            "toRate": false,
-            "orderOfferId": "2f272150-8362-11ec-9d6c-e5c75239de42",
-            "showOriginalPrice": false,
-            "offerPrice": {
-              "amount": "8.9",
-              "currency": "PLN"
-            },
-            "originalOfferPrice": {
-              "amount": "8.9",
-              "currency": "PLN"
-            }
-          },
-          {
-            "id": "11421671453",
-            "title": "karta sieciowa WiFi Intel 62205ANHMW 6205",
-            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-intel-62205anhmw-6205-11421671453?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyO2ZjNTU0M2VkODNkMjc1YTg0MmM5MmViMWNiOTIzNzU1Mzg0NTNiOGE4MzJmM2ViNmFkODI1ZTdiYTFhOWQzNDk%3D",
-            "unitPrice": {
-              "amount": "18.9",
-              "currency": "PLN"
-            },
-            "originalUnitPrice": {
-              "amount": "18.9",
-              "currency": "PLN"
-            },
-            "quantity": 1,
-            "type": "UNIT",
-            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F111cc7\u002Fed2348744697a95beba8e8400915",
-            "productId": "82aacd6b-4698-4b1f-bdda-88f46a88eba5",
-            "orderDate": "2022-02-01T13:24:12.743Z",
-            "gold": false,
-            "pharmacy": false,
-            "auction": false,
-            "toRate": false,
-            "orderOfferId": "2f272152-8362-11ec-9d6c-e5c75239de42",
-            "showOriginalPrice": false,
-            "offerPrice": {
-              "amount": "18.9",
-              "currency": "PLN"
-            },
-            "originalOfferPrice": {
-              "amount": "18.9",
-              "currency": "PLN"
-            }
-          },
-          {
-            "id": "11332188805",
-            "title": "karta sieciowa WiFi QUALCOMM ATHEROS QCWB335",
-            "friendlyUrl": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-qualcomm-atheros-qcwb335-11332188805?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyO2JkNjQyMTFmZjJjNjg3ZjI4N2VhNjI4NDU3NWM1Y2FmMzE2OTE4YmFhYzU4NThiMTQyNTllZTE2Y2MyNzlhNDc%3D",
-            "unitPrice": {
-              "amount": "15",
-              "currency": "PLN"
-            },
-            "originalUnitPrice": {
-              "amount": "15",
-              "currency": "PLN"
-            },
-            "quantity": 1,
-            "type": "UNIT",
-            "imageUrl": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F116ce7\u002F030766944e199d82ae48af2206dc",
-            "productId": "decac84a-435a-47e3-a686-fd57175f077d",
-            "orderDate": "2022-02-01T13:24:12.743Z",
-            "gold": false,
-            "pharmacy": false,
-            "auction": false,
-            "toRate": false,
-            "orderOfferId": "2f272153-8362-11ec-9d6c-e5c75239de42",
-            "showOriginalPrice": false,
-            "offerPrice": {
-              "amount": "15",
-              "currency": "PLN"
-            },
-            "originalOfferPrice": {
-              "amount": "15",
-              "currency": "PLN"
-            }
-          }
-        ],
-        "delivery": {
-          "cost": {
-            "amount": "0.00",
-            "currency": "PLN"
-          },
-          "name": "Allegro Paczkomaty InPost",
-          "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
-          "id": "2f63dc30-8362-11ec-bc1c-f1a39c65a848",
-          "address": {
-            "id": "70df85b7-e65c-4fd2-a791-e72738b569ec",
-            "firstName": "Jakub",
-            "lastName": "Bełch",
-            "city": "Rzeszów",
-            "street": "Osmeckiego 41\u002F16",
-            "countryCode": "PL",
-            "zipCode": "35-506",
-            "phoneNumber": "534 883 128"
-          },
-          "generalDelivery": {
-            "id": "222574",
-            "name": "Paczkomat RZE10N",
-            "description": "Przy przedszkolu",
-            "address": {
-              "street": "Brydaka 10A",
-              "code": "35-001",
-              "city": "Rzeszów"
-            },
-            "coordinates": {
-              "lat": 50.0579,
-              "lon": 21.98505
-            }
-          },
-          "discount": {
-            "originalCost": {
-              "amount": "8.99",
-              "currency": "PLN"
-            },
-            "type": "FREEBOX",
-            "planType": "FREEBOX_STANDARD"
-          },
-          "status": "DELIVERED",
-          "timestamp": "2022-02-03T11:42:21.000Z",
-          "paymentType": {
-            "name": "płatne z góry",
-            "type": "PREPAID"
-          }
-        },
-        "totalCost": {
-          "amount": "72.20",
-          "currency": "PLN"
-        },
-        "summary": {
-          "totalCost": {
-            "amount": "72.20",
-            "currency": "PLN"
-          },
-          "exchangeRateDate": "2022-02-01T13:24:15.746Z",
-          "showExchangeRateInformation": false
-        },
-        "payment": {
-          "id": "366dec51-8362-11ec-a7f6-0dfa047f620b",
-          "provider": "PAYU",
-          "amount": {
-            "amount": "72.20",
-            "currency": "PLN"
-          },
-          "method": "Karta płatnicza",
-          "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
-          "status": "COMPLETED",
-          "date": "2022-02-01T13:24:15.746Z",
-          "isInstallments": false,
-          "isMultipleSellers": false,
-          "cardMask": "482436******6807"
-        },
-        "createDate": "2022-02-01T13:23:46.120Z",
-        "orderDate": "2022-02-01T13:24:12.743Z",
-        "serviceCountry": "PL",
-        "hiddenInMyOrders": false,
-        "boughtOnDevice": "DESKTOP",
-        "cancelled": false,
-        "status": {
-          "primary": {
-            "status": "PARTIALLY_RETURNED",
-            "hint": "Zwrócony pt. 04 lut. 2022."
-          },
-          "traits": [
-            "DELIVERY_SMART",
-            "IS_SURCHARGE_ALLOWED"
-          ],
-          "actions": [
-            {
-              "type": "HIDE_ORDER",
-              "enabled": true
-            },
-            {
-              "type": "BUY_AGAIN",
-              "enabled": true
-            },
-            {
-              "type": "RATE_SELLER",
-              "enabled": true,
-              "details": [
-                {
-                  "type": "TEXT",
-                  "value": "Wystaw ocenę do"
-                },
-                {
-                  "type": "SPACE"
-                },
-                {
-                  "type": "TEXT",
-                  "value": "2 maja 2022, 15:23"
-                }
-              ]
-            },
-            {
-              "type": "RETURN_PRODUCTS",
-              "enabled": true,
-              "details": [
-                {
-                  "type": "TEXT",
-                  "value": "Zwróciłeś 4 przedmioty z zakupu."
-                },
-                {
-                  "type": "BREAK_LINE"
-                },
-                {
-                  "type": "TEXT",
-                  "value": "Pozostało 1 dni (do czw. 17 lut.) na zwrot pozostałych przedmiotów."
-                },
-                {
-                  "type": "BREAK_LINE"
-                },
-                {
-                  "type": "ACTION",
-                  "value": "Dowiedz się więcej.",
-                  "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
-                }
-              ]
-            },
-            {
-              "type": "QUESTION_TO_SELLER",
-              "enabled": true
-            },
-            {
-              "type": "DISCUSSION_ASK_FOR_HELP",
-              "enabled": true,
-              "details": [
-                {
-                  "type": "TEXT",
-                  "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 31.07.2022, 15:23. W razie potrzeby udzielimy Ci wsparcia."
-                }
-              ]
-            }
-          ]
-        },
-        "coins": {
-          "total": 0
-        },
-        "timelines": [
-          {
-            "status": "DELIVERED",
-            "waybillId": "645349769235001114804585",
-            "details": [
-              {
-                "type": "TEXT",
-                "value": "3 lut. 2022, 12:42"
-              }
-            ],
-            "steps": [
-              {
-                "type": "PAYMENT_PAID",
-                "hint": "1 lut. 2022, 14:24",
-                "active": false,
-                "error": false
-              },
-              {
-                "type": "TO_BE_SENT",
-                "hint": "Od 2. lut. 14:03",
-                "active": false,
-                "error": false
-              },
-              {
-                "type": "IN_TRANSIT",
-                "hint": "Od 2. lut. 15:03",
-                "active": false,
-                "error": false
-              },
-              {
-                "type": "AVAILABLE_FOR_PICKUP",
-                "hint": "Od 3. lut. 10:26",
-                "active": false,
-                "error": false
-              },
-              {
-                "type": "DELIVERED",
-                "hint": "3 lut. 12:42",
-                "active": true,
-                "error": false
-              }
-            ],
-            "pickup": {
-              "point": {
-                "id": "222574",
-                "name": "Paczkomat RZE10N",
-                "description": "Przy przedszkolu",
-                "address": {
-                  "city": "Rzeszów",
-                  "code": "35-001",
-                  "street": "Brydaka 10A"
-                }
-              }
-            },
-            "carrier": {
-              "id": "INPOST",
-              "name": "InPost",
-              "url": "https:\u002F\u002Finpost.pl\u002Fpl\u002Fpomoc\u002Fznajdz-przesylke?parcel=645349769235001114804585"
-            },
-            "detailedHistoryAvailable": true,
-            "alert": {}
-          }
-        ],
-        "isFulfilment": false,
-        "groupId": "c6d77471-a24a-3c73-b37f-c9fab6bed611",
-        "rescissions": {
-          "rescissions": [
-            {
-              "rescissionId": "f69296ac-b756-4e36-8b3d-d8fcb4885218",
-              "status": "SHIPMENT_SELECTED",
-              "shipmentExpirationDate": "2022-02-18T22:59:59.827Z",
-              "sellerLogin": "MIX24SHOP",
-              "requestDate": "2022-02-04T08:07:52.827Z",
-              "referenceNumber": "91W4\u002F2022",
-              "timelineStatus": {
-                "status": "FINISHED",
-                "label": "Zwrot zakończony",
-                "hint": "Pełen zwrot pieniędzy",
-                "steps": [
-                  {
-                    "type": "CREATED",
-                    "active": false,
-                    "label": "Zwrot zgłoszony",
-                    "hint": "Od 4 lut 09:07"
-                  },
-                  {
-                    "type": "IN_TRANSIT",
-                    "active": false,
-                    "label": "Zwrot w drodze",
-                    "hint": "Od 5 lut 09:50"
-                  },
-                  {
-                    "type": "DELIVERED",
-                    "active": false,
-                    "label": "Zwrot u sprzedającego",
-                    "hint": "Od 7 lut 15:39"
-                  },
-                  {
-                    "type": "FINISHED",
-                    "active": true,
-                    "label": "Zwrot zakończony",
-                    "hint": "Pełen zwrot pieniędzy"
-                  }
-                ]
-              },
-              "returnParcels": [
-                {
-                  "returnParcelId": "f89c0604-69bc-4463-8873-c869ab9e789e",
-                  "authorType": "BUYER",
-                  "deliveryMethodType": "ALLEGRO_INPOST",
-                  "returnCode": "702 923 828 7",
-                  "tracking": {
-                    "carrier": "INPOST",
-                    "detailedHistoryAvailable": true,
-                    "link": "https:\u002F\u002Finpost.pl\u002Fsledzenie-przesylek?number=600000569245349013470825",
-                    "number": "600000569245349013470825"
-                  },
-                  "expiresAt": "2022-02-18T22:59:59.077Z",
-                  "receiver": {
-                    "fullName": "ZWROTY MIX-SHOP",
-                    "address": {
-                      "street": "Fabryczna 1",
-                      "city": "Opole",
-                      "zipCode": "45-349",
-                      "country": "PL"
-                    }
-                  },
-                  "costCoveredBySeller": false
-                }
-              ],
-              "rescissionOffers": [
-                {
-                  "product": {
-                    "name": "karta sieciowa WiFi Intel 62205ANHMW 6205",
-                    "image": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F111cc7\u002Fed2348744697a95beba8e8400915"
-                  },
-                  "quantity": 1,
-                  "price": {
-                    "amount": "18.9",
-                    "currency": "PLN"
-                  },
-                  "reason": {
-                    "type": "NONE",
-                    "comment": ""
-                  },
-                  "offerSnapshotHash": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-intel-62205anhmw-6205-11421671453?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyO2ZjNTU0M2VkODNkMjc1YTg0MmM5MmViMWNiOTIzNzU1Mzg0NTNiOGE4MzJmM2ViNmFkODI1ZTdiYTFhOWQzNDk%3D"
-                },
-                {
-                  "product": {
-                    "name": "karta sieciowa WiFi AR5B93 atheros",
-                    "image": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1106da\u002Fda499300483785a1129f81e21ff4"
-                  },
-                  "quantity": 1,
-                  "price": {
-                    "amount": "8.9",
-                    "currency": "PLN"
-                  },
-                  "reason": {
-                    "type": "NONE",
-                    "comment": ""
-                  },
-                  "offerSnapshotHash": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b93-atheros-11021956812?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzdhNTAwYmQxYzU2ODk4Nzc5Zjc2NjExOGIzZmI4NzhmM2EyMmZjNzJmNGI2MTRiZTk2ZDNhZWNmNzA2NWVhMWQ%3D"
-                },
-                {
-                  "product": {
-                    "name": "karta sieciowa WiFI AR5B125 miniPCIe Atheros",
-                    "image": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1162b6\u002F8c2cb3004034960dc3cb72c3304e"
-                  },
-                  "quantity": 1,
-                  "price": {
-                    "amount": "14.5",
-                    "currency": "PLN"
-                  },
-                  "reason": {
-                    "type": "NONE",
-                    "comment": ""
-                  },
-                  "offerSnapshotHash": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b125-minipcie-atheros-11326774019?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzcwNGI1MTY3YjY4OTViMDQ3NzY5ZTUxYmU3MWJjMDE4MWJlYjE5YzM0YzE0YjBiNTk2NGM0YTI3MjliMTg1NzE%3D"
-                },
-                {
-                  "product": {
-                    "name": "Karta sieciowa WiFI AR5B195 Atheros",
-                    "image": "https:\u002F\u002Fa.allegroimg.com\u002Foriginal\u002F1111dc\u002Fb933e9c14834b597e4a276705607"
-                  },
-                  "quantity": 1,
-                  "price": {
-                    "amount": "14.9",
-                    "currency": "PLN"
-                  },
-                  "reason": {
-                    "type": "NONE",
-                    "comment": ""
-                  },
-                  "offerSnapshotHash": "https:\u002F\u002Fallegro.pl\u002Foferta\u002Fkarta-sieciowa-wifi-ar5b195-atheros-11350669872?navCategoryId=77770&snapshot=MjAyMi0wMi0wMVQxMzoyNDoxMi43NDNaO2J1eWVyOzM2Y2UxODRjMzE3N2FlOTdhY2I3ZjM4NGI3OTkyNWYzOTBlZGM2MGNlZTEyMmU5YTU0YmMwMzA2YmMwYmYzNjY%3D"
-                }
-              ]
-            }
-          ],
-          "retails": false
-        }
-      }
-    ],
-    "status": {
-      "primary": {
-        "status": "PARTIALLY_RETURNED",
-        "hint": "Zwrócony pt. 04 lut. 2022."
-      },
-      "traits": [
-        "DELIVERY_SMART",
-        "IS_SURCHARGE_ALLOWED"
-      ],
-      "actions": [
-        {
-          "type": "HIDE_ORDER",
-          "enabled": true
-        },
-        {
-          "type": "BUY_AGAIN",
-          "enabled": true
-        },
-        {
-          "type": "RATE_SELLER",
-          "enabled": true,
-          "details": [
-            {
-              "type": "TEXT",
-              "value": "Wystaw ocenę do"
-            },
-            {
-              "type": "SPACE"
-            },
-            {
-              "type": "TEXT",
-              "value": "2 maja 2022, 15:23"
-            }
-          ]
-        },
-        {
-          "type": "RETURN_PRODUCTS",
-          "enabled": true,
-          "details": [
-            {
-              "type": "TEXT",
-              "value": "Zwróciłeś 4 przedmioty z zakupu."
-            },
-            {
-              "type": "BREAK_LINE"
-            },
-            {
-              "type": "TEXT",
-              "value": "Pozostało 1 dni (do czw. 17 lut.) na zwrot pozostałych przedmiotów."
-            },
-            {
-              "type": "BREAK_LINE"
-            },
-            {
-              "type": "ACTION",
-              "value": "Dowiedz się więcej.",
-              "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
-            }
-          ]
-        },
-        {
-          "type": "QUESTION_TO_SELLER",
-          "enabled": true
-        },
-        {
-          "type": "DISCUSSION_ASK_FOR_HELP",
-          "enabled": true,
-          "details": [
-            {
-              "type": "TEXT",
-              "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 31.07.2022, 15:23. W razie potrzeby udzielimy Ci wsparcia."
-            }
-          ]
-        }
-      ]
-    },
-    "summary": {
-      "totalCost": {
-        "amount": "72.20",
-        "currency": "PLN"
-      },
-      "totalCostBeforeExchange": {
-        "amount": "0",
-        "currency": "PLN"
-      },
-      "exchangeRateDate": "2022-02-01T13:24:15.746Z",
-      "showExchangeRateInformation": false
-    }
+  "id": "e6a0d907-8f1c-11ec-ac30-e9120ceb9b40",
+  "purchaseId": "e6819130-8f1c-11ec-ac30-e9120ceb9b40",
+  "seller": {
+    "id": "96766856",
+    "login": "Platet-A"
   },
-  "myorderGroup.$meta": {}
+  "offers": [
+    {
+      "id": "11093993120",
+      "title": "Osłona wentylatora 120x120mm",
+      "friendlyUrl": "https://allegro.pl/oferta/oslona-wentylatora-120x120mm-11093993120?navCategoryId=67363&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzdhZjJhY2M4YjRiZTY0MmJmNjZiMzk3MGI5ZTg1MzZiMmE0ODFiY2ViZWQ2MmFkMzlmOTVlOWQ4N2Q1OTI4NjE%3D",
+      "unitPrice": {
+        "amount": "3.9",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "3.9",
+        "currency": "PLN"
+      },
+      "quantity": 2,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/1175b1/2d086d484830bea85f8e36689f07",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d906-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "7.8",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "7.8",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "10632417250",
+      "title": "Osłona wentylatora filtr przeciwkurzowy 120x120mm",
+      "friendlyUrl": "https://allegro.pl/oferta/oslona-wentylatora-filtr-przeciwkurzowy-120x120mm-10632417250?navCategoryId=67197&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzMyYWIwMzliZWU1MzFlYWY2NGU0NmEyM2M4Yzg3YmE0YWFmZjNjYTAzNzVlN2Y2ZjhhYzZjNTEyZjQ4OTU5Nzc%3D",
+      "unitPrice": {
+        "amount": "2.7",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "2.7",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/117f6d/f378c7464917a249724395207e04",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d905-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "2.7",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "2.7",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "11394153289",
+      "title": "Przełącznik hebelkowy RED ON-OFF 6A/250V podśw 12V",
+      "friendlyUrl": "https://allegro.pl/oferta/przelacznik-hebelkowy-red-on-off-6a-250v-podsw-12v-11394153289?navCategoryId=67342&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzdiZWUxMzlmNzJmNjExZTM5ZTBiMmNmNjI5ZDQ4NzU2ZmQ5NjRmMDg1MmY1ZGQxNDU3MzVkZjJiNzJjYmM0M2Y%3D",
+      "unitPrice": {
+        "amount": "2.9",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "2.9",
+        "currency": "PLN"
+      },
+      "quantity": 2,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/11f323/b86d79084d8a9ae6b94387809383",
+      "productId": "b07f5c02-b71a-4e4f-8057-418c8aebb977",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d904-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "5.8",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "5.8",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "10645208730",
+      "title": "Pęseta penseta pomiarowa do elementów SMD",
+      "friendlyUrl": "https://allegro.pl/oferta/peseta-penseta-pomiarowa-do-elementow-smd-10645208730?navCategoryId=67197&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzFiNTBiMzQwNTViMDU0OGViZGVjYTA0ODBlYzUzY2VkNzdlY2I4ZTFiNmVmOTY2ODNiZWRlYjg4ZjMzMjJhOWE%3D",
+      "unitPrice": {
+        "amount": "18",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "18",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/11619d/3dcb37274fb08849d1df8522108e",
+      "productId": "aa6ccddd-8035-46b4-ab9d-d06ceb7a8bce",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d902-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "18",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "18",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "10760655147",
+      "title": "Pęseta pinceta ESD-12 l=135mm prosta",
+      "friendlyUrl": "https://allegro.pl/oferta/peseta-pinceta-esd-12-l-135mm-prosta-10760655147?navCategoryId=67346&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzNhYTZlNTRjZjBhMzBjYTAzNWNmNGYzZDNmOWQyMmZiNzgwYjg0YWVjMWQ2NGYxOTgzOGRmMTIyNzY0ODdhZDU%3D",
+      "unitPrice": {
+        "amount": "6.5",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "6.5",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/1132db/49d7eced4cc1bf816d57287d802e",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d901-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "6.5",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "6.5",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "10211293800",
+      "title": "Pęseta pinceta ESD-15 l=120mm 156F zagięta",
+      "friendlyUrl": "https://allegro.pl/oferta/peseta-pinceta-esd-15-l-120mm-156f-zagieta-10211293800?navCategoryId=67352&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzNlNWE2YjJiOTE2OGU3MTA2MzFjNmMzYWJlMzdiYjBjODMzNjNlZjNiNzc4ZTdkYWZlNDI3YzMzNTYxOGNmODE%3D",
+      "unitPrice": {
+        "amount": "6",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "6",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/11bbc6/bfa262e54449badfbac30b70ea94",
+      "productId": "b5c33e6f-3441-4338-9adb-d08acb6534d3",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d903-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "6",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "6",
+        "currency": "PLN"
+      }
+    },
+    {
+      "id": "11699351830",
+      "title": "Wyłącznik czasowy mechaniczny 1-30min oś ścięta",
+      "friendlyUrl": "https://allegro.pl/oferta/wylacznik-czasowy-mechaniczny-1-30min-os-scieta-11699351830?navCategoryId=67342&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzU4MTI2ZTFkOGI1Yzk2YTU3ZWE1M2M2ODU4Mjk0NWU5MGFiZmJlMDU2MTc0NmNjZjg0OGE5MzM0YzM1MjdiZWM%3D",
+      "unitPrice": {
+        "amount": "34",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "34",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/111f69/c576d5244053a59e3a67064d999b",
+      "orderDate": "2022-02-16T11:38:29.403Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": false,
+      "orderOfferId": "e6a0d900-8f1c-11ec-ac30-e9120ceb9b40",
+      "originalOfferPrice": {
+        "amount": "34",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false,
+      "offerPrice": {
+        "amount": "34",
+        "currency": "PLN"
+      }
+    }
+  ],
+  "delivery": {
+    "cost": {
+      "amount": "0.00",
+      "currency": "PLN"
+    },
+    "name": "Allegro Paczkomaty InPost",
+    "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
+    "id": "e6d46c20-8f1c-11ec-acf9-d367232228ad",
+    "generalDelivery": {
+      "id": "673168",
+      "name": "Paczkomat RZE34M",
+      "description": "Z boku sklepu od strony magazynu",
+      "address": {
+        "street": "Brydaka 13",
+        "code": "35-507",
+        "city": "Rzeszów"
+      },
+      "coordinates": {
+        "lat": 50.05841,
+        "lon": 21.98412
+      }
+    },
+    "discount": {
+      "originalCost": {
+        "amount": "8.99",
+        "currency": "PLN"
+      },
+      "type": "FREEBOX",
+      "planType": "FREEBOX_STANDARD"
+    },
+    "paymentType": {
+      "name": "płatne z góry",
+      "type": "PREPAID"
+    },
+    "waybillsData": {}
+  },
+  "totalCost": {
+    "amount": "80.80",
+    "currency": "PLN"
+  },
+  "payment": {
+    "id": "e71c98b1-8f1c-11ec-8eaa-032ea4d890eb",
+    "provider": "PAYU",
+    "amount": {
+      "amount": "80.80",
+      "currency": "PLN"
+    },
+    "method": "Karta płatnicza",
+    "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
+    "status": "COMPLETED",
+    "date": "2022-02-16T11:38:32.124Z",
+    "isInstallments": false,
+    "isMultipleSellers": false,
+    "cardMask": "482436******6807"
+  },
+  "createDate": "2022-02-16T11:38:03.075Z",
+  "orderDate": "2022-02-16T11:38:29.403Z",
+  "serviceCountry": "PL",
+  "markedAsPaid": false,
+  "hiddenInMyOrders": false,
+  "boughtOnDevice": "DESKTOP",
+  "cancelled": false,
+  "status": {
+    "primary": {
+      "status": "PAID"
+    },
+    "traits": [
+      "DELIVERY_SMART",
+      "IS_SURCHARGE_ALLOWED"
+    ],
+    "actions": [
+      {
+        "type": "HIDE_ORDER",
+        "enabled": true
+      },
+      {
+        "type": "BUY_AGAIN",
+        "enabled": true
+      },
+      {
+        "type": "RATE_SELLER",
+        "enabled": true
+      },
+      {
+        "type": "CANCEL_ORDER",
+        "enabled": true,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Gdy zakup będzie miał status 'w przygotowaniu', anulowanie nie będzie możliwe."
+          },
+          {
+            "type": "SPACE",
+            "value": ""
+          },
+          {
+            "type": "ACTION",
+            "value": "Dowiedz się więcej",
+            "action": "SHOW_CANCEL_ORDER_INFORMATION"
+          },
+          {
+            "type": "TEXT",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "QUESTION_TO_SELLER",
+        "enabled": true
+      },
+      {
+        "type": "DISCUSSION_ASK_FOR_HELP",
+        "enabled": true,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 15.08.2022, 13:38. W razie potrzeby udzielimy Ci wsparcia."
+          }
+        ]
+      }
+    ]
+  },
+  "isFulfilment": false
 }

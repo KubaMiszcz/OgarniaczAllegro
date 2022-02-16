@@ -4,6 +4,33 @@ import { IDateYMD } from './date-YMD';
 import { IOrderItem } from './order-item';
 
 
+
+export interface IReturn {
+  isReturnIssued?: StatusEnum; //Zwrot zgłoszony
+  returnToDate?: IDateYMD; // odeslij do
+  returnCode?: string; // kod zwrotu
+  returnValue?: number; // kwota do zwrotu
+  isReturnSended?: StatusEnum; // Zwrot wysłany
+  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego
+  isCashReturned?: StatusEnum; // zwrot na koncie
+  isInvoiceCorrectionReceived?: StatusEnum; // korekta OK ?
+
+}
+export interface IPurchase {
+  isAllegroPay: StatusEnum; // allegro Pay
+  hasInvoice?: StatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  orderItems: IOrderItem[];
+  orderValue: number;
+  isInvoiceReceived?: StatusEnum; // faktura OK ?
+  isPackageReceived?: StatusEnum; // Przesyłka odebrana
+  receivedDate?: IDateYMD; // Data odebrania ->
+
+
+
+}
+
+
+
 export interface IOrder {
   allegroJson?: string; //remove later
   id: string;
@@ -11,31 +38,9 @@ export interface IOrder {
 
   isNew: boolean;
   name: string; //zamowienie
-  isAllegroPay: StatusEnum; // allegro Pay
-  hasInvoice?: StatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
-  orderValue: number;
 
-
-
-
-
-  isInvoiceReceived?: StatusEnum; // faktura OK ?
-  isPackageReceived?: StatusEnum; // Przesyłka odebrana
-  receivedDate?: IDateYMD; // Data odebrania ->
-
-
-
-
-  isReturnIssued?: StatusEnum; //Zwrot zgłoszony
-  returnToDate?: IDateYMD; // odeslij do
-  returnCode?: string; // kod zwrotu
-  returnValue?: number; // kwota do zwrotu
-  isReturnSended?: StatusEnum; // Zwrot wysłany
-  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego  
-  isCashReturned?: StatusEnum; // zwrot na koncie
-  isInvoiceCorrectionReceived?: StatusEnum; // korekta OK ?
-
-
+  purchase: IPurchase;
+  return: IReturn;
 
 
   isFinished: StatusEnum; // ALL OK
@@ -43,10 +48,6 @@ export interface IOrder {
 
   comment?: string; // notatka
 
-
-
-
-  orderItems: IOrderItem[];
   // owner?:IUser; //remove nullable
 
 
@@ -64,6 +65,10 @@ export interface IOrder {
 }
 
 export class Order implements IOrder {
+  allegroJson?: string | undefined;
+  purchase!: IPurchase;
+  return!: IReturn;
+  finishingDate?: IDateYMD | undefined;
   id = '';
   name = '';
   isNew = false;
