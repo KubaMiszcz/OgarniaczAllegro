@@ -341,7 +341,7 @@ export interface IRescissions {
   retails: boolean;
 }
 
-export interface ISingleOrder {
+export interface ISingleOrderAllegro {
   id: string;
   purchaseId: string;
   seller: ISeller;
@@ -406,7 +406,7 @@ export interface ISummary2 {
 
 export interface ISingleOrderGroup {
   groupId: string;
-  myorders: ISingleOrder[];
+  myorders: ISingleOrderAllegro[];
   status: IStatus2;
   summary: ISummary2;
 }

@@ -176,7 +176,7 @@ export interface IStatus {
   secondary: ISecondary;
 }
 
-export interface IMyorder {
+export interface IMyOrderAllegro {
   id: string;
   purchaseId: string;
   seller: ISeller;
@@ -228,7 +228,7 @@ export interface IStatus2 {
 
 export interface IOrderGroup {
   groupId: string;
-  myorders: IMyorder[];
+  myorders: IMyOrderAllegro[];
   status: IStatus2;
 }
 

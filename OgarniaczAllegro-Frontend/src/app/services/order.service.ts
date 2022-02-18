@@ -1,12 +1,12 @@
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
-import { IAllegroSingleOrder, ISingleOrder, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
+import { IAllegroSingleOrder, ISingleOrderAllegro, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { StatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { IAllegroAllOrders, IMyorder, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrders, IMyOrderAllegro, IOrderGroup } from '../models/allegro-models/all-orders.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
@@ -129,23 +129,22 @@ export class OrderService {
 
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
 
     try {
-      newList = this.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+      const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
+      newList = this.fillAllOrdersFromAllegroImport(allAllegroOrders, oldList);
       console.log(`first ${allOrdersView.limit} order from ${allOrdersView.myorders.total} imported sucessfully`);
 
     } catch (error) {
       console.warn('something wrong with importAllegroOrdersFromResponse');
       alert('something wrong with importAllegroOrdersFromResponse');
-      newList = oldList;
-
-    } finally {
-      this.allOrdersList$.next(oldList);
     }
 
+    this.allOrdersList$.next(newList);
   }
+
+
 
   importAllegroSingleOrderFromResponse(source: string) {
     const json = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
@@ -158,26 +157,22 @@ export class OrderService {
       alert('group.myorders.length>1');
     }
 
-    const singleAllegroOrder: ISingleOrder = singleOrderView?.myorderGroup?.myorders[0];
+    const singleAllegroOrder: ISingleOrderAllegro = singleOrderView?.myorderGroup?.myorders[0];
 
     console.log('singleAllegroOrder', singleAllegroOrder);
 
 
-    const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
 
     try {
-      newList = this.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
-      console.log(`first ${allOrdersView.limit} order from ${allOrdersView.myorders.total} imported sucessfully`);
-
+      const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
+      newList = this.fillSingleOrderFromAllegroImport(singleAllegroOrder, oldList);
     } catch (error) {
-      console.warn('something wrong with importAllegroOrdersFromResponse');
-      alert('something wrong with importAllegroOrdersFromResponse');
-      newList = oldList;
-
-    } finally {
-      this.allOrdersList$.next(oldList);
+      console.warn('something wrong with importAllegroSingleOrderFromResponse');
+      alert('something wrong with importAllegroSingleOrderFromResponse');
     }
+
+    this.allOrdersList$.next(newList);
   }
 
 
@@ -210,24 +205,31 @@ export class OrderService {
 
 
 
-  private fillOrdersFromAllegroImport(importedList: IMyorder[], oldOrderList: IOrder[]): IOrder[] {
+  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllegro[], oldOrderList: IOrder[]): IOrder[] {
 
     importedList.forEach(importedOrder => {
-      const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
-
-      if (existedOrderIdx >= 0) {
-        const updatedOrder = this.getUpdatedOrder(oldOrderList[existedOrderIdx], importedOrder);
-        oldOrderList[existedOrderIdx] = updatedOrder;
-      } else {
-        oldOrderList.push(this.createOrderFromImportedOrder(importedOrder));
-      }
+      oldOrderList = this.fillSingleOrderFromAllegroImport(importedOrder, oldOrderList);
     });
 
     return oldOrderList;
   }
 
+  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllegro | ISingleOrderAllegro, oldOrderList: IOrder[]): IOrder[] {
+    const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
 
-  private getUpdatedOrder(oldOrder: IOrder, order: IMyorder): IOrder {
+    if (existedOrderIdx >= 0) {
+      const updatedOrder = this.getUpdatedOrder(oldOrderList[existedOrderIdx], importedOrder);
+      oldOrderList[existedOrderIdx] = updatedOrder;
+    } else {
+      oldOrderList.push(this.createOrderFromImportedOrder(importedOrder));
+    }
+
+    return oldOrderList;
+  }
+
+
+
+  private getUpdatedOrder(oldOrder: IOrder, order: IMyOrderAllegro | ISingleOrderAllegro): IOrder {
     return {
       ...oldOrder,
       allegroJson: JSON.stringify(order),
@@ -242,7 +244,7 @@ export class OrderService {
   }
 
 
-  private createOrderFromImportedOrder(order: IMyorder): IOrder {
+  private createOrderFromImportedOrder(order: IMyOrderAllegro | ISingleOrderAllegro): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
     return {
