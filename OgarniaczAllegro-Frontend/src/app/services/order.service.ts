@@ -1,12 +1,12 @@
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
-import { IAllegroSingleOrder, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
+import { IAllegroSingleOrder, ISingleOrder, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { StatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { IAllegroAllOrders, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrders, IMyorder, IOrderGroup } from '../models/allegro-models/all-orders.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
@@ -113,7 +113,21 @@ export class OrderService {
     const allOrdersJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
     const allOrdersView: IAllegroAllOrders = JSON.parse(allOrdersJSON);
-    const allAllegroOrders: IOrderGroup[] = allOrdersView?.myorders?.orderGroups;
+
+    if (allOrdersView.myorders.orderGroups.some(g => g.myorders.length > 1)) {
+      alert('group.myorders.length>1');
+    }
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // dont use group.myorders, just go straight into
+    // group.myorders[0].order
+    // myorders has alway one item: order
+    // and in this first item there is all info about it
+    // maybe it has more when you pay for more orders in one payment?
+
+    const allAllegroOrders = allOrdersView.myorders.orderGroups.map(o => o.myorders[0]);
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
@@ -135,26 +149,35 @@ export class OrderService {
 
   importAllegroSingleOrderFromResponse(source: string) {
     const json = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
-    console.log(json);
+    console.log(json, JSON.parse(json));
 
     const singleOrdersJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
     const singleOrderView: IAllegroSingleOrder = JSON.parse(singleOrdersJSON);
-    const singleAllegroOrder: ISingleOrderGroup = singleOrderView.myorderGroup;
+
+    if (singleOrderView?.myorderGroup?.myorders?.length > 1) {
+      alert('group.myorders.length>1');
+    }
+
+    const singleAllegroOrder: ISingleOrder = singleOrderView?.myorderGroup?.myorders[0];
+
+    console.log('singleAllegroOrder', singleAllegroOrder);
 
 
+    const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
+    let newList: IOrder[] = [];
 
-    // const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
-    // let newList: IOrder[] = [];
-    // try {
-    //   const allAllegroOrders: IAllegroAllOrders = JSON.parse(json);
-    //   newList = this.allegroService.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
-    // } catch (error) {
-    //   console.warn('something wrong with importAllegroOrdersFromResponse');
-    //   alert('something wrong with importAllegroOrdersFromResponse');
-    //   newList = oldList;
-    // } finally {
-    //   this.allOrdersList$.next(oldList);
-    // }
+    try {
+      newList = this.fillOrdersFromAllegroImport(allAllegroOrders, oldList);
+      console.log(`first ${allOrdersView.limit} order from ${allOrdersView.myorders.total} imported sucessfully`);
+
+    } catch (error) {
+      console.warn('something wrong with importAllegroOrdersFromResponse');
+      alert('something wrong with importAllegroOrdersFromResponse');
+      newList = oldList;
+
+    } finally {
+      this.allOrdersList$.next(oldList);
+    }
   }
 
 
@@ -187,16 +210,16 @@ export class OrderService {
 
 
 
-  private fillOrdersFromAllegroImport(importedList: IOrderGroup[], oldOrderList: IOrder[]): IOrder[] {
-    importedList.forEach(group => {
-      const existedOrderIdx = oldOrderList.findIndex(o => o.id === group.groupId);
+  private fillOrdersFromAllegroImport(importedList: IMyorder[], oldOrderList: IOrder[]): IOrder[] {
+
+    importedList.forEach(importedOrder => {
+      const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
 
       if (existedOrderIdx >= 0) {
-        const order = this.getUpdatedOrder(oldOrderList[existedOrderIdx], group);
-        oldOrderList[existedOrderIdx] = order;
-
+        const updatedOrder = this.getUpdatedOrder(oldOrderList[existedOrderIdx], importedOrder);
+        oldOrderList[existedOrderIdx] = updatedOrder;
       } else {
-        oldOrderList.push(this.createOrderFromGroup(group));
+        oldOrderList.push(this.createOrderFromImportedOrder(importedOrder));
       }
     });
 
@@ -204,9 +227,7 @@ export class OrderService {
   }
 
 
-  private getUpdatedOrder(oldOrder: IOrder, group: IOrderGroup): IOrder {
-    const order = group.myorders[0];
-
+  private getUpdatedOrder(oldOrder: IOrder, order: IMyorder): IOrder {
     return {
       ...oldOrder,
       allegroJson: JSON.stringify(order),
@@ -221,20 +242,12 @@ export class OrderService {
   }
 
 
-  private createOrderFromGroup(group: IOrderGroup): IOrder {
-    // createOrderFromGroup(group: IOrderGroup): IOrder {
-    // !!!!!!!!!!!!!!!!
-    // dont use group.myorders, just go straight into
-    // group.myorders[0].order
-    // myorders has alway one item: order
-    // and there is all info about it
-
-    const order = group.myorders[0];
+  private createOrderFromImportedOrder(order: IMyorder): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
     return {
       allegroJson: JSON.stringify(order),
-      id: group.groupId,
+      id: order.purchaseId, //same as order.id
       name: name,
       isNew: true,
       status: order.status.primary.status,

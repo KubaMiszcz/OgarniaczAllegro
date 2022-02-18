@@ -82,7 +82,7 @@ export class AllegroService {
   private checkIfAllJsonsIdentical(list: string[]) {
     list.forEach(item => {
       if (list[0] !== item) {
-        console.log('not identical');
+        console.error('not identical');
         throw new Error('Jsons not identical.');
       }
     });

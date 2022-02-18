@@ -1,297 +1,428 @@
 {
-  "id": "e6a0d907-8f1c-11ec-ac30-e9120ceb9b40",
-  "purchaseId": "e6819130-8f1c-11ec-ac30-e9120ceb9b40",
-  "seller": {
-    "id": "96766856",
-    "login": "Platet-A"
-  },
-  "offers": [
+  "groupId": "3a1ec08f-d395-3c4d-9439-2cf1013c424e",
+  "myorders": [
     {
-      "id": "11093993120",
-      "title": "Osłona wentylatora 120x120mm",
-      "friendlyUrl": "https://allegro.pl/oferta/oslona-wentylatora-120x120mm-11093993120?navCategoryId=67363&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzdhZjJhY2M4YjRiZTY0MmJmNjZiMzk3MGI5ZTg1MzZiMmE0ODFiY2ViZWQ2MmFkMzlmOTVlOWQ4N2Q1OTI4NjE%3D",
-      "unitPrice": {
-        "amount": "3.9",
+      "id": "47b20fd4-8fe4-11ec-aefa-ad5f9e50b0d9",
+      "purchaseId": "47a25860-8fe4-11ec-aefa-ad5f9e50b0d9",
+      "seller": {
+        "id": "5233156",
+        "login": "aneta_sk1",
+        "address": {
+          "firstName": "Aneta",
+          "lastName": "Szlagor",
+          "zipCode": "32-050",
+          "city": "Skawina",
+          "country": "PL",
+          "street": "Adama Asnyka 7d",
+          "phoneNumber": "+48 602 398 392",
+          "company": "Instal-Mazo",
+          "taxId": "944-186-90-51",
+          "regon": "367895998",
+          "email": "v9okj5avwt@allegromail.pl"
+        },
+        "contactDetails": {
+          "phones": [
+            {
+              "number": "538904865",
+              "numberLabel": "538 904 865",
+              "numberLabelMasked": "538  *** ***"
+            },
+            {
+              "number": "882482296",
+              "numberLabel": "882 482 296",
+              "numberLabelMasked": "882  *** ***"
+            }
+          ],
+          "emails": [
+            {
+              "address": "v9okj5avwt@allegromail.pl",
+              "addressMasked": "v*********@a**********.pl"
+            }
+          ],
+          "openingHours": [
+            {
+              "daysLabel": "poniedziałek - piątek",
+              "daysShortLabel": "pon. - pt.",
+              "hoursLabels": [
+                "08:00 - 16:00"
+              ]
+            },
+            {
+              "daysLabel": "sobota - niedziela",
+              "daysShortLabel": "sob. - nd.",
+              "hoursLabels": [
+                "zamknięte"
+              ]
+            }
+          ]
+        }
+      },
+      "offers": [
+        {
+          "id": "7353333144",
+          "title": "WIERTŁO WIERTŁA DO KONFIRMATÓW KONFIRMATU 4.0/6.0",
+          "friendlyUrl": "https://allegro.pl/oferta/wiertlo-wiertla-do-konfirmatow-konfirmatu-4-0-6-0-7353333144?navCategoryId=147677&snapshot=MjAyMi0wMi0xN1QxMToyNzo1MC41MjJaO2J1eWVyOzM4NWFmMWNjZTI1MTJjODIyNTZiMGI1OTYxZTI4MGM0NzUyYzk2NTY2Y2UyYmRjNzU1YWE5Yjk4ZDRmNjdlNzE%3D",
+          "unitPrice": {
+            "amount": "10.5",
+            "currency": "PLN"
+          },
+          "originalUnitPrice": {
+            "amount": "10.5",
+            "currency": "PLN"
+          },
+          "quantity": 1,
+          "type": "UNIT",
+          "imageUrl": "https://a.allegroimg.com/original/03b4a9/a20320d34ebab1342a45a487e08a",
+          "productId": "505820b8-5630-48a9-888c-409786b91753",
+          "orderDate": "2022-02-17T11:27:50.522Z",
+          "gold": false,
+          "pharmacy": false,
+          "auction": false,
+          "toRate": false,
+          "orderOfferId": "47b20fd3-8fe4-11ec-aefa-ad5f9e50b0d9",
+          "offerPrice": {
+            "amount": "10.5",
+            "currency": "PLN"
+          },
+          "originalOfferPrice": {
+            "amount": "10.5",
+            "currency": "PLN"
+          },
+          "showOriginalPrice": false
+        },
+        {
+          "id": "6943443931",
+          "title": "WTYCZKA ELEKTRYCZNA PŁASKA Z UCHWYTEM, MAŁA",
+          "friendlyUrl": "https://allegro.pl/oferta/wtyczka-elektryczna-plaska-z-uchwytem-mala-6943443931?navCategoryId=316094&snapshot=MjAyMi0wMi0xN1QxMToyNzo1MC41MjJaO2J1eWVyOzNkNDgxNmRhYTBkYTY3YTQzZGYwZGM1YTgxOGVlZDgyYmRjMGZjYTE2MDA5OWU2YjgzZWYxMzUwNjdiMjhlNDg%3D",
+          "unitPrice": {
+            "amount": "6.2",
+            "currency": "PLN"
+          },
+          "originalUnitPrice": {
+            "amount": "6.2",
+            "currency": "PLN"
+          },
+          "quantity": 3,
+          "type": "UNIT",
+          "imageUrl": "https://d.allegroimg.com/original/0386f2/b8a43c184b44bc49626a9d04d5fd",
+          "productId": "ec85764f-3750-4713-a62c-1602a9c7682c",
+          "orderDate": "2022-02-17T11:27:50.522Z",
+          "gold": false,
+          "pharmacy": false,
+          "auction": false,
+          "toRate": false,
+          "orderOfferId": "47b20fd0-8fe4-11ec-aefa-ad5f9e50b0d9",
+          "offerPrice": {
+            "amount": "18.6",
+            "currency": "PLN"
+          },
+          "originalOfferPrice": {
+            "amount": "18.6",
+            "currency": "PLN"
+          },
+          "showOriginalPrice": false
+        },
+        {
+          "id": "6943541739",
+          "title": "WTYCZKA PROSTA Z UZIEMIENIEM BIAŁA",
+          "friendlyUrl": "https://allegro.pl/oferta/wtyczka-prosta-z-uziemieniem-biala-6943541739?navCategoryId=316094&snapshot=MjAyMi0wMi0xN1QxMToyNzo1MC41MjJaO2J1eWVyO2U2YmExMGJhMmQ0N2I1NDY5NDQ4ODlhOTU4NTdlYzdmMWE2Y2FmYjdhODMxNWQyOTgzNGUxYWUyMmUzZGI1MzY%3D",
+          "unitPrice": {
+            "amount": "6.5",
+            "currency": "PLN"
+          },
+          "originalUnitPrice": {
+            "amount": "6.5",
+            "currency": "PLN"
+          },
+          "quantity": 2,
+          "type": "UNIT",
+          "imageUrl": "https://7.allegroimg.com/original/0323b6/a1c4576a4a6287b005fde65eaa07",
+          "productId": "30b40d6e-d3b9-444e-9257-6b0f315eb298",
+          "orderDate": "2022-02-17T11:27:50.522Z",
+          "gold": false,
+          "pharmacy": false,
+          "auction": false,
+          "toRate": false,
+          "orderOfferId": "47b20fd2-8fe4-11ec-aefa-ad5f9e50b0d9",
+          "offerPrice": {
+            "amount": "13.0",
+            "currency": "PLN"
+          },
+          "originalOfferPrice": {
+            "amount": "13.0",
+            "currency": "PLN"
+          },
+          "showOriginalPrice": false
+        },
+        {
+          "id": "9232811047",
+          "title": "WTYCZKA Z DODATKOWYM GNIAZDEM I UZIEMIENIEM",
+          "friendlyUrl": "https://allegro.pl/oferta/wtyczka-z-dodatkowym-gniazdem-i-uziemieniem-9232811047?navCategoryId=111855&snapshot=MjAyMi0wMi0xN1QxMToyNzo1MC41MjJaO2J1eWVyOzUyYmQ0ZTI1YTVkMTkwZDJlMjhkNDBlYmRlYzFjODY0YTI2NmJkNWNiNDRiNTVhZDM4ODhiYzNmOWEwMzI5NjA%3D",
+          "unitPrice": {
+            "amount": "13",
+            "currency": "PLN"
+          },
+          "originalUnitPrice": {
+            "amount": "13",
+            "currency": "PLN"
+          },
+          "quantity": 1,
+          "type": "UNIT",
+          "imageUrl": "https://0.allegroimg.com/original/035469/b747501849f0809695cbeef01be0",
+          "productId": "e4f746a5-ebba-452b-8aa9-128adf28746a",
+          "orderDate": "2022-02-17T11:27:50.522Z",
+          "gold": false,
+          "pharmacy": false,
+          "auction": false,
+          "toRate": false,
+          "orderOfferId": "47b20fd1-8fe4-11ec-aefa-ad5f9e50b0d9",
+          "offerPrice": {
+            "amount": "13",
+            "currency": "PLN"
+          },
+          "originalOfferPrice": {
+            "amount": "13",
+            "currency": "PLN"
+          },
+          "showOriginalPrice": false
+        }
+      ],
+      "delivery": {
+        "cost": {
+          "amount": "0.00",
+          "currency": "PLN"
+        },
+        "name": "Allegro Paczkomaty InPost",
+        "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
+        "id": "47daa670-8fe4-11ec-9951-e5e023f57961",
+        "address": {
+          "id": "70df85b7-e65c-4fd2-a791-e72738b569ec",
+          "firstName": "Jakub",
+          "lastName": "Bełch",
+          "city": "Rzeszów",
+          "street": "Osmeckiego 41/16",
+          "countryCode": "PL",
+          "zipCode": "35-506",
+          "phoneNumber": "534 883 128"
+        },
+        "generalDelivery": {
+          "id": "673168",
+          "name": "Paczkomat RZE34M",
+          "description": "Z boku sklepu od strony magazynu",
+          "address": {
+            "street": "Brydaka 13",
+            "code": "35-507",
+            "city": "Rzeszów"
+          },
+          "coordinates": {
+            "lat": 50.05841,
+            "lon": 21.98412
+          }
+        },
+        "discount": {
+          "originalCost": {
+            "amount": "8.99",
+            "currency": "PLN"
+          },
+          "type": "FREEBOX",
+          "planType": "FREEBOX_STANDARD"
+        },
+        "status": "DELIVERED",
+        "timestamp": "2022-02-18T14:48:34.000Z",
+        "paymentType": {
+          "name": "płatne z góry",
+          "type": "PREPAID"
+        }
+      },
+      "totalCost": {
+        "amount": "55.10",
         "currency": "PLN"
       },
-      "originalUnitPrice": {
-        "amount": "3.9",
-        "currency": "PLN"
+      "summary": {
+        "totalCost": {
+          "amount": "55.10",
+          "currency": "PLN"
+        },
+        "exchangeRateDate": "2022-02-17T11:27:54.323Z",
+        "showExchangeRateInformation": false
       },
-      "quantity": 2,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/1175b1/2d086d484830bea85f8e36689f07",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d906-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "7.8",
-        "currency": "PLN"
+      "payment": {
+        "id": "a13abf21-8fe4-11ec-8d63-47002e53488e",
+        "provider": "PAYU",
+        "amount": {
+          "amount": "55.10",
+          "currency": "PLN"
+        },
+        "method": "Karta płatnicza",
+        "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
+        "status": "COMPLETED",
+        "date": "2022-02-17T11:27:54.323Z",
+        "isInstallments": false,
+        "isMultipleSellers": false,
+        "cardMask": "482436******6807"
       },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "7.8",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "10632417250",
-      "title": "Osłona wentylatora filtr przeciwkurzowy 120x120mm",
-      "friendlyUrl": "https://allegro.pl/oferta/oslona-wentylatora-filtr-przeciwkurzowy-120x120mm-10632417250?navCategoryId=67197&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzMyYWIwMzliZWU1MzFlYWY2NGU0NmEyM2M4Yzg3YmE0YWFmZjNjYTAzNzVlN2Y2ZjhhYzZjNTEyZjQ4OTU5Nzc%3D",
-      "unitPrice": {
-        "amount": "2.7",
-        "currency": "PLN"
+      "createDate": "2022-02-17T11:25:15.878Z",
+      "orderDate": "2022-02-17T11:27:50.522Z",
+      "serviceCountry": "PL",
+      "hiddenInMyOrders": false,
+      "boughtOnDevice": "DESKTOP",
+      "cancelled": false,
+      "status": {
+        "primary": {
+          "status": "DELIVERED",
+          "action": "RATE_SELLER"
+        },
+        "traits": [
+          "DELIVERY_SMART",
+          "IS_SURCHARGE_ALLOWED"
+        ],
+        "actions": [
+          {
+            "type": "HIDE_ORDER",
+            "enabled": true
+          },
+          {
+            "type": "BUY_AGAIN",
+            "enabled": true
+          },
+          {
+            "type": "RATE_SELLER",
+            "enabled": true,
+            "details": [
+              {
+                "type": "TEXT",
+                "value": "Wystaw ocenę do"
+              },
+              {
+                "type": "SPACE"
+              },
+              {
+                "type": "TEXT",
+                "value": "18 maja 2022, 13:25"
+              }
+            ]
+          },
+          {
+            "type": "RETURN_PRODUCTS",
+            "enabled": true,
+            "details": [
+              {
+                "type": "TEXT",
+                "value": "Pozostało 14 dni na zwrot (do pt. 04 mar.)."
+              },
+              {
+                "type": "BREAK_LINE"
+              },
+              {
+                "type": "ACTION",
+                "value": "Dowiedz się więcej.",
+                "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
+              }
+            ]
+          },
+          {
+            "type": "QUESTION_TO_SELLER",
+            "enabled": true
+          },
+          {
+            "type": "DISCUSSION_ASK_FOR_HELP",
+            "enabled": true,
+            "details": [
+              {
+                "type": "TEXT",
+                "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 16.08.2022, 13:25. W razie potrzeby udzielimy Ci wsparcia."
+              }
+            ]
+          }
+        ]
       },
-      "originalUnitPrice": {
-        "amount": "2.7",
-        "currency": "PLN"
+      "coins": {
+        "total": 0
       },
-      "quantity": 1,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/117f6d/f378c7464917a249724395207e04",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d905-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "2.7",
-        "currency": "PLN"
+      "invoiceAddress": {
+        "id": "60f931f0f0282b439374fa22",
+        "zipCode": "35-506",
+        "city": "Rzeszów",
+        "countryCode": "PL",
+        "street": "płk. Kazimierza Iranka-Osmeckiego 41/16",
+        "company": "Jakub Bełch it-kom",
+        "taxId": "8133395094"
       },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "2.7",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "11394153289",
-      "title": "Przełącznik hebelkowy RED ON-OFF 6A/250V podśw 12V",
-      "friendlyUrl": "https://allegro.pl/oferta/przelacznik-hebelkowy-red-on-off-6a-250v-podsw-12v-11394153289?navCategoryId=67342&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzdiZWUxMzlmNzJmNjExZTM5ZTBiMmNmNjI5ZDQ4NzU2ZmQ5NjRmMDg1MmY1ZGQxNDU3MzVkZjJiNzJjYmM0M2Y%3D",
-      "unitPrice": {
-        "amount": "2.9",
-        "currency": "PLN"
-      },
-      "originalUnitPrice": {
-        "amount": "2.9",
-        "currency": "PLN"
-      },
-      "quantity": 2,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/11f323/b86d79084d8a9ae6b94387809383",
-      "productId": "b07f5c02-b71a-4e4f-8057-418c8aebb977",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d904-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "5.8",
-        "currency": "PLN"
-      },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "5.8",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "10645208730",
-      "title": "Pęseta penseta pomiarowa do elementów SMD",
-      "friendlyUrl": "https://allegro.pl/oferta/peseta-penseta-pomiarowa-do-elementow-smd-10645208730?navCategoryId=67197&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzFiNTBiMzQwNTViMDU0OGViZGVjYTA0ODBlYzUzY2VkNzdlY2I4ZTFiNmVmOTY2ODNiZWRlYjg4ZjMzMjJhOWE%3D",
-      "unitPrice": {
-        "amount": "18",
-        "currency": "PLN"
-      },
-      "originalUnitPrice": {
-        "amount": "18",
-        "currency": "PLN"
-      },
-      "quantity": 1,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/11619d/3dcb37274fb08849d1df8522108e",
-      "productId": "aa6ccddd-8035-46b4-ab9d-d06ceb7a8bce",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d902-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "18",
-        "currency": "PLN"
-      },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "18",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "10760655147",
-      "title": "Pęseta pinceta ESD-12 l=135mm prosta",
-      "friendlyUrl": "https://allegro.pl/oferta/peseta-pinceta-esd-12-l-135mm-prosta-10760655147?navCategoryId=67346&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzNhYTZlNTRjZjBhMzBjYTAzNWNmNGYzZDNmOWQyMmZiNzgwYjg0YWVjMWQ2NGYxOTgzOGRmMTIyNzY0ODdhZDU%3D",
-      "unitPrice": {
-        "amount": "6.5",
-        "currency": "PLN"
-      },
-      "originalUnitPrice": {
-        "amount": "6.5",
-        "currency": "PLN"
-      },
-      "quantity": 1,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/1132db/49d7eced4cc1bf816d57287d802e",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d901-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "6.5",
-        "currency": "PLN"
-      },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "6.5",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "10211293800",
-      "title": "Pęseta pinceta ESD-15 l=120mm 156F zagięta",
-      "friendlyUrl": "https://allegro.pl/oferta/peseta-pinceta-esd-15-l-120mm-156f-zagieta-10211293800?navCategoryId=67352&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzNlNWE2YjJiOTE2OGU3MTA2MzFjNmMzYWJlMzdiYjBjODMzNjNlZjNiNzc4ZTdkYWZlNDI3YzMzNTYxOGNmODE%3D",
-      "unitPrice": {
-        "amount": "6",
-        "currency": "PLN"
-      },
-      "originalUnitPrice": {
-        "amount": "6",
-        "currency": "PLN"
-      },
-      "quantity": 1,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/11bbc6/bfa262e54449badfbac30b70ea94",
-      "productId": "b5c33e6f-3441-4338-9adb-d08acb6534d3",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d903-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "6",
-        "currency": "PLN"
-      },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "6",
-        "currency": "PLN"
-      }
-    },
-    {
-      "id": "11699351830",
-      "title": "Wyłącznik czasowy mechaniczny 1-30min oś ścięta",
-      "friendlyUrl": "https://allegro.pl/oferta/wylacznik-czasowy-mechaniczny-1-30min-os-scieta-11699351830?navCategoryId=67342&snapshot=MjAyMi0wMi0xNlQxMTozODoyOS40MDNaO2J1eWVyOzU4MTI2ZTFkOGI1Yzk2YTU3ZWE1M2M2ODU4Mjk0NWU5MGFiZmJlMDU2MTc0NmNjZjg0OGE5MzM0YzM1MjdiZWM%3D",
-      "unitPrice": {
-        "amount": "34",
-        "currency": "PLN"
-      },
-      "originalUnitPrice": {
-        "amount": "34",
-        "currency": "PLN"
-      },
-      "quantity": 1,
-      "type": "UNIT",
-      "imageUrl": "https://a.allegroimg.com/original/111f69/c576d5244053a59e3a67064d999b",
-      "orderDate": "2022-02-16T11:38:29.403Z",
-      "gold": false,
-      "pharmacy": false,
-      "auction": false,
-      "toRate": false,
-      "orderOfferId": "e6a0d900-8f1c-11ec-ac30-e9120ceb9b40",
-      "originalOfferPrice": {
-        "amount": "34",
-        "currency": "PLN"
-      },
-      "showOriginalPrice": false,
-      "offerPrice": {
-        "amount": "34",
-        "currency": "PLN"
+      "timelines": [
+        {
+          "status": "DELIVERED",
+          "waybillId": "632050259235507117026190",
+          "details": [
+            {
+              "type": "TEXT",
+              "value": "18 lut. 2022, 15:48"
+            }
+          ],
+          "steps": [
+            {
+              "type": "PAYMENT_PAID",
+              "hint": "17 lut. 2022, 12:27",
+              "active": false,
+              "error": false
+            },
+            {
+              "type": "TO_BE_SENT",
+              "hint": "Od 17. lut. 12:38",
+              "active": false,
+              "error": false
+            },
+            {
+              "type": "IN_TRANSIT",
+              "hint": "Od 17. lut. 15:10",
+              "active": false,
+              "error": false
+            },
+            {
+              "type": "AVAILABLE_FOR_PICKUP",
+              "hint": "Od 18. lut. 07:04",
+              "active": false,
+              "error": false
+            },
+            {
+              "type": "DELIVERED",
+              "hint": "18 lut. 15:48",
+              "active": true,
+              "error": false
+            }
+          ],
+          "action": "RATE_SELLER",
+          "pickup": {
+            "point": {
+              "id": "673168",
+              "name": "Paczkomat RZE34M",
+              "description": "Z boku sklepu od strony magazynu",
+              "address": {
+                "city": "Rzeszów",
+                "code": "35-507",
+                "street": "Brydaka 13"
+              }
+            }
+          },
+          "carrier": {
+            "id": "INPOST",
+            "name": "InPost",
+            "url": "https://inpost.pl/pl/pomoc/znajdz-przesylke?parcel=632050259235507117026190"
+          },
+          "detailedHistoryAvailable": true,
+          "alert": {}
+        }
+      ],
+      "isFulfilment": false,
+      "groupId": "3a1ec08f-d395-3c4d-9439-2cf1013c424e",
+      "rescissions": {
+        "retails": false
       }
     }
   ],
-  "delivery": {
-    "cost": {
-      "amount": "0.00",
-      "currency": "PLN"
-    },
-    "name": "Allegro Paczkomaty InPost",
-    "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
-    "id": "e6d46c20-8f1c-11ec-acf9-d367232228ad",
-    "generalDelivery": {
-      "id": "673168",
-      "name": "Paczkomat RZE34M",
-      "description": "Z boku sklepu od strony magazynu",
-      "address": {
-        "street": "Brydaka 13",
-        "code": "35-507",
-        "city": "Rzeszów"
-      },
-      "coordinates": {
-        "lat": 50.05841,
-        "lon": 21.98412
-      }
-    },
-    "discount": {
-      "originalCost": {
-        "amount": "8.99",
-        "currency": "PLN"
-      },
-      "type": "FREEBOX",
-      "planType": "FREEBOX_STANDARD"
-    },
-    "paymentType": {
-      "name": "płatne z góry",
-      "type": "PREPAID"
-    },
-    "waybillsData": {}
-  },
-  "totalCost": {
-    "amount": "80.80",
-    "currency": "PLN"
-  },
-  "payment": {
-    "id": "e71c98b1-8f1c-11ec-8eaa-032ea4d890eb",
-    "provider": "PAYU",
-    "amount": {
-      "amount": "80.80",
-      "currency": "PLN"
-    },
-    "method": "Karta płatnicza",
-    "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
-    "status": "COMPLETED",
-    "date": "2022-02-16T11:38:32.124Z",
-    "isInstallments": false,
-    "isMultipleSellers": false,
-    "cardMask": "482436******6807"
-  },
-  "createDate": "2022-02-16T11:38:03.075Z",
-  "orderDate": "2022-02-16T11:38:29.403Z",
-  "serviceCountry": "PL",
-  "markedAsPaid": false,
-  "hiddenInMyOrders": false,
-  "boughtOnDevice": "DESKTOP",
-  "cancelled": false,
   "status": {
     "primary": {
-      "status": "PAID"
+      "status": "DELIVERED",
+      "action": "RATE_SELLER"
     },
     "traits": [
       "DELIVERY_SMART",
@@ -308,28 +439,36 @@
       },
       {
         "type": "RATE_SELLER",
-        "enabled": true
-      },
-      {
-        "type": "CANCEL_ORDER",
         "enabled": true,
         "details": [
           {
             "type": "TEXT",
-            "value": "Gdy zakup będzie miał status 'w przygotowaniu', anulowanie nie będzie możliwe."
+            "value": "Wystaw ocenę do"
           },
           {
-            "type": "SPACE",
-            "value": ""
-          },
-          {
-            "type": "ACTION",
-            "value": "Dowiedz się więcej",
-            "action": "SHOW_CANCEL_ORDER_INFORMATION"
+            "type": "SPACE"
           },
           {
             "type": "TEXT",
-            "value": "."
+            "value": "18 maja 2022, 13:25"
+          }
+        ]
+      },
+      {
+        "type": "RETURN_PRODUCTS",
+        "enabled": true,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Pozostało 14 dni na zwrot (do pt. 04 mar.)."
+          },
+          {
+            "type": "BREAK_LINE"
+          },
+          {
+            "type": "ACTION",
+            "value": "Dowiedz się więcej.",
+            "action": "RETURN_PRODUCTS_SHOW_MORE_DETAILS"
           }
         ]
       },
@@ -343,11 +482,18 @@
         "details": [
           {
             "type": "TEXT",
-            "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 15.08.2022, 13:38. W razie potrzeby udzielimy Ci wsparcia."
+            "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 16.08.2022, 13:25. W razie potrzeby udzielimy Ci wsparcia."
           }
         ]
       }
     ]
   },
-  "isFulfilment": false
+  "summary": {
+    "totalCost": {
+      "amount": "55.10",
+      "currency": "PLN"
+    },
+    "exchangeRateDate": "2022-02-17T11:27:54.323Z",
+    "showExchangeRateInformation": false
+  }
 }

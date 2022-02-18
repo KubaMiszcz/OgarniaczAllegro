@@ -60,7 +60,6 @@ export class OrderRowComponent implements OnInit {
 
   hasStatus(value: string | null = null) {
     const key = this.helperService.getKeyFromEnum(AllegroParcelStatusEnums, value);
-    console.log(this.order.status, key, this.order.status === key);
 
     return this.order.status === key;
   }
