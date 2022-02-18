@@ -244,7 +244,7 @@ export class OrderService {
         orderValue: Number(order.totalCost.amount),
         // isPackageDelivered: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
         // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
-        isPackageReceived: StatusEnum.No,
+        // isPackageReceived: StatusEnum.No,
       } as IPurchase,
       return: {},
       isFinished: StatusEnum.No

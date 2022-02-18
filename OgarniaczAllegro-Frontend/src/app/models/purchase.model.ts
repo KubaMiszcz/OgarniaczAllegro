@@ -1,6 +1,6 @@
 import { StatusEnum } from './constants/status.enum';
 import { IDateYMD } from './date-YMD.model';
-import { IOrderItem as IPurchaseItem } from './purchase-item';
+import { IOrderItem as IPurchaseItem } from './purchase-item.model';
 
 export interface IPurchase {
   isAllegroPay: StatusEnum; // allegro Pay
@@ -10,5 +10,5 @@ export interface IPurchase {
   // isInvoiceReceived?: StatusEnum; // faktura OK ?
   isPackageDelivered?: StatusEnum; // Przesyłka odebrana
   deliveredDate?: IDateYMD; // Data odebrania ->
-  isPackageReceived?: StatusEnum; // Przesyłka odebrana
+  // isPackageReceived?: StatusEnum; // Przesyłka odebrana
 }
