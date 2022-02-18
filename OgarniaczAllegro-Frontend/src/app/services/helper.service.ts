@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AllegroStagesEnums } from '../allegro-stuff/models/allegro-enums';
-import { IDateYMD } from '../models/date-YMD';
-import { IOrder } from '../models/order';
+import { IDateYMD } from '../models/date-YMD.model';
 import _ from 'lodash';
 
 
@@ -34,13 +32,23 @@ export class HelperService {
 
 
 
-  findInEnum<T1, T2>(inEnum: T1, value: T2): string | undefined {
-    const keys = Object.keys(inEnum);
-    const values = Object.values(inEnum);
+  getValueFromEnum<T1, T2>(sourceEnum: T1, value: T2): string | undefined {
+    const keys = Object.keys(sourceEnum);
+    const values = Object.values(sourceEnum);
 
     const idx = keys.findIndex(k => String(k) === String(value));
 
     return values[idx];
   }
+
+  getKeyFromEnum<T1, T2>(sourceEnum: T1, value: T2): string | undefined {
+    const keys = Object.keys(sourceEnum);
+    const values = Object.values(sourceEnum);
+
+    const idx = values.findIndex(k => String(k) === String(value));
+
+    return keys[idx];
+  }
+
 
 }

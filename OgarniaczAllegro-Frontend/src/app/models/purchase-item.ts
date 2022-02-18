@@ -1,3 +1,3 @@
 export interface IOrderItem {
-  title: string;
+  name: string;
 }

@@ -1,34 +1,7 @@
-import { IUser } from './user.model';
 import { StatusEnum } from './constants/status.enum';
-import { IDateYMD } from './date-YMD';
-import { IOrderItem } from './order-item';
-
-
-
-export interface IReturn {
-  isReturnIssued?: StatusEnum; //Zwrot zgłoszony
-  returnToDate?: IDateYMD; // odeslij do
-  returnCode?: string; // kod zwrotu
-  returnValue?: number; // kwota do zwrotu
-  isReturnSended?: StatusEnum; // Zwrot wysłany
-  isReturnDelivered?: StatusEnum; // Zwrot u sprzedającego
-  isCashReturned?: StatusEnum; // zwrot na koncie
-  isInvoiceCorrectionReceived?: StatusEnum; // korekta OK ?
-
-}
-export interface IPurchase {
-  isAllegroPay: StatusEnum; // allegro Pay
-  hasInvoice?: StatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  orderItems: IOrderItem[];
-  orderValue: number;
-  isInvoiceReceived?: StatusEnum; // faktura OK ?
-  isPackageReceived?: StatusEnum; // Przesyłka odebrana
-  receivedDate?: IDateYMD; // Data odebrania ->
-
-
-
-}
-
+import { IDateYMD } from './date-YMD.model';
+import { IPurchase } from './purchase.model';
+import { IReturn } from './return.model';
 
 
 export interface IOrder {
@@ -38,7 +11,7 @@ export interface IOrder {
 
   isNew: boolean;
   name: string; //zamowienie
-  stage?: string;
+  status?: string;
 
   purchase: IPurchase;
   return: IReturn;
@@ -73,7 +46,12 @@ export class Order implements IOrder {
   isNew = false;
   isAllegroPay = StatusEnum.Unknown;
 
-  purchase!: IPurchase;
+  purchase = {
+    isAllegroPay: StatusEnum.Unknown,
+    purchaseItems: [],
+    orderValue: 0,
+  } as IPurchase;
+
   return!: IReturn;
 
   isFinished = StatusEnum.No; // ALL OK
@@ -85,7 +63,7 @@ export class Order implements IOrder {
 
 
 
-export const EXAMPLE_ROWS_XXX: IOrder[] = [
+// export const EXAMPLE_ROWS_XXX: IOrder[] = [
   // {
   //   id: '1',
   //   name: 'spieniacz do mleka ten drugi zwracany',
@@ -132,5 +110,5 @@ export const EXAMPLE_ROWS_XXX: IOrder[] = [
   //   isCashReturned: StatusEnum.No,
   //   isFinished: StatusEnum.No,
   // },
-];
+// ];
 

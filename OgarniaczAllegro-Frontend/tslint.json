@@ -26,6 +26,7 @@
     ],
     "no-unused-expression": true,
     "no-submodule-imports": false,
+    "no-object-literal-type-assertion": false,
     // "no-use-before-declare": true,
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,

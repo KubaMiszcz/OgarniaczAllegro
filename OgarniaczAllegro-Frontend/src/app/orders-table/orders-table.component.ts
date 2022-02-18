@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs';
 import { OrderService } from '../services/order.service';
-import { IOrder, Order } from './../models/order';
+import { IOrder, Order } from '../models/order.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 

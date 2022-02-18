@@ -1,16 +1,16 @@
-import { AllegroStagesEnums } from './../allegro-stuff/models/allegro-enums';
-import { IAllegroSingleOrder, ISingleOrderGroup } from './../allegro-stuff/models/single-order-model';
+import { AllegroEnums } from '../models/allegro-models/allegro-enums';
+import { IAllegroSingleOrder, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { AllegroEnums } from '../allegro-stuff/models/allegro-enums';
 import { StatusEnum } from '../models/constants/status.enum';
-import { IOrder, Order } from '../models/order';
-import { IAllegroAllOrders, IOrderGroup } from './../allegro-stuff/models/all-orders-model';
+import { IOrder, Order } from '../models/order.model';
+import { IAllegroAllOrders, IOrderGroup } from '../models/allegro-models/all-orders.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
+import { IPurchase } from '../models/purchase.model';
 
 
 @Injectable({
@@ -111,8 +111,9 @@ export class OrderService {
 
   importAllegroAllOrdersFromResponse(source: string) {
     const allOrdersJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
+
     const allOrdersView: IAllegroAllOrders = JSON.parse(allOrdersJSON);
-    const allAllegroOrders: IOrderGroup[] = allOrdersView.myorders.orderGroups;
+    const allAllegroOrders: IOrderGroup[] = allOrdersView?.myorders?.orderGroups;
 
     const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
     let newList: IOrder[] = [];
@@ -210,12 +211,12 @@ export class OrderService {
       ...oldOrder,
       allegroJson: JSON.stringify(order),
       isNew: false,
-      stage: order.status.primary.status,
-      purchase: {
-        ...oldOrder.purchase,
-        isPackageReceived: order.delivery.status === AllegroStagesEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
-        receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
-      }
+      status: order.status.primary.status,
+      // purchase: {
+      // ...oldOrder.purchase,
+      // isPackageReceived: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
+      // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
+      // }
     };
   }
 
@@ -236,14 +237,15 @@ export class OrderService {
       id: group.groupId,
       name: name,
       isNew: true,
-      stage: this.helperService.findInEnum(AllegroStagesEnums, order.status.primary.status),
+      status: order.status.primary.status,
       purchase: {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
-        orderItems: order.offers,
+        // purchaseItems: order.offers,
         orderValue: Number(order.totalCost.amount),
-        isPackageReceived: order.delivery.status === AllegroStagesEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
-        receivedDate: this.helperService.getDateYMD(order.delivery.timestamp),
-      },
+        // isPackageDelivered: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
+        // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
+        isPackageReceived: StatusEnum.No,
+      } as IPurchase,
       return: {},
       isFinished: StatusEnum.No
     };

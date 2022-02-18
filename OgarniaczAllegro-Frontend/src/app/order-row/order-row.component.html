@@ -45,12 +45,7 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.purchase.isAllegroPay"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.purchase.hasInvoice" (click)="triStateClicked('hasInvoice')"></app-tri-state-check-box>
+  <app-tri-state-check-box [(value)]="order.purchase.isAllegroPay" [disabled]="true" readonly="true"></app-tri-state-check-box>
 </td>
 
 
@@ -63,121 +58,18 @@
 
 <!-- ============ -->
 <td class="text-center">
-  <div>{{order.stage}}</div>
+  <span class="badge badge-pill bg-primary"
+        [ngClass]="{
+    'bg-success' : hasStatus(parcelStatuses.DELIVERED),
+    'bg-warning' : hasStatus(parcelStatuses.AVAILABLE_FOR_PICKUP)
+} ">{{getStatus()}}</span>
+  <!-- km progress bar here -->
 </td>
 
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived"></app-tri-state-check-box>
-</td>
 
 
 <td class="text-center">
   <app-tri-state-check-box [(value)]="order.purchase.isPackageReceived"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <!-- <form class="form-inline"> -->
-  <!-- <div class="form-group"> -->
-  <!-- <div class="input-group"> -->
-  <div class="d-flex">
-    <span *ngIf="!isInEdit"
-          class="return-to-date"
-          (click)="d.toggle()">{{order?.purchase?.receivedDate | myDate}}
-    </span>
-
-    <input [hidden]="!isInEdit"
-           [(ngModel)]="order.purchase.receivedDate"
-           class="form-control return-to-date"
-           name="dp"
-           (click)="d.toggle()"
-           ngbDatepicker #d="ngbDatepicker"
-           [placement]="'bottom'">
-    <!-- (closed)="onDateSelected(order)" -->
-    <!-- [positionTarget]="buttonEl" -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </form> -->
-  </div>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.return.isReturnIssued"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <!-- <form class="form-inline"> -->
-  <!-- <div class="form-group"> -->
-  <!-- <div class="input-group"> -->
-  <div class="d-flex">
-    <span *ngIf="!isInEdit"
-          class="return-to-date"
-          (click)="d.toggle()">{{order?.return?.returnToDate | myDate}}
-    </span>
-
-    <input [hidden]="!isInEdit"
-           [(ngModel)]="order.return.returnToDate"
-           class="form-control return-to-date"
-           name="dp"
-           (click)="d.toggle()"
-           ngbDatepicker #d="ngbDatepicker"
-           [placement]="'bottom'">
-    <!-- (closed)="onDateSelected(order)" -->
-    <!-- [positionTarget]="buttonEl" -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </form> -->
-  </div>
-</td>
-
-
-<td class="text-center">
-  <div class="d-flex">
-    <span *ngIf="!isInEdit" class="return-code">{{order.return.returnCode}}</span>
-    <textarea *ngIf="isInEdit" [(ngModel)]="order.return.returnCode"
-              id="exampleFormControlTextarea1" class="form-control text-area return-code"
-              [rows]="order.id === '' ? 1 : 4"
-              aria-label="With textarea">
-            </textarea>
-  </div>
-</td>
-
-
-<td class="text-center text-nowrap">
-  <span *ngIf="!isInEdit" class="">{{order.return.returnValue | plnPipe}}</span>
-  <input *ngIf="isInEdit" [(ngModel)]="order.return.returnValue"
-         class="form-control" type="number">
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.return.isReturnSended"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.return.isReturnDelivered"></app-tri-state-check-box>
-</td>
-
-
-<!-- <td class="text-center">
-      <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle " aria-hidden="true"></i>
-      <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
-      <i class="fa fa-question-circle" aria-hidden="true"></i>
-    </td> -->
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.return.isCashReturned"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.return.isInvoiceCorrectionReceived"></app-tri-state-check-box>
 </td>
 
 

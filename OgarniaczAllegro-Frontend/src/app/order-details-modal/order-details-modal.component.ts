@@ -1,5 +1,5 @@
 import { OrderService } from './../services/order.service';
-import { IOrder, Order } from './../models/order';
+import { IOrder, Order } from '../models/order.model';
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { DialogResultEnum } from '../models/constants/dialog-result.enum';

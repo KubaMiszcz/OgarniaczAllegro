@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAllegroAllOrders, IOrderGroup } from '../allegro-stuff/models/all-orders-model';
-import { IOrder } from '../models/order';
+import { IAllegroAllOrders, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IOrder } from '../models/order.model';
 import { StatusEnum } from '../models/constants/status.enum';
-import { AllegroEnums } from '../allegro-stuff/models/allegro-enums';
+import { AllegroEnums } from '../models/allegro-models/allegro-enums';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
 
@@ -52,7 +52,7 @@ export class AllegroService {
 
 
 
-  private getJSONFromAllegroResponse(source: string, beginningSubstring: string, endingSubstring: string) {
+  private getJSONFromAllegroResponse(source: string, beginningSubstring: string, endingSubstring: string): string {
     const foundedByBeginMark = source.split(beginningSubstring);
     const possibleJsons: string[] = [];
 
@@ -68,6 +68,10 @@ export class AllegroService {
     }
 
     let finalJson = possibleJsons[0];
+
+    if (!finalJson) {
+      return 'null';
+    }
 
     finalJson = '{' + beginningSubstring + finalJson + endingSubstring + '{}}';
 
