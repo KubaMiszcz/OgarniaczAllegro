@@ -1,12 +1,12 @@
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
-import { IAllegroSingleOrder, ISingleOrderAllegro, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
+import { ISingleOrderView, ISingleOrderAllegro, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { StatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { IAllegroAllOrders, IMyOrderAllegro, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrdersView, IMyOrderAllAllegro, IOrderGroup } from '../models/allegro-models/all-orders.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
@@ -112,7 +112,9 @@ export class OrderService {
   importAllegroAllOrdersFromResponse(source: string) {
     const allOrdersJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
-    const allOrdersView: IAllegroAllOrders = JSON.parse(allOrdersJSON);
+    const allOrdersView: IAllegroAllOrdersView = JSON.parse(allOrdersJSON);
+    console.log(allOrdersView);
+
 
     if (allOrdersView.myorders.orderGroups.some(g => g.myorders.length > 1)) {
       alert('group.myorders.length>1');
@@ -151,7 +153,7 @@ export class OrderService {
     console.log(json, JSON.parse(json));
 
     const singleOrdersJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
-    const singleOrderView: IAllegroSingleOrder = JSON.parse(singleOrdersJSON);
+    const singleOrderView: ISingleOrderView = JSON.parse(singleOrdersJSON);
 
     if (singleOrderView?.myorderGroup?.myorders?.length > 1) {
       alert('group.myorders.length>1');
@@ -205,7 +207,7 @@ export class OrderService {
 
 
 
-  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllegro[], oldOrderList: IOrder[]): IOrder[] {
+  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllAllegro[], oldOrderList: IOrder[]): IOrder[] {
 
     importedList.forEach(importedOrder => {
       oldOrderList = this.fillSingleOrderFromAllegroImport(importedOrder, oldOrderList);
@@ -214,7 +216,7 @@ export class OrderService {
     return oldOrderList;
   }
 
-  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllegro | ISingleOrderAllegro, oldOrderList: IOrder[]): IOrder[] {
+  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllAllegro | ISingleOrderAllegro, oldOrderList: IOrder[]): IOrder[] {
     const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
 
     if (existedOrderIdx >= 0) {
@@ -229,7 +231,7 @@ export class OrderService {
 
 
 
-  private getUpdatedOrder(oldOrder: IOrder, order: IMyOrderAllegro | ISingleOrderAllegro): IOrder {
+  private getUpdatedOrder(oldOrder: IOrder, order: IMyOrderAllAllegro | ISingleOrderAllegro): IOrder {
     return {
       ...oldOrder,
       allegroJson: JSON.stringify(order),
@@ -244,9 +246,12 @@ export class OrderService {
   }
 
 
-  private createOrderFromImportedOrder(order: IMyOrderAllegro | ISingleOrderAllegro): IOrder {
+  private createOrderFromImportedOrder(order: IMyOrderAllAllegro | ISingleOrderAllegro): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
+    console.log((order as IMyOrderAllAllegro).invoiceAddressId ? StatusEnum.Yes : StatusEnum.NA);
+
+    // const result: IOrder = {
     return {
       allegroJson: JSON.stringify(order),
       id: order.purchaseId, //same as order.id
@@ -257,6 +262,8 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
         // purchaseItems: order.offers,
         orderValue: Number(order.totalCost.amount),
+        hasInvoice: (order as IMyOrderAllAllegro).invoiceAddressId ? StatusEnum.Yes : StatusEnum.No,
+        isInvoiceReceived: StatusEnum.No,
         // isPackageDelivered: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
         // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
         // isPackageReceived: StatusEnum.No,
@@ -264,6 +271,8 @@ export class OrderService {
       return: {},
       isFinished: StatusEnum.No
     };
+
+    // return result;
   }
 
 

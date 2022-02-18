@@ -68,6 +68,17 @@
 
 
 
+
+<td class="text-center ">
+  <app-tri-state-check-box [value]="order.purchase.hasInvoice" [disabled]="true" readonly="true"></app-tri-state-check-box>
+</td>
+
+<td class="text-center ">
+  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived" (click)="triStateClicked('invoiceReceived')"></app-tri-state-check-box>
+</td>
+
+
+
 <td class="text-center">
   <app-tri-state-check-box [(value)]="order.isFinished"></app-tri-state-check-box>
 </td>

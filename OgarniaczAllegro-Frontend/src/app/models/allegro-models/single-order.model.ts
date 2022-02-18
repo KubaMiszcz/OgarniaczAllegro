@@ -414,7 +414,7 @@ export interface ISingleOrderGroup {
 export interface ISingleOrderGroupMeta {
 }
 
-export interface IAllegroSingleOrder {
+export interface ISingleOrderView {
   myorderGroup: ISingleOrderGroup;
   // myorderGroup.$meta: SingleorderGroupMeta;
 }

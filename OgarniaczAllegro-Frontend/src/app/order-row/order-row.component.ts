@@ -23,7 +23,9 @@ export class OrderRowComponent implements OnInit {
     private helperService: HelperService
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log(this.order.purchase.isInvoiceReceived);
+  }
 
   addNew() {
     this.editComplete.emit(this.order);

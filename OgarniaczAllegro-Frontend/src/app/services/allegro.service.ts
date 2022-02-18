@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAllegroAllOrders, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrdersView, IOrderGroup } from '../models/allegro-models/all-orders.model';
 import { IOrder } from '../models/order.model';
 import { StatusEnum } from '../models/constants/status.enum';
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';

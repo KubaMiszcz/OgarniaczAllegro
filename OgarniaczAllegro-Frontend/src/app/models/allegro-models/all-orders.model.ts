@@ -1,4 +1,4 @@
-export interface IAllegroAllOrders {
+export interface IAllegroAllOrdersView {
   myorders: IMyorders;
   //====
   filter: string;
@@ -176,7 +176,7 @@ export interface IStatus {
   secondary: ISecondary;
 }
 
-export interface IMyOrderAllegro {
+export interface IMyOrderAllAllegro {
   id: string;
   purchaseId: string;
   seller: ISeller;
@@ -228,7 +228,7 @@ export interface IStatus2 {
 
 export interface IOrderGroup {
   groupId: string;
-  myorders: IMyOrderAllegro[];
+  myorders: IMyOrderAllAllegro[];
   status: IStatus2;
 }
 
