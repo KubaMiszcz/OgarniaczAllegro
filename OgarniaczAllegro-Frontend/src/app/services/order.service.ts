@@ -1,14 +1,14 @@
+import { AllegroCommonEnum } from './../models/allegro-models/allegro-common.enum';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import _ from 'lodash';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IAllegroAllOrdersView, IMyOrderAllAllegro } from '../models/allegro-models/all-orders.model';
-import { AllegroEnums } from '../models/allegro-models/allegro-enums';
+import { AllegroParcelStatusEnum } from '../models/allegro-models/allegro-parcel-status.enum';
 import { ISingleOrderAllegro, ISingleOrderView } from '../models/allegro-models/single-order.model';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
 import { IOrderItem } from './../models/purchase-item.model';
 import { IReturn } from './../models/return.model';
 import { AllegroService } from './allegro.service';
@@ -159,11 +159,9 @@ export class OrderService {
 
       if ((importedOrder as ISingleOrderAllegro).rescissions) {
         updatedOrder.return = this.getReturnData(importedOrder as ISingleOrderAllegro);
-        updatedOrder.name = 'Y' + updatedOrder.name;
       }
 
-      updatedOrder.name = 'X' + updatedOrder.name;
-
+      updatedOrder.allegroJson = this.helperService.mergeJsons(updatedOrder.allegroJson, importedOrder);
       oldOrderList[existedOrderIdx] = updatedOrder;
 
     } else {
@@ -174,10 +172,12 @@ export class OrderService {
   }
 
   getReturnData(order: ISingleOrderAllegro): IReturn {
+    const rescission = order.rescissions?.rescissions[0];
     return {
-      returnCode: order.rescissions.rescissions[0].returnParcels[0].returnCode,
-      returnCodeExpirationDate: order.rescissions.rescissions[0].shipmentExpirationDate,
-      returnValue: _.sum(order.rescissions.rescissions[0].rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
+      returnCode: rescission.returnParcels[0].returnCode,
+      returnCodeExpirationDate: rescission.shipmentExpirationDate,
+      returnValue: _.sum(rescission.rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
+      returnStatus: this.allegroService.convertToMyReturnStatusEnum(rescission.timelineStatus.status),
     };
   }
 
@@ -239,13 +239,12 @@ export class OrderService {
 
 
   private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegro): IOrder {
-    oldOrder.allegroJson = JSON.stringify(order);
     oldOrder.isNew = false;
-    oldOrder.purchase.status = this.allegroService.convertToMyStatusEnum(order.delivery.status);
+    oldOrder.purchase.status = this.allegroService.convertToMyParcelStatusEnum(order.delivery.status);
 
     oldOrder.purchase.statusTimestamp = new Date(order.delivery.timestamp);
 
-    if (oldOrder.purchase.status === AllegroParcelStatusEnums.DELIVERED && !oldOrder.purchase.issueReturnToDate) {
+    if (oldOrder.purchase.status === AllegroParcelStatusEnum.DELIVERED && !oldOrder.purchase.issueReturnToDate) {
       oldOrder.purchase.issueReturnToDate = this.helperService.addDaysToTimestamp(
         order.delivery.timestamp,
         this.settingsService.defaultReturnInterval
@@ -266,11 +265,11 @@ export class OrderService {
       name: name,
       isNew: true,
       purchase: {
-        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
+        isAllegroPay: order.payment.method === AllegroCommonEnum.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
         purchaseDate: order.orderDate,
-        status: this.allegroService.convertToMyStatusEnum(order.delivery.status),
+        status: this.allegroService.convertToMyParcelStatusEnum(order.delivery.status),
         statusTimestamp: order.delivery.timestamp ? new Date(order.delivery.timestamp) : order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegro).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
@@ -283,7 +282,7 @@ export class OrderService {
     };
 
 
-    if (result.purchase.status === AllegroParcelStatusEnums.DELIVERED) {
+    if (result.purchase.status === AllegroParcelStatusEnum.DELIVERED) {
       result.purchase.issueReturnToDate = this.helperService.addDaysToTimestamp(
         order.delivery.timestamp,
         this.settingsService.defaultReturnInterval

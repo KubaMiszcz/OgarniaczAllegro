@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 // import { IDateYMD } from '../models/date-YMD.model';
 import _ from 'lodash';
+import { IMyOrderAllAllegro } from '../models/allegro-models/all-orders.model';
+import { IOrder } from '../models/order.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class HelperService {
+
   addDaysToTimestamp(timestamp: Date, days: number) {
     if (!timestamp) {
       return timestamp;
@@ -47,7 +50,7 @@ export class HelperService {
 
 
 
-  getValueFromEnum<T1, T2>(sourceEnum: T1, value: T2): string | undefined {
+  getValueFromEnum<T1, T2>(sourceEnum: T1, value: T2): string | undefined { //km return T1
     const keys = Object.keys(sourceEnum);
     const values = Object.values(sourceEnum);
 
@@ -65,5 +68,9 @@ export class HelperService {
     return keys[idx];
   }
 
+
+  mergeJsons<T1, T2>(obj1: T1, obj2: T2): string | undefined {
+    return JSON.stringify({ ...obj1, ...obj2 });
+  }
 
 }

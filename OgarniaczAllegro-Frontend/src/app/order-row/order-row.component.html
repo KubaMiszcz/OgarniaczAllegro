@@ -123,6 +123,21 @@
 
 
 
+<td class="text-center">
+  {{order.return?.returnValue | plnPipe}}
+</td>
+
+<td class="text-center ">
+  <div *ngIf="order.return?.returnCode" class="small-text return-info">
+    Kod:<br>
+    <b>{{order.return?.returnCode}}</b> <br>
+    Odeslij do <br>
+    {{order.return?.returnCodeExpirationDate | date:'yyyy-MM-dd'}}
+</div>
+<!-- when return sended put status here insetad of code and date -->
+</td>
+
+
 
 
 

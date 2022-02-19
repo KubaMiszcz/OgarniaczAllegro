@@ -1,11 +1,11 @@
-import { SettingsService } from './../services/settings.service';
-import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
-import { HelperService } from './../services/helper.service';
+import { DatePipe } from '@angular/common';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { NgbDate, NgbInputDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { AllegroParcelStatusEnum } from '../models/allegro-models/allegro-parcel-status.enum';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { DatePipe } from '@angular/common';
-import { NgbDate, NgbDatepicker, NgbInputDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { HelperService } from './../services/helper.service';
+import { SettingsService } from './../services/settings.service';
 
 
 @Component({
@@ -23,7 +23,7 @@ export class OrderRowComponent implements OnInit {
   @ViewChild('datePicker') datePicker!: NgbInputDatepicker;
 
 
-  parcelStatuses = AllegroParcelStatusEnums;
+  parcelStatuses = AllegroParcelStatusEnum;
   triStateStauses = TriStateStatusEnum;
 
   constructor(
@@ -60,7 +60,7 @@ export class OrderRowComponent implements OnInit {
   }
 
   getStatus() {
-    return this.order.purchase.status ?? AllegroParcelStatusEnums.MISSING_ENUM;
+    return this.order.purchase.status ?? AllegroParcelStatusEnum.MISSING_ENUM;
   }
 
 
@@ -71,10 +71,10 @@ export class OrderRowComponent implements OnInit {
   getIssueReturnToDate(): string | null {
 
     if (
-      this.order.purchase.status !== AllegroParcelStatusEnums.DELIVERED
+      this.order.purchase.status !== AllegroParcelStatusEnum.DELIVERED
       || !this.order.purchase.issueReturnToDate
     ) {
-      return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
+      return 'Nie ' + AllegroParcelStatusEnum.DELIVERED;
     }
 
     const date = new Date(this.order.purchase.issueReturnToDate);
@@ -124,6 +124,16 @@ export class OrderRowComponent implements OnInit {
 
     //cast to date to Date, idk why it comes as ISOstring
     return new Date(date) < now;
+  }
+
+  getReturnLabel() {
+    // const returnInfo = this.order.return?.returnCodeExpirationDate;
+    // if (returnInfo?.returnCode) {
+    //   return `kod zwrotu: ${returnInfo.returnCode}\n
+    //   odeslij do ${this.datepipe.transform(returnInfo.returnCodeExpirationDate, 'yyyy-MM-dd')}`;
+    // }
+
+    return '';
   }
 
 }
