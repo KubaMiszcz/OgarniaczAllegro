@@ -1,5 +1,5 @@
 import { SpinnerComponent } from './shared/spinner/spinner.component';
-import { DateYMDPipe } from './shared/pipes/date-YMD.pipe';
+// import { DateYMDPipe } from './shared/pipes/date-YMD.pipe';
 import { PlnPipe } from './shared/pipes/pln.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +16,7 @@ import { TriStateCheckBoxComponent } from './shared/tri-state-check-box/tri-stat
 import { HttpClientModule } from '@angular/common/http';
 import { ImportOrderComponent } from './import-all-orders/import-all-orders.component';
 import { OrderDetailsModalComponent } from './order-details-modal/order-details-modal.component';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { OrderDetailsModalComponent } from './order-details-modal/order-details-
     OrdersTableComponent,
     FooterComponent,
     PlnPipe,
-    DateYMDPipe,
+    // DateYMDPipe,
     TriStateCheckBoxComponent,
     ImportOrderComponent,
     OrderDetailsModalComponent,
@@ -39,7 +40,7 @@ import { OrderDetailsModalComponent } from './order-details-modal/order-details-
     AppRoutingModule,
     NgbModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

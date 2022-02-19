@@ -3,6 +3,7 @@ import { HelperService } from './../services/helper.service';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class OrderRowComponent implements OnInit {
   triStateStauses = TriStateStatusEnum;
 
   constructor(
-    private helperService: HelperService
+    private helperService: HelperService,
+    private datepipe: DatePipe,
   ) { }
 
   ngOnInit(): void {
@@ -79,8 +81,12 @@ export class OrderRowComponent implements OnInit {
   getReturnToDate() {
     // swicth to labels get riod of getkey from enum
     const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
-    if (status === AllegroParcelStatusEnums.DELIVERED) {
-      return this.order.purchase.statusTimestamp;
+    const timestamp = this.order.purchase.statusTimestamp;
+    if (timestamp && status === AllegroParcelStatusEnums.DELIVERED) {
+      const date = new Date(timestamp);
+      date?.setDate(date.getDate() + 14);
+
+      return this.datepipe.transform(date, 'yyyy-MM-dd');
     }
 
     return 'N/A';

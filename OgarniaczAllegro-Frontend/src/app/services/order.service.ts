@@ -183,7 +183,7 @@ export class OrderService {
     oldOrder.allegroJson = JSON.stringify(order);
     oldOrder.isNew = false;
     oldOrder.purchase.status = order.delivery.status;
-    oldOrder.purchase.statusTimestamp = this.helperService.getDateYMD(order.delivery.timestamp);
+    oldOrder.purchase.statusTimestamp = order.delivery.timestamp;
 
     return oldOrder;
   }
@@ -206,7 +206,7 @@ export class OrderService {
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
         status: order.delivery.status,
-        statusTimestamp: this.helperService.getDateYMD(order.delivery.timestamp),
+        statusTimestamp: order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.No : TriStateStatusEnum.NA,
       } as IPurchase,

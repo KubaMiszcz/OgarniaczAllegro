@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IDateYMD } from '../models/date-YMD.model';
+// import { IDateYMD } from '../models/date-YMD.model';
 import _ from 'lodash';
 
 
@@ -15,16 +15,16 @@ export class HelperService {
 
   nameof = <T>(name: keyof T) => name;
 
-  getDateYMD(timestamp: Date): IDateYMD {
-    //todo what if no delivery? ''? null as timestamp?
-    const date = new Date(timestamp);
+  // getDateYMD(timestamp: Date): IDateYMD {
+  //   //todo what if no delivery? ''? null as timestamp?
+  //   const date = new Date(timestamp);
 
-    return {
-      year: date.getFullYear(),
-      month: date.getMonth() + 1,
-      day: date.getDate(),
-    };
-  }
+  //   return {
+  //     year: date.getFullYear(),
+  //     month: date.getMonth() + 1,
+  //     day: date.getDate(),
+  //   };
+  // }
 
   getDeepCopy<T>(obj: T): T {
     return JSON.parse(JSON.stringify(obj));

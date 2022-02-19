@@ -1,5 +1,5 @@
 import { TriStateStatusEnum } from './constants/status.enum';
-import { IDateYMD } from './date-YMD.model';
+// import { IDateYMD } from './date-YMD.model';
 import { IPurchase } from './purchase.model';
 import { IReturn } from './return.model';
 
@@ -18,7 +18,7 @@ export interface IOrder {
 
 
   isFinished: TriStateStatusEnum; // ALL OK
-  finishingDate?: IDateYMD;
+  finishingDate?: Date;
 
   comment?: string; // notatka
 

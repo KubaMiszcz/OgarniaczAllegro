@@ -1,5 +1,5 @@
 import { TriStateStatusEnum } from './constants/status.enum';
-import { IDateYMD } from './date-YMD.model';
+// import { IDateYMD } from './date-YMD.model';
 import { IOrderItem as IPurchaseItem } from './purchase-item.model';
 
 export interface IPurchase {
@@ -8,7 +8,7 @@ export interface IPurchase {
   orderValue: number;
 
   status?: string;
-  statusTimestamp?: IDateYMD;
+  statusTimestamp?: Date;
   // hasInvoice?: TriStateStatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   isInvoiceReceived?: TriStateStatusEnum; // faktura OK ?
 
