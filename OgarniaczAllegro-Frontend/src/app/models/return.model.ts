@@ -3,7 +3,8 @@ export interface IReturn {
   returnCodeExpirationDate: Date; // odeslij do
   returnCode: string; // kod zwrotu
   returnValue: number; // kwota do zwrotu
-  returnStatus: string; //km swittch to enum
+  status: string; //km swittch to enum
+  statusHint: string;
   // isSended?: StatusEnum; // Zwrot wysłany
   // isDelivered?: StatusEnum; // Zwrot u sprzedającego
   // isCashReturned?: StatusEnum; // zwrot na koncie

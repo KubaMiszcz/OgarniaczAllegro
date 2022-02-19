@@ -173,11 +173,13 @@ export class OrderService {
 
   getReturnData(order: ISingleOrderAllegro): IReturn {
     const rescission = order.rescissions?.rescissions[0];
+
     return {
       returnCode: rescission.returnParcels[0].returnCode,
       returnCodeExpirationDate: rescission.shipmentExpirationDate,
       returnValue: _.sum(rescission.rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
-      returnStatus: this.allegroService.convertToMyReturnStatusEnum(rescission.timelineStatus.status),
+      status: this.allegroService.convertToMyReturnStatusEnum(rescission.timelineStatus.status),
+      statusHint: rescission.timelineStatus.hint,
     };
   }
 

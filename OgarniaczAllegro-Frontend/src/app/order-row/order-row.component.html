@@ -70,7 +70,7 @@
     <!-- km progress bar here -->
     <!-- km date bar here -->
     <br>
-    <span  class="status-date">{{order.purchase.statusTimestamp | date:'yyyy-MM-dd'}} </span>
+    <span class="status-date">{{order.purchase.statusTimestamp | date:'yyyy-MM-dd'}} </span>
   </div>
 </td>
 
@@ -93,7 +93,7 @@
 <td class="text-center ">
 
   <div *ngIf="!order.purchase.issueReturnToDate" class="return-to-date">
-    {{getIssueReturnToDate()}}    
+    {{getIssueReturnToDate()}}
   </div>
 
 
@@ -103,7 +103,7 @@
           (click)="d.toggle()">
       {{getIssueReturnToDate()}}
     </span>
-    <span *ngIf="isReturnDeadlinePassed()" >
+    <span *ngIf="isReturnDeadlinePassed()">
       <i class="fa fa-exclamation-triangle" style="color: orange; font-size: 2rem;" aria-hidden="true"></i>
     </span>
 
@@ -127,15 +127,58 @@
   {{order.return?.returnValue | plnPipe}}
 </td>
 
-<td class="text-center ">
-  <div *ngIf="order.return?.returnCode" class="small-text return-info">
+<td class="text-center flex-column">
+  <!-- <div *ngIf="order.return?.returnCode" class="small-text return-info">
     Kod:<br>
     <b>{{order.return?.returnCode}}</b> <br>
     Odeslij do <br>
-    {{order.return?.returnCodeExpirationDate | date:'yyyy-MM-dd'}}
-</div>
-<!-- when return sended put status here insetad of code and date -->
+    {{order.return?.codeExpirationDate | date:'yyyy-MM-dd'}}
+  </div> -->
+  <div [ngSwitch]="getReturnStatus()">
+
+
+    <div *ngSwitchCase="returnStatuses.CREATED">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>Kod:<br>
+      <b>{{order.return?.returnCode}}</b> <br>
+      Odeslij do <br>
+      {{order.return?.returnCodeExpirationDate | date:'yyyy-MM-dd'}}
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.IN_TRANSIT ">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.DELIVERED">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.FINISHED" class="status-col">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.MISSING_ENUM">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+    </div>
+
+    <div *ngSwitchDefault>{{returnStatuses.UNKNOWN}}</div>
+  </div>
+
+  <!-- km progress bar here -->
+  <!-- km date bar here -->
+
 </td>
+
+<!--  when return sended put status here insetad of code and date -->
 
 
 
@@ -217,11 +260,7 @@
     <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
               id="exampleFormControlTextarea1" class="form-control text-area"
               [rows]="order.id === '' ? 1 : 3"
-              aria-label="With textarea"> 
+              aria-label="With textarea">
   </textarea>
   </div>
 </td>
-
-
-
-

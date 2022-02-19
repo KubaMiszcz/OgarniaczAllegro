@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { NgbDate, NgbInputDatepicker } from '@ng-bootstrap/ng-bootstrap';
 import { AllegroParcelStatusEnum } from '../models/allegro-models/allegro-parcel-status.enum';
+import { AllegroReturnStatusEnum } from '../models/allegro-models/allegro-return-status.enum';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
 import { HelperService } from './../services/helper.service';
@@ -24,6 +25,7 @@ export class OrderRowComponent implements OnInit {
 
 
   parcelStatuses = AllegroParcelStatusEnum;
+  returnStatuses = AllegroReturnStatusEnum;
   triStateStauses = TriStateStatusEnum;
 
   constructor(
@@ -136,5 +138,8 @@ export class OrderRowComponent implements OnInit {
     return '';
   }
 
-}
+  getReturnStatus() {
+    return this.order.return?.status;
+  }
 
+}
