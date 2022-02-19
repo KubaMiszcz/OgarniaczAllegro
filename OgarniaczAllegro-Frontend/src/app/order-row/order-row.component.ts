@@ -70,15 +70,15 @@ export class OrderRowComponent implements OnInit {
 
   getIssueReturnToDate(): string | null {
 
-    if (!this.order.purchase.issueReturnToDate) {
+    if (
+      this.order.purchase.status !== AllegroParcelStatusEnums.DELIVERED
+      || !this.order.purchase.issueReturnToDate
+    ) {
       return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
     }
 
     const date = new Date(this.order.purchase.issueReturnToDate);
-
-    const now = new Date();
-    // const now = this.helperService.addDaysToTimestamp(new Date(), 10);
-    if (date < now) {
+    if (this.isReturnDatePassed()) {
       return 'czas minal';
     }
 
@@ -115,9 +115,15 @@ export class OrderRowComponent implements OnInit {
 
   isReturnDatePassed() {
     const date = this.order.purchase.issueReturnToDate;
+
+    if (!date) {
+      return true;
+    }
+
     const now = new Date();
 
-    return !date ? true : date <= now;
+    //cast to date to Date, idk why it comes as ISOstring
+    return new Date(date) < now;
   }
 
 }

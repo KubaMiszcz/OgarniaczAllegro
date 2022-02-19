@@ -97,14 +97,14 @@
   </div>
 
 
-  <div *ngIf="order.purchase.issueReturnToDate" class="d-flex">
+  <div *ngIf="order.purchase.issueReturnToDate" class="d-flex flex-column">
     <span *ngIf="!isInEdit"
           class="return-to-date"
           (click)="d.toggle()">
       {{getIssueReturnToDate()}}
-      <div *ngIf="isReturnDeadlinePassed()" >
-        <i class="fa fa-exclamation-triangle" style="color: orange; font-size: 2rem;" aria-hidden="true"></i>
-      </div>
+    </span>
+    <span *ngIf="isReturnDeadlinePassed()" >
+      <i class="fa fa-exclamation-triangle" style="color: orange; font-size: 2rem;" aria-hidden="true"></i>
     </span>
 
     <input [hidden]="!isInEdit"
