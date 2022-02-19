@@ -119,5 +119,6 @@ export class OrderRowComponent implements OnInit {
 
     return !date ? true : date <= now;
   }
+
 }
 

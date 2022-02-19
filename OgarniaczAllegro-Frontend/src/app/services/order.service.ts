@@ -218,7 +218,7 @@ export class OrderService {
         status: this.helperService.getValueFromEnum(AllegroParcelStatusEnums, order.delivery.status)
           ?? AllegroParcelStatusEnums.MISSING_ENUM,
 
-        statusTimestamp: new Date(order.delivery.timestamp),
+        statusTimestamp: order.delivery.timestamp ? new Date(order.delivery.timestamp) : order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
       },
