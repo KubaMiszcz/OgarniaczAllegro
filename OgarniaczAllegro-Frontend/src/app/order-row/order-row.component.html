@@ -60,15 +60,19 @@
 
 
 <!-- ============ -->
-<td class="text-center">
-  <span class="badge badge-pill bg-primary"
-        [ngClass]="{
-    'bg-success' : hasStatus(parcelStatuses.DELIVERED),
-    'bg-warning' : hasStatus(parcelStatuses.AVAILABLE_FOR_PICKUP)
-} ">{{getStatus()}}</span>
-  <!-- km progress bar here -->
-  <!-- km date bar here -->
-</td>
+<td class="text-center  d-flsex flex-column">
+  <div class="status-col">
+    <span class="badge badge-pill bg-primary"
+    [ngClass]="{
+      'bg-success' : hasStatus(parcelStatuses.DELIVERED),
+      'bg-warning' : hasStatus(parcelStatuses.AVAILABLE_FOR_PICKUP)
+    } ">{{getStatus()}}</span>
+    <!-- km progress bar here -->
+    <!-- km date bar here -->
+    <br>
+    <span  class="status-date">{{order.purchase.statusTimestamp | toDateYMD}} </span>
+  </div>
+ </td>
 
 
 

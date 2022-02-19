@@ -3,14 +3,15 @@ td {
   border-right: 1px solid grey;
   border-collapse: collapse;
 
+
+  .text-area {
+    border-radius: 10px;
+  }
+
   .open-modal-button {
     font-size: 2rem;
     // color: #0d6efb;
     margin-right: 0.5rem;
-  }
-
-  .text-area {
-    border-radius: 10px;
   }
 
   .order-name {
@@ -18,37 +19,63 @@ td {
     overflow: auto;
     margin-left: 0.5rem;
   }
+}
 
-  .return-code {
+
+.status-col {
+
+  .status-date {
     font-size: 0.7rem;
-    overflow-y: hidden;
-    // height: calc(0.9*6rem);
   }
 
-  .return-to-date {
-    font-size: 0.7rem;
-    min-width: 6rem;
-  }
+}
 
-  .checkbox {
-    // min-height: 2rem;
-    min-width: 2rem;
-  }
 
-  .add-button {
-    // min-width: 2.5;
-    // min-height: 2.5rem;
-    // padding: 0;
-    // max-width: 2.5rem;
-    // max-height: 2.5rem;
-    // width: 2.5rem;
-    // height: 2.5rem;
-    margin-right: 0.25rem;
-  }
 
-  .add-icon {
-    // font-size: 2rem;
-    // margin-top: -17px;
-  }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.return-code {
+  font-size: 0.7rem;
+  overflow-y: hidden;
+  // height: calc(0.9*6rem);
+}
+
+.return-to-date {
+  font-size: 0.7rem;
+  min-width: 6rem;
+}
+
+.checkbox {
+  // min-height: 2rem;
+  min-width: 2rem;
+}
+
+.add-button {
+  // min-width: 2.5;
+  // min-height: 2.5rem;
+  // padding: 0;
+  // max-width: 2.5rem;
+  // max-height: 2.5rem;
+  // width: 2.5rem;
+  // height: 2.5rem;
+  margin-right: 0.25rem;
+}
+
+.add-icon {
+  // font-size: 2rem;
+  // margin-top: -17px;
 }

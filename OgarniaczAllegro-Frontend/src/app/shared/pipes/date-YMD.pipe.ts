@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { IDateYMD } from '../../models/date-YMD.model';
 
 @Pipe({
-  name: 'myDate',
+  name: 'toDateYMD',
 })
 export class DateYMDPipe implements PipeTransform {
   transform(value: IDateYMD | undefined, ...args: any[]): string {

@@ -8,6 +8,7 @@ export interface IPurchase {
   orderValue: number;
 
   status?: string;
+  statusTimestamp?: IDateYMD;
   // hasInvoice?: TriStateStatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   isInvoiceReceived?: TriStateStatusEnum; // faktura OK ?
 

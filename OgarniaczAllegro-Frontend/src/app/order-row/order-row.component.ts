@@ -64,7 +64,9 @@ export class OrderRowComponent implements OnInit {
   }
 
   getStatus() {
-    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status) ?? this.order.purchase.status;
+    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status)
+      ?? this.order.purchase.status
+      ?? 'MISSING_ENUM';
   }
 
 

@@ -182,7 +182,8 @@ export class OrderService {
   private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     oldOrder.allegroJson = JSON.stringify(order);
     oldOrder.isNew = false;
-    oldOrder.purchase.status = order.status.primary.status;
+    oldOrder.purchase.status = order.delivery.status;
+    oldOrder.purchase.statusTimestamp = this.helperService.getDateYMD(order.delivery.timestamp);
 
     return oldOrder;
   }
@@ -192,6 +193,7 @@ export class OrderService {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
     console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.NA);
+
 
     // const result: IOrder = {
     return {
@@ -203,7 +205,8 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
-        status: order.status.primary.status,
+        status: order.delivery.status,
+        statusTimestamp: this.helperService.getDateYMD(order.delivery.timestamp),
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.No : TriStateStatusEnum.NA,
       } as IPurchase,
