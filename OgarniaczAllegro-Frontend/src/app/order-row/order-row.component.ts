@@ -40,20 +40,9 @@ export class OrderRowComponent implements OnInit {
 
   triStateClicked(value: TriStateStatusEnum, colName: string) {
     switch (colName) {
-      // case this.helperService.nameof<Order>('hasInvoice'):
-
-      // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.YES ? StatusEnum.NOT_AVAILABLE : StatusEnum.UNKNOWN;
-      // console.log(colName, this.order[colName], this.order.isInvoiceCorrectionReceived)
-
-
-      // break;
-
       case 'invoiceReceived':
-        console.log(value);
         this.order.purchase.isInvoiceReceived = value;
         break;
-
-
 
       default:
         break;

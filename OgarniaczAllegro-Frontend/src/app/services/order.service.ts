@@ -213,7 +213,10 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
-        status: this.helperService.getValueFromEnum(AllegroParcelStatusEnums, order.delivery.status) ?? AllegroParcelStatusEnums.UNKNOWN,
+
+        status: this.helperService.getValueFromEnum(AllegroParcelStatusEnums, order.delivery.status)
+          ?? AllegroParcelStatusEnums.MISSING_ENUM,
+
         statusTimestamp: new Date(order.delivery.timestamp),
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
