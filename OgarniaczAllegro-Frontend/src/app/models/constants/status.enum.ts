@@ -1,6 +1,6 @@
 export enum TriStateStatusEnum {
-  No = 'No',
-  Yes = 'Yes',
-  NA = 'NA',
-  Unknown = 'Unknown',
+  NO = 'No',
+  YES = 'Yes',
+  NOT_AVAILABLE = 'Not Available',
+  UNKNOWN = 'Unknown',
 }

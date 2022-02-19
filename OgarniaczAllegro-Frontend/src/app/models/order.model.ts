@@ -45,21 +45,21 @@ export class Order implements IOrder {
   id = '';
   name = '';
   isNew = false;
-  isAllegroPay = TriStateStatusEnum.Unknown;
+  isAllegroPay = TriStateStatusEnum.UNKNOWN;
 
   purchase = {
-    isAllegroPay: TriStateStatusEnum.Unknown,
+    isAllegroPay: TriStateStatusEnum.UNKNOWN,
     purchaseItems: [],
     orderValue: 0,
     status: AllegroParcelStatusEnums.UNKNOWN,
     statusTimestamp: new Date(),
-    isInvoiceReceived: TriStateStatusEnum.Unknown,
+    isInvoiceReceived: TriStateStatusEnum.UNKNOWN,
     issueReturnToDate: new Date(),
   } as IPurchase;
 
   return!: IReturn;
 
-  isFinished = TriStateStatusEnum.No; // ALL OK
+  isFinished = TriStateStatusEnum.NO; // ALL OK
 }
 
 
@@ -72,48 +72,48 @@ export class Order implements IOrder {
   // {
   //   id: '1',
   //   name: 'spieniacz do mleka ten drugi zwracany',
-  //   isAllegroPay: StatusEnum.Yes,
-  //   hasInvoice: StatusEnum.Yes,
-  //   isInvoiceReceived: StatusEnum.Yes,
+  //   isAllegroPay: StatusEnum.YES,
+  //   hasInvoice: StatusEnum.YES,
+  //   isInvoiceReceived: StatusEnum.YES,
   //   orderValue: 188,
-  //   isPackageReceived: StatusEnum.Yes,
+  //   isPackageReceived: StatusEnum.YES,
   //   returnToDate: { year: 2022, month: 1, day: 1 },
   //   returnCode: '889 465 645 2',
   //   returnValue: 188,
-  //   isReturnSended: StatusEnum.Yes,
-  //   isReturnDelivered: StatusEnum.Yes,
-  //   isCashReturned: StatusEnum.No,
-  //   isFinished: StatusEnum.No,
+  //   isReturnSended: StatusEnum.YES,
+  //   isReturnDelivered: StatusEnum.YES,
+  //   isCashReturned: StatusEnum.NO,
+  //   isFinished: StatusEnum.NO,
   //   comment: 'anycomm'
   // },
   // {
   //   id: '2',
   //   name: 'sonoff zwracany bo pomylka  ',
-  //   isAllegroPay: StatusEnum.No,
-  //   hasInvoice: StatusEnum.Yes,
+  //   isAllegroPay: StatusEnum.NO,
+  //   hasInvoice: StatusEnum.YES,
   //   orderValue: 56.12,
-  //   isPackageReceived: StatusEnum.Yes,
+  //   isPackageReceived: StatusEnum.YES,
   //   returnCode: '889 444 555 2',
   //   returnValue: 56.12,
-  //   isReturnSended: StatusEnum.Yes,
-  //   isReturnDelivered: StatusEnum.No,
-  //   isCashReturned: StatusEnum.No,
-  //   isFinished: StatusEnum.No,
+  //   isReturnSended: StatusEnum.YES,
+  //   isReturnDelivered: StatusEnum.NO,
+  //   isCashReturned: StatusEnum.NO,
+  //   isFinished: StatusEnum.NO,
   //   comment: 'soncom'
   // },
   // {
   //   id: '3',
   //   name: 'ubranka z atomizerem  ',
-  //   isAllegroPay: StatusEnum.Unknown,
-  //   hasInvoice: StatusEnum.No,
+  //   isAllegroPay: StatusEnum.UNKNOWN,
+  //   hasInvoice: StatusEnum.NO,
   //   orderValue: 41.97,
-  //   isPackageReceived: StatusEnum.Yes,
+  //   isPackageReceived: StatusEnum.YES,
   //   returnCode: '889 444 555 2',
   //   returnValue: 24.68,
-  //   isReturnSended: StatusEnum.Yes,
-  //   isReturnDelivered: StatusEnum.No,
-  //   isCashReturned: StatusEnum.No,
-  //   isFinished: StatusEnum.No,
+  //   isReturnSended: StatusEnum.YES,
+  //   isReturnDelivered: StatusEnum.NO,
+  //   isCashReturned: StatusEnum.NO,
+  //   isFinished: StatusEnum.NO,
   // },
 // ];
 

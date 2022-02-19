@@ -17,6 +17,7 @@ export enum AllegroReturnStatusEnums {
 
 
 export enum AllegroParcelStatusEnums {
+  UNKNOWN = 'Unknown',
   PAID = 'Zaplacone',
   WAYBILL_CREATED = 'etykieta utworzona',
   IN_PREPARATION = 'w przygotowaniu',
@@ -28,7 +29,6 @@ export enum AllegroParcelStatusEnums {
   // przyjęcie na sortownie,przekierowanie do innego punktu.
   AVAILABLE_FOR_PICKUP = 'Do odbioru',
   DELIVERED = 'Odebrane',
-  UNKNOWN = "UNKNOWN"
 }
 // PENDING - przesyłka została przygotowana przez nadawcę, oczekuje na nadanie;
 // RELEASED_FOR_DELIVERY - w trakcie doręczenia przez kuriera (na adres odbiorcy lub do punktu odbioru);

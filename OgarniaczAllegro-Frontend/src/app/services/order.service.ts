@@ -196,7 +196,7 @@ export class OrderService {
   private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
-    console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.NA);
+    console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NOT_AVAILABLE);
 
 
     // let defaultReturnToDate = this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval);
@@ -210,19 +210,19 @@ export class OrderService {
       name: name,
       isNew: true,
       purchase: {
-        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
+        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
         status: order.delivery.status,
         statusTimestamp: order.delivery.timestamp,
-        // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
-        isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.No : TriStateStatusEnum.NA,
+        // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
+        isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
         issueReturnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
       },
       return: {
         // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
       },
-      isFinished: TriStateStatusEnum.No
+      isFinished: TriStateStatusEnum.NO
     };
 
     // return result;

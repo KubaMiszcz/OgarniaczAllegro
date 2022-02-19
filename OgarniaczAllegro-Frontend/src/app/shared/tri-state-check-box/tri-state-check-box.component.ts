@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./tri-state-check-box.component.scss']
 })
 export class TriStateCheckBoxComponent implements OnInit {
-  @Input() value?: TriStateStatusEnum = TriStateStatusEnum.Unknown;
+  @Input() value?: TriStateStatusEnum = TriStateStatusEnum.UNKNOWN;
   @Output() valueChange = new EventEmitter<TriStateStatusEnum>();
   @Input() disabled = false;
   @Input() hidden = false;

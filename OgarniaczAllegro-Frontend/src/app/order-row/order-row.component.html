@@ -84,7 +84,7 @@
 <td class="text-center ">
   <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived" 
   (valueChange)="triStateClicked($event, 'invoiceReceived')"
-  [disabled]="order.purchase.isInvoiceReceived === triStateStauses.NA"
+  [disabled]="order.purchase.isInvoiceReceived === triStateStauses.NOT_AVAILABLE"
   >
   </app-tri-state-check-box>
 </td>

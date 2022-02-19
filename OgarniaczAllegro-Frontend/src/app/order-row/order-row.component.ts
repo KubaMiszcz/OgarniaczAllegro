@@ -39,7 +39,7 @@ export class OrderRowComponent implements OnInit {
     switch (colName) {
       // case this.helperService.nameof<Order>('hasInvoice'):
 
-      // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.Yes ? StatusEnum.NA : StatusEnum.Unknown;
+      // this.order.isInvoiceCorrectionReceived = this.order[colName] === StatusEnum.YES ? StatusEnum.NOT_AVAILABLE : StatusEnum.UNKNOWN;
       // console.log(colName, this.order[colName], this.order.isInvoiceCorrectionReceived)
 
 
