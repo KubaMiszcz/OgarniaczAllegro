@@ -13,7 +13,7 @@ export enum AllegroParcelStatusEnums {
   // przyjęcie na sortownie,przekierowanie do innego punktu.
 
   AVAILABLE_FOR_PICKUP = 'Do odbioru', //oczekuje na odbiór w punkcie;
-  DELIVERED = 'Dostarczone', //przesyłka została doręczona do odbiorcy lub odebrana z punktu odbioru;
+  DELIVERED = 'Odebrane', //przesyłka została doręczona do odbiorcy lub odebrana z punktu odbioru;
   PARTIALLY_RETURNED = 'czesciowo zwrocone',
   RETURNED = 'cale zwrocone', // przesyłka została zwrócona do nadawcy.
 }

@@ -1,3 +1,39 @@
+.link {
+  white-space: pre-line;
+}
+
+.import-panel {
+
+  .import-label {
+    width: 28%;
+
+    div {
+      // max-width: 10rem;
+      white-space: pre-line;
+    }
+  }
+
+  .import-area {
+    width: 55%;
+
+    text-area {
+
+      // width: 40%;
+    }
+
+
+  }
+
+  .import-button {
+    width: 17%;
+
+    button {
+      width: -webkit-fill-available;
+    }
+  }
+
+}
+
 // .card {
 //   margin: 1em;
 // }

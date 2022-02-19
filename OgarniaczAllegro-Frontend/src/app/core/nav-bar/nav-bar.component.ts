@@ -21,15 +21,18 @@ export class NavBarComponent implements OnInit {
     switch (value) {
       case 'save':
         localStorage.setItem('orders', JSON.stringify(this.orderService.allOrdersList$.value));
+        console.log('saved');
         break;
 
       case 'load':
         this.orderService.allOrdersList$.next(JSON.parse(localStorage.getItem('orders') ?? '[]'));
+        console.log('loaded');
         break;
 
       case 'clear':
         localStorage.clear();
         this.orderService.allOrdersList$.next([]);
+        console.log('cleared');
         break;
 
       default:

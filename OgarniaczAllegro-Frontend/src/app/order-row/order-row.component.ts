@@ -31,7 +31,7 @@ export class OrderRowComponent implements OnInit {
     this.editComplete.emit(this.order);
   }
 
-  triStateClicked(colName: string) {
+  triStateClicked(value: StatusEnum, colName: string) {
     switch (colName) {
       // case this.helperService.nameof<Order>('hasInvoice'):
 
@@ -40,6 +40,13 @@ export class OrderRowComponent implements OnInit {
 
 
       // break;
+
+      case 'invoiceReceived':
+        console.log(value);
+        this.order.purchase.isInvoiceReceived = value;
+        break;
+
+
 
       default:
         break;

@@ -5,6 +5,7 @@ import { IOrderItem as IPurchaseItem } from './purchase-item.model';
 export interface IPurchase {
   isAllegroPay: StatusEnum; // allegro Pay
   hasInvoice?: StatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  purchaseItems?: IPurchaseItem[];
   orderValue: number;
   deliveredDate?: IDateYMD; // Data odebrania ->
   isInvoiceReceived?: StatusEnum; // faktura OK ?
@@ -13,7 +14,6 @@ export interface IPurchase {
 
 
 
-  // purchaseItems?: IPurchaseItem[];
   // isPackageDelivered?: StatusEnum; // Przesyłka odebrana
   // isPackageReceived?: StatusEnum; // Przesyłka odebrana
 }
