@@ -12,6 +12,6 @@ export interface IPurchase {
   // hasInvoice?: TriStateStatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   isInvoiceReceived: TriStateStatusEnum; // faktura OK ?
 
-  issueReturnToDate: Date;
+  issueReturnToDate?: Date;
 
 }

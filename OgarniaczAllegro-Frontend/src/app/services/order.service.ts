@@ -190,18 +190,19 @@ export class OrderService {
     oldOrder.purchase.status = order.delivery.status;
     oldOrder.purchase.statusTimestamp = new Date(order.delivery.timestamp);
 
+    if (oldOrder.purchase.status === AllegroParcelStatusEnums.DELIVERED) {
+      oldOrder.purchase.issueReturnToDate = this.helperService.addDaysToTimestamp(
+        order.delivery.timestamp,
+        this.settingsService.defaultReturnInterval
+      );
+    }
+
     return oldOrder;
   }
 
 
   private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
-
-    // const issueReturnToDate;
-    // if (order.delivery.status === AllegroParcelStatusEnums.DELIVERED) {
-
-    // }
-
 
 
     const result: IOrder = {
@@ -220,16 +221,20 @@ export class OrderService {
         statusTimestamp: new Date(order.delivery.timestamp),
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
-        issueReturnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
       },
       return: {
         // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
       },
-      isFinished: TriStateStatusEnum.NO
+      isFinished: TriStateStatusEnum.NO,
     };
 
 
-
+    if (result.purchase.status === AllegroParcelStatusEnums.DELIVERED) {
+      result.purchase.issueReturnToDate = this.helperService.addDaysToTimestamp(
+        order.delivery.timestamp,
+        this.settingsService.defaultReturnInterval
+      );
+    }
 
 
 

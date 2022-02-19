@@ -67,57 +67,26 @@ export class OrderRowComponent implements OnInit {
     return this.order.purchase.status === value;
   }
 
-  //km move to service set when irder created or update it there
   getIssueReturnToDate(): string | null {
-    // swicth to labels get riod of getkey from enum
     const date = this.order.purchase.issueReturnToDate;
 
-
     if (!date) {
-      return 'N/A';
-    }
-
-    const status = this.order.purchase.status;
-    if (status !== AllegroParcelStatusEnums.DELIVERED) {
       return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
     }
 
     return this.datepipe.transform(date, 'yyyy-MM-dd');
   }
 
+
   setIssueReturnToDate(value: NgbDate) {
-    console.log(value);
-    this.order.purchase.statusTimestamp = new Date(`${value.year}-${value.month}-${value.day}`);
-    console.log(this.order.purchase.statusTimestamp);
+    const date = new Date(`${value.year}-${value.month}-${value.day}`)
+    if (date.getDate() < new Date().getDate()) {
+      alert('juz za pozno, za wczesna data');
 
-  }
-
-  onToggle() {
-    if (this.order.purchase.issueReturnToDate) {
-      // this.datePicker.toggle();
-    } else {
-      // this.datePicker.close();
-
-    }
-  }
-
-  isDatePickerHidden() {
-    if (this.isInEdit && this.order.purchase.issueReturnToDate) {
-      // console.log(this.isInEdit, this.order.purchase.issueReturnToDate);
-
-      return false;
+      return;
     }
 
-    return true;
+    this.order.purchase.issueReturnToDate = date;
   }
-
-
-  // get returnToDate() {
-  //   const timestamp = this.order.purchase.statusTimestamp ?? new Date();
-
-  //   return new NgbDate(timestamp?.getFullYear(), timestamp?.getMonth() + 1, timestamp?.getDay());
-  // }
-
-  // private _returnToDate = new NgbDate(0, 0, 0);
 }
 
