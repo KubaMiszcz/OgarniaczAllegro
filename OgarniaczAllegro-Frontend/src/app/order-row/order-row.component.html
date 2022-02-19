@@ -92,68 +92,34 @@
 
 
 <td class="text-center ">
-  <!-- <form class="form-inline"> -->
-  <!-- <div class="form-group"> -->
-  <!-- <div class="input-group"> -->
-  <!-- style=" pointer-events: none; " -->
-<div *ngIf="!order.purchase.issueReturnToDate" class="return-to-date">
-    {{getIssueReturnToDate()}}
-</div>
+
+  <div *ngIf="!order.purchase.issueReturnToDate" class="return-to-date">
+    {{getIssueReturnToDate()}}    
+  </div>
 
 
-
-<div *ngIf="order.purchase.issueReturnToDate" class="d-flex">
-  <span *ngIf="!isInEdit"
-        class="return-to-date"
-        (click)="d.toggle()">
-    {{getIssueReturnToDate()}}
-  </span>
-
-  
-
-  <!-- [(ngModel)]="order.purchase.statusTimestamp" -->
-  
-  <input [hidden]="!isInEdit"
-        [value]="getIssueReturnToDate()"
-        (dateSelect)="setIssueReturnToDate($event)"
-        class="form-control return-to-date"
-        name="dp"
-        (click)="d.toggle()"
-        ngbDatepicker #d="ngbDatepicker"
-[placement]="'bottom'">
-
-
-
-
-
-
-  <!-- <div *ngIf="order.purchase.issueReturnToDate" class="d-flex" >
-    <div *ngIf="isDatePickerHidden()"
-         class="return-to-date disabled"
-         (click)="onToggle()">
-      <span *ngIf="order.purchase.issueReturnToDate">zglos do</span>
-      <br>
+  <div *ngIf="order.purchase.issueReturnToDate" class="d-flex">
+    <span *ngIf="!isInEdit"
+          class="return-to-date"
+          (click)="d.toggle()">
       {{getIssueReturnToDate()}}
-    </div> -->
+      <div *ngIf="isReturnDeadlinePassed()" >
+        <i class="fa fa-exclamation-triangle" style="color: orange; font-size: 2rem;" aria-hidden="true"></i>
+      </div>
+    </span>
 
-
-
-    <!-- [(ngModel)]="order.purchase.statusTimestamp" -->
-<!-- 
-    <input [hidden]="isDatePickerHidden()"
+    <input [hidden]="!isInEdit"
            [value]="getIssueReturnToDate()"
            (dateSelect)="setIssueReturnToDate($event)"
            class="form-control return-to-date"
            name="dp"
-           (click)="onToggle()"
-           ngbDatepicker #datePicker="ngbDatepicker"
-           [placement]="'bottom'"> -->
-    <!-- (closed)="onDateSelected(order)" -->
-    <!-- [positionTarget]="buttonEl" -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </form> -->
+           (click)="d.toggle()"
+           ngbDatepicker #d="ngbDatepicker"
+           [placement]="'bottom'">
+
   </div>
+
+
 </td>
 
 
@@ -217,11 +183,11 @@
 
 
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <td class="text-center">
   <app-tri-state-check-box [(value)]="order.isFinished"></app-tri-state-check-box>
 </td>
@@ -237,3 +203,7 @@
   </textarea>
   </div>
 </td>
+
+
+
+

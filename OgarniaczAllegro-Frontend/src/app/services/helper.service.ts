@@ -8,11 +8,20 @@ import _ from 'lodash';
 })
 export class HelperService {
   addDaysToTimestamp(timestamp: Date, days: number) {
+    if (!timestamp) {
+      return timestamp;
+    }
+
     const date = new Date(timestamp);
     const newDate = date.setDate(date.getDate() + days);
 
     return new Date(newDate);
   }
+
+  subtractDaysToTimestamp(timestamp: Date, days: number) {
+    return this.addDaysToTimestamp(timestamp, -days);
+  }
+
 
 
   isObjectsEqual<T>(obj1: T, obj2: T) {

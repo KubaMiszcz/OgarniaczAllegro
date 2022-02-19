@@ -29,6 +29,7 @@ export class OrderRowComponent implements OnInit {
   constructor(
     private helperService: HelperService,
     private datepipe: DatePipe,
+    private settingsService: SettingsService,
   ) { }
 
   ngOnInit(): void {
@@ -68,10 +69,17 @@ export class OrderRowComponent implements OnInit {
   }
 
   getIssueReturnToDate(): string | null {
-    const date = this.order.purchase.issueReturnToDate;
 
-    if (!date) {
+    if (!this.order.purchase.issueReturnToDate) {
       return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
+    }
+
+    const date = new Date(this.order.purchase.issueReturnToDate);
+
+    const now = new Date();
+    // const now = this.helperService.addDaysToTimestamp(new Date(), 10);
+    if (date < now) {
+      return 'czas minal';
     }
 
     return this.datepipe.transform(date, 'yyyy-MM-dd');
@@ -79,14 +87,37 @@ export class OrderRowComponent implements OnInit {
 
 
   setIssueReturnToDate(value: NgbDate) {
-    const date = new Date(`${value.year}-${value.month}-${value.day}`)
-    if (date.getDate() < new Date().getDate()) {
-      alert('juz za pozno, za wczesna data');
+    const date = new Date(`${value.year}-${value.month}-${value.day}`);
+    if (date < new Date()) {
+      alert('za wczesna data');
 
       return;
     }
 
     this.order.purchase.issueReturnToDate = date;
+  }
+
+  isReturnDeadlinePassed() {
+    if (this.isReturnDatePassed()) {
+      return false;
+    }
+
+    const date = this.order.purchase.issueReturnToDate;
+    if (date) {
+      const safeDate = this.helperService.subtractDaysToTimestamp(date, this.settingsService.safeReturnMargin);
+      const now = new Date();
+
+      return safeDate <= now;
+    }
+
+    return true;
+  }
+
+  isReturnDatePassed() {
+    const date = this.order.purchase.issueReturnToDate;
+    const now = new Date();
+
+    return !date ? true : date <= now;
   }
 }
 
