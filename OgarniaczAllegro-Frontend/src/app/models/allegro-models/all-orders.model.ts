@@ -1,52 +1,34 @@
-export interface IAllegroAllOrdersView {
-  myorders: IMyorders;
-  //====
-  filter: string;
-  limit: number;
-  offset: number;
-  sort: string;
-  order: string;
-  selectionMode: boolean;
-  detailsUrl: string;
-  timeToShowCancelPaymentButton: number;
-  listingBanner: string;
-  forceFallbackAjaxUpdateForEmptyDS: boolean;
-  isRwd: boolean;
-  language: string;
-  slots: ISlots;
-}
-
-export interface ISeller {
+export interface Seller {
   id: string;
   login: string;
 }
 
-export interface IUnitPrice {
+export interface UnitPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOriginalUnitPrice {
+export interface OriginalUnitPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOfferPrice {
+export interface OfferPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOriginalOfferPrice {
+export interface OriginalOfferPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOffer {
+export interface Offer {
   id: string;
   title: string;
   friendlyUrl: string;
-  unitPrice: IUnitPrice;
-  originalUnitPrice: IOriginalUnitPrice;
+  unitPrice: UnitPrice;
+  originalUnitPrice: OriginalUnitPrice;
   quantity: number;
   type: string;
   imageUrl: string;
@@ -57,85 +39,103 @@ export interface IOffer {
   auction: boolean;
   toRate: boolean;
   orderOfferId: string;
-  offerPrice: IOfferPrice;
-  originalOfferPrice: IOriginalOfferPrice;
+  offerPrice: OfferPrice;
+  originalOfferPrice: OriginalOfferPrice;
   showOriginalPrice: boolean;
 }
 
-export interface ICost {
+export interface Cost {
   amount: string;
   currency: string;
 }
 
-export interface IAddress {
+export interface Address {
   street: string;
   code: string;
   city: string;
 }
 
-export interface IGeneralDelivery {
+export interface Coordinates {
+  lat: number;
+  lon: number;
+}
+
+export interface GeneralDelivery {
   id: string;
   name: string;
   description: string;
-  address: IAddress;
+  address: Address;
+  coordinates: Coordinates;
 }
 
-export interface IOriginalCost {
+export interface OriginalCost {
   amount: string;
   currency: string;
 }
 
-export interface IDiscount {
-  originalCost: IOriginalCost;
+export interface Discount {
+  originalCost: OriginalCost;
   type: string;
   planType: string;
 }
 
-export interface IPaymentType {
+export interface PaymentType {
   name: string;
   type: string;
 }
 
-export interface IWaybillsData {
+export interface Carrier {
+  id: string;
+  name: string;
+  url: string;
 }
 
-export interface IDelivery {
-  cost: ICost;
+export interface Waybill {
+  waybillId: string;
+  carrier: Carrier;
+}
+
+export interface WaybillsData {
+  waybills: Waybill[];
+}
+
+export interface Delivery {
+  cost: Cost;
   name: string;
   methodId: string;
   id: string;
-  generalDelivery: IGeneralDelivery;
-  discount: IDiscount;
+  generalDelivery: GeneralDelivery;
+  discount: Discount;
   status: string;
   timestamp: Date;
-  paymentType: IPaymentType;
-  waybillsData: IWaybillsData;
+  paymentType: PaymentType;
+  waybillsData: WaybillsData;
 }
 
-export interface ITotalCost {
+export interface TotalCost {
   amount: string;
   currency: string;
 }
 
-export interface IAmount {
+export interface Amount {
   amount: string;
   currency: string;
 }
 
-export interface IValue {
+export interface Value {
   amount: string;
   currency: string;
 }
 
-export interface IDiscount2 {
-  value: IValue;
+export interface Discount2 {
+  value: Value;
   label: string;
 }
 
-export interface IPayment {
+export interface Payment {
   id: string;
   provider: string;
-  amount: IAmount;
+  amount: Amount;
   method: string;
   methodId: string;
   status: string;
@@ -143,47 +143,47 @@ export interface IPayment {
   isInstallments: boolean;
   isMultipleSellers: boolean;
   cardMask: string;
-  discount: IDiscount2;
+  discount: Discount2;
 }
 
-export interface IPrimary {
+export interface Primary {
   status: string;
   action: string;
   hint: string;
 }
 
-export interface IDetail {
+export interface Detail {
   type: string;
   value: string;
   action: string;
 }
 
-export interface IAction {
+export interface Action {
   type: string;
   enabled: boolean;
-  details: IDetail[];
+  details: Detail[];
 }
 
-export interface ISecondary {
+export interface Secondary {
   status: string;
   action: string;
 }
 
-export interface IStatus {
-  primary: IPrimary;
+export interface Status {
+  primary: Primary;
   traits: string[];
-  actions: IAction[];
-  secondary: ISecondary;
+  actions: Action[];
+  secondary: Secondary;
 }
 
-export interface IMyOrderAllAllegro {
+export interface IMyOrderAllAllegroV2 {
   id: string;
   purchaseId: string;
-  seller: ISeller;
-  offers: IOffer[];
-  delivery: IDelivery;
-  totalCost: ITotalCost;
-  payment: IPayment;
+  seller: Seller;
+  offers: Offer[];
+  delivery: Delivery;
+  totalCost: TotalCost;
+  payment: Payment;
   createDate: Date;
   orderDate: Date;
   invoiceAddressId: string;
@@ -192,51 +192,68 @@ export interface IMyOrderAllAllegro {
   hiddenInMyOrders: boolean;
   boughtOnDevice: string;
   cancelled: boolean;
-  status: IStatus;
+  status: Status;
   isFulfilment: boolean;
 }
 
-export interface IPrimary2 {
+export interface Primary2 {
   status: string;
   action: string;
   hint: string;
 }
 
-export interface IDetail2 {
+export interface Detail2 {
   type: string;
   value: string;
   action: string;
 }
 
-export interface IAction2 {
+export interface Action2 {
   type: string;
   enabled: boolean;
-  details: IDetail2[];
+  details: Detail2[];
 }
 
-export interface ISecondary2 {
+export interface Secondary2 {
   status: string;
   action: string;
 }
 
-export interface IStatus2 {
-  primary: IPrimary2;
+export interface Status2 {
+  primary: Primary2;
   traits: string[];
-  actions: IAction2[];
-  secondary: ISecondary2;
+  actions: Action2[];
+  secondary: Secondary2;
 }
 
-export interface IOrderGroup {
+export interface OrderGroup {
   groupId: string;
-  myorders: IMyOrderAllAllegro[];
-  status: IStatus2;
+  myorders: IMyOrderAllAllegroV2[];
+  status: Status2;
 }
 
-export interface IMyorders {
-  orderGroups: IOrderGroup[];
+export interface Myorders {
+  orderGroups: OrderGroup[];
   total: number;
   offset: number;
 }
 
-export interface ISlots {
+export interface Slots {
+}
+
+export interface IAllegroAllOrdersViewV2 {
+  filter: string;
+  limit: number;
+  offset: number;
+  sort: string;
+  order: string;
+  selectionMode: boolean;
+  myorders: Myorders;
+  detailsUrl: string;
+  timeToShowCancelPaymentButton: number;
+  listingBanner: string;
+  forceFallbackAjaxUpdateForEmptyDS: boolean;
+  isRwd: boolean;
+  language: string;
+  slots: Slots;
 }

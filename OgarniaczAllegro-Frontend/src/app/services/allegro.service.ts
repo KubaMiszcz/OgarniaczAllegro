@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAllegroAllOrdersView, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrdersViewV2 } from '../models/allegro-models/all-orders.model';
 import { IOrder } from '../models/order.model';
-import { StatusEnum } from '../models/constants/status.enum';
+import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';

@@ -2,8 +2,6 @@ import { AllegroService } from '../services/allegro.service';
 import { OrderService } from '../services/order.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IAllegroAllOrdersView } from '../models/allegro-models/all-orders.model';
-import { MyorderGroup } from './models';
 import { Router } from '@angular/router';
 
 @Component({

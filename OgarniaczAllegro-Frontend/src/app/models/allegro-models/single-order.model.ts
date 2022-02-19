@@ -1,5 +1,4 @@
-
-export interface IAddress {
+export interface Address {
   firstName: string;
   lastName: string;
   zipCode: string;
@@ -9,65 +8,66 @@ export interface IAddress {
   phoneNumber: string;
   company: string;
   taxId: string;
+  regon: string;
   email: string;
 }
 
-export interface IPhone {
+export interface Phone {
   number: string;
   numberLabel: string;
   numberLabelMasked: string;
 }
 
-export interface IEmail {
+export interface Email {
   address: string;
   addressMasked: string;
 }
 
-export interface IOpeningHour {
+export interface OpeningHour {
   daysLabel: string;
   daysShortLabel: string;
   hoursLabels: string[];
 }
 
-export interface IContactDetails {
-  phones: IPhone[];
-  emails: IEmail[];
-  openingHours: IOpeningHour[];
+export interface ContactDetails {
+  phones: Phone[];
+  emails: Email[];
+  openingHours: OpeningHour[];
 }
 
-export interface ISeller {
+export interface Seller {
   id: string;
   login: string;
-  address: IAddress;
-  contactDetails: IContactDetails;
+  address: Address;
+  contactDetails: ContactDetails;
 }
 
-export interface IUnitPrice {
+export interface UnitPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOriginalUnitPrice {
+export interface OriginalUnitPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOfferPrice {
+export interface OfferPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOriginalOfferPrice {
+export interface OriginalOfferPrice {
   amount: string;
   currency: string;
 }
 
-export interface IOffer {
+export interface Offer {
   id: string;
   title: string;
   friendlyUrl: string;
-  unitPrice: IUnitPrice;
-  originalUnitPrice: IOriginalUnitPrice;
+  unitPrice: UnitPrice;
+  originalUnitPrice: OriginalUnitPrice;
   quantity: number;
   type: string;
   imageUrl: string;
@@ -78,17 +78,17 @@ export interface IOffer {
   auction: boolean;
   toRate: boolean;
   orderOfferId: string;
+  offerPrice: OfferPrice;
+  originalOfferPrice: OriginalOfferPrice;
   showOriginalPrice: boolean;
-  offerPrice: IOfferPrice;
-  originalOfferPrice: IOriginalOfferPrice;
 }
 
-export interface ICost {
+export interface Cost {
   amount: string;
   currency: string;
 }
 
-export interface IAddress2 {
+export interface Address2 {
   id: string;
   firstName: string;
   lastName: string;
@@ -99,79 +99,79 @@ export interface IAddress2 {
   phoneNumber: string;
 }
 
-export interface IAddress3 {
+export interface Address3 {
   street: string;
   code: string;
   city: string;
 }
 
-export interface ICoordinates {
+export interface Coordinates {
   lat: number;
   lon: number;
 }
 
-export interface IGeneralDelivery {
+export interface GeneralDelivery {
   id: string;
   name: string;
   description: string;
-  address: IAddress3;
-  coordinates: ICoordinates;
+  address: Address3;
+  coordinates: Coordinates;
 }
 
-export interface IOriginalCost {
+export interface OriginalCost {
   amount: string;
   currency: string;
 }
 
-export interface IDiscount {
-  originalCost: IOriginalCost;
+export interface Discount {
+  originalCost: OriginalCost;
   type: string;
   planType: string;
 }
 
-export interface IPaymentType {
+export interface PaymentType {
   name: string;
   type: string;
 }
 
-export interface IDelivery {
-  cost: ICost;
+export interface Delivery {
+  cost: Cost;
   name: string;
   methodId: string;
   id: string;
-  address: IAddress2;
-  generalDelivery: IGeneralDelivery;
-  discount: IDiscount;
+  address: Address2;
+  generalDelivery: GeneralDelivery;
+  discount: Discount;
   status: string;
   timestamp: Date;
-  paymentType: IPaymentType;
+  paymentType: PaymentType;
 }
 
-export interface ITotalCost {
+export interface TotalCost {
   amount: string;
   currency: string;
 }
 
-export interface ITotalCost2 {
+export interface TotalCost2 {
   amount: string;
   currency: string;
 }
 
-export interface ISummary {
-  totalCost: ITotalCost2;
+export interface Summary {
+  totalCost: TotalCost2;
   exchangeRateDate: Date;
   showExchangeRateInformation: boolean;
 }
 
-export interface IAmount {
+export interface Amount {
   amount: string;
   currency: string;
 }
 
-export interface IPayment {
+export interface Payment {
   id: string;
   provider: string;
-  amount: IAmount;
+  amount: Amount;
   method: string;
   methodId: string;
   status: string;
@@ -181,241 +181,167 @@ export interface IPayment {
   cardMask: string;
 }
 
-export interface IPrimary {
+export interface Primary {
   status: string;
-  hint: string;
+  action: string;
 }
 
-export interface IDetail {
+export interface Detail {
   type: string;
   value: string;
   action: string;
 }
 
-export interface IAction {
+export interface Action {
   type: string;
   enabled: boolean;
-  details: IDetail[];
+  details: Detail[];
 }
 
-export interface IStatus {
-  primary: IPrimary;
+export interface Status {
+  primary: Primary;
   traits: string[];
-  actions: IAction[];
+  actions: Action[];
 }
 
-export interface ICoins {
+export interface Coins {
   total: number;
 }
 
-export interface IDetail2 {
+export interface InvoiceAddress {
+  id: string;
+  zipCode: string;
+  city: string;
+  countryCode: string;
+  street: string;
+  company: string;
+  taxId: string;
+}
+
+export interface Detail2 {
   type: string;
   value: string;
 }
 
-export interface IStep {
+export interface Step {
   type: string;
   hint: string;
   active: boolean;
   error: boolean;
 }
 
-export interface IAddress4 {
+export interface Address4 {
   city: string;
   code: string;
   street: string;
 }
 
-export interface IPoint {
+export interface Point {
   id: string;
   name: string;
   description: string;
-  address: IAddress4;
+  address: Address4;
 }
 
-export interface IPickup {
-  point: IPoint;
+export interface Pickup {
+  point: Point;
 }
 
-export interface ICarrier {
+export interface Carrier {
   id: string;
   name: string;
   url: string;
 }
 
-export interface IAlert {
+export interface Alert {
 }
 
-export interface ITimeline {
+export interface Timeline {
   status: string;
   waybillId: string;
-  details: IDetail2[];
-  steps: IStep[];
-  pickup: IPickup;
-  carrier: ICarrier;
+  details: Detail2[];
+  steps: Step[];
+  action: string;
+  pickup: Pickup;
+  carrier: Carrier;
   detailedHistoryAvailable: boolean;
-  alert: IAlert;
+  alert: Alert;
 }
 
-export interface IStep2 {
-  type: string;
-  active: boolean;
-  label: string;
-  hint: string;
-}
-
-export interface ITimelineStatus {
-  status: string;
-  label: string;
-  hint: string;
-  steps: IStep2[];
-}
-
-export interface ITracking {
-  carrier: string;
-  detailedHistoryAvailable: boolean;
-  link: string;
-  number: string;
-}
-
-export interface IAddress5 {
-  street: string;
-  city: string;
-  zipCode: string;
-  country: string;
-}
-
-export interface IReceiver {
-  fullName: string;
-  address: IAddress5;
-}
-
-export interface IReturnParcel {
-  returnParcelId: string;
-  authorType: string;
-  deliveryMethodType: string;
-  returnCode: string;
-  tracking: ITracking;
-  expiresAt: Date;
-  receiver: IReceiver;
-  costCoveredBySeller: boolean;
-}
-
-export interface IProduct {
-  name: string;
-  image: string;
-}
-
-export interface IPrice {
-  amount: string;
-  currency: string;
-}
-
-export interface IReason {
-  type: string;
-  comment: string;
-}
-
-export interface IRescissionOffer {
-  product: IProduct;
-  quantity: number;
-  price: IPrice;
-  reason: IReason;
-  offerSnapshotHash: string;
-}
-
-export interface IRescission {
-  rescissionId: string;
-  status: string;
-  shipmentExpirationDate: Date;
-  sellerLogin: string;
-  requestDate: Date;
-  referenceNumber: string;
-  timelineStatus: ITimelineStatus;
-  returnParcels: IReturnParcel[];
-  rescissionOffers: IRescissionOffer[];
-}
-
-export interface IRescissions {
-  rescissions: IRescission[];
+export interface Rescissions {
   retails: boolean;
 }
 
-export interface ISingleOrderAllegro {
+export interface ISingleOrderAllegroV2 {
   id: string;
   purchaseId: string;
-  seller: ISeller;
-  offers: IOffer[];
-  delivery: IDelivery;
-  totalCost: ITotalCost;
-  summary: ISummary;
-  payment: IPayment;
+  seller: Seller;
+  offers: Offer[];
+  delivery: Delivery;
+  totalCost: TotalCost;
+  summary: Summary;
+  payment: Payment;
   createDate: Date;
   orderDate: Date;
   serviceCountry: string;
   hiddenInMyOrders: boolean;
   boughtOnDevice: string;
   cancelled: boolean;
-  status: IStatus;
-  coins: ICoins;
-  timelines: ITimeline[];
+  status: Status;
+  coins: Coins;
+  invoiceAddress: InvoiceAddress;
+  timelines: Timeline[];
   isFulfilment: boolean;
   groupId: string;
-  rescissions: IRescissions;
+  rescissions: Rescissions;
 }
 
-export interface IPrimary2 {
+export interface Primary2 {
   status: string;
-  hint: string;
+  action: string;
 }
 
-export interface IDetail3 {
+export interface Detail3 {
   type: string;
   value: string;
   action: string;
 }
 
-export interface IAction2 {
+export interface Action2 {
   type: string;
   enabled: boolean;
-  details: IDetail3[];
+  details: Detail3[];
 }
 
-export interface IStatus2 {
-  primary: IPrimary2;
+export interface Status2 {
+  primary: Primary2;
   traits: string[];
-  actions: IAction2[];
+  actions: Action2[];
 }
 
-export interface ITotalCost3 {
+export interface TotalCost3 {
   amount: string;
   currency: string;
 }
 
-export interface ITotalCostBeforeExchange {
-  amount: string;
-  currency: string;
-}
-
-export interface ISummary2 {
-  totalCost: ITotalCost3;
-  totalCostBeforeExchange: ITotalCostBeforeExchange;
+export interface Summary2 {
+  totalCost: TotalCost3;
   exchangeRateDate: Date;
   showExchangeRateInformation: boolean;
 }
 
-export interface ISingleOrderGroup {
+export interface MyorderGroup {
   groupId: string;
-  myorders: ISingleOrderAllegro[];
-  status: IStatus2;
-  summary: ISummary2;
+  myorders: ISingleOrderAllegroV2[];
+  status: Status2;
+  summary: Summary2;
 }
 
-export interface ISingleOrderGroupMeta {
+export interface MyorderGroupMeta {
 }
 
-export interface ISingleOrderView {
-  myorderGroup: ISingleOrderGroup;
-  // myorderGroup.$meta: SingleorderGroupMeta;
+export interface ISingleOrderViewV2 {
+  myorderGroup: MyorderGroup;
+  myorderGroup$meta: MyorderGroupMeta;
 }
 

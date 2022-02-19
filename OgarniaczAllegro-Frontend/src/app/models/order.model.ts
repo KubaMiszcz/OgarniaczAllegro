@@ -1,4 +1,4 @@
-import { StatusEnum } from './constants/status.enum';
+import { TriStateStatusEnum } from './constants/status.enum';
 import { IDateYMD } from './date-YMD.model';
 import { IPurchase } from './purchase.model';
 import { IReturn } from './return.model';
@@ -11,13 +11,13 @@ export interface IOrder {
 
   isNew: boolean;
   name: string; //zamowienie
-  status?: string;
+
 
   purchase: IPurchase;
   return: IReturn;
 
 
-  isFinished: StatusEnum; // ALL OK
+  isFinished: TriStateStatusEnum; // ALL OK
   finishingDate?: IDateYMD;
 
   comment?: string; // notatka
@@ -44,17 +44,17 @@ export class Order implements IOrder {
   id = '';
   name = '';
   isNew = false;
-  isAllegroPay = StatusEnum.Unknown;
+  isAllegroPay = TriStateStatusEnum.Unknown;
 
   purchase = {
-    isAllegroPay: StatusEnum.Unknown,
+    isAllegroPay: TriStateStatusEnum.Unknown,
     purchaseItems: [],
     orderValue: 0,
   } as IPurchase;
 
   return!: IReturn;
 
-  isFinished = StatusEnum.No; // ALL OK
+  isFinished = TriStateStatusEnum.No; // ALL OK
 }
 
 

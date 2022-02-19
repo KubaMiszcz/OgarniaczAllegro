@@ -1,4 +1,4 @@
-export enum StatusEnum {
+export enum TriStateStatusEnum {
   No = 'No',
   Yes = 'Yes',
   NA = 'NA',

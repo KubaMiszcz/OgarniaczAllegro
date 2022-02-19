@@ -1,13 +1,13 @@
 import { IOrderItem } from './../models/purchase-item.model';
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
-import { ISingleOrderView, ISingleOrderAllegro, ISingleOrderGroup } from '../models/allegro-models/single-order.model';
+import { ISingleOrderViewV2, ISingleOrderAllegroV2 } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { StatusEnum } from '../models/constants/status.enum';
+import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { IAllegroAllOrdersView, IMyOrderAllAllegro, IOrderGroup } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrdersViewV2, IMyOrderAllAllegroV2 } from '../models/allegro-models/all-orders.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
@@ -62,13 +62,13 @@ export class OrderService {
 
 
   importAllegroAllOrdersFromResponse(source: string) {
-    const allOrdersJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
+    const allOrdersFromAllegroJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
-    const allOrdersView: IAllegroAllOrdersView = JSON.parse(allOrdersJSON);
-    console.log(allOrdersView);
+    const allOrdersFromAllegroView: IAllegroAllOrdersViewV2 = JSON.parse(allOrdersFromAllegroJSON);
+    console.log('allOrdersFromAllegroView', allOrdersFromAllegroView);
 
 
-    if (allOrdersView.myorders.orderGroups.some(g => g.myorders.length > 1)) {
+    if (allOrdersFromAllegroView.myorders.orderGroups.some(g => g.myorders.length > 1)) {
       alert('group.myorders.length>1');
     }
 
@@ -79,7 +79,7 @@ export class OrderService {
     // and in this first item there is all info about it
     // maybe it has more when you pay for more orders in one payment?
 
-    const allAllegroOrders = allOrdersView.myorders.orderGroups.map(o => o.myorders[0]);
+    const allAllegroOrders = allOrdersFromAllegroView.myorders.orderGroups.map(o => o.myorders[0]);
 
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -88,7 +88,7 @@ export class OrderService {
     try {
       const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
       newList = this.fillAllOrdersFromAllegroImport(allAllegroOrders, oldList);
-      console.log(`first ${allOrdersView.limit} order from ${allOrdersView.myorders.total} imported sucessfully`);
+      console.log(`first ${allOrdersFromAllegroView.limit} order from ${allOrdersFromAllegroView.myorders.total} imported sucessfully`);
 
     } catch (error) {
       console.warn('something wrong with importAllegroOrdersFromResponse');
@@ -101,20 +101,17 @@ export class OrderService {
 
 
   importAllegroSingleOrderFromResponse(source: string) {
-    const json = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
-    console.log(json, JSON.parse(json));
+    const singleOrderFromAllegroJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
+    const singleOrderFromAllegroView: ISingleOrderViewV2 = JSON.parse(singleOrderFromAllegroJSON);
+    console.log('singleOrderFromAllegroView', singleOrderFromAllegroView);
 
-    const singleOrdersJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
-    const singleOrderView: ISingleOrderView = JSON.parse(singleOrdersJSON);
 
-    if (singleOrderView?.myorderGroup?.myorders?.length > 1) {
+    if (singleOrderFromAllegroView?.myorderGroup?.myorders?.length > 1) {
       alert('group.myorders.length>1');
     }
 
-    const singleAllegroOrder: ISingleOrderAllegro = singleOrderView?.myorderGroup?.myorders[0];
-
-    console.log('singleAllegroOrder', singleAllegroOrder);
-
+    const singleAllegroOrder: ISingleOrderAllegroV2 = singleOrderFromAllegroView?.myorderGroup?.myorders[0];
+    // console.log('singleAllegroOrder', singleAllegroOrder);
 
     let newList: IOrder[] = [];
 
@@ -158,7 +155,7 @@ export class OrderService {
 
 
 
-  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllAllegro[], oldOrderList: IOrder[]): IOrder[] {
+  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllAllegroV2[], oldOrderList: IOrder[]): IOrder[] {
 
     importedList.forEach(importedOrder => {
       oldOrderList = this.fillSingleOrderFromAllegroImport(importedOrder, oldOrderList);
@@ -167,7 +164,7 @@ export class OrderService {
     return oldOrderList;
   }
 
-  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllAllegro | ISingleOrderAllegro, oldOrderList: IOrder[]): IOrder[] {
+  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2, oldOrderList: IOrder[]): IOrder[] {
     const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
 
     if (existedOrderIdx >= 0) {
@@ -182,25 +179,19 @@ export class OrderService {
 
 
 
-  private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegro | ISingleOrderAllegro): IOrder {
-    return {
-      ...oldOrder,
-      allegroJson: JSON.stringify(order),
-      isNew: false,
-      status: order.status.primary.status,
-      // purchase: {
-      // ...oldOrder.purchase,
-      // isPackageReceived: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
-      // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
-      // }
-    };
+  private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
+    oldOrder.allegroJson = JSON.stringify(order);
+    oldOrder.isNew = false;
+    oldOrder.purchase.status = order.status.primary.status;
+
+    return oldOrder;
   }
 
 
-  private createNewOrderFromImportedOrder(order: IMyOrderAllAllegro | ISingleOrderAllegro): IOrder {
+  private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
-    console.log((order as IMyOrderAllAllegro).invoiceAddressId ? StatusEnum.Yes : StatusEnum.NA);
+    console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.NA);
 
     // const result: IOrder = {
     return {
@@ -208,19 +199,16 @@ export class OrderService {
       id: order.purchaseId, //same as order.id
       name: name,
       isNew: true,
-      status: order.status.primary.status,
       purchase: {
-        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? StatusEnum.Yes : StatusEnum.No,
+        isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
-        hasInvoice: (order as IMyOrderAllAllegro).invoiceAddressId ? StatusEnum.Yes : StatusEnum.No,
-        isInvoiceReceived: StatusEnum.No,
-        // isPackageDelivered: order.delivery.status === AllegroStatusEnums.DELIVERED ? StatusEnum.Yes : StatusEnum.No,
-        // deliveredDate: this.helperService.getDateYMD(order.delivery.timestamp),
-        // isPackageReceived: StatusEnum.No,
+        status: order.status.primary.status,
+        // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
+        isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.No : TriStateStatusEnum.NA,
       } as IPurchase,
       return: {},
-      isFinished: StatusEnum.No
+      isFinished: TriStateStatusEnum.No
     };
 
     // return result;
@@ -261,17 +249,6 @@ export class OrderService {
 
 
 
-
-
-
-
-
-
-  // showDetailsModal(order: IOrder) {
-  //   order = { ...order } as IOrder
-  //   this.selectedOrder$.next({ ...order } as IOrder);
-  //   this.showOrderDetailsModal$.next(order);
-  // }
 
   addNewOrder(newOrder: IOrder) {
     newOrder = { ...newOrder };
@@ -318,9 +295,6 @@ export class OrderService {
       // }
     }
   }
-
-
-
 
 
 

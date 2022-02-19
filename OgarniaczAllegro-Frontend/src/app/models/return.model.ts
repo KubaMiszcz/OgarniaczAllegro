@@ -1,5 +1,5 @@
 import { IUser } from './user.model';
-import { StatusEnum } from './constants/status.enum';
+import { TriStateStatusEnum } from './constants/status.enum';
 import { IDateYMD } from './date-YMD.model';
 import { IOrderItem } from './purchase-item.model';
 

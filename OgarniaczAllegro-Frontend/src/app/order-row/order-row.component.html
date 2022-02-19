@@ -67,17 +67,21 @@
     'bg-warning' : hasStatus(parcelStatuses.AVAILABLE_FOR_PICKUP)
 } ">{{getStatus()}}</span>
   <!-- km progress bar here -->
+  <!-- km date bar here -->
 </td>
 
 
 
 
-<td class="text-center ">
+<!-- <td class="text-center ">
   <app-tri-state-check-box [value]="order.purchase.hasInvoice" [disabled]="true" readonly="true"></app-tri-state-check-box>
-</td>
+</td> -->
 
 <td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived" (valueChange)="triStateClicked($event, 'invoiceReceived')">
+  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived" 
+  (valueChange)="triStateClicked($event, 'invoiceReceived')"
+  [disabled]="order.purchase.isInvoiceReceived === triStateStauses.NA"
+  >
   </app-tri-state-check-box>
 </td>
 

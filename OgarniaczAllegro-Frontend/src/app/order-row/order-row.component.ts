@@ -1,6 +1,6 @@
 import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
 import { HelperService } from './../services/helper.service';
-import { StatusEnum } from '../models/constants/status.enum';
+import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
@@ -18,6 +18,7 @@ export class OrderRowComponent implements OnInit {
   @Output() openDetails = new EventEmitter<IOrder>();
 
   parcelStatuses = AllegroParcelStatusEnums;
+  triStateStauses = TriStateStatusEnum;
 
   constructor(
     private helperService: HelperService
@@ -31,7 +32,7 @@ export class OrderRowComponent implements OnInit {
     this.editComplete.emit(this.order);
   }
 
-  triStateClicked(value: StatusEnum, colName: string) {
+  triStateClicked(value: TriStateStatusEnum, colName: string) {
     switch (colName) {
       // case this.helperService.nameof<Order>('hasInvoice'):
 
@@ -63,14 +64,14 @@ export class OrderRowComponent implements OnInit {
   }
 
   getStatus() {
-    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.status) ?? this.order.status;
+    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status) ?? this.order.purchase.status;
   }
 
 
   hasStatus(value: string | null = null) {
     const key = this.helperService.getKeyFromEnum(AllegroParcelStatusEnums, value);
 
-    return this.order.status === key;
+    return this.order.purchase.status === key;
   }
 }
 
