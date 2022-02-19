@@ -3,6 +3,7 @@ import { OrderService } from '../services/order.service';
 import { IOrder, Order } from '../models/order.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import _ from 'lodash';
 
 
 @Component({
@@ -11,15 +12,11 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./orders-table.component.scss']
 })
 export class OrdersTableComponent implements OnInit {
-  // ordersList: IOrder[] = [];
-  allOrdersList$ = this.orderService.allOrdersList$;
+  allOrdersList: IOrder[] = [];
+  // allOrdersList$ = this.orderService.allOrdersList$;
 
 
   selectedOrder: IOrder = new Order();
-
-
-  // showAddNewRow = false;
-  // showOrderDetailsModal$ = this.orderService.showOrderDetailsModal$;
 
   @ViewChild('orderDetailsModal') orderDetailsModal: any;
   private modalRef!: NgbModalRef;
@@ -31,7 +28,13 @@ export class OrdersTableComponent implements OnInit {
 
   ) {
 
-    // this.orderService.ordersList$.subscribe(ol => this.ordersList = ol);
+    this.orderService.allOrdersList$.subscribe(ol => {
+      this.allOrdersList = ol.sort();
+      // ol[0].purchase.purchaseDate
+      // this.allOrdersList = _.orderBy(ol, ['purchase'], ['asc']); // Use Lodash to sort array by 'name'
+      this.allOrdersList = _.sortBy(ol, o => o.purchase.purchaseDate).reverse();
+
+    });
     // this.ordersList$ = this.orderService.ordersList$;
     this.orderService.selectedOrder$.subscribe(o => this.selectedOrder = o);
   }
@@ -65,6 +68,11 @@ export class OrdersTableComponent implements OnInit {
 
   onCloseModal(result: string) {
     this.modalRef.close();
+  }
+
+  sortBy(colName: string) {
+    // this.allOrdersList = _.sortBy(this.allOrdersList, o => o['name']).reverse();
+    this.allOrdersList = this.allOrdersList.reverse();
   }
 
 }

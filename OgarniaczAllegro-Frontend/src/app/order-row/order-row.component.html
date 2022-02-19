@@ -47,9 +47,11 @@
 </td>
 
 
+
 <td class="text-center">
   <app-tri-state-check-box [(value)]="order.purchase.isAllegroPay" [disabled]="true" readonly="true"></app-tri-state-check-box>
 </td>
+
 
 
 <td class="text-center text-nowrap">
@@ -57,6 +59,7 @@
   <input *ngIf="isInEdit" [(ngModel)]="order.purchase.orderValue"
          class="form-control" type="number">
 </td>
+
 
 
 <!-- ============ -->

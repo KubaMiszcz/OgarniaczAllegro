@@ -158,7 +158,7 @@ export class OrderService {
       const updatedOrder = this.getUpdatedOrderFromImported(oldOrderList[existedOrderIdx], importedOrder as IMyOrderAllAllegro);
 
       if ((importedOrder as ISingleOrderAllegro).rescissions) {
-        updatedOrder.return = this.getReturnData(importedOrder as ISingleOrderAllegro);
+        updatedOrder.return = this.fillReturnData(importedOrder as ISingleOrderAllegro);
       }
 
       updatedOrder.allegroJson = this.helperService.mergeJsons(updatedOrder.allegroJson, importedOrder);
@@ -171,17 +171,7 @@ export class OrderService {
     return oldOrderList;
   }
 
-  getReturnData(order: ISingleOrderAllegro): IReturn {
-    const rescission = order.rescissions?.rescissions[0];
 
-    return {
-      returnCode: rescission.returnParcels[0].returnCode,
-      returnCodeExpirationDate: rescission.shipmentExpirationDate,
-      returnValue: _.sum(rescission.rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
-      status: this.allegroService.convertToMyReturnStatusEnum(rescission.timelineStatus.status),
-      statusHint: rescission.timelineStatus.hint,
-    };
-  }
 
 
 
@@ -294,6 +284,19 @@ export class OrderService {
 
 
     return result;
+  }
+
+
+  fillReturnData(order: ISingleOrderAllegro): IReturn {
+    const rescission = order.rescissions?.rescissions[0];
+
+    return {
+      returnCode: rescission.returnParcels[0].returnCode,
+      returnCodeExpirationDate: rescission.shipmentExpirationDate,
+      returnValue: _.sum(rescission.rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
+      status: this.allegroService.convertToMyReturnStatusEnum(rescission.timelineStatus.status),
+      statusHint: rescission.timelineStatus.hint,
+    };
   }
 
 
