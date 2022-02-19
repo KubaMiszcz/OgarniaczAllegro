@@ -98,16 +98,22 @@
   <div class="d-flex">
     <span *ngIf="!isInEdit"
           class="return-to-date"
-          (click)="d.toggle()">{{getReturnToDate()}}
+          (click)="d.toggle()">
+      {{getReturnToDate()}}
     </span>
 
+    
+
+    <!-- [(ngModel)]="order.purchase.statusTimestamp" -->
+    
     <input [hidden]="!isInEdit"
-           [(ngModel)]="order.purchase.statusTimestamp"
-           class="form-control return-to-date"
-           name="dp"
-           (click)="d.toggle()"
-           ngbDatepicker #d="ngbDatepicker"
-           [placement]="'bottom'">
+          [value]="getReturnToDate()"
+          (dateSelect)="setReturnToDate($event)"
+          class="form-control return-to-date"
+          name="dp"
+          (click)="d.toggle()"
+          ngbDatepicker #d="ngbDatepicker"
+[placement]="'bottom'">
     <!-- (closed)="onDateSelected(order)" -->
     <!-- [positionTarget]="buttonEl" -->
     <!-- </div> -->

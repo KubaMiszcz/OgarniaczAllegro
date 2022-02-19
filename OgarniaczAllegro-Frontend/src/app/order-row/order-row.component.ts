@@ -4,6 +4,7 @@ import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -78,7 +79,8 @@ export class OrderRowComponent implements OnInit {
     return this.order.purchase.status === key;
   }
 
-  getReturnToDate() {
+  //km move to service set when irder created or update it there
+  getReturnToDate(): string | null {
     // swicth to labels get riod of getkey from enum
     const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
     const timestamp = this.order.purchase.statusTimestamp;
@@ -90,6 +92,13 @@ export class OrderRowComponent implements OnInit {
     }
 
     return 'N/A';
+  }
+
+  setReturnToDate(value: NgbDate) {
+    console.log(value);
+    this.order.purchase.statusTimestamp = new Date(`${value.year}-${value.month}-${value.day}`);
+    console.log(this.order.purchase.statusTimestamp);
+
   }
 }
 
