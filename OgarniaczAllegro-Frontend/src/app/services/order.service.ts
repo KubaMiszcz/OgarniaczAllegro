@@ -1,3 +1,4 @@
+import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
 import { IReturn } from './../models/return.model';
 import { IOrderItem } from './../models/purchase-item.model';
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
@@ -196,12 +197,12 @@ export class OrderService {
   private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
-    // let defaultReturnToDate = this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval);
-    // console.log(order.delivery.timestamp, defaultReturnToDate);
+    // const issueReturnToDate;
+    // if (order.delivery.status === AllegroParcelStatusEnums.DELIVERED) {
 
+    // }
 
-    // const result: IOrder = {
-    return {
+    const result: IOrder = {
       allegroJson: JSON.stringify(order),
       id: order.purchaseId, //same as order.id
       name: name,
@@ -222,7 +223,12 @@ export class OrderService {
       isFinished: TriStateStatusEnum.NO
     };
 
-    // return result;
+
+
+
+
+
+    return result;
   }
 
 

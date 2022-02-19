@@ -3,9 +3,9 @@ import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enu
 import { HelperService } from './../services/helper.service';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate, NgbDatepicker, NgbInputDatepicker } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -19,6 +19,9 @@ export class OrderRowComponent implements OnInit {
 
   @Output() editComplete = new EventEmitter<IOrder>();
   @Output() openDetails = new EventEmitter<IOrder>();
+
+  @ViewChild('datePicker') datePicker!: NgbInputDatepicker;
+
 
   parcelStatuses = AllegroParcelStatusEnums;
   triStateStauses = TriStateStatusEnum;
@@ -84,6 +87,7 @@ export class OrderRowComponent implements OnInit {
     // swicth to labels get riod of getkey from enum
     const date = this.order.purchase.issueReturnToDate;
 
+
     if (!date) {
       return 'N/A';
     }
@@ -101,6 +105,25 @@ export class OrderRowComponent implements OnInit {
     this.order.purchase.statusTimestamp = new Date(`${value.year}-${value.month}-${value.day}`);
     console.log(this.order.purchase.statusTimestamp);
 
+  }
+
+  onToggle() {
+    if (this.order.purchase.issueReturnToDate) {
+      // this.datePicker.toggle();
+    } else {
+      // this.datePicker.close();
+
+    }
+  }
+
+  isDatePickerHidden() {
+    if (this.isInEdit && this.order.purchase.issueReturnToDate) {
+      console.log(this.isInEdit, this.order.purchase.issueReturnToDate);
+
+      return false;
+    }
+
+    return true;
   }
 
 

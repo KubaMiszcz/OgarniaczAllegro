@@ -95,24 +95,26 @@
   <!-- <form class="form-inline"> -->
   <!-- <div class="form-group"> -->
   <!-- <div class="input-group"> -->
+    <!-- style=" pointer-events: none; " -->
   <div class="d-flex">
-    <span *ngIf="!isInEdit"
-          class="return-to-date"
-          (click)="d.toggle()">
+    <div *ngIf="isDatePickerHidden()"
+          class="return-to-date disabled" 
+          (click)="onToggle()"
+          >
       {{getIssueReturnToDate()}}
-    </span>
+    </div>
 
     
 
     <!-- [(ngModel)]="order.purchase.statusTimestamp" -->
     
-    <input [hidden]="!isInEdit"
+    <input [hidden]="isDatePickerHidden()"
           [value]="getIssueReturnToDate()"
           (dateSelect)="setIssueReturnToDate($event)"
           class="form-control return-to-date"
           name="dp"
-          (click)="d.toggle()"
-          ngbDatepicker #d="ngbDatepicker"
+          (click)="onToggle()"
+          ngbDatepicker #datePicker="ngbDatepicker"
 [placement]="'bottom'">
     <!-- (closed)="onDateSelected(order)" -->
     <!-- [positionTarget]="buttonEl" -->
