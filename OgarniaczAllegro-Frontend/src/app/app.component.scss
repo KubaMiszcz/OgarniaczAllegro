@@ -1,3 +1,11 @@
 .container-fluid {
   width: 100%;
+  overflow: hidden;
+
+  .content {
+    // border: 2px solid red;
+    margin-top: 5rem;
+    height: 38rem;
+    overflow: auto;
+  }
 }
