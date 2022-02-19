@@ -1,3 +1,4 @@
+import { SettingsService } from './../services/settings.service';
 import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
 import { HelperService } from './../services/helper.service';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
@@ -28,7 +29,6 @@ export class OrderRowComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.order.purchase.isInvoiceReceived);
   }
 
   addNew() {
@@ -86,7 +86,7 @@ export class OrderRowComponent implements OnInit {
     const timestamp = this.order.purchase.statusTimestamp;
     if (timestamp && status === AllegroParcelStatusEnums.DELIVERED) {
       const date = new Date(timestamp);
-      date?.setDate(date.getDate() + 14);
+      // date?.setDate(date.getDate() + 14);
 
       return this.datepipe.transform(date, 'yyyy-MM-dd');
     }
@@ -100,5 +100,14 @@ export class OrderRowComponent implements OnInit {
     console.log(this.order.purchase.statusTimestamp);
 
   }
+
+
+  // get returnToDate() {
+  //   const timestamp = this.order.purchase.statusTimestamp ?? new Date();
+
+  //   return new NgbDate(timestamp?.getFullYear(), timestamp?.getMonth() + 1, timestamp?.getDay());
+  // }
+
+  // private _returnToDate = new NgbDate(0, 0, 0);
 }
 

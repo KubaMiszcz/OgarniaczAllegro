@@ -4,12 +4,14 @@ import { IOrderItem as IPurchaseItem } from './purchase-item.model';
 
 export interface IPurchase {
   isAllegroPay: TriStateStatusEnum; // allegro Pay
-  purchaseItems?: IPurchaseItem[];
+  purchaseItems: IPurchaseItem[];
   orderValue: number;
 
-  status?: string;
-  statusTimestamp?: Date;
+  status: string;
+  statusTimestamp: Date;
   // hasInvoice?: TriStateStatusEnum; //na firme? xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-  isInvoiceReceived?: TriStateStatusEnum; // faktura OK ?
+  isInvoiceReceived: TriStateStatusEnum; // faktura OK ?
+
+  issueReturnToDate: Date;
 
 }

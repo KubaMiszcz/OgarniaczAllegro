@@ -1,3 +1,4 @@
+import { IReturn } from './../models/return.model';
 import { IOrderItem } from './../models/purchase-item.model';
 import { AllegroEnums } from '../models/allegro-models/allegro-enums';
 import { ISingleOrderViewV2, ISingleOrderAllegroV2 } from '../models/allegro-models/single-order.model';
@@ -12,6 +13,7 @@ import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
 import { IPurchase } from '../models/purchase.model';
+import { SettingsService } from './settings.service';
 
 
 @Injectable({
@@ -34,6 +36,8 @@ export class OrderService {
     private allegroService: AllegroService,
     private helperService: HelperService,
     private http: HttpClient,
+    private settingsService: SettingsService,
+
   ) {
 
 
@@ -195,6 +199,10 @@ export class OrderService {
     console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.NA);
 
 
+    // let defaultReturnToDate = this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval);
+    // console.log(order.delivery.timestamp, defaultReturnToDate);
+
+
     // const result: IOrder = {
     return {
       allegroJson: JSON.stringify(order),
@@ -209,8 +217,11 @@ export class OrderService {
         statusTimestamp: order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.Yes : TriStateStatusEnum.No,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.No : TriStateStatusEnum.NA,
-      } as IPurchase,
-      return: {},
+        issueReturnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
+      },
+      return: {
+        // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
+      },
       isFinished: TriStateStatusEnum.No
     };
 

@@ -14,16 +14,21 @@ export enum AllegroReturnStatusEnums {
 }
 
 
+
+
 export enum AllegroParcelStatusEnums {
   PAID = 'Zaplacone',
   WAYBILL_CREATED = 'etykieta utworzona',
   IN_PREPARATION = 'w przygotowaniu',
-  IN_TRANSIT = 'W drodze',  // w drodze. Status obejmuje zdarzenia takie jak:
+  IN_TRANSIT = 'W drodze',
+
+
+
   // nadanie przesyłki w punkcie,odebranie jej przez kuriera,
   // przyjęcie na sortownie,przekierowanie do innego punktu.
-
-  AVAILABLE_FOR_PICKUP = 'Do odbioru', //oczekuje na odbiór w punkcie;
-  DELIVERED = 'Odebrane', //przesyłka została doręczona do odbiorcy lub odebrana z punktu odbioru;
+  AVAILABLE_FOR_PICKUP = 'Do odbioru',
+  DELIVERED = 'Odebrane',
+  UNKNOWN = "UNKNOWN"
 }
 // PENDING - przesyłka została przygotowana przez nadawcę, oczekuje na nadanie;
 // RELEASED_FOR_DELIVERY - w trakcie doręczenia przez kuriera (na adres odbiorcy lub do punktu odbioru);

@@ -7,6 +7,12 @@ import _ from 'lodash';
   providedIn: 'root'
 })
 export class HelperService {
+  addDaysToTimestamp(timestamp: Date, days: number) {
+    const date = new Date(timestamp);
+    const newDate = date.setDate(date.getDate() + days);
+
+    return new Date(newDate);
+  }
 
 
   isObjectsEqual<T>(obj1: T, obj2: T) {

@@ -1,3 +1,4 @@
+import { AllegroParcelStatusEnums } from './allegro-models/allegro-enums';
 import { TriStateStatusEnum } from './constants/status.enum';
 // import { IDateYMD } from './date-YMD.model';
 import { IPurchase } from './purchase.model';
@@ -50,6 +51,10 @@ export class Order implements IOrder {
     isAllegroPay: TriStateStatusEnum.Unknown,
     purchaseItems: [],
     orderValue: 0,
+    status: AllegroParcelStatusEnums.UNKNOWN,
+    statusTimestamp: new Date(),
+    isInvoiceReceived: TriStateStatusEnum.Unknown,
+    issueReturnToDate: new Date(),
   } as IPurchase;
 
   return!: IReturn;
