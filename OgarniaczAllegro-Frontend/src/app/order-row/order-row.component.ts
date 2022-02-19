@@ -75,5 +75,15 @@ export class OrderRowComponent implements OnInit {
 
     return this.order.purchase.status === key;
   }
+
+  getReturnToDate() {
+    // swicth to labels get riod of getkey from enum
+    const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
+    if (status === AllegroParcelStatusEnums.DELIVERED) {
+      return this.order.purchase.statusTimestamp;
+    }
+
+    return 'N/A';
+  }
 }
 

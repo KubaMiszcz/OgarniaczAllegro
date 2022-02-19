@@ -1,4 +1,3 @@
-
 <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
 
 
@@ -8,9 +7,9 @@
       <th scope="col" class="col text-center">Name</th>
       <th scope="col" class="col text-center">Allegro Pay</th>
       <th scope="col" class="col text-center">Total Value</th>
-      
+
       <th scope="col" class="col text-center">Status</th>
-      
+
       <!-- <th scope="col" class="col text-center">Has Invoice</th> -->
       <th scope="col" class="col text-center">Invoice Received</th>
 
@@ -19,19 +18,20 @@
 
 
 
-      
+
       <!-- <th scope="col" class="col text-center">Received Date</th> -->
 
-      <!-- <th scope="col" class="col text-center">Return Issued</th>
+
+      <!-- <th scope="col" class="col text-center">Return Issued</th> -->
 
       <th scope="col" class="col text-center">Return To&nbsp;Date</th>
-      <th scope="col" class="col text-center">Return Code</th>
-      <th scope="col" class="col text-center">Return Total</th>
-
-      <th scope="col" class="col text-center">Return Sended</th>
-      <th scope="col" class="col text-center">Return Delivered</th>
-      <th scope="col" class="col text-center">Cash Returned</th>
-      <th scope="col" class="col text-center">Invoice Corr&nbsp;Rcvd</th> -->
+      <!-- <th scope="col" class="col text-center">Return Code</th> -->
+      <!-- <th scope="col" class="col text-center">Return Total</th> -->
+      
+      <!-- <th scope="col" class="col text-center">Return Sended</th> -->
+      <!-- <th scope="col" class="col text-center">Return Delivered</th> -->
+      <!-- <th scope="col" class="col text-center">Cash Returned</th> -->
+      <!-- <th scope="col" class="col text-center">Invoice Corr&nbsp;Rcvd</th> -->
 
       <th scope="col" class="col text-center">Finished</th>
       <th scope="col" class="col text-center">Comment</th>
@@ -44,8 +44,8 @@
         (editComplete)="addNewOrder($event)">
     </tr> -->
 
-    <tr app-order-row *ngFor="let order of allOrdersList$ | async" 
-        [order]="order" 
+    <tr app-order-row *ngFor="let order of allOrdersList$ | async"
+        [order]="order"
         [isInEdit]="isInEdit(order)"
         (click)="onRowSelected(order)"
         (editComplete)="updateOrder($event)"
@@ -59,5 +59,5 @@
 
 
 <ng-template #orderDetailsModal let-modal>
-  <app-order-details-modal [order]="selectedOrder" (close)="onCloseModal($event)" ></app-order-details-modal>
+  <app-order-details-modal [order]="selectedOrder" (close)="onCloseModal($event)"></app-order-details-modal>
 </ng-template>
