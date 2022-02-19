@@ -1,6 +1,5 @@
 export enum AllegroEnums {
-  AllegroPay = 'Allegro Pay',
-  // statusCOMPLETED = 'COMPLETED',
+  AllegroPay = 'Allegro Pay', //value with space, dont remove
 }
 
 
@@ -23,6 +22,7 @@ export enum AllegroParcelStatusEnums {
   WAYBILL_CREATED = 'etykieta utworzona',
   IN_PREPARATION = 'w przygotowaniu',
   IN_TRANSIT = 'W drodze',
+  MISSING_ENUM = 'MISSING_ENUM',
 
 
 

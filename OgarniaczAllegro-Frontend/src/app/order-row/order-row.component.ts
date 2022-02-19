@@ -70,16 +70,12 @@ export class OrderRowComponent implements OnInit {
   }
 
   getStatus() {
-    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status)
-      ?? this.order.purchase.status
-      ?? 'MISSING_ENUM';
+    return this.order.purchase.status ?? AllegroParcelStatusEnums.MISSING_ENUM;
   }
 
 
   hasStatus(value: string | null = null) {
-    const key = this.helperService.getKeyFromEnum(AllegroParcelStatusEnums, value);
-
-    return this.order.purchase.status === key;
+    return this.order.purchase.status === value;
   }
 
   //km move to service set when irder created or update it there
@@ -92,7 +88,7 @@ export class OrderRowComponent implements OnInit {
       return 'N/A';
     }
 
-    const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
+    const status = this.order.purchase.status;
     if (status !== AllegroParcelStatusEnums.DELIVERED) {
       return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
     }
@@ -118,7 +114,7 @@ export class OrderRowComponent implements OnInit {
 
   isDatePickerHidden() {
     if (this.isInEdit && this.order.purchase.issueReturnToDate) {
-      console.log(this.isInEdit, this.order.purchase.issueReturnToDate);
+      // console.log(this.isInEdit, this.order.purchase.issueReturnToDate);
 
       return false;
     }

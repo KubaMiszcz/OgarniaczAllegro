@@ -202,6 +202,8 @@ export class OrderService {
 
     // }
 
+
+
     const result: IOrder = {
       allegroJson: JSON.stringify(order),
       id: order.purchaseId, //same as order.id
@@ -211,7 +213,7 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
-        status: order.delivery.status,
+        status: this.helperService.getValueFromEnum(AllegroParcelStatusEnums, order.delivery.status) ?? AllegroParcelStatusEnums.UNKNOWN,
         statusTimestamp: new Date(order.delivery.timestamp),
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,

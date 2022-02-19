@@ -21,7 +21,14 @@ export class OrderDetailsModalComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('OrderDetailsModalComponent', this.order?.allegroJson, JSON.parse(this.order?.allegroJson ?? 'null'), this.order);
+    console.log('OrderDetailsModalComponent',
+      // '' + this.order?.allegroJson,
+      '\n',
+      '\nparsedFromAllegro', JSON.parse(this.order?.allegroJson ?? 'null'),
+      '\n',
+      '\nimportedOrder', this.order,
+      '\n'
+    );
   }
 
   importOrder() {
