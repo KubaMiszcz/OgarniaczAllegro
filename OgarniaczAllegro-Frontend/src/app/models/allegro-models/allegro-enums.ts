@@ -9,6 +9,7 @@ export enum AllegroEnums {
 // list przewozowy utworzony
 
 export enum AllegroReturnStatusEnums {
+  UNKNOWN = 'Unknown',
   PARTIALLY_RETURNED = 'czesciowo zwrocone',
   RETURNED = 'cale zwrocone', // przesyłka została zwrócona do nadawcy.
 }

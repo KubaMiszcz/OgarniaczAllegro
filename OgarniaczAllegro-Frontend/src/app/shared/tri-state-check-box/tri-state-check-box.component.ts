@@ -21,10 +21,18 @@ export class TriStateCheckBoxComponent implements OnInit {
   }
 
   toggleState() {
+    this.toggleTwoStates();
+  }
+  private toggleTwoStates() {
+    this.valueChange.emit(this.value === TriStateStatusEnum.YES ? TriStateStatusEnum.NO : TriStateStatusEnum.YES);
+  }
+
+  private toggleFourStates() {
     const statuses = Object.values(TriStateStatusEnum);
     let nextStatusIdx = statuses.findIndex(s => this.value === s) + 1;
     nextStatusIdx = nextStatusIdx >= statuses.length ? 0 : nextStatusIdx;
     this.value = statuses[nextStatusIdx];
     this.valueChange.emit(this.value);
   }
+
 }

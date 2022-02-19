@@ -80,21 +80,23 @@ export class OrderRowComponent implements OnInit {
   }
 
   //km move to service set when irder created or update it there
-  getReturnToDate(): string | null {
+  getIssueReturnToDate(): string | null {
     // swicth to labels get riod of getkey from enum
-    const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
-    const timestamp = this.order.purchase.statusTimestamp;
-    if (timestamp && status === AllegroParcelStatusEnums.DELIVERED) {
-      const date = new Date(timestamp);
-      // date?.setDate(date.getDate() + 14);
+    const date = this.order.purchase.issueReturnToDate;
 
-      return this.datepipe.transform(date, 'yyyy-MM-dd');
+    if (!date) {
+      return 'N/A';
     }
 
-    return 'N/A';
+    const status = this.helperService.getValueFromEnum(AllegroParcelStatusEnums, this.order.purchase.status);
+    if (status !== AllegroParcelStatusEnums.DELIVERED) {
+      return 'Nie ' + AllegroParcelStatusEnums.DELIVERED;
+    }
+
+    return this.datepipe.transform(date, 'yyyy-MM-dd');
   }
 
-  setReturnToDate(value: NgbDate) {
+  setIssueReturnToDate(value: NgbDate) {
     console.log(value);
     this.order.purchase.statusTimestamp = new Date(`${value.year}-${value.month}-${value.day}`);
     console.log(this.order.purchase.statusTimestamp);

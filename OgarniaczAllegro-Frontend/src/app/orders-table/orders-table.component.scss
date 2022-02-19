@@ -5,11 +5,25 @@
     border-radius: 10px;
   }
 
+  // tr,
+  // th {
+  //   text-align: start;
+  // }
+
+  // th {
+  //   width: auto;
+  // }
+
   th,
   td {
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     border-collapse: collapse;
+  }
+
+  .col-header {
+    // text-align: center;
+    // white-space: pre-line;
   }
 
   .return-code {

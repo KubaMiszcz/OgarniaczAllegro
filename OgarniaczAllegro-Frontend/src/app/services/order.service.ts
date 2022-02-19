@@ -187,7 +187,7 @@ export class OrderService {
     oldOrder.allegroJson = JSON.stringify(order);
     oldOrder.isNew = false;
     oldOrder.purchase.status = order.delivery.status;
-    oldOrder.purchase.statusTimestamp = order.delivery.timestamp;
+    oldOrder.purchase.statusTimestamp = new Date(order.delivery.timestamp);
 
     return oldOrder;
   }
@@ -195,9 +195,6 @@ export class OrderService {
 
   private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
-
-    console.log((order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NOT_AVAILABLE);
-
 
     // let defaultReturnToDate = this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval);
     // console.log(order.delivery.timestamp, defaultReturnToDate);
@@ -214,7 +211,7 @@ export class OrderService {
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
         status: order.delivery.status,
-        statusTimestamp: order.delivery.timestamp,
+        statusTimestamp: new Date(order.delivery.timestamp),
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
         issueReturnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),

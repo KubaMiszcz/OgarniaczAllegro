@@ -99,7 +99,7 @@
     <span *ngIf="!isInEdit"
           class="return-to-date"
           (click)="d.toggle()">
-      {{getReturnToDate()}}
+      {{getIssueReturnToDate()}}
     </span>
 
     
@@ -107,8 +107,8 @@
     <!-- [(ngModel)]="order.purchase.statusTimestamp" -->
     
     <input [hidden]="!isInEdit"
-          [value]="getReturnToDate()"
-          (dateSelect)="setReturnToDate($event)"
+          [value]="getIssueReturnToDate()"
+          (dateSelect)="setIssueReturnToDate($event)"
           class="form-control return-to-date"
           name="dp"
           (click)="d.toggle()"
