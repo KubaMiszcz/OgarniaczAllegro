@@ -82,7 +82,7 @@
 </td> -->
 
 <td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.purchase.isInvoiceReceived"
+  <app-tri-state-check-box [numOfStates]="2" [(value)]="order.purchase.isInvoiceReceived"
                            (valueChange)="triStateClicked($event, 'invoiceReceived')"
                            [disabled]="order.purchase.isInvoiceReceived === triStateStauses.NOT_AVAILABLE">
   </app-tri-state-check-box>
@@ -188,7 +188,11 @@
 
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isFinished"></app-tri-state-check-box>
+  <app-tri-state-check-box [numOfStates]="4" [(value)]="order.isCashReturned"></app-tri-state-check-box>
+</td>
+
+<td class="text-center">
+  <app-tri-state-check-box [numOfStates]="4" [(value)]="order.isFinished"></app-tri-state-check-box>
 </td>
 
 
@@ -198,7 +202,7 @@
     <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
               id="exampleFormControlTextarea1" class="form-control text-area"
               [rows]="order.id === '' ? 1 : 3"
-              aria-label="With textarea">
+              aria-label="With textarea"> 
   </textarea>
   </div>
 </td>

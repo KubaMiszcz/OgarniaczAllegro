@@ -30,7 +30,6 @@ export class OrdersTableComponent implements OnInit {
     private modalService: NgbModal,
 
   ) {
-    // this.orderService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
 
     // this.orderService.ordersList$.subscribe(ol => this.ordersList = ol);
     // this.ordersList$ = this.orderService.ordersList$;

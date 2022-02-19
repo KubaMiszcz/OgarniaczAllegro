@@ -269,6 +269,7 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
+        purchaseDate: order.orderDate,
         status: this.allegroService.convertToMyStatusEnum(order.delivery.status),
         statusTimestamp: order.delivery.timestamp ? new Date(order.delivery.timestamp) : order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
@@ -277,6 +278,7 @@ export class OrderService {
       // return: {
       // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
       // },
+      isCashReturned: TriStateStatusEnum.NO,
       isFinished: TriStateStatusEnum.NO,
     };
 

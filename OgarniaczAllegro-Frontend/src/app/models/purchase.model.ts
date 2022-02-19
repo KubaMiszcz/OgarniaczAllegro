@@ -6,6 +6,7 @@ export interface IPurchase {
   isAllegroPay: TriStateStatusEnum; // allegro Pay
   purchaseItems: IPurchaseItem[];
   orderValue: number;
+  purchaseDate: Date;
 
   status: string;
   statusTimestamp: Date;
