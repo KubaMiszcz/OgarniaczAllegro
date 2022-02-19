@@ -6,9 +6,9 @@ import { IOrderItem } from './purchase-item.model';
 
 export interface IReturn {
   // isIssued?: StatusEnum; //Zwrot zgłoszony
-  // returnToDate?: Date; // odeslij do
-  // returnCode?: string; // kod zwrotu
-  // returnValue?: number; // kwota do zwrotu
+  returnCodeExpirationDate?: Date; // odeslij do
+  returnCode?: string; // kod zwrotu
+  returnValue?: number; // kwota do zwrotu
   // isSended?: StatusEnum; // Zwrot wysłany
   // isDelivered?: StatusEnum; // Zwrot u sprzedającego
   // isCashReturned?: StatusEnum; // zwrot na koncie

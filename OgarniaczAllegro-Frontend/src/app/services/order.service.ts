@@ -1,20 +1,20 @@
-import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
-import { IReturn } from './../models/return.model';
-import { IOrderItem } from './../models/purchase-item.model';
-import { AllegroEnums } from '../models/allegro-models/allegro-enums';
-import { ISingleOrderViewV2, ISingleOrderAllegroV2 } from '../models/allegro-models/single-order.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import _ from 'lodash';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { IAllegroAllOrdersView, IMyOrderAllAllegro } from '../models/allegro-models/all-orders.model';
+import { AllegroEnums } from '../models/allegro-models/allegro-enums';
+import { ISingleOrderAllegro, ISingleOrderView } from '../models/allegro-models/single-order.model';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
 import { IOrder, Order } from '../models/order.model';
-import { IAllegroAllOrdersViewV2, IMyOrderAllAllegroV2 } from '../models/allegro-models/all-orders.model';
+import { AllegroParcelStatusEnums } from './../models/allegro-models/allegro-enums';
+import { IOrderItem } from './../models/purchase-item.model';
+import { IReturn } from './../models/return.model';
 import { AllegroService } from './allegro.service';
 import { HelperService } from './helper.service';
-import { StatusService } from './status.service';
-import { IPurchase } from '../models/purchase.model';
 import { SettingsService } from './settings.service';
+import { StatusService } from './status.service';
 
 
 @Injectable({
@@ -69,11 +69,11 @@ export class OrderService {
   importAllegroAllOrdersFromResponse(source: string) {
     const allOrdersFromAllegroJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
-    const allOrdersFromAllegroView: IAllegroAllOrdersViewV2 = JSON.parse(allOrdersFromAllegroJSON);
+    const allOrdersFromAllegroView: IAllegroAllOrdersView = JSON.parse(allOrdersFromAllegroJSON);
     console.log('allOrdersFromAllegroView', allOrdersFromAllegroView);
 
 
-    if (allOrdersFromAllegroView.myorders.orderGroups.some(g => g.myorders.length > 1)) {
+    if (allOrdersFromAllegroView?.myorders?.orderGroups?.some(g => g?.myorders.length > 1)) {
       alert('group.myorders.length>1');
     }
 
@@ -84,83 +84,25 @@ export class OrderService {
     // and in this first item there is all info about it
     // maybe it has more when you pay for more orders in one payment?
 
-    const allAllegroOrders = allOrdersFromAllegroView.myorders.orderGroups.map(o => o.myorders[0]);
+    const allAllegroOrders = allOrdersFromAllegroView?.myorders?.orderGroups?.map(o => o?.myorders[0]);
 
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    let newList: IOrder[] = [];
 
     try {
-      const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
-      newList = this.fillAllOrdersFromAllegroImport(allAllegroOrders, oldList);
-      console.log(`first ${allOrdersFromAllegroView.limit} order from ${allOrdersFromAllegroView.myorders.total} imported sucessfully`);
+      const newList = this.fillAllOrdersFromAllegroImport(allAllegroOrders, this.allOrdersList$.value);
+      this.allOrdersList$.next(newList);
+
+      console.log(`first ${allOrdersFromAllegroView?.limit} order from ${allOrdersFromAllegroView?.myorders?.total} imported sucessfully`);
 
     } catch (error) {
       console.warn('something wrong with importAllegroOrdersFromResponse');
       alert('something wrong with importAllegroOrdersFromResponse');
     }
 
-    this.allOrdersList$.next(newList);
   }
 
-
-
-  importAllegroSingleOrderFromResponse(source: string) {
-    const singleOrderFromAllegroJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
-    const singleOrderFromAllegroView: ISingleOrderViewV2 = JSON.parse(singleOrderFromAllegroJSON);
-    console.log('singleOrderFromAllegroView', singleOrderFromAllegroView);
-
-
-    if (singleOrderFromAllegroView?.myorderGroup?.myorders?.length > 1) {
-      alert('group.myorders.length>1');
-    }
-
-    const singleAllegroOrder: ISingleOrderAllegroV2 = singleOrderFromAllegroView?.myorderGroup?.myorders[0];
-    // console.log('singleAllegroOrder', singleAllegroOrder);
-
-    let newList: IOrder[] = [];
-
-    try {
-      const oldList = this.helperService.getDeepCopy(this.allOrdersList$.value);
-      newList = this.fillSingleOrderFromAllegroImport(singleAllegroOrder, oldList);
-    } catch (error) {
-      console.warn('something wrong with importAllegroSingleOrderFromResponse');
-      alert('something wrong with importAllegroSingleOrderFromResponse');
-    }
-
-    this.allOrdersList$.next(newList);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllAllegroV2[], oldOrderList: IOrder[]): IOrder[] {
+  private fillAllOrdersFromAllegroImport(importedList: IMyOrderAllAllegro[], oldOrderList: IOrder[]): IOrder[] {
 
     importedList.forEach(importedOrder => {
       oldOrderList = this.fillSingleOrderFromAllegroImport(importedOrder, oldOrderList);
@@ -169,12 +111,61 @@ export class OrderService {
     return oldOrderList;
   }
 
-  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2, oldOrderList: IOrder[]): IOrder[] {
+
+
+
+
+
+
+
+
+  importAllegroSingleOrderFromResponse(source: string) {
+    const singleOrderFromAllegroJSON = this.allegroService.getJSONFromAllegroSingleOrderResponse(source);
+    const singleOrderFromAllegroView: ISingleOrderView = JSON.parse(singleOrderFromAllegroJSON);
+    // console.log('\nsingleOrderFromAllegroView\n', singleOrderFromAllegroView);
+
+
+    if (singleOrderFromAllegroView?.myorderGroup?.myorders?.length > 1) {
+      alert('group.myorders.length>1');
+    }
+
+    const singleAllegroOrder: ISingleOrderAllegro = singleOrderFromAllegroView?.myorderGroup?.myorders[0];
+    console.log('\nparsed  singleAllegroOrder\n', singleAllegroOrder);
+
+
+    try {
+      const newList = this.fillSingleOrderFromAllegroImport(singleAllegroOrder, this.allOrdersList$.value);
+      this.allOrdersList$.next(newList);
+
+    } catch (error) {
+      console.warn('something wrong with importAllegroSingleOrderFromResponse');
+      alert('something wrong with importAllegroSingleOrderFromResponse');
+
+    }
+
+  }
+
+
+
+
+
+
+
+  private fillSingleOrderFromAllegroImport(importedOrder: IMyOrderAllAllegro | ISingleOrderAllegro, oldOrderList: IOrder[]): IOrder[] {
     const existedOrderIdx = oldOrderList.findIndex(oldOrder => oldOrder.id === importedOrder.purchaseId);
 
     if (existedOrderIdx >= 0) {
-      const updatedOrder = this.getUpdatedOrderFromImported(oldOrderList[existedOrderIdx], importedOrder);
+      const updatedOrder = this.getUpdatedOrderFromImported(oldOrderList[existedOrderIdx], importedOrder as IMyOrderAllAllegro);
+
+      if ((importedOrder as ISingleOrderAllegro).rescissions) {
+        updatedOrder.return = this.getReturnData(importedOrder as ISingleOrderAllegro);
+        updatedOrder.name = 'Y' + updatedOrder.name;
+      }
+
+      updatedOrder.name = 'X' + updatedOrder.name;
+
       oldOrderList[existedOrderIdx] = updatedOrder;
+
     } else {
       oldOrderList.push(this.createNewOrderFromImportedOrder(importedOrder));
     }
@@ -182,15 +173,79 @@ export class OrderService {
     return oldOrderList;
   }
 
+  getReturnData(order: ISingleOrderAllegro): IReturn {
+    return {
+      returnCode: order.rescissions.rescissions[0].returnParcels[0].returnCode,
+      returnCodeExpirationDate: order.rescissions.rescissions[0].shipmentExpirationDate,
+      returnValue: _.sum(order.rescissions.rescissions[0].rescissionOffers.map(o => o.quantity * Number(o.price.amount))),
+    };
+  }
 
 
-  private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  private getUpdatedOrderFromImported(oldOrder: IOrder, order: IMyOrderAllAllegro): IOrder {
     oldOrder.allegroJson = JSON.stringify(order);
     oldOrder.isNew = false;
-    oldOrder.purchase.status = order.delivery.status;
+    oldOrder.purchase.status = this.allegroService.convertToMyStatusEnum(order.delivery.status);
+
     oldOrder.purchase.statusTimestamp = new Date(order.delivery.timestamp);
 
-    if (oldOrder.purchase.status === AllegroParcelStatusEnums.DELIVERED) {
+    if (oldOrder.purchase.status === AllegroParcelStatusEnums.DELIVERED && !oldOrder.purchase.issueReturnToDate) {
       oldOrder.purchase.issueReturnToDate = this.helperService.addDaysToTimestamp(
         order.delivery.timestamp,
         this.settingsService.defaultReturnInterval
@@ -201,7 +256,7 @@ export class OrderService {
   }
 
 
-  private createNewOrderFromImportedOrder(order: IMyOrderAllAllegroV2 | ISingleOrderAllegroV2): IOrder {
+  private createNewOrderFromImportedOrder(order: IMyOrderAllAllegro | ISingleOrderAllegro): IOrder {
     const name = order.offers.map(o => '- ' + o.title.slice(0, 100)).join('\n');
 
 
@@ -214,17 +269,14 @@ export class OrderService {
         isAllegroPay: order.payment.method === AllegroEnums.AllegroPay ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
         purchaseItems: order.offers.map(o => ({ name: o.title } as IOrderItem)),
         orderValue: Number(order.totalCost.amount),
-
-        status: this.helperService.getValueFromEnum(AllegroParcelStatusEnums, order.delivery.status)
-          ?? AllegroParcelStatusEnums.MISSING_ENUM,
-
+        status: this.allegroService.convertToMyStatusEnum(order.delivery.status),
         statusTimestamp: order.delivery.timestamp ? new Date(order.delivery.timestamp) : order.delivery.timestamp,
         // hasInvoice: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.YES : TriStateStatusEnum.NO,
-        isInvoiceReceived: (order as IMyOrderAllAllegroV2).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
+        isInvoiceReceived: (order as IMyOrderAllAllegro).invoiceAddressId ? TriStateStatusEnum.NO : TriStateStatusEnum.NOT_AVAILABLE,
       },
-      return: {
-        // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
-      },
+      // return: {
+      // returnToDate: this.helperService.addDaysToTimestamp(order.delivery.timestamp, this.settingsService.defaultReturnInterval),
+      // },
       isFinished: TriStateStatusEnum.NO,
     };
 

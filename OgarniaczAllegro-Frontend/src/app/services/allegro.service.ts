@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IAllegroAllOrdersViewV2 } from '../models/allegro-models/all-orders.model';
+import { IAllegroAllOrdersView } from '../models/allegro-models/all-orders.model';
 import { IOrder } from '../models/order.model';
 import { TriStateStatusEnum } from '../models/constants/status.enum';
-import { AllegroEnums } from '../models/allegro-models/allegro-enums';
+import { AllegroEnums, AllegroParcelStatusEnums } from '../models/allegro-models/allegro-enums';
 import { HelperService } from './helper.service';
 import { StatusService } from './status.service';
 
@@ -12,6 +12,9 @@ import { StatusService } from './status.service';
   providedIn: 'root'
 })
 export class AllegroService {
+  convertToMyStatusEnum(status: string): string {
+    return this.helperService.getValueFromEnum(AllegroParcelStatusEnums, status) ?? AllegroParcelStatusEnums.MISSING_ENUM;
+  }
 
 
   constructor(

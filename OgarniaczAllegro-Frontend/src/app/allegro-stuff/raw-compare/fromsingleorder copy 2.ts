@@ -252,7 +252,8 @@ export interface Carrier {
   url: string;
 }
 
-export interface Alert {}
+export interface Alert {
+}
 
 export interface Timeline {
   status: string;
@@ -372,3 +373,4 @@ export interface RootObject {
   groupId: string;
   rescissions: Rescissions;
 }
+

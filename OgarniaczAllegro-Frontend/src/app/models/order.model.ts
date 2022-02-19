@@ -15,7 +15,7 @@ export interface IOrder {
 
 
   purchase: IPurchase;
-  return: IReturn;
+  return?: IReturn;
 
 
   isFinished: TriStateStatusEnum; // ALL OK

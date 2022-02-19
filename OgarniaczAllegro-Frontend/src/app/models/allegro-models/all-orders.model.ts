@@ -176,7 +176,7 @@ export interface Status {
   secondary: Secondary;
 }
 
-export interface IMyOrderAllAllegroV2 {
+export interface IMyOrderAllAllegro {
   id: string;
   purchaseId: string;
   seller: Seller;
@@ -228,7 +228,7 @@ export interface Status2 {
 
 export interface OrderGroup {
   groupId: string;
-  myorders: IMyOrderAllAllegroV2[];
+  myorders: IMyOrderAllAllegro[];
   status: Status2;
 }
 
@@ -241,7 +241,7 @@ export interface Myorders {
 export interface Slots {
 }
 
-export interface IAllegroAllOrdersViewV2 {
+export interface IAllegroAllOrdersView {
   filter: string;
   limit: number;
   offset: number;

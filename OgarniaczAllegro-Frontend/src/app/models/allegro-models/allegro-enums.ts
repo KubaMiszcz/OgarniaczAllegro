@@ -12,6 +12,30 @@ export enum AllegroReturnStatusEnums {
   PARTIALLY_RETURNED = 'czesciowo zwrocone',
   RETURNED = 'cale zwrocone', // przesyłka została zwrócona do nadawcy.
 }
+// s: Array(4)
+// 0: {type: 'CREATED', active: false, label: 'Zwrot zgłoszony', hint: 'Od 4 lut 20:24'}
+// 1: {type: 'IN_TRANSIT', active: false, label: 'Zwrot w drodze', hint: 'Od 5 lut 09:50'}
+// 2: {type: 'DELIVERED', active: false, label: 'Zwrot u sprzedającego', hint: 'Od 7 lut 09:28'}
+// 3: {type: 'FINISHED', active: true, label: 'Zwrot zakończony', hint: 'Pełen zwrot pieniędzy'}
+// l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,6 +61,9 @@ export enum AllegroParcelStatusEnums {
 // ISSUE - wystąpił problem z przesyłką. Status obejmuje zdarzenia takie jak:
 // odmowa przyjęcia przesyłki,
 // zagubienie przesyłki.
+
+
+
 
 
 

@@ -184,6 +184,7 @@ export interface Payment {
 export interface Primary {
   status: string;
   action: string;
+  hint: string;
 }
 
 export interface Detail {
@@ -268,11 +269,91 @@ export interface Timeline {
   alert: Alert;
 }
 
+export interface Step2 {
+  type: string;
+  active: boolean;
+  label: string;
+  hint: string;
+}
+
+export interface TimelineStatus {
+  status: string;
+  label: string;
+  hint: string;
+  steps: Step2[];
+}
+
+export interface Tracking {
+  carrier: string;
+  detailedHistoryAvailable: boolean;
+  link: string;
+  number: string;
+}
+
+export interface Address5 {
+  street: string;
+  city: string;
+  zipCode: string;
+  country: string;
+}
+
+export interface Receiver {
+  fullName: string;
+  address: Address5;
+}
+
+export interface ReturnParcel {
+  returnParcelId: string;
+  authorType: string;
+  deliveryMethodType: string;
+  returnCode: string;
+  tracking: Tracking;
+  expiresAt: Date;
+  receiver: Receiver;
+  costCoveredBySeller: boolean;
+}
+
+export interface Product {
+  name: string;
+  image: string;
+}
+
+export interface Price {
+  amount: string;
+  currency: string;
+}
+
+export interface Reason {
+  type: string;
+  comment: string;
+}
+
+export interface RescissionOffer {
+  product: Product;
+  quantity: number;
+  price: Price;
+  reason: Reason;
+  offerSnapshotHash: string;
+}
+
+export interface Rescission {
+  rescissionId: string;
+  status: string;
+  shipmentExpirationDate: Date;
+  sellerLogin: string;
+  requestDate: Date;
+  referenceNumber: string;
+  timelineStatus: TimelineStatus;
+  returnParcels: ReturnParcel[];
+  rescissionOffers: RescissionOffer[];
+}
+
 export interface Rescissions {
+  rescissions: Rescission[];
   retails: boolean;
 }
 
-export interface ISingleOrderAllegroV2 {
+export interface ISingleOrderAllegro {
   id: string;
   purchaseId: string;
   seller: Seller;
@@ -332,7 +413,7 @@ export interface Summary2 {
 
 export interface MyorderGroup {
   groupId: string;
-  myorders: ISingleOrderAllegroV2[];
+  myorders: ISingleOrderAllegro[];
   status: Status2;
   summary: Summary2;
 }
@@ -340,7 +421,7 @@ export interface MyorderGroup {
 export interface MyorderGroupMeta {
 }
 
-export interface ISingleOrderViewV2 {
+export interface ISingleOrderView {
   myorderGroup: MyorderGroup;
   myorderGroup$meta: MyorderGroupMeta;
 }
