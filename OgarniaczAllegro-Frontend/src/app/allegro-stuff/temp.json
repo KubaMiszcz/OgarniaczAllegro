@@ -1,0 +1,443 @@
+{
+  "id": "5b0e3642-822d-11ec-b5c9-250ce13a71b1",
+  "purchaseId": "5b020140-822d-11ec-b5c9-250ce13a71b1",
+  "seller": {
+    "id": "41677639",
+    "login": "graal_2015",
+    "address": {
+      "firstName": "Kamil",
+      "lastName": "Gralak",
+      "zipCode": "95-100",
+      "city": "Zgierz",
+      "country": "PL",
+      "street": "Urzędnicza 27",
+      "phoneNumber": "+48 570 945 429",
+      "company": "Przedsiębiorstwo Wielobranżowe GRAAL Kamil Gralak",
+      "taxId": "7322075071",
+      "regon": "360506628",
+      "email": "1pfaontutv@allegromail.pl"
+    },
+    "contactDetails": {
+      "phones": [
+        {
+          "number": "+48570945429",
+          "numberLabel": "+48 570 945 429",
+          "numberLabelMasked": "+48 570  *** ***"
+        }
+      ],
+      "emails": [
+        {
+          "address": "1pfaontutv@allegromail.pl",
+          "addressMasked": "1*********@a**********.pl"
+        }
+      ],
+      "openingHours": [
+        {
+          "daysLabel": "poniedziałek - piątek",
+          "daysShortLabel": "pon. - pt.",
+          "hoursLabels": [
+            "17:00 - 19:00"
+          ]
+        },
+        {
+          "daysLabel": "sobota - niedziela",
+          "daysShortLabel": "sob. - nd.",
+          "hoursLabels": [
+            "zamknięte"
+          ]
+        }
+      ]
+    }
+  },
+  "offers": [
+    {
+      "id": "11256388758",
+      "title": "MASECZKA MASKA OCHRONNA TRZYWARSTWOWA 2 sztuki CE",
+      "friendlyUrl": "https://allegro.pl/oferta/maseczka-maska-ochronna-trzywarstwowa-2-sztuki-ce-11256388758?navCategoryId=259464&snapshot=MjAyMi0wMS0zMVQwMDozMzoxNy43MjRaO2J1eWVyO2VhYTA4NDFlYTk1NTUyZWYzZjgzZmY2YmU5MTc2NmVlOTYwMjRhMDE3ODc0NWFhMzRlNzE5NWMwZTZmMTg0ZTI%3D",
+      "unitPrice": {
+        "amount": "1",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "1",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "SET",
+      "imageUrl": "https://a.allegroimg.com/original/1137aa/73c4afc94844811c1c38721a28db",
+      "productId": "ff2ed048-8472-405a-805f-4713e3b9c2f8",
+      "orderDate": "2022-01-31T00:33:17.724Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": true,
+      "orderOfferId": "5b0e3641-822d-11ec-b5c9-250ce13a71b1",
+      "offerPrice": {
+        "amount": "1",
+        "currency": "PLN"
+      },
+      "originalOfferPrice": {
+        "amount": "1",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false
+    },
+    {
+      "id": "10918258632",
+      "title": "SKRZYNKA NARZĘDZIOWA QBRICK REGULAR R-BOX19\"",
+      "friendlyUrl": "https://allegro.pl/oferta/skrzynka-narzedziowa-qbrick-regular-r-box19-10918258632?navCategoryId=306189&snapshot=MjAyMi0wMS0zMVQwMDozMzoxNy43MjRaO2J1eWVyOzQ1YjM3ZWQ4ZDY4MGRmNzJiYjA4ZWE1NmM5Mzc1NTdiNGM5MzY1Nzk5MTIxMWI4YWNmNzJlMmQ4YjJlYzEwNWE%3D",
+      "unitPrice": {
+        "amount": "39.99",
+        "currency": "PLN"
+      },
+      "originalUnitPrice": {
+        "amount": "39.99",
+        "currency": "PLN"
+      },
+      "quantity": 1,
+      "type": "UNIT",
+      "imageUrl": "https://a.allegroimg.com/original/1109f8/78992fcc480680837b40329cdeb7",
+      "productId": "61848d81-6a38-4c20-b6df-c46f281046d7",
+      "orderDate": "2022-01-31T00:33:17.724Z",
+      "gold": false,
+      "pharmacy": false,
+      "auction": false,
+      "toRate": true,
+      "orderOfferId": "5b0e3640-822d-11ec-b5c9-250ce13a71b1",
+      "offerPrice": {
+        "amount": "39.99",
+        "currency": "PLN"
+      },
+      "originalOfferPrice": {
+        "amount": "39.99",
+        "currency": "PLN"
+      },
+      "showOriginalPrice": false
+    }
+  ],
+  "delivery": {
+    "cost": {
+      "amount": "0.00",
+      "currency": "PLN"
+    },
+    "name": "Allegro Paczkomaty InPost",
+    "methodId": "2488f7b7-5d1c-4d65-b85c-4cbcf253fd93",
+    "id": "5b3c9940-822d-11ec-bedb-172a31c573c4",
+    "address": {
+      "id": "70df85b7-e65c-4fd2-a791-e72738b569ec",
+      "firstName": "Jakub",
+      "lastName": "Bełch",
+      "city": "Rzeszów",
+      "street": "Osmeckiego 41/16",
+      "countryCode": "PL",
+      "zipCode": "35-506",
+      "phoneNumber": "534 883 128"
+    },
+    "generalDelivery": {
+      "id": "222574",
+      "name": "Paczkomat RZE10N",
+      "description": "Przy przedszkolu",
+      "address": {
+        "street": "Brydaka 10A",
+        "code": "35-001",
+        "city": "Rzeszów"
+      },
+      "coordinates": {
+        "lat": 50.0579,
+        "lon": 21.98505
+      }
+    },
+    "discount": {
+      "originalCost": {
+        "amount": "8.99",
+        "currency": "PLN"
+      },
+      "type": "FREEBOX",
+      "planType": "FREEBOX_STANDARD"
+    },
+    "status": "DELIVERED",
+    "timestamp": "2022-02-02T17:57:20.000Z",
+    "paymentType": {
+      "name": "płatne z góry",
+      "type": "PREPAID"
+    }
+  },
+  "totalCost": {
+    "amount": "40.99",
+    "currency": "PLN"
+  },
+  "summary": {
+    "totalCost": {
+      "amount": "40.99",
+      "currency": "PLN"
+    },
+    "exchangeRateDate": "2022-01-31T00:33:20.891Z",
+    "showExchangeRateInformation": false
+  },
+  "payment": {
+    "id": "5e892c31-822d-11ec-ab9f-0d053463f54f",
+    "provider": "PAYU",
+    "amount": {
+      "amount": "40.99",
+      "currency": "PLN"
+    },
+    "method": "Karta płatnicza",
+    "methodId": "OCP-b1a8533b7367e370a18116f91ebdeb9a",
+    "status": "COMPLETED",
+    "date": "2022-01-31T00:33:20.891Z",
+    "isInstallments": false,
+    "isMultipleSellers": false,
+    "cardMask": "482436******6807"
+  },
+  "createDate": "2022-01-31T00:33:05.364Z",
+  "orderDate": "2022-01-31T00:33:17.724Z",
+  "serviceCountry": "PL",
+  "hiddenInMyOrders": false,
+  "boughtOnDevice": "DESKTOP",
+  "cancelled": false,
+  "status": {
+    "primary": {
+      "status": "RETURNED",
+      "hint": "Zwrócony pt. 04 lut. 2022."
+    },
+    "traits": [
+      "DELIVERY_SMART",
+      "IS_SURCHARGE_ALLOWED"
+    ],
+    "actions": [
+      {
+        "type": "HIDE_ORDER",
+        "enabled": true
+      },
+      {
+        "type": "BUY_AGAIN",
+        "enabled": true
+      },
+      {
+        "type": "RATE_SELLER",
+        "enabled": true,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Wystaw ocenę do"
+          },
+          {
+            "type": "SPACE"
+          },
+          {
+            "type": "TEXT",
+            "value": "1 maja 2022, 2:33"
+          }
+        ]
+      },
+      {
+        "type": "RETURN_PRODUCTS",
+        "enabled": false,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Zwróciłeś wszystkie przedmioty z tego zamówienia."
+          }
+        ]
+      },
+      {
+        "type": "QUESTION_TO_SELLER",
+        "enabled": true
+      },
+      {
+        "type": "DISCUSSION_ASK_FOR_HELP",
+        "enabled": true,
+        "details": [
+          {
+            "type": "TEXT",
+            "value": "Nie możesz porozumieć się ze sprzedającym? Otwórz dyskusję do 30.07.2022, 02:33. W razie potrzeby udzielimy Ci wsparcia."
+          }
+        ]
+      },
+      {
+        "type": "RATE_PRODUCT",
+        "enabled": true
+      }
+    ]
+  },
+  "coins": {
+    "total": 0
+  },
+  "invoiceAddress": {
+    "id": "60f931f0f0282b439374fa22",
+    "zipCode": "35-506",
+    "city": "Rzeszów",
+    "countryCode": "PL",
+    "street": "płk. Kazimierza Iranka-Osmeckiego 41/16",
+    "company": "Jakub Bełch it-kom",
+    "taxId": "8133395094"
+  },
+  "timelines": [
+    {
+      "status": "DELIVERED",
+      "waybillId": "695100969235001132460816",
+      "details": [
+        {
+          "type": "TEXT",
+          "value": "2 lut. 2022, 18:57"
+        }
+      ],
+      "steps": [
+        {
+          "type": "PAYMENT_PAID",
+          "hint": "31 sty. 2022, 01:33",
+          "active": false,
+          "error": false
+        },
+        {
+          "type": "TO_BE_SENT",
+          "hint": "Od 31. sty. 11:51",
+          "active": false,
+          "error": false
+        },
+        {
+          "type": "IN_TRANSIT",
+          "hint": "Od 1. lut. 15:13",
+          "active": false,
+          "error": false
+        },
+        {
+          "type": "AVAILABLE_FOR_PICKUP",
+          "hint": "Od 2. lut. 11:25",
+          "active": false,
+          "error": false
+        },
+        {
+          "type": "DELIVERED",
+          "hint": "2 lut. 18:57",
+          "active": true,
+          "error": false
+        }
+      ],
+      "pickup": {
+        "point": {
+          "id": "222574",
+          "name": "Paczkomat RZE10N",
+          "description": "Przy przedszkolu",
+          "address": {
+            "city": "Rzeszów",
+            "code": "35-001",
+            "street": "Brydaka 10A"
+          }
+        }
+      },
+      "carrier": {
+        "id": "INPOST",
+        "name": "InPost",
+        "url": "https://inpost.pl/pl/pomoc/znajdz-przesylke?parcel=695100969235001132460816"
+      },
+      "detailedHistoryAvailable": true,
+      "alert": {}
+    }
+  ],
+  "isFulfilment": false,
+  "groupId": "b4ff8fe6-9d2e-3c52-98ea-48f24d863180",
+  "rescissions": {
+    "rescissions": [
+      {
+        "rescissionId": "8c7145ce-d6b1-4847-b282-f73b85d1e97a",
+        "status": "SHIPMENT_SELECTED",
+        "shipmentExpirationDate": "2022-02-18T22:59:59.642Z",
+        "sellerLogin": "graal_2015",
+        "requestDate": "2022-02-04T19:24:46.642Z",
+        "referenceNumber": "P39M/2022",
+        "timelineStatus": {
+          "status": "FINISHED",
+          "label": "Zwrot zakończony",
+          "hint": "Pełen zwrot pieniędzy",
+          "steps": [
+            {
+              "type": "CREATED",
+              "active": false,
+              "label": "Zwrot zgłoszony",
+              "hint": "Od 4 lut 20:24"
+            },
+            {
+              "type": "IN_TRANSIT",
+              "active": false,
+              "label": "Zwrot w drodze",
+              "hint": "Od 5 lut 09:50"
+            },
+            {
+              "type": "DELIVERED",
+              "active": false,
+              "label": "Zwrot u sprzedającego",
+              "hint": "Od 7 lut 09:28"
+            },
+            {
+              "type": "FINISHED",
+              "active": true,
+              "label": "Zwrot zakończony",
+              "hint": "Pełen zwrot pieniędzy"
+            }
+          ]
+        },
+        "returnParcels": [
+          {
+            "returnParcelId": "87d89c60-6581-4c2f-aa58-a4e19dd112e9",
+            "authorType": "BUYER",
+            "deliveryMethodType": "ALLEGRO_INPOST",
+            "returnCode": "469 606 521 6",
+            "tracking": {
+              "carrier": "INPOST",
+              "detailedHistoryAvailable": true,
+              "link": "https://inpost.pl/sledzenie-przesylek?number=600000569295100039413794",
+              "number": "600000569295100039413794"
+            },
+            "expiresAt": "2022-02-18T22:59:59.117Z",
+            "receiver": {
+              "fullName": "Przedsiębiorstwo Wielobranżowe GRAAL Kamil Gralak",
+              "address": {
+                "street": "Urzędnicza 27",
+                "city": "Zgierz",
+                "zipCode": "95-100",
+                "country": "PL"
+              }
+            },
+            "costCoveredBySeller": false
+          }
+        ],
+        "rescissionOffers": [
+          {
+            "product": {
+              "name": "MASECZKA MASKA OCHRONNA TRZYWARSTWOWA 2 sztuki CE",
+              "image": "https://a.allegroimg.com/original/1137aa/73c4afc94844811c1c38721a28db"
+            },
+            "quantity": 1,
+            "price": {
+              "amount": "1",
+              "currency": "PLN"
+            },
+            "reason": {
+              "type": "MISTAKE",
+              "comment": ""
+            },
+            "offerSnapshotHash": "https://allegro.pl/oferta/maseczka-maska-ochronna-trzywarstwowa-2-sztuki-ce-11256388758?navCategoryId=259464&snapshot=MjAyMi0wMS0zMVQwMDozMzoxNy43MjRaO2J1eWVyO2VhYTA4NDFlYTk1NTUyZWYzZjgzZmY2YmU5MTc2NmVlOTYwMjRhMDE3ODc0NWFhMzRlNzE5NWMwZTZmMTg0ZTI%3D"
+          },
+          {
+            "product": {
+              "name": "SKRZYNKA NARZĘDZIOWA QBRICK REGULAR R-BOX19\"",
+              "image": "https://a.allegroimg.com/original/1109f8/78992fcc480680837b40329cdeb7"
+            },
+            "quantity": 1,
+            "price": {
+              "amount": "39.99",
+              "currency": "PLN"
+            },
+            "reason": {
+              "type": "DONT_LIKE_IT",
+              "comment": ""
+            },
+            "offerSnapshotHash": "https://allegro.pl/oferta/skrzynka-narzedziowa-qbrick-regular-r-box19-10918258632?navCategoryId=306189&snapshot=MjAyMi0wMS0zMVQwMDozMzoxNy43MjRaO2J1eWVyOzQ1YjM3ZWQ4ZDY4MGRmNzJiYjA4ZWE1NmM5Mzc1NTdiNGM5MzY1Nzk5MTIxMWI4YWNmNzJlMmQ4YjJlYzEwNWE%3D"
+          }
+        ]
+      }
+    ],
+    "retails": false
+  }
+}

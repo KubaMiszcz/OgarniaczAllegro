@@ -1,0 +1,116 @@
+<div class="modal-content " (keydown)="onKeyPressed($event)">
+
+  <div class="modal-header">
+    <h4 class="modal-title " id="modal-basic-title">Order Details</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeModal('')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body modal-lg py-2">
+
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Order Id</div>
+      </div>
+      <input [(ngModel)]="order.id" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+    </div>
+
+    <div class="mb-2">
+      <a [href]="'https://allegro.pl/moje-allegro/zakupy/kupione/' +order.id" class="badge bg-primary link" target="_blank">
+        https://allegro.pl/moje-allegro/zakupy/kupione/{{order.id}}
+      </a>
+    </div>
+
+    <div class="input-group mb-2 import-panel">
+      <div class="input-group-prepend import-label">
+        <div class="input-group-text ">paste raw data from allegro</div>
+      </div>
+      <div class="d-flex import-area"> <textarea [(ngModel)]="source"
+                  id="exampleFormControlTextarea1" class="form-control "
+                  [rows]="1"
+                  aria-label="With textarea">
+
+                  </textarea>
+      </div>
+      <div class="input-group-append  d-flex import-button">
+        <button type="button" class="btn btn-primary " (click)="importOrder()">Import</button>
+      </div>
+    </div>
+
+
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Name</div>
+      </div>
+      <input [(ngModel)]="order.name" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+    </div>
+
+    <div>
+      <p *ngFor="let item of order.purchase.purchaseItems">{{item.name}}</p>
+    </div>
+
+
+    
+    <div>
+      <p >{{order.return?.returnCode}}</p>
+      <p >{{order.return?.returnCodeExpirationDate}}</p>
+      <p >{{order.return?.returnValue}}</p>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal-footer p-2">
+
+      <button type="button" name="" id=""
+              class="col s-4 btn btn-primary btn-md btn-bloxck mr-1"
+              (click)="importOrder()">
+        Import</button>
+      <button type="button" name="" id=""
+              class="col s-4 btn btn-outline-danger btn-md btn-bloxck"
+              (click)="closeModal('cancel')">
+        Cancel</button>
+      <button type="button" name="" id="" data-bs-dismiss="modal"
+              class="col s-4 btn btn-outline-success btn-md btn-blxock"
+              (click)="closeModal('OK')">
+        OK
+      </button>
+    </div>
+
+
+
+
+    <!-- <div class="modal-footer">
+          <button type="button" name="" id="" data-bs-dismiss="modal"
+                  class="col-4 btn btn-outline-success btn-md btn-blxock"
+                  (click)="closeModal('OK')">
+            OK
+          </button>
+        </div> -->
+
+  </div>
+
+
+</div>

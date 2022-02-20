@@ -1,0 +1,24 @@
+<div class="col">
+  <h2>paste all orders</h2>
+
+  <h4>
+    <a [href]="'https://allegro.pl/moje-allegro/zakupy/kupione/'" class="badge bg-primary" target="_blank">
+      https://allegro.pl/moje-allegro/zakupy/kupione/
+    </a>
+  </h4>
+
+  <h4>open, ctrl+U, copy pagesource, and paste here</h4>
+
+  <div>
+    <div class="d-flex">
+      <textarea [(ngModel)]="source"
+                id="exampleFormControlTextarea1" class="form-control"
+                [rows]="10"
+                aria-label="With textarea">
+                  </textarea>
+    </div>
+    <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="importAllOrders()">import all</button>
+  </div>
+
+</div>
+  <!-- https://allegro.pl/moje-allegro/zakupy/kupione -->

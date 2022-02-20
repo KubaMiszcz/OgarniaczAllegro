@@ -1,54 +1,96 @@
-import { OrderService } from './order.service';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { AllegroParcelStatusEnum } from '../models/allegro-models/allegro-parcel-status.enum';
+import { AllegroReturnStatusEnum } from '../models/allegro-models/allegro-return-status.enum';
 import { HelperService } from './helper.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { StatusService } from './status.service';
-import { environment } from 'src/environments/environment';
-import { IAllegroAllOrders } from '../allegro-stuff/models/all-orders-models';
-import { IOrder, Order } from '../models/order';
-import { StatusEnum } from '../models/status.enum';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AllegroService {
+  convertToMyParcelStatusEnum(status: string): string { //km retyrn enums
+    return this.helperService.getValueFromEnum(AllegroParcelStatusEnum, status) ?? AllegroParcelStatusEnum.MISSING_ENUM;
+  }
+
+  convertToMyReturnStatusEnum(status: string): string {
+    return this.helperService.getValueFromEnum(AllegroReturnStatusEnum, status) ?? AllegroReturnStatusEnum.MISSING_ENUM;
+  }
+
+
   constructor(
     private statusService: StatusService,
     private helperService: HelperService,
     private http: HttpClient,
   ) { }
 
-  fillOrdersFromAllegroImport(importedList: IAllegroAllOrders, oldOrderList: IOrder[]) {
-    // let oldOrderList = this.orderService.ordersList$.value;
+  getJSONFromAllegroAllOrdersResponse(source: string): string {
+    const beginningSubstring = '"filter":';
+    const endingSubstring = '"slots":';
 
-    importedList.myorders.orderGroups.forEach(group => {
-      oldOrderList.find(o => o.id === group.groupId);
-      if (oldOrderList.find(o => o.id === group.groupId)) {
-        this.updateOrder();
-      } else {
-        group.myorders.forEach(o => {
-          let order: IOrder = {
-            id: group.groupId,
-            name: `${o.seller.login} ${o.offers[0].title}`,
-            orderValue: Number(o.totalCost),
-            isFinished: StatusEnum.No
-          }
+    return this.getJSONFromAllegroResponse(source, beginningSubstring, endingSubstring);
+  }
 
-          oldOrderList.push(order);
-        })
+  getJSONFromAllegroSingleOrderResponse(source: string) {
+    const beginningSubstring = '"myorderGroup":';
+    const endingSubstring = '"myorderGroup.$meta":';
+
+    return this.getJSONFromAllegroResponse(source, beginningSubstring, endingSubstring);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  private getJSONFromAllegroResponse(source: string, beginningSubstring: string, endingSubstring: string): string {
+    const foundedByBeginMark = source.split(beginningSubstring);
+    const possibleJsons: string[] = [];
+
+    foundedByBeginMark.forEach(part => {
+      const json = part.split(endingSubstring);
+      if (json.length > 1) {
+        possibleJsons.push(json[0]);
       }
     });
 
-    //show toast
-    console.log(`first ${importedList.limit} order from ${importedList.myorders.total} imported sucessfully`);
+    if (possibleJsons.length > 1) {
+      this.checkIfAllJsonsIdentical(possibleJsons);
+    }
+
+    let finalJson = possibleJsons[0];
+
+    if (!finalJson) {
+      return 'null';
+    }
+
+    finalJson = '{' + beginningSubstring + finalJson + endingSubstring + '{}}';
+
+    return finalJson;
   }
 
 
-  updateOrder() {
-    //todo
+  private checkIfAllJsonsIdentical(list: string[]) {
+    list.forEach(item => {
+      if (list[0] !== item) {
+        console.error('not identical');
+        throw new Error('Jsons not identical.');
+      }
+    });
   }
-
 
 }

@@ -1,6 +1,9 @@
+import { Subject } from 'rxjs';
 import { OrderService } from '../services/order.service';
-import { IOrder, Order } from './../models/order';
-import { Component, OnInit } from '@angular/core';
+import { IOrder, Order } from '../models/order.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import _ from 'lodash';
 
 
 @Component({
@@ -9,35 +12,67 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders-table.component.scss']
 })
 export class OrdersTableComponent implements OnInit {
-  ordersList: IOrder[] = [];
-  editedOrder = new Order();
-  showAddNewRow = false;
+  allOrdersList: IOrder[] = [];
+  // allOrdersList$ = this.orderService.allOrdersList$;
+
+
+  selectedOrder: IOrder = new Order();
+
+  @ViewChild('orderDetailsModal') orderDetailsModal: any;
+  private modalRef!: NgbModalRef;
+
 
   constructor(
     private orderService: OrderService,
-  ) {
-    this.orderService.showAddNewOrderRow$.subscribe(s => this.showAddNewRow = s);
+    private modalService: NgbModal,
 
-    this.orderService.ordersList$.subscribe(ol => this.ordersList = ol);
-    this.orderService.selectedOrder$.subscribe(o => this.editedOrder = o);
+  ) {
+
+    this.orderService.allOrdersList$.subscribe(ol => {
+      this.allOrdersList = ol.sort();
+      // ol[0].purchase.purchaseDate
+      // this.allOrdersList = _.orderBy(ol, ['purchase'], ['asc']); // Use Lodash to sort array by 'name'
+      this.allOrdersList = _.sortBy(ol, o => o.purchase.purchaseDate).reverse();
+
+    });
+    // this.ordersList$ = this.orderService.ordersList$;
+    this.orderService.selectedOrder$.subscribe(o => this.selectedOrder = o);
   }
 
   ngOnInit(): void { }
 
-  selectRow(order: IOrder | null) {
+  onRowSelected(order: IOrder | null) {
     this.orderService.selectOrder(order);
   }
 
   isInEdit(order: IOrder) {
-    return order.id === this.editedOrder.id;
+    return order.id === this.selectedOrder.id;
   }
 
-  addNewOrder(order: IOrder) {
-    this.orderService.addNewOrder(order);
-  }
+  // addNewOrder(order: IOrder) {
+  //   this.orderService.addNewOrder(order);
+  // }
 
   updateOrder(order: IOrder) {
     this.orderService.updateOrder(order);
+  }
+
+  onOpenDetails(order: IOrder) {
+    // this.orderService.showDetailsModal(order);
+    this.modalRef = this.modalService.open(this.orderDetailsModal, {
+      size: 'lg',
+      backdrop: 'static',
+      ariaLabelledBy: 'modal-basic-title'
+    });
+  }
+
+  onCloseModal(result: string) {
+    this.modalRef.close();
+  }
+
+  sortBy(colName: string) {
+    // this.allOrdersList = _.sortBy(this.allOrdersList, o => o['name']).reverse();
+    this.allOrdersList = this.allOrdersList.reverse();
   }
 
 }

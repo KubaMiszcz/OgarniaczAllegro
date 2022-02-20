@@ -1,0 +1,227 @@
+{
+  "extends": "../tslint.json"
+  //   "rules": {
+  //     "directive-selector": [
+  //       true,
+  //       "attribute",
+  //       "app",
+  //       "camelCase"
+  //     ],
+  //     "component-selector": [
+  //       true,
+  //       "element",
+  //       "app",
+  //       [], //xx
+  //       "kebab-case"
+  //     ],
+  //     "defaultSeverity": "error",
+  //     "deprecation": {
+  //       "severity": "warn"
+  //     },
+  //     "no-console": [
+  //       false,
+  //       "debug",
+  //       "info",
+  //       "time",
+  //       "timeEnd",
+  //       "trace",
+  //       "log"
+  //     ],
+  //     //==========================
+  //     // about formatting
+  //     //==========================
+  //     "eofline": true,
+  //     "indent": [
+  //       true,
+  //       "spaces",
+  //       2
+  //     ],
+  //     "no-consecutive-blank-lines": [
+  //       true,
+  //       20
+  //     ],
+  //     "comment-format": [
+  //       true,
+  //       "check-space"
+  //     ],
+  //     "max-line-length": [
+  //       true,
+  //       {
+  //         "limit": 200,
+  //         "ignore-pattern": "^import |^export {(.*?)}",
+  //         "check-strings": true,
+  //         "check-regex": true
+  //       }
+  //     ],
+  //     "quotemark": [
+  //       true,
+  //       "single"
+  //     ],
+  //     // "space-before-function-paren": [
+  //     //   true,
+  //     //   "never"
+  //     // ],
+  //     "space-before-function-paren": [
+  //       true,
+  //       {
+  //         "anonymous": "always",
+  //         "named": "always",
+  //         "asyncArrow": "always"
+  //       }
+  //     ],
+  //     "no-trailing-whitespace": [
+  //       true
+  //     ],
+  //     "type-literal-delimiter": true,
+  //     "number-literal-format": true,
+  //     "align": [
+  //       true,
+  //       // "arguments",
+  //       // "elements",
+  //       "members",
+  //       "parameters",
+  //       "statements"
+  //     ],
+  //     "newline-before-return": true,
+  //     "no-irregular-whitespace": true,
+  //     "one-line": [
+  //       true,
+  //       "check-open-brace",
+  //       "check-whitespace",
+  //       "check-else",
+  //       "check-catch",
+  //       "check-finally"
+  //     ],
+  //     // "object-literal-sort-keys": true,
+  //     //================================
+  //     // about code
+  //     //================================
+  //     "curly": true,
+  //     "semicolon": [
+  //       true,
+  //       "always"
+  //       // "ignore-interfaces",
+  //       // "ignore-bound-class-methods"
+  //     ],
+  //     "prefer-const": [
+  //       true,
+  //       {
+  //         "destructuring": "any"
+  //       }
+  //     ],
+  //     "no-bitwise": true,
+  //     "no-var-keyword": true,
+  //     "no-unused-variable": [
+  //       true,
+  //       {
+  //         "ignore-pattern": "^_"
+  //       }
+  //     ],
+  //     "no-eval": true,
+  //     // "no-empty": true,
+  //     "use-isnan": true,
+  //     "no-angle-bracket-type-assertion": true,
+  //     "no-boolean-literal-compare": true,
+  //     "no-conditional-assignment": true,
+  //     "one-variable-per-declaration": [
+  //       true,
+  //       "ignore-for-loop"
+  //     ],
+  //     "prefer-function-over-method": [
+  //       true,
+  //       "allow-public"
+  //       // "allow-protected"
+  //     ],
+  //     "return-undefined": true,
+  //     "class-name": true,
+  //     "triple-equals": [
+  //       true
+  //       // [
+  //       // "allow-null-check", //xxx
+  //       // "allow-undefined-check"
+  //       // ]
+  //     ],
+  //     "unnecessary-else": [
+  //       true,
+  //       {
+  //         "allow-else-if": true
+  //       }
+  //     ],
+  //     "no-duplicate-imports": [
+  //       true,
+  //       {
+  //         "allow-namespace-imports": true
+  //       }
+  //     ],
+  //     "object-literal-shorthand": false,
+  //     "arrow-return-shorthand": true,
+  //     //================ z glownego
+  //     //check below
+  //     // "callable-types": true,
+  //     "forin": true,
+  //     "import-spacing": true,
+  //     "interface-over-type-literal": true,
+  //     "label-position": true,
+  //     "member-access": false,
+  //     "member-ordering": [
+  //       true,
+  //       {
+  //         "order": [
+  //           "instance-sandwich"
+  //         ]
+  //       }
+  //     ],
+  //     "no-arg": true,
+  //     "no-construct": true,
+  //     "no-debugger": true,
+  //     "no-duplicate-super": true,
+  //     "no-empty": false,
+  //     "no-empty-interface": false,
+  //     "no-inferrable-types": [
+  //       true,
+  //       "ignore-params"
+  //     ],
+  //     "no-misused-new": true,
+  //     "no-non-null-assertion": true,
+  //     "no-shadowed-variable": true,
+  //     "no-string-literal": false,
+  //     "no-string-throw": true,
+  //     "no-switch-case-fall-through": true,
+  //     "no-unnecessary-initializer": true,
+  //     "no-output-on-prefix": false,
+  //     "no-input-rename": true,
+  //     "no-output-rename": true,
+  //     "no-unused-css": true,
+  //     "object-literal-sort-keys": false,
+  //     "radix": true,
+  //     "typedef": [
+  //       true,
+  //       "parameter"
+  //     ],
+  //     "typedef-whitespace": [
+  //       true,
+  //       {
+  //         "call-signature": "nospace",
+  //         "index-signature": "nospace",
+  //         "parameter": "nospace",
+  //         "property-declaration": "nospace",
+  //         "variable-declaration": "nospace"
+  //       }
+  //     ],
+  //     "unified-signatures": true,
+  //     "variable-name": false,
+  //     "whitespace": [
+  //       true,
+  //       "check-branch",
+  //       "check-decl",
+  //       "check-operator",
+  //       "check-separator",
+  //       "check-type"
+  //     ],
+  //     "use-life-cycle-interface": true,
+  //     "use-pipe-transform-interface": true,
+  //     "component-class-suffix": true,
+  //     "directive-class-suffix": true
+  //     //====
+  //   }
+}

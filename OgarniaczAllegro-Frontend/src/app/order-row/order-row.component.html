@@ -1,157 +1,259 @@
 <td class="col-12">
   <div class="d-flex align-items-center">
 
-    <button *ngIf="order.id === ''" type="button" class="btn btn-primary add-button" (click)="addNew()">
-      <div class="add-icon"><i class="fa fa-plus " aria-hidden="true"></i></div>
+
+
+
+    <!-- <i class="fa fa-cloud-download" aria-hidden="true"></i>
+<i class="fas fa-cloud-download    "></i>
+<i class=" fa-cloud-download    "></i>
+<i class="fa fas fa-cloud-download" aria-hidden="true"></i>
+<i class="far fa-cloud-download    "></i> -->
+
+    <!-- <i class="fa fa-solid fa-cloud-arrow-down"></i> -->
+
+    <!-- <i class="fa-solid fa-arrow-down-from-dotted-line"></i>
+    <i class="fa-regular fa-cloud-arrow-down"></i>
+    <i class="fa-solid fa-cloud-arrow-down"></i>
+    <i class="fa-solid fa-down-from-dotted-line"></i>
+    <i class="fa-solid fa-arrow-down-from-dotted-line"></i>
+    <i class="fa-solid fa-arrow-down-to-dotted-line"></i>
+    <i class="fa-regular fa-cloud-arrow-down"></i> -->
+
+
+
+
+    <!-- <i class="fas fa-cloud-download-alt    "></i> -->
+
+    <button type="button" name="" id="" class="btn btn-primary btn-sm open-modal-button"
+            (click)="onOpenDetails(order)">
+      <span> <i class="fas fa-file-import    "></i> </span>
     </button>
 
-    <span *ngIf="!isInEdit" class="">{{order.id}} {{order.name}}</span>
+
+    <!-- <button *ngIf="order.id === ''" type="button" class="btn btn-primary add-button" (click)="addNew()">
+      <div class="add-icon"><i class="fa fa-plus " aria-hidden="true"></i></div>
+    </button> -->
+    <span *ngIf="order.isNew" class="badge badge-pill bg-primary">New</span>
+
+    <div *ngIf="!isInEdit" class="order-name">{{order.name}}</div>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.name"
               class="form-control name" id="exampleFormControlTextarea1"
-              [rows]="order.id === '' ? 1 : 3" 
+              [rows]="order.id === '' ? 1 : 3"
               (focusout)="onLostFocus($event)"
-              aria-label="With textarea"
-              >
-            </textarea>
-  </div>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isAllegroPay"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <app-tri-state-check-box [(value)]="order.hasInvoice" (click)="triStateClicked('hasInvoice')"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center text-nowrap">
-  <span *ngIf="!isInEdit" class="">{{order.orderValue | plnPipe}}</span>
-  <input *ngIf="isInEdit" [(ngModel)]="order.orderValue"
-         class="form-control" type="number">
-</td>
-
-
-<!-- ============ -->
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isInvoiceReceived"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isPackageReceived"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <!-- <form class="form-inline"> -->
-    <!-- <div class="form-group"> -->
-      <!-- <div class="input-group"> -->
-      <div class="d-flex">
-        <span *ngIf="!isInEdit"
-              class="return-to-date"
-              (click)="d.toggle()">{{order?.receivedDate | myDate}}
-        </span>
-
-        <input [hidden]="!isInEdit"
-               [(ngModel)]="order.receivedDate"
-               class="form-control return-to-date"
-               name="dp"
-               (click)="d.toggle()"
-               ngbDatepicker #d="ngbDatepicker"
-               [placement]="'bottom'">
-        <!-- (closed)="onDateSelected(order)" -->
-        <!-- [positionTarget]="buttonEl" -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </form> -->
-      </div>
-</td>
-
-
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnIssued"></app-tri-state-check-box>
-</td>
-
-
-<td class="text-center ">
-  <!-- <form class="form-inline"> -->
-    <!-- <div class="form-group"> -->
-      <!-- <div class="input-group"> -->
-      <div class="d-flex">
-        <span *ngIf="!isInEdit"
-              class="return-to-date"
-              (click)="d.toggle()">{{order?.returnToDate | myDate}}
-        </span>
-
-        <input [hidden]="!isInEdit"
-               [(ngModel)]="order.returnToDate"
-               class="form-control return-to-date"
-               name="dp"
-               (click)="d.toggle()"
-               ngbDatepicker #d="ngbDatepicker"
-               [placement]="'bottom'">
-        <!-- (closed)="onDateSelected(order)" -->
-        <!-- [positionTarget]="buttonEl" -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </form> -->
-      </div>
-</td>
-
-
-<td class="text-center">
-  <div class="d-flex">
-    <span *ngIf="!isInEdit" class="return-code">{{order.returnCode}}</span>
-    <textarea *ngIf="isInEdit" [(ngModel)]="order.returnCode"
-              id="exampleFormControlTextarea1" class="form-control name return-code" 
-              [rows]="order.id === '' ? 1 : 4" 
               aria-label="With textarea">
             </textarea>
   </div>
 </td>
 
 
+
+<td class="text-center">
+  <app-tri-state-check-box [(value)]="order.purchase.isAllegroPay" [disabled]="true" readonly="true"></app-tri-state-check-box>
+</td>
+
+
+
 <td class="text-center text-nowrap">
-  <span *ngIf="!isInEdit" class="">{{order.returnValue | plnPipe}}</span>
-  <input *ngIf="isInEdit" [(ngModel)]="order.returnValue"
+  <span *ngIf="!isInEdit" class="">{{order.purchase.orderValue | plnPipe}}</span>
+  <input *ngIf="isInEdit" [(ngModel)]="order.purchase.orderValue"
          class="form-control" type="number">
 </td>
 
 
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnSended"></app-tri-state-check-box>
+
+<!-- ============ -->
+<td class="text-center  d-flsex flex-column">
+  <div class="status-col">
+    <span class="badge badge-pill bg-primary"
+          [ngClass]="{
+      'bg-success' : hasStatus(parcelStatuses.DELIVERED),
+      'bg-warning' : hasStatus(parcelStatuses.AVAILABLE_FOR_PICKUP)
+    } ">{{order.purchase.status}}</span>
+    <!-- km progress bar here -->
+    <!-- km date bar here -->
+    <br>
+    <span class="status-date">{{order.purchase.statusTimestamp | date:'yyyy-MM-dd'}} </span>
+  </div>
 </td>
 
 
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isReturnDelivered"></app-tri-state-check-box>
+
+
+<!-- <td class="text-center ">
+  <app-tri-state-check-box [value]="order.purchase.hasInvoice" [disabled]="true" readonly="true"></app-tri-state-check-box>
+</td> -->
+
+<td class="text-center ">
+  <app-tri-state-check-box [numOfStates]="2" [(value)]="order.purchase.isInvoiceReceived"
+                           (valueChange)="triStateClicked($event, 'invoiceReceived')"
+                           [disabled]="order.purchase.isInvoiceReceived === triStateStauses.NOT_AVAILABLE">
+  </app-tri-state-check-box>
 </td>
 
 
-<!-- <td class="text-center">
-      <i *ngIf="order.isReturnDelivered" class="fa fa-check-circle " aria-hidden="true"></i>
-      <i *ngIf="!order.isReturnDelivered" class="fa fa-times-circle"></i>
-      <i class="fa fa-question-circle" aria-hidden="true"></i>
-    </td> -->
+
+<td class="text-center ">
+
+  <div *ngIf="!order.purchase.issueReturnToDate" class="return-to-date">
+    {{getIssueReturnToDate()}}
+  </div>
 
 
-<td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isCashReturned"></app-tri-state-check-box>
+  <div *ngIf="order.purchase.issueReturnToDate" class="d-flex flex-column">
+    <span *ngIf="!isInEdit"
+          class="return-to-date"
+          (click)="d.toggle()">
+      {{getIssueReturnToDate()}}
+    </span>
+    <span *ngIf="isReturnDeadlinePassed()">
+      <i class="fa fa-exclamation-triangle" style="color: orange; font-size: 2rem;" aria-hidden="true"></i>
+    </span>
+
+    <input [hidden]="!isInEdit"
+           [value]="getIssueReturnToDate()"
+           (dateSelect)="setIssueReturnToDate($event)"
+           class="form-control return-to-date"
+           name="dp"
+           (click)="d.toggle()"
+           ngbDatepicker #d="ngbDatepicker"
+           [placement]="'bottom'">
+
+  </div>
+
+
 </td>
 
 
+
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isInvoiceCorrectionReceived"></app-tri-state-check-box>
+  {{order.return?.returnValue | plnPipe}}
 </td>
 
+<td class="text-center flex-column">
+  <!-- <div *ngIf="order.return?.returnCode" class="small-text return-info">
+    Kod:<br>
+    <b>{{order.return?.returnCode}}</b> <br>
+    Odeslij do <br>
+    {{order.return?.codeExpirationDate | date:'yyyy-MM-dd'}}
+  </div> -->
+  <div [ngSwitch]="getReturnStatus()">
+
+
+    <div *ngSwitchCase="returnStatuses.CREATED">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>Kod:<br>
+      <b>{{order.return?.returnCode}}</b> <br>
+      Odeslij do <br>
+      {{order.return?.returnCodeExpirationDate | date:'yyyy-MM-dd'}}
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.IN_TRANSIT ">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.DELIVERED">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.FINISHED" class="status-col">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <br>
+      <span class="small-text">{{order.return?.statusHint}}</span>
+    </div>
+
+
+    <div *ngSwitchCase="returnStatuses.MISSING_ENUM">
+      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+    </div>
+
+    <div *ngSwitchDefault>{{returnStatuses.UNKNOWN}}</div>
+  </div>
+
+  <!-- km progress bar here -->
+  <!-- km date bar here -->
+
+</td>
+
+<!--  when return sended put status here insetad of code and date -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 
 <td class="text-center">
-  <app-tri-state-check-box [(value)]="order.isFinished"></app-tri-state-check-box>
+  <app-tri-state-check-box [numOfStates]="4" [(value)]="order.isCashReturned"></app-tri-state-check-box>
+</td>
+
+<td class="text-center">
+  <app-tri-state-check-box [numOfStates]="4" [(value)]="order.isFinished"></app-tri-state-check-box>
 </td>
 
 
@@ -159,9 +261,9 @@
   <div class="d-flex">
     <span *ngIf="!isInEdit" class="">{{order.comment}}</span>
     <textarea *ngIf="isInEdit" [(ngModel)]="order.comment"
-    id="exampleFormControlTextarea1" class="form-control name" 
-    [rows]="order.id === '' ? 1 : 3" 
-    aria-label="With textarea">
+              id="exampleFormControlTextarea1" class="form-control text-area"
+              [rows]="order.id === '' ? 1 : 3"
+              aria-label="With textarea">
   </textarea>
-</div>
+  </div>
 </td>

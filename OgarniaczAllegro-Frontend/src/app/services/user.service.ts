@@ -1,5 +1,5 @@
 import { CURRENT_USER as CURRENT_USER } from '../models/user.model';
-import { EXAMPLE_ROWS, IOrder, Order } from '../models/order';
+import { EXAMPLE_ROWS, IOrder, Order } from '../models/order.model';
 import { EventEmitter, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IUser } from '../models/user.model';

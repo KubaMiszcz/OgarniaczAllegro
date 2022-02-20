@@ -1,13 +1,60 @@
-.name {
-  border-radius: 10px;
-}
-
-th,
 td {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
   border-collapse: collapse;
+
+
+  .text-area {
+    border-radius: 10px;
+  }
+
+  .open-modal-button {
+    font-size: 2rem;
+    // color: #0d6efb;
+    margin-right: 0.5rem;
+  }
+
+  .order-name {
+    max-height: 4rem;
+    overflow: auto;
+    margin-left: 0.5rem;
+  }
+
+  .small-text {
+    font-size: 0.7rem;
+  }
+
+  .return-info {
+    min-width: 5rem;
+  }
 }
+
+
+.status-col {
+
+  .status-date {
+    font-size: 0.7rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .return-code {
   font-size: 0.7rem;

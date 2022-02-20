@@ -3,7 +3,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "plugins": [
+      // {
+      //   "name": "typescript-tslint-plugin",
+      //   // "alwaysShowRuleFailuresAsWarnings": false,
+      //   // "ignoreDefinitionFiles": true,
+      //   "configFile": "./tslint.json",
+      //   // "suppressWhileTypeErrorsPresent": false
+      // }
+    ]
   },
   "files": [
     "src/main.ts",

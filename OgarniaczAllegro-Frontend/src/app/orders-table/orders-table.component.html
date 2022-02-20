@@ -1,42 +1,74 @@
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+
+
 <table class="table table-sm table-hover table-striped">
   <thead>
     <tr>
-      <th scope="col" class="col text-center">Name</th>
-      <th scope="col" class="col text-center">Allegro Pay</th>
-      <th scope="col" class="col text-center">Has Invoice</th>
-      <th scope="col" class="col text-center">Total Value</th>
+      <th scope="col" class="col text-center col-header align-middle"
+      (click)="sortBy('name')"
+      >Name
+        <i class="fas fa-sort    "></i>
+      </th>
 
-      <th scope="col" class="col text-center">Invoice Received</th>
-      <th scope="col" class="col text-center">Package Received</th>
-      <th scope="col" class="col text-center">Received Date</th>
+      <th scope="col" class="col text-center col-header align-middle">Allegro Pay</th>
+      <th scope="col" class="col text-center col-header align-middle">Total Value</th>
 
-      <th scope="col" class="col text-center">Return Issued</th>
+      <th scope="col" class="col text-center col-header align-middle">Status Przesylki</th>
 
-      <th scope="col" class="col text-center">Return To&nbsp;Date</th>
-      <th scope="col" class="col text-center">Return Code</th>
-      <th scope="col" class="col text-center">Return Total</th>
+      <!-- <th scope="col" class="col text-center col-header align-middle">Has Invoice</th> -->
+      <th scope="col" class="col text-center col-header align-middle">Faktura w paczce</th>
 
-      <th scope="col" class="col text-center">Return Sended</th>
-      <th scope="col" class="col text-center">Return Delivered</th>
-      <th scope="col" class="col text-center">Cash Returned</th>
-      <th scope="col" class="col text-center">Invoice Corr&nbsp;Rcvd</th>
 
-      <th scope="col" class="col text-center">Finished</th>
-      <th scope="col" class="col text-center">Comment</th>
+
+
+
+
+
+      <!-- <th scope="col" class="col text-center col-header align-middle">Received Date</th> -->
+
+
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return Issued</th> -->
+
+      <th scope="col" class="col text-center col-header align-middle">Zglos zwrot do</th>
+      <th scope="col" class="col text-center col-header align-middle">do zwrotu</th>
+      <th scope="col" class="col text-center col-header align-middle">O zwrocie</th>
+
+
+
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return To&nbsp;Date</th> -->
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return Code</th> -->
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return Total</th> -->
+      
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return Sended</th> -->
+      <!-- <th scope="col" class="col text-center col-header align-middle">Return Delivered</th> -->
+      <th scope="col" class="col text-center col-header align-middle">Kasa na koncie</th>
+      <!-- <th scope="col" class="col text-center col-header align-middle">Invoice Corr&nbsp;Rcvd</th> -->
+
+      <th scope="col" class="col text-center col-header align-middle">All Ok</th>
+      <th scope="col" class="col text-center col-header align-middle">Comment</th>
     </tr>
   </thead>
   <tbody>
 
-    <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true"
+    <!-- <tr app-order-row *ngIf="showAddNewRow" [isInEdit]="true"
         (click)="selectRow(null)"
         (editComplete)="addNewOrder($event)">
-    </tr>
+    </tr> -->
 
-    <tr app-order-row *ngFor="let order of ordersList" [order]="order" [isInEdit]="isInEdit(order)"
-        (click)="selectRow(order)"
-        (editComplete)="updateOrder($event)">
+    <tr app-order-row *ngFor="let order of allOrdersList"
+        [order]="order"
+        [isInEdit]="isInEdit(order)"
+        (click)="onRowSelected(order)"
+        (editComplete)="updateOrder($event)"
+        (openDetails)="onOpenDetails($event)">
     </tr>
 
 
   </tbody>
 </table>
+
+
+
+<ng-template #orderDetailsModal let-modal>
+  <app-order-details-modal [order]="selectedOrder" (close)="onCloseModal($event)"></app-order-details-modal>
+</ng-template>
