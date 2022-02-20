@@ -6,6 +6,7 @@ import { ImportOrderComponent } from './import-all-orders/import-all-orders.comp
 const routes: Routes = [
   { path: 'orders-table', component: OrdersTableComponent },
   { path: 'archived-orders', component: OrdersTableComponent },
+  { path: 'notes', component: OrdersTableComponent },
   { path: 'import-all-orders', component: ImportOrderComponent },
   { path: '', redirectTo: '/game', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: OrdersTableComponent },  // Wildcard route for a 404 page
