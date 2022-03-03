@@ -67,6 +67,11 @@ export class OrderService {
 
 
   importAllegroAllOrdersFromResponse(source: string) {
+
+
+  }
+
+  importAllegroAllOrdersFromResponse2(source: string) {
     const allOrdersFromAllegroJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
     const allOrdersFromAllegroView: IAllegroAllOrdersView = JSON.parse(allOrdersFromAllegroJSON);
