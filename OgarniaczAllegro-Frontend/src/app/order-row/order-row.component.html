@@ -141,7 +141,7 @@
 
 
     <div *ngSwitchCase="returnStatuses.CREATED">
-      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>Kod:<br>
+      <span class="badge badge-pill bg-primary">{{order.return?.status}}</span>Kod:<br>
       <b>{{order.return?.returnCode}}</b> <br>
       Odeslij do <br>
       {{order.return?.returnCodeExpirationDate | date:'yyyy-MM-dd'}}
@@ -149,14 +149,14 @@
 
 
     <div *ngSwitchCase="returnStatuses.IN_TRANSIT ">
-      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <span class="badge badge-pill bg-primary">{{order.return?.status}}</span>
       <br>
       <span class="small-text">{{order.return?.statusHint}}</span>
     </div>
 
 
     <div *ngSwitchCase="returnStatuses.DELIVERED">
-      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <span class="badge badge-pill bg-primary">{{order.return?.status}}</span>
       <br>
       <span class="small-text">{{order.return?.statusHint}}</span>
     </div>
@@ -170,7 +170,7 @@
 
 
     <div *ngSwitchCase="returnStatuses.MISSING_ENUM">
-      <span class="badge badge-pill bg-success">{{order.return?.status}}</span>
+      <span class="badge badge-pill bg-danger">{{order.return?.status}}</span>
     </div>
 
     <div *ngSwitchDefault>{{returnStatuses.UNKNOWN}}</div>
