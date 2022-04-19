@@ -67,16 +67,10 @@ export class OrderService {
 
 
   importAllegroAllOrdersFromResponse(source: string) {
-
-
-  }
-
-  importAllegroAllOrdersFromResponse2(source: string) {
     const allOrdersFromAllegroJSON = this.allegroService.getJSONFromAllegroAllOrdersResponse(source);
 
     const allOrdersFromAllegroView: IAllegroAllOrdersView = JSON.parse(allOrdersFromAllegroJSON);
-    console.log('allOrdersFromAllegroView', allOrdersFromAllegroView);
-
+    // console.log('allOrdersFromAllegroView', allOrdersFromAllegroView);
 
     if (allOrdersFromAllegroView?.myorders?.orderGroups?.some(g => g?.myorders.length > 1)) {
       alert('group.myorders.length>1');
@@ -162,7 +156,7 @@ export class OrderService {
     if (existedOrderIdx >= 0) {
       const updatedOrder = this.getUpdatedOrderFromImported(oldOrderList[existedOrderIdx], importedOrder as IMyOrderAllAllegro);
 
-      if ((importedOrder as ISingleOrderAllegro).rescissions) {
+      if ((importedOrder as ISingleOrderAllegro)?.rescissions?.rescissions) {
         updatedOrder.return = this.fillReturnData(importedOrder as ISingleOrderAllegro);
       }
 
